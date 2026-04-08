@@ -1,0 +1,30 @@
+# Build output
+build/
+
+# Reference PDFs (provided by UPC, not part of the source)
+*.pdf
+
+# LaTeX temp files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
