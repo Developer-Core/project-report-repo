@@ -23,8 +23,8 @@
       <td><strong>Saldaña De Souza, Juan David -- U20221F192</strong><br><br><em>Descripción.</em></td>
     </tr>
     <tr>
-      <td class="member-photo"><img src="report/assets/members/sulca-sanchez-piero.jpg" alt="Foto de Sulca Sanchez, Piero Angel"></td>
-      <td><strong>Sulca Sanchez, Piero Angel -- U202423711</strong><br><br><em>Descripción.</em></td>
+      <td class="member-photo"><img src="report/assets/members/piero-sulca.jpg" alt="Foto de Sulca Sanchez, Piero Angel"></td>
+      <td><strong>Sulca Sanchez, Piero Angel -- U202423711</strong><br><br>Curso la carrera de Ingeniería de Software y tengo experiencia en desarrollo web trabajando con equipos pequeños. Me apasiona el Front End, sobre todo cuando hay espacio para el diseño creativo: interfaces 3D, animaciones, productos que se ven y se sienten distintos. En el equipo puedo aportar en levantamiento de requerimientos, diseño de interfaces, desarrollo web con React y TypeScript, diseño de bases de datos. En el equipo aporto organización y colaboración.</td>
     </tr>
     <tr>
       <td class="member-photo"><img src="report/assets/members/torres-sanchez-dalila.jpg" alt="Foto de Torres Sanchez, Dalila Victoria"></td>
