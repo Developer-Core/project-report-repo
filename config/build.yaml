@@ -1,8 +1,7 @@
+from: markdown
+to: pdf
+
 input-files:
-  - config/metadata.yaml
-  - report/front-matter/01-version-history.md
-  - report/front-matter/02-collaboration-insights.md
-  - report/front-matter/03-toc.md
   - report/10-student-outcome.md
   - report/12-startup-profile.md
   - report/13-solution-profile.md
@@ -11,13 +10,15 @@ file-scope: true
 resource-path: [".", "report/assets"]
 output-file: build/project-report.pdf
 
-pdf-engine: lualatex
-template: templates/eisvogel
+pdf-engine: weasyprint
+css:
+  - css/report.css
 
 bibliography: references.bib
 csl: config/apa.csl
 citeproc: true
 
-toc: false
+toc: true
+toc-depth: 3
 number-sections: true
 syntax-highlighting: tango
