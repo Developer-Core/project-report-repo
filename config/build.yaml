@@ -19,6 +19,9 @@ csl: config/apa.csl
 citeproc: true
 
 toc: true
-toc-depth: 3
+toc-depth: 4
 number-sections: true
 syntax-highlighting: tango
+
+metadata:
+  toc-title: "Tabla de Contenidos"
