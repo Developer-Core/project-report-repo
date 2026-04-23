@@ -1,38 +1,121 @@
-# project-report-repo
+<div class="cover-page">
+<div class="cover-top">
+<img src="report/assets/logo-upc.png" alt="UPC" class="cover-logo">
+<div class="cover-university">Universidad Peruana de Ciencias Aplicadas</div>
+<div class="cover-program">Ingeniería de Software</div>
+<div class="cover-ciclo">Ciclo 2026-10</div>
+<div class="cover-course">1ASI0730 – Aplicaciones Web</div>
+<div class="cover-nrc">NRC: 10215</div>
+<div class="cover-professor">Docente: Velasquez Nuñez, Angel Augusto</div>
+</div>
+<div class="cover-middle">
+<div class="cover-document-type">Informe de Trabajo Final</div>
+<hr class="cover-separator">
+<div class="cover-product-name">Nombre del Producto</div>
+<hr class="cover-separator">
+</div>
+<div class="cover-bottom">
+<table class="cover-team">
+<thead>
+<tr><th>Integrante</th><th>Código</th></tr>
+</thead>
+<tbody>
+<tr><td>Gonza Morales, Anderson</td><td>U202120836</td></tr>
+<tr><td>Justo Yauricasa, Alexander Paolo</td><td>U20191C054</td></tr>
+<tr><td>Saldaña De Souza, Juan David</td><td>U20221F192</td></tr>
+<tr><td>Sulca Sanchez, Piero Angel</td><td>U202423711</td></tr>
+<tr><td>Torres Sanchez, Dalila Victoria</td><td>U20221F734</td></tr>
+</tbody>
+</table>
+<div class="cover-date">Abril 2026</div>
+</div>
+</div>
+# Registro de Versiones del Informe
 
-Plantilla mínima para generar el PDF del informe con Pandoc + Eisvogel.
+<table>
+<thead>
+<tr><th>Versión</th><th>Fecha</th><th>Autor</th><th>Descripción</th></tr>
+</thead>
+<tbody>
+<tr><td>0.1.0</td><td>2026-04-07</td><td>Sulca Sanchez, Piero Angel</td><td>Creación del repositorio e incorporación de la estructura base del informe</td></tr>
+<tr><td>0.2.0</td><td>2026-04-07</td><td>Sulca Sanchez, Piero Angel</td><td>Agregado de carátula, registro de versiones y configuración general del documento</td></tr>
+</tbody>
+</table>
+# Project Report Collaboration Insights
 
-## Construcción del PDF
+**URL del Repositorio:** [https://github.com/Developer-Core/project-report-repo](https://github.com/Developer-Core/project-report-repo)
+# Contenido
+---
+toc: true
+toc-title: "Tabla de contenidos"
+---
+# Student Outcome
 
-- Comando real de build: `pandoc --defaults=config/build.yaml`
-- Atajo opcional: `make pdf`
+El curso contribuye al cumplimiento del Student Outcome ABET: **ABET -- EAC - Student Outcome 5**
 
-> No hace falta pasar los archivos Markdown manualmente: el orden de entrada ya está definido en `config/build.yaml`.
+**Criterio:** _La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos
+proporcionan liderazgo, crean un entorno de colaboración e inclusivo, establecen objetivos,
+planifican tareas y cumplen objetivos._
 
-## Configuración
+En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por
+parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET -- EAC - Student
+Outcome 5.
 
-### `config/build.yaml`
+# Introducción
 
-Define la ejecución de Pandoc:
+## Startup Profile
 
-- orden de `input-files`,
-- archivo de salida,
-- template,
-- bibliografía y CSL,
-- opciones generales como `toc: false` y `number-sections: true`.
+### Descripción de la Startup
 
-### `config/metadata.yaml`
+*Por definir.*
 
-Define los metadatos del documento y variables consumidas por el template:
+### Perfiles de integrantes del equipo
 
-- título,
-- datos institucionales,
-- integrantes,
-- tipografías,
-- `header-includes`.
+<table>
+  <tbody>
+    <tr>
+      <td class="member-photo"><img src="report/assets/members/gonza-morales-anderson.jpg" alt="Foto de Gonza Morales, Anderson"></td>
+      <td><strong>Gonza Morales, Anderson -- U202120836</strong><br><br><em>Descripción.</em></td>
+    </tr>
+    <tr>
+      <td class="member-photo"><img src="report/assets/members/justo-yauricasa-alexander.jpg" alt="Foto de Justo Yauricasa, Alexander Paolo"></td>
+      <td><strong>Justo Yauricasa, Alexander Paolo -- U20191C054</strong><br><br><em>Descripción.</em></td>
+    </tr>
+    <tr>
+      <td class="member-photo"><img src="report/assets/members/saldana-de-souza-juan.jpg" alt="Foto de Saldaña De Souza, Juan David"></td>
+      <td><strong>Saldaña De Souza, Juan David -- U20221F192</strong><br><br><em>Descripción.</em></td>
+    </tr>
+    <tr>
+      <td class="member-photo"><img src="report/assets/members/sulca-sanchez-piero.jpg" alt="Foto de Sulca Sanchez, Piero Angel"></td>
+      <td><strong>Sulca Sanchez, Piero Angel -- U202423711</strong><br><br><em>Descripción.</em></td>
+    </tr>
+    <tr>
+      <td class="member-photo"><img src="report/assets/members/torres-sanchez-dalila.jpg" alt="Foto de Torres Sanchez, Dalila Victoria"></td>
+      <td><strong>Torres Sanchez, Dalila Victoria -- U20221F734</strong><br><br><em>Descripción.</em></td>
+    </tr>
+  </tbody>
+</table>
 
-## Tabla de contenidos
+## Solution Profile
 
-La TOC actual es **manual**: se inyecta desde `report/front-matter/03-toc.md` usando LaTeX (`\tableofcontents`).
+### Antecedentes y problemática
 
-Por eso `toc` se mantiene desactivado en la configuración, para evitar una tabla de contenidos duplicada.
+_Por definir. Aplicar la técnica de las 5 W's y 2 H's: Who, What, Where, When, Why, How & How Much._
+
+### Lean UX Process
+
+#### Lean UX Problem Statements
+
+_Por definir._
+
+#### Lean UX Assumptions
+
+_Por definir._
+
+#### Lean UX Hypothesis Statements
+
+_Por definir._
+
+#### Lean UX Canvas
+
+_Por definir._
