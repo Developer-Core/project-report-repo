@@ -1,5 +1,1 @@
-```{=latex}
-\renewcommand{\contentsname}{Tabla de Contenidos}
-\tableofcontents
-\newpage
-```
+# Contenido {.unnumbered}
