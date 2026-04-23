@@ -1,4 +1,4 @@
-# Registro de Versiones del Informe {.unnumbered}
+# Registro de Versiones del Informe
 
 <table>
 <thead>
@@ -9,3 +9,4 @@
 <tr><td>0.2.0</td><td>2026-04-07</td><td>Sulca Sanchez, Piero Angel</td><td>Agregado de carátula, registro de versiones y configuración general del documento</td></tr>
 </tbody>
 </table>
+

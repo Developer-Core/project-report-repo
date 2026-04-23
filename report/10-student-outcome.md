@@ -1,8 +1,4 @@
----
-toc: true
-toc-title: "Tabla de contenidos"
----
-# Student Outcome {.unnumbered}
+<h1>Student Outcome</h1>
 
 El curso contribuye al cumplimiento del Student Outcome ABET: **ABET -- EAC - Student Outcome 5**
 
