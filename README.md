@@ -30,6 +30,7 @@
 <div class="cover-date">Abril 2026</div>
 </div>
 </div>
+
 # Registro de Versiones del Informe
 
 <table>
@@ -41,15 +42,13 @@
 <tr><td>0.2.0</td><td>2026-04-07</td><td>Sulca Sanchez, Piero Angel</td><td>Agregado de carátula, registro de versiones y configuración general del documento</td></tr>
 </tbody>
 </table>
+
 # Project Report Collaboration Insights
 
 **URL del Repositorio:** [https://github.com/Developer-Core/project-report-repo](https://github.com/Developer-Core/project-report-repo)
+
 # Contenido
----
-toc: true
-toc-title: "Tabla de contenidos"
----
-# Student Outcome
+<h1>Student Outcome</h1>
 
 El curso contribuye al cumplimiento del Student Outcome ABET: **ABET -- EAC - Student Outcome 5**
 
