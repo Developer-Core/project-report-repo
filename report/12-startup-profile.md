@@ -12,7 +12,7 @@
   <tbody>
     <tr>
       <td class="member-photo"><img src="report/assets/members/gonza-morales-anderson.jpg" alt="Foto de Gonza Morales, Anderson"></td>
-      <td><strong>Gonza Morales, Anderson -- U202120836</strong><br><br><em>Descripción.</em></td>
+      <td><strong>Gonza Morales, Anderson -- U202120836</strong><br><br>Estudiante de sexto ciclo de la carrera de Ingenieria de Software. Destaca por su capacidad de liderazgo y organizacion en equipos de trabajo. Tiene habilidades en coordinacion de tareas, comunicacion efectiva, analisis de requerimientos y seguimiento de actividades orientadas a cumplir objetivos del proyecto.</td>
     </tr>
     <tr>
       <td class="member-photo"><img src="report/assets/members/justo-yauricasa-alexander.jpg" alt="Foto de Justo Yauricasa, Alexander Paolo"></td>
