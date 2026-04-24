@@ -32,7 +32,7 @@ $(OUTPUT): $(SOURCES) $(FRONT_HTML)
 readme: $(README)
 
 $(README): $(MD_FILES)
-	@cat $(MD_FILES) | sed 's/ *{[^}]*}//g' | sed '/<div class="page-break"><\/div>/d' > $(README)
+	@cat $(MD_FILES) | sed 's/ *{[^}]*}//g' | sed '/<div class="page-break"><\/div>/d' | sed 's|src="assets/|src="report/assets/|g' | sed 's|src="annexes/|src="report/annexes/|g' > $(README)
 
 clean:
 	@rm -rf build/

@@ -8,7 +8,7 @@ input-files:
   - report/98-bibliografia.md
 
 file-scope: true
-resource-path: [".", "report/assets"]
+resource-path: [".", "report", "report/assets", "report/annexes"]
 output-file: build/project-report.pdf
 
 pdf-engine: weasyprint

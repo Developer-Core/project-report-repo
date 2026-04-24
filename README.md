@@ -40,8 +40,10 @@
 <tbody>
 <tr><td>0.1.0</td><td>2026-04-07</td><td>Sulca Sanchez, Piero Angel</td><td>Creación del repositorio e incorporación de la estructura base del informe</td></tr>
 <tr><td>0.2.0</td><td>2026-04-07</td><td>Sulca Sanchez, Piero Angel</td><td>Agregado de carátula, registro de versiones y configuración general del documento</td></tr>
+<tr><td>0.3.0</td><td>2026-04-24</td><td>Gonza Morales, Anderson</td><td>Agregado del capitulo 1, capitulo 2</td></tr>
 </tbody>
 </table>
+
 
 # Project Report Collaboration Insights
 
@@ -117,7 +119,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
   <tbody>
     <tr>
       <td class="member-photo"><img src="report/assets/members/gonza-morales-anderson.jpg" alt="Foto de Gonza Morales, Anderson"></td>
-      <td><strong>Gonza Morales, Anderson -- U202120836</strong><br><br><em>Descripción.</em></td>
+      <td><strong>Gonza Morales, Anderson -- U202120836</strong><br><br>Estudiante de sexto ciclo de la carrera de Ingenieria de Software. Destaca por su capacidad de liderazgo y organizacion en equipos de trabajo. Tiene habilidades en coordinacion de tareas, comunicacion efectiva, analisis de requerimientos y seguimiento de actividades orientadas a cumplir objetivos del proyecto.</td>
     </tr>
     <tr>
       <td class="member-photo"><img src="report/assets/members/justo-yauricasa-alexander.jpg" alt="Foto de Justo Yauricasa, Alexander Paolo"></td>
@@ -165,6 +167,8 @@ _Por definir._
 <h1>Bibliografía</h1>
 
 <div class="bibliography">
+
+<!-- Ejemplos de formato APA 7 — reemplazar con las fuentes reales del equipo -->
 
 <!-- Libro -->
 Sommerville, I. (2016). *Software engineering* (10.ª ed.). Pearson.
