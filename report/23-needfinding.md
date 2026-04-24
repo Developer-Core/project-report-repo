@@ -97,3 +97,9 @@ El journey representado cubre el end-to-end de la experiencia actual desde que e
 ![User Journey Mapping](./assets/needfinding/User%20Journey%20Mapping%202%20AW.png)
 
 ### Empathy Mapping
+
+En esta sección se presentan los Empathy Maps elaborados para los dos User Personas del proyecto: Carlos Gutiérrez (carpintero) y Valeria Fernández (cliente).
+
+El proceso de elaboración consistió en colocar cada User Persona en el centro del canvas y registrar observaciones del equipo para responder: ¿Con quién empatizamos? ¿Qué necesita hacer? ¿Qué dice? ¿Qué ve? ¿Qué hace? ¿Qué escucha? ¿Qué piensa y siente? Finalmente, se identificaron Pains (¿Qué le preocupa?) y Gains (¿Qué ayuda? ¿Qué lo convence? ¿Qué dice?).
+
+Los diagramas fueron elaborados en UXPressia y se adjuntan las capturas a continuación.
