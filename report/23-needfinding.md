@@ -9,6 +9,8 @@ La construcción de estos arquetipos se sustenta en el análisis cualitativo de 
 
 ![User Persona 1](./assets/needfinding/User%20persona%201%20_%20Carpintero.png)
 
+![User Persona 2](./assets/needfinding/User%20Persona%202%20%20_%20Compradora.png)
+
 
 ### User Task Matrix
 
