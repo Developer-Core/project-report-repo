@@ -149,6 +149,8 @@ Aquí se presenta el Lean UX Canvas desarrollado para **Alimenta**:
 
 **Figura 1. Lean UX Canvas de WoodRoute**
 
-![Image](https://github.com/user-attachments/assets/ec4d7f64-f0f3-4310-9853-1faecd8b0d71)
+<div align="center">
+  <img src="assets/lean-ux-canvas.png" alt="Entrevista_carp 3" width="100%">
+</div>
 
 **Enlace al Lean UX Canvas:** https://miro.com/welcomeonboard/ZVFaMVdKblhINnB5d1dnbWcxT2RLZ3ZjVFlQNWpsS2VKLzVQQ3dQMWUxS1pkY3hJbStyWENZNnc1cjIvd01lNkltV283MkVGRUM3MS94a1Q0dXp4U3QzclBsK0ZrZ24zQXZhRG14blV5YXdtMUlaMlV5alRXNTFMT21PL0tXbzJzVXVvMm53MW9OWFg5bkJoVXZxdFhRPT0hdjE=?share_link_id=533296594528

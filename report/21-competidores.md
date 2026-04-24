@@ -25,7 +25,7 @@ En esta sección evaluamos los competidores de nuestro nicho.
       <td align="center">Buildertrend</td>
     </tr>
     <tr>
-      <td valign="top" align="center"><img src="assets/WoodRoute.png"/></td>
+      <td valign="top" align="center"><img src="assets/logo.png"/></td>
       <td valign="top" align="center"><img src="assets/cleri.png"/></td>
       <td valign="top" align="center"><img src="assets/craftybase.png"/></td>
       <td valign="top" align="center"><img src="assets/buildertrend.png"/></td>

@@ -43,7 +43,7 @@
 **Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQBIxTsDiMoMQ7UmxqokSxBtAbzjckIXgF8fW8kP5-aSU14?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LRldwg>
 
 <div align="center">
-  <img src="assets/carp_1.png" alt="Entrevista_carp 1" width="100%">
+  <img src="assets/carpintero-1.png" alt="Entrevista_carp 1" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
@@ -58,7 +58,7 @@ La entrevista realizada a un Maestro de carpintería independiente, menciona que
 **Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQA-72r7kw1ETKLhkTOknwcFAfMyGR4WulQY5KCh3gmHGxo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=lJhikH>
 
 <div align="center">
-  <img src="assets/carp_2.png" alt="Entrevista_carp 2" width="100%">
+  <img src="assets/carpintero-2.png" alt="Entrevista_carp 2" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
@@ -73,7 +73,7 @@ La entrevista realizada a un ayudante de carpintería evidencio que la gestión 
 **Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQChpwCTvVG-TJqmM0qE2yvnAWHSrGpBMxOBJK0kUSS8z88?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=g0kCLa>
 
 <div align="center">
-  <img src="assets/carp_3.png" alt="Entrevista_carp 3" width="100%">
+  <img src="assets/carpintero-3.png" alt="Entrevista_carp 3" width="100%">
 </div>
 
 **Resumen de la entrevista:**
