@@ -94,4 +94,6 @@ El journey representado cubre el end-to-end de la experiencia actual desde que e
 
 ![User Journey Mapping](./assets/needfinding/User%20Journey%20Mapping%201%20AW.png)
 
+![User Journey Mapping](./assets/needfinding/User%20Journey%20Mapping%202%20AW.png)
+
 ### Empathy Mapping
