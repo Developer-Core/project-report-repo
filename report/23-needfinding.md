@@ -48,6 +48,17 @@ Importancia: Escala de 1 a 5 (1 = Poco importante / Prescindible, 5 = Crítica /
 | **15. Recordar fechas de entrega prometidas** | 5 | 5 | 4 | 5 |
 
 
+
+#### Escala utilizada
+
+| Valor | Frecuencia | Importancia |
+|:---:|:---|:---|
+| **5** | Varias veces al día | Crítica / Indispensable |
+| **4** | A diario | Muy importante |
+| **3** | 2-3 veces por semana | Moderadamente importante |
+| **2** | Semanalmente | Poco importante |
+| **1** | Rara vez (mensual o menos) | Prescindible |
+
 ### User Journey Mapping
 
 ### Empathy Mapping
