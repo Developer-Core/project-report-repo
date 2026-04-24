@@ -127,7 +127,7 @@ WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes 
     </tr>
     <tr>
       <td class="member-photo"><img src="report/assets/members/juan-saldaña.jpeg" alt="Foto de Saldaña De Souza, Juan David"></td>
-      <td><strong>Saldaña De Souza, Juan David -- U20221F192</strong><br><br><em>Mi nombre es Juan David, tengo 20 años y estoy cursando la carrera de Ingeniería de Software en la UPC. Me considero una persona dedicada y analítica en los proyectos que requieren un enfoque técnico sólido. Tengo habilidades enfocadas en la resolución de problemas y el desarrollo eficiente, apoyando siempre a mi equipo para lograr un software de calidad. Mis conocimientos se centran en Java, C++ y Python, acompañados de frameworks y herramientas para desarrollo web como Astro.js y Svelte. De la misma forma, manejo SQL Server, MongoDB, redes y algoritmos de complejidad. Algunos de mis hobbies son los videojuegos y la tecnología.</em></td>
+      <td><strong>Saldaña De Souza, Juan David -- U20221F192</strong><br><br><em>Descripción.</em></td>
     </tr>
     <tr>
       <td class="member-photo"><img src="report/assets/members/piero-sulca.jpg" alt="Foto de Sulca Sanchez, Piero Angel"></td>
@@ -296,87 +296,488 @@ Aquí se presenta el Lean UX Canvas desarrollado para **Alimenta**:
 </div>
 
 **Enlace al Lean UX Canvas:** https://miro.com/welcomeonboard/ZVFaMVdKblhINnB5d1dnbWcxT2RLZ3ZjVFlQNWpsS2VKLzVQQ3dQMWUxS1pkY3hJbStyWENZNnc1cjIvd01lNkltV283MkVGRUM3MS94a1Q0dXp4U3QzclBsK0ZrZ24zQXZhRG14blV5YXdtMUlaMlV5alRXNTFMT21PL0tXbzJzVXVvMm53MW9OWFg5bkJoVXZxdFhRPT0hdjE=?share_link_id=533296594528
+# Product Design
 
+## Style Guidelines
 
+### General Style Guidelines
 
+#### Branding
 
+La identidad visual de WoodRoute refleja los valores del producto: calidez, precisión y confianza.
+Cada decisión de diseño está enraizada en el mundo del carpintero: la textura de la madera, la
+calidez del material natural y la claridad de un proceso bien organizado.
 
+El branding abarca la identidad completa de la marca: el logo, el sistema de colores, la tipografía,
+el tono de comunicación y los principios que guían cómo el producto se ve, se siente y habla.
+No es solo el logo, es la suma de todas las decisiones que hacen que WoodRoute sea reconocible
+y coherente en cualquier punto de contacto con el usuario.
 
+El logo combina un símbolo que evoca la veta de la madera con la idea de rutas o caminos,
+representando el flujo de trabajo del taller. El wordmark utiliza la fuente de display del sistema
+tipográfico en peso ExtraBold para transmitir solidez y presencia.
 
+![Logo de WoodRoute](report/assets/logo-woodroute.png)
 
+Los tres principios que guían todas las decisiones de diseño son:
 
+**Calidez con contraste** — Los fondos y superficies usan tonos cálidos que evocan la madera
+natural (beige, crema, marrón claro). El color primario de acción (`#FD4319`, naranja-rojo) rompe
+intencionalmente esa calidez para señalizar con claridad qué debe hacer el usuario a continuación.
+La tensión entre el fondo cálido y el CTA energético crea jerarquía visual sin necesidad de texto
+adicional.
 
-### 5.2.1. Sprint 1
+**Claridad funcional** — Los artesanos trabajan con las manos, no con pantallas. La interfaz elimina
+el ruido visual y prioriza la información que importa: el estado del pedido, el inventario disponible,
+la viabilidad del mueble.
 
-En este primer sprint se desarrolló la landing page y la documentación inicial del proyecto WoodRoute.
+**Confianza ganada** — WoodRoute no impone: acompaña. El diseño respeta el saber del carpintero.
+No reemplaza su criterio, lo amplifica con datos.
 
-#### 5.2.1.1. Sprint Planning 1
+#### Tono de comunicación
 
-| Sprint # | Sprint 1 |
-| :--- | :--- |
-| **Sprint Planning Background** | |
-| Date | 10/04/2026 |
-| Time | 3:30 PM |
-| Location | Google Meet |
-| Prepared By | Torres Sanchez, Dalila Victoria |
-| Attendees (to planning meeting) | Gonza Morales, Anderson<br>Justo Yauricasa, Alexander Paolo<br>Saldaña De Souza, Juan David<br>Sulca Sanchez, Piero Angel<br>Torres Sanchez, Dalila Victoria |
-| **Sprint 1 Review Summary** | Durante este sprint, el equipo se enfocó en sentar las bases estratégicas del proyecto WoodRoute. Se completaron entregables clave de UX como User Personas, Journey Maps y la arquitectura de información, que guiaron el diseño de la plataforma. Con esta base, se diseñó, maquetó y desplegó la primera versión funcional de la landing page. Esta página incluye la propuesta de valor del SaaS, los planes de suscripción y una sección que destaca los beneficios para carpinteros y clientes finales. |
-| **Sprint 1 Retrospective Summary** | Los miembros del equipo coincidieron en que la colaboración fue fluida gracias a la correcta asignación de roles. Se destacó la sinergia entre el diseño en Figma y la configuración inicial de los repositorios. Para el siguiente sprint, se identificó la oportunidad de mejorar la estimación de tiempos de desarrollo al iniciar la integración del backend. |
-| **Sprint Goal & User Stories** | |
-| **Sprint 1 Goal** | Nos enfocamos en entregar una primera versión de la landing page desplegada y la documentación de los primeros capítulos del informe. Creemos que esto entrega una propuesta de valor validada para atraer a nuestro segmento objetivo. Esto se confirmará cuando la web esté pública y el informe sea aprobado. |
-| **Sprint 1 Velocity** | 20 |
-| **Sum of Story Points** | 20 |
+WoodRoute habla de carpintero a carpintero. No usa lenguaje corporativo ni tecnicismos innecesarios.
+El tono está posicionado en cuatro dimensiones que definen la personalidad de la marca:
 
-#### 5.2.1.2. Aspect Leaders and Collaborators
+| Dimensión | Posición | Descripción |
+|---|---|---|
+| Divertido / Serio | 65% Serio | El producto resuelve problemas reales de negocio. El tono es directo y profesional, sin exceso de formalidad. |
+| Formal / Casual | 60% Casual | Habla al carpintero como a un igual, sin jerarquía corporativa. Directo y accesible. |
+| Respetuoso / Irreverente | 80% Respetuoso | Respeto profundo por el oficio. El carpintero es el experto; WoodRoute es su asistente. |
+| Entusiasta / Sereno | 55% Sereno | Confianza tranquila. Los resultados hablan por sí solos, sin signos de exclamación vacíos. |
 
-| Team Member | GitHub Username | Landing Page | Diseño UI/UX | Documentación |
-| :--- | :--- |:-------------| :--- | :--- |
-| Gonza Morales, Anderson | anderson-gonza | Colaborador  | Colaborador | Colaborador |
-| Justo Yauricasa, Alexander Paolo | alexander-justo | Colaborador  | Colaborador | Líder |
-| Saldaña De Souza, Juan David | jndesouza | Colaborador  | Colaborador | Colaborador |
-| Sulca Sanchez, Piero Angel | piero-sulca | Lider        | Líder | Colaborador |
-| Torres Sanchez, Dalila Victoria | dalila-torres | Colaborador  | Colaborador | Colaborador |
+Las reglas de lenguaje derivadas de este posicionamiento son:
 
-#### 5.2.1.3. Sprint Backlog 1
+- Español neutro sin regionalismos ni voseo
+- Imperativo universal: "Registra", "Selecciona", "Confirma"
+- Mensajes de error directos y accionables: "Selecciona un material para continuar"
+- Placeholders descriptivos: "¿Cuántos tablones necesitas?"
+- Botones en infinitivo o imperativo neutro: "Crear pedido", "Ver inventario"
+- Evitar exclamaciones vacías: "¡Genial!", "¡Listo!", "¡Perfecto!"
 
-| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation | Assigned To | Status |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| US-LP01 | Landing Page – Estructura inicial | T01 | Maquetado HTML base | Construcción de la estructura inicial: header, hero section y footer. | 8h | Piero Sulca | Done |
-| US-LP02 | Landing Page – Diseño visual | T02 | Aplicación de estilos CSS | Implementación de estilos visuales según el manual de marca. | 10h | Piero Sulca | Done |
-| US-LP03 | Arquitectura y Entorno | T03 | Configuración del proyecto | Creación de repositorios y definición de la arquitectura base. | 4h | Juan David Saldaña | Done |
-| US-LP04 | Contenido estratégico UX | T04 | User Personas & Journey Maps | Creación de perfiles de usuarios y Lean UX Canvas. | 6h | Alexander Justo | Done |
-| US-LP05 | Diagramas de Arquitectura | T05 | Definición de C4 Model | Diseño de arquitectura Context y Container Diagrams. | 5h | Juan David Saldaña | Done |
-| US-LP06 | Despliegue de la web | T06 | Configuración de Hosting | Publicación del sitio estático en GitHub Pages. | 4h | Dalila Torres | Done |
-| US-INF01 | Documentación del informe | T07 | Redacción Capítulos Iniciales | Startup Profile, UX Research y estructura del informe. | 10h | Equipo Completo | Done |
+#### Sistema de colores
 
-#### 5.2.1.4. Development Evidence for Sprint Review
+La paleta de WoodRoute combina dos decisiones visuales complementarias: fondos cálidos que
+evocan la madera natural, y un color primario de acción fuerte y directo. Esta tensión entre
+la calidez del fondo y la energía del primario crea jerarquía visual inmediata: el usuario sabe
+exactamente dónde hacer clic.
 
-En este primer Sprint hemos realizado la implementación de nuestra Landing Page y la configuración inicial de los repositorios, donde todo el equipo ha aportado mediante la gestión de ramas. En la siguiente tabla se muestran los commits realizados.
+Los tokens semánticos son el nivel de abstracción que conecta la paleta con los componentes.
+La interfaz nunca referencia valores de color crudos: siempre usa tokens.
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Developer-Core/WoodRoute-Landing | main | 15ad028 | Initial commit | Initial commit | 10/04/2026 |
-| Developer-Core/WoodRoute-Landing | main | 33ad2a9 | Actualización de index.html | Agregado de estilos principales y la vista de la propuesta de valor. | 12/04/2026 |
-| Developer-Core/WoodRoute-Landing | main | 3694000 | Configuración de assets y diagramas | Se incluyeron los diagramas y el esquema inicial en los assets. | 14/04/2026 |
+![Paleta de colores de WoodRoute](report/assets/style-color-palette.png)
 
-#### 5.2.1.5. Execution Evidence for Sprint Review
+**Colores de marca:**
 
+| Token | Hex | Uso |
+|---|---|---|
+| `--color-background` | `#FAF7F2` | Fondo de la página |
+| `--color-foreground` | `#1A1715` | Texto principal |
+| `--color-primary` | `#FD4319` | Acciones principales, CTAs |
+| `--color-primary-hover` | `#E23415` | Estado hover del primario |
+| `--color-primary-foreground` | `#FFFFFF` | Texto sobre color primario |
+| `--color-brand-light` | `#F0E4D8` | Fondos de marca con énfasis |
+| `--color-brand-subtle` | `#F8F2EC` | Fondos de marca sutiles |
 
+**Colores de UI:**
 
+| Token | Hex | Uso |
+|---|---|---|
+| `--color-card` | `#FFFFFF` | Fondo de cards y paneles |
+| `--color-card-foreground` | `#1A1715` | Texto sobre cards |
+| `--color-secondary` | `#F0E8DF` | Acciones secundarias |
+| `--color-secondary-foreground` | `#443218` | Texto sobre secundario |
+| `--color-muted` | `#EAE2D6` | Fondos neutrales |
+| `--color-muted-foreground` | `#63523A` | Texto de soporte, placeholders |
+| `--color-accent` | `#E6DDD1` | Destacados sutiles |
+| `--color-accent-foreground` | `#443218` | Texto sobre accent |
+| `--color-border` | `#D6C5B3` | Bordes y separadores |
+| `--color-ring` | `#FD4319` | Outline de focus |
 
+**Colores de estado:**
 
+| Token | Hex | Uso |
+|---|---|---|
+| `--color-destructive` | `#C0392B` | Errores, acciones irreversibles |
+| `--color-destructive-foreground` | `#FFFFFF` | Texto sobre destructive |
 
+#### Tipografía
 
+El sistema tipográfico usa dos fuentes complementarias:
 
+**Plus Jakarta Sans** es la fuente de display para títulos y encabezados. Geométrica y moderna, con
+personalidad definida sin perder legibilidad. Transmite innovación y solidez. Se aplica en todos los
+elementos de heading (h1–h6) con `font-weight` semibold o superior.
 
+**Inter** es la fuente de cuerpo para texto corrido, UI y datos. Optimizada para lectura en pantalla
+a cualquier tamaño. Neutral y funcional, no compite con los títulos.
 
+![Specimen tipográfico](report/assets/style-typography-specimen.png)
 
+La escala tipográfica define tamaños, pesos e interlineado para cada nivel jerárquico:
 
+| Token | Tamaño | Px | Uso típico |
+|---|---|---|---|
+| `--font-size-6xl` | 3.75rem | 60px | Hero principal de landing |
+| `--font-size-5xl` | 3rem | 48px | H1 de sección |
+| `--font-size-4xl` | 2.25rem | 36px | H2 de sección |
+| `--font-size-3xl` | 1.875rem | 30px | H3 |
+| `--font-size-2xl` | 1.5rem | 24px | H4, subtítulos destacados |
+| `--font-size-xl` | 1.25rem | 20px | Lead text, taglines |
+| `--font-size-lg` | 1.125rem | 18px | Body grande, texto de intro |
+| `--font-size-base` | 1rem | 16px | Body estándar |
+| `--font-size-sm` | 0.875rem | 14px | UI labels, captions |
+| `--font-size-xs` | 0.75rem | 12px | Badges, metadatos |
 
+Los pesos tipográficos disponibles y su uso son:
 
+| Peso | Valor | Uso |
+|---|---|---|
+| ExtraBold | 800 | Logo wordmark, hero headlines |
+| Bold | 700 | H1, H2, énfasis crítico |
+| SemiBold | 600 | H3, H4, botones |
+| Medium | 500 | Labels, navegación |
+| Regular | 400 | Body, texto corrido |
 
+El interlineado varía según el contexto de lectura:
 
+| Token | Valor | Uso |
+|---|---|---|
+| `tight` (1.2) | 1.2 | Títulos grandes, donde el espacio vertical es limitado |
+| `snug` (1.35) | 1.35 | Subtítulos, texto de UI compacto |
+| `normal` (1.5) | 1.5 | Body estándar, párrafos de contenido |
+| `relaxed` (1.7) | 1.7 | Texto de lectura larga, artículos |
 
+#### Espaciado
+
+El espaciado base sigue la escala de Tailwind (múltiplos de 4px). Adicionalmente, se definen
+dos tokens de sección para controlar la separación vertical entre bloques de contenido en la interfaz:
+
+![Escala de espaciado](report/assets/style-spacing-scale.png)
+
+| Token | Valor | Px | Uso |
+|---|---|---|---|
+| `--spacing-section` | 6rem | 96px | Separación entre secciones en desktop |
+| `--spacing-section-sm` | 4rem | 64px | Separación entre secciones en mobile |
+
+### Web Style Guidelines
+
+#### Border radius
+
+![Border radius tokens de WoodRoute](report/assets/style-border-radius.png)
+
+El sistema de radios define la personalidad de los componentes. WoodRoute usa radios moderados:
+ni completamente cuadrado (frío, técnico) ni completamente redondo (demasiado informal). La
+esquina redondeada evoca la madera trabajada y lijada.
+
+| Token | Valor | Uso |
+|---|---|---|
+| `--radius-sm` | 0.375rem | Badges, chips, tooltips |
+| `--radius-md` | 0.5rem | Inputs, botones pequeños |
+| `--radius-lg` | 0.75rem | Cards, modales |
+| `--radius-xl` | 1rem | Cards destacadas, paneles |
+| `--radius-full` | 9999px | Avatares, toggles pill |
+
+#### Sombras
+
+Las sombras usan el color del foreground con opacidad controlada, manteniendo la temperatura
+cálida del sistema. Definen la jerarquía de elevación de los elementos en el plano Z:
+
+![Escala de sombras](report/assets/style-shadow-scale.png)
+
+| Token | Elevación | Uso |
+|---|---|---|
+| `--shadow-sm` | 1px, 6% opacidad | Inputs en foco, separadores sutiles |
+| `--shadow-md` | 4px, 8% opacidad | Cards, dropdowns |
+| `--shadow-lg` | 8px, 10% opacidad | Modales, sidebars, popovers |
+| `--shadow-xl` | 16px, 12% opacidad | Overlays, drawers, banners flotantes |
+
+#### Diseño responsive
+
+La interfaz sigue la estrategia mobile-first: los estilos base se definen para mobile y se
+sobreescriben hacia arriba con media queries. Los breakpoints siguen la escala estándar de
+Tailwind CSS:
+
+![Breakpoints responsive](report/assets/style-responsive-breakpoints.png)
+
+| Breakpoint | Ancho mínimo | Contexto |
+|---|---|---|
+| `sm` | 640px | Smartphones grandes |
+| `md` | 768px | Tablets en portrait |
+| `lg` | 1024px | Tablets en landscape, laptops |
+| `xl` | 1280px | Desktops |
+| `2xl` | 1536px | Pantallas grandes |
+
+Los patrones responsive principales que aplican a la landing y la web app son:
+
+- **Grids**: colapsan de multi-columna a una sola columna por debajo de `md`
+- **Navegación**: menú hamburguesa por debajo de `md`, barra horizontal desde `md`
+- **Secciones**: `--spacing-section-sm` (4rem) en mobile, `--spacing-section` (6rem) en desktop
+- **Tipografía**: escala reducida en mobile (H1 baja de `5xl` a `4xl`, hero de `6xl` a `5xl`)
+- **Imágenes**: `max-width: 100%` en todos los elementos `img` y `svg` por defecto
+
+## Information Architecture
+
+Las decisiones de arquitectura de información de WoodRoute están orientadas a dos
+experiencias distintas con objetivos complementarios: la landing page, enfocada en
+convertir visitantes en usuarios, y la aplicación web, enfocada en que carpinteros
+gestionen su taller con la menor fricción posible. En ambos casos, el principio rector
+es que el usuario encuentre lo que necesita sin esfuerzo y sin necesidad de instrucción.
+
+### Organization Systems
+
+El contenido de WoodRoute se organiza según el contexto de uso de cada superficie.
+
+**Landing Page — organización secuencial y jerárquica**
+
+La landing page sigue una organización **secuencial** (step-by-step): el visitante
+recorre una narrativa de problema → solución → beneficios → prueba social → acción.
+Cada sección responde a una pregunta implícita del visitante antes de que la formule.
+El orden no es arbitrario: primero se valida el dolor (el caos del taller), luego se
+presenta la solución, luego se justifica la confianza. Esta progresión reduce la
+resistencia a la conversión.
+
+Dentro de cada sección, la organización es **jerárquica**: el mensaje principal ocupa
+el nivel tipográfico más alto, los detalles de soporte están en niveles inferiores y las
+acciones secundarias nunca compiten visualmente con el CTA primario.
+
+**Aplicación web — organización por tópicos y por audiencia**
+
+La aplicación organiza el contenido **por tópicos funcionales** que mapean directamente
+al flujo de trabajo del carpintero:
+
+| Módulo | Tópico | Audiencia |
+|---|---|---|
+| Pedidos | Gestión del ciclo de vida de un pedido | Carpintero |
+| Inventario | Control de materiales y stock | Carpintero |
+| Planificación | Viabilidad, tiempos y capacidad | Carpintero |
+| Seguimiento | Estado de producción en tiempo real | Cliente final |
+
+La organización **por audiencia** se aplica en el acceso: el carpintero entra con
+credenciales propias y tiene acceso completo al sistema; el cliente accede mediante
+un enlace compartido y ve únicamente la vista de seguimiento de su pedido, sin
+necesidad de registro.
+
+Dentro de los listados (pedidos, materiales), el contenido se organiza de forma
+**cronológica inversa** por defecto: los elementos más recientes aparecen primero,
+reflejando el flujo natural de trabajo donde el carpintero atiende los pedidos activos
+antes que los históricos.
+
+### Labeling Systems
+
+Las etiquetas de WoodRoute siguen el principio de mínima carga cognitiva: una palabra
+cuando es suficiente, dos cuando es necesario para evitar ambigüedad. Se usa el
+vocabulario del carpintero, no el vocabulario técnico del software.
+
+**Navegación principal de la aplicación:**
+
+| Etiqueta | Concepto que representa |
+|---|---|
+| Pedidos | Listado y gestión de órdenes de fabricación |
+| Inventario | Stock de materiales disponibles |
+| Planificación | Asistente de viabilidad y estimación de tiempos |
+| Clientes | Directorio de clientes y sus pedidos asociados |
+| Configuración | Datos del taller, usuarios y preferencias |
+
+**Estados de un pedido:**
+
+| Etiqueta | Significado |
+|---|---|
+| Pendiente | Pedido recibido, aún no iniciado |
+| En producción | Fabricación en curso |
+| En revisión | Control de calidad antes de entrega |
+| Listo | Pedido terminado, pendiente de entrega o retiro |
+| Entregado | Proceso completado |
+
+**Inventario:**
+
+| Etiqueta | Significado |
+|---|---|
+| Disponible | Material con stock suficiente |
+| Stock bajo | Material cerca del mínimo definido |
+| Sin stock | Material agotado, bloquea nuevos pedidos |
+
+**Landing page (secciones visibles en navegación):**
+
+| Etiqueta | Contenido |
+|---|---|
+| Inicio | Hero y propuesta de valor |
+| Funciones | Features del producto |
+| Cómo funciona | Flujo paso a paso |
+| Precios | Planes y comparativa |
+| Preguntas frecuentes | FAQ |
+
+### SEO Tags and Meta Tags
+
+**Landing Page**
+
+```html
+<title>WoodRoute — Gestión de pedidos y taller para carpinteros</title>
+<meta name="description"
+  content="WoodRoute organiza tu taller de carpintería: gestiona pedidos,
+  controla materiales y ofrece seguimiento en tiempo real a tus clientes.
+  Empieza gratis." />
+<meta name="keywords"
+  content="gestión de taller, software para carpinteros, control de pedidos
+  carpintería, inventario madera, seguimiento de pedidos, SaaS carpintería" />
+<meta name="author" content="WoodRoute" />
+<meta property="og:title" content="WoodRoute — Gestión de taller para carpinteros" />
+<meta property="og:description"
+  content="Organiza tus pedidos, controla tu inventario y mantén a tus clientes
+  informados en tiempo real. Sin complicaciones." />
+<meta property="og:type" content="website" />
+```
+
+**Aplicación web (página de login / acceso)**
+
+```html
+<title>Ingresar — WoodRoute</title>
+<meta name="description"
+  content="Accede a tu cuenta de WoodRoute para gestionar tu taller de carpintería." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="author" content="WoodRoute" />
+```
+
+**Vista de seguimiento pública (compartida con clientes)**
+
+```html
+<title>Seguimiento de pedido — WoodRoute</title>
+<meta name="description"
+  content="Consulta el estado de fabricación de tu mueble en tiempo real." />
+<meta name="robots" content="noindex, nofollow" />
+```
+
+Las páginas internas de la aplicación (pedidos, inventario, planificación) usan
+`noindex, nofollow` ya que son contenido privado detrás de autenticación. Solo la
+landing page está indexada para motores de búsqueda.
+
+### Searching Systems
+
+WoodRoute ofrece búsqueda y filtrado en los módulos donde el volumen de información
+puede desorientar al usuario. El sistema no expone un buscador global: cada módulo
+tiene su propio mecanismo de búsqueda contextual.
+
+**Módulo de Pedidos**
+
+El usuario puede buscar por nombre de cliente, número de pedido o descripción del
+mueble. Los resultados se muestran en tiempo real (búsqueda reactiva sin necesidad
+de enviar el formulario). Los filtros disponibles son:
+
+| Filtro | Opciones |
+|---|---|
+| Estado | Pendiente / En producción / En revisión / Listo / Entregado |
+| Fecha de creación | Rango de fechas |
+| Cliente | Selección desde directorio |
+
+Los resultados muestran: nombre del cliente, descripción del mueble, estado actual
+(con etiqueta de color) y fecha estimada de entrega.
+
+**Módulo de Inventario**
+
+El usuario puede buscar materiales por nombre o tipo. Los filtros disponibles son:
+
+| Filtro | Opciones |
+|---|---|
+| Estado de stock | Disponible / Stock bajo / Sin stock |
+| Tipo de material | Madera / Herrajes / Acabados / Otros |
+
+Los resultados muestran: nombre del material, unidad de medida, cantidad disponible
+y estado de stock (con etiqueta de color). Los materiales con stock bajo aparecen
+destacados al inicio del listado sin necesidad de filtrar, como alerta proactiva.
+
+**Módulo de Clientes**
+
+Búsqueda por nombre o contacto. Sin filtros adicionales dado el volumen acotado
+esperado en talleres pequeños. Los resultados muestran nombre, contacto y cantidad
+de pedidos activos.
+
+**Vista de seguimiento pública**
+
+No requiere búsqueda: el cliente accede mediante un enlace único que lleva directamente
+al estado de su pedido. No hay navegación ni descubrimiento de contenido en esta vista.
+
+### Navigation Systems
+
+**Landing Page**
+
+La navegación de la landing sigue un modelo de **scroll lineal con anclas**: el menú
+superior fija las secciones principales y permite saltar directamente a cualquier punto.
+En mobile, el menú colapsa en un panel lateral (hamburguesa). El CTA principal
+("Empieza gratis") está fijo en el navbar para que esté siempre accesible sin importar
+la posición del scroll.
+
+El flujo de navegación esperado es:
+
+```
+Navbar → Hero → Funciones → Cómo funciona → Precios → FAQ → CTA final
+```
+
+Los usuarios que llegan con intención directa (ej. desde un anuncio) aterrizan en el
+hero y pueden ir directo al CTA. Los usuarios exploratorios recorren las secciones de
+forma descendente. Ambos flujos convergen en el mismo punto de conversión.
+
+**Aplicación web**
+
+La aplicación usa una **navegación lateral persistente** (sidebar) en desktop y una
+**barra inferior** en mobile, siguiendo convenciones establecidas de aplicaciones de
+gestión que el usuario ya conoce.
+
+El sidebar muestra los cinco módulos principales con íconos y etiquetas. El módulo
+activo se indica con el color primario. Las acciones de creación (nuevo pedido, nuevo
+material) están disponibles desde un botón prominente dentro de cada módulo, no
+desde la navegación global.
+
+La jerarquía de navegación es de dos niveles máximo:
+
+```
+Nivel 1 (sidebar): Pedidos / Inventario / Planificación / Clientes / Configuración
+Nivel 2 (dentro del módulo): Listado → Detalle / Formulario de creación o edición
+```
+
+No existe un nivel 3. Si una acción requeriría un tercer nivel, se implementa como
+modal o panel lateral (drawer) sobre el nivel 2 actual, manteniendo el contexto del
+usuario visible.
+
+**Vista de seguimiento pública**
+
+Es una experiencia de una sola página sin navegación. El cliente ve el estado actual
+del pedido, el historial de estados anteriores y los datos del mueble. No hay menú,
+no hay links a otras secciones, no hay posibilidad de confundirse. El único punto de
+salida opcional es un link al sitio de WoodRoute para que el cliente conozca el producto.
+
+## Landing Page UI Design
+
+### Landing Page Wireframe
+
+### Landing Page Mock-up
+
+El mock-up de la landing page de WoodRoute aplica el design system definido en la
+sección anterior: tipografía Plus Jakarta Sans / Inter, paleta cálida con primario
+naranja-rojo `#FD4319` y espaciado de sección de 6rem en desktop y 4rem en mobile.
+
+La página está estructurada en ocho secciones en el siguiente orden:
+
+1. **Hero** — propuesta de valor principal con CTA "Empieza gratis" y vista previa del dashboard
+2. **Features** — grilla de beneficios clave del producto
+3. **How it works** — flujo numerado de 4 pasos: registrar pedido → validar viabilidad → producir → cliente sigue el avance
+4. **Social proof** — demostración de la vista de seguimiento para el cliente final
+5. **Pricing** — tres planes (Free $0 / Pro $19 / Business $39) con comparativa
+6. **FAQ** — preguntas frecuentes expandibles
+7. **Team** — equipo detrás de WoodRoute
+8. **Footer** — links, redes y legal
+
+**Vista desktop**
+
+![Mock-up landing page — desktop](report/assets/desktop.png)
+
+**Vista mobile**
+
+![Mock-up landing page — mobile](report/assets/mobile.png)
+
+La versión mobile mantiene la misma jerarquía de contenido que desktop. Las grillas
+de features colapsan a una columna, el navbar se convierte en menú hamburguesa y
+el CTA de conversión permanece visible y accesible en todo momento. El espaciado
+entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm`.
 
 <h1>Bibliografía</h1>
 

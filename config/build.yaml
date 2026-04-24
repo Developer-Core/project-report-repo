@@ -5,6 +5,9 @@ input-files:
   - report/10-student-outcome.md
   - report/12-startup-profile.md
   - report/13-solution-profile.md
+  - report/41-style-guidelines.md
+  - report/42-information-architecture.md
+  - report/43-landing-page-ui-design.md
   - report/98-bibliografia.md
 
 file-scope: true
