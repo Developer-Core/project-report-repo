@@ -32,4 +32,101 @@
 
 ### Registro de entrevistas
 
+#### Segmento 1: Carpintero/Taller
+
+**Entrevista 1**
+
+**Entrevistador:** Anderson Gonza Morales
+
+**Entrevistado:** Victor Garcia
+
+**Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQBIxTsDiMoMQ7UmxqokSxBtAbzjckIXgF8fW8kP5-aSU14?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LRldwg>
+
+<div align="center">
+  <img src="report/assets/members/carp_1.png" alt="Entrevista_carp 1" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+La entrevista realizada a un Maestro de carpintería independiente, menciona que la gestión de pedidos se realiza principalmente mediante WhatsApp y anotaciones manuales en un cuaderno. El calcula cuanto materiales y el tiempo que tomara hacer el mueble, se basa en la experiencia de años en el rubro. Tambien menciona que aveces compra se le escapa y compra una pieza menos o mas de material. Además, la comunicación se hace mediante fotos por WhatsApp. El entrevistado considera que si le seria util una herramienta que le ayude hacer todo lo mencionada anteriormente.
+
+**Entrevista 2**
+
+**Entrevistador:** Anderson Gonza Morales
+
+**Entrevistado:** Marco
+
+**Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQA-72r7kw1ETKLhkTOknwcFAfMyGR4WulQY5KCh3gmHGxo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=lJhikH>
+
+<div align="center">
+  <img src="report/assets/members/carp_2.png" alt="Entrevista_carp 2" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+La entrevista realizada a un ayudante de carpintería evidencio que la gestión de pedidos se realiza principalmente mediante WhatsApp y anotaciones manuales, sin el uso de herramientas digitales especializadas. Las decisiones sobre materiales y tiempos se basan en la experiencia del maestro. MEnciona que algunas veces hay retrasos por falta de material al hacer un mal calculo y problemas como falta de stock durante la producción. Además, la comunicación con los clientes que solicitan actualizaciones se hace mediante fotos por WhatsApp. En este contexto, el entrevistado considero que una aplicación que apoye en la planificación, cálculo de materiales y estimación de tiempos sería de gran utilidad para mejorar la organización y eficiencia del trabajo.
+
+**Entrevista 3**
+
+**Entrevistador:** Anderson Gonza Morales
+
+**Entrevistado:** Ronaldo
+
+**Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQChpwCTvVG-TJqmM0qE2yvnAWHSrGpBMxOBJK0kUSS8z88?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=g0kCLa>
+
+<div align="center">
+  <img src="report/assets/members/carp_3.png" alt="Entrevista_carp 3" width="100%">
+</div>
+
+**Resumen de la entrevista:**
+La entrevista a un joven carpintero que trabaja junto a su padre evidenció que la gestión de pedidos se realiza principalmente mediante WhatsApp y registros manuales, sin herramientas digitales especializadas. Las decisiones sobre materiales y tiempos se basan en la experiencia del maestro, lo que en ocasiones genera errores como falta de material y retrasos en la entrega. Además, el control de inventario es visual y poco preciso, y la comunicación con los clientes es mayormente reactiva. El entrevistado considera que una aplicación que permita calcular materiales, estimar tiempos y validar la viabilidad de los muebles sería de gran utilidad para mejorar la organización y eficiencia del taller.
+
+#### Segmento 2: Cliente
+
+**Entrevista 1**
+
+**Entrevistador:** Juan David Saldaña De Souza
+
+**Entrevistado:** Eduardo Rojas
+
+**Link de la entrevista:** <enlace del video>
+
+<div align="center">
+  <img src="imagen" alt="Entrevista_cliente 1" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+
+En la primera entrevista, el cliente Eduardo Alonso, estudiante residente del distrito de Magdalena, indicó haber tenido una experiencia "regular" al mandar a fabricar un escritorio. Mencionó que enfrentó problemas de comunicación, percibió un trato poco amable por parte del carpintero y experimentó retrasos en la entrega final. Además, señaló que la selección adecuada de materiales y asegurar que el resultado reflejara su idea inicial fueron los aspectos más complicados del proceso. Para generar confianza, el entrevistado requiere respuestas rápidas y evidencia visual del avance, por lo que consideró sumamente útil la implementación de un enlace de seguimiento automático y afirmó estar dispuesto a pagar un monto adicional por un servicio premium que mejore la comunicación y el monitoreo de su pedido.
+
+
+**Entrevista 2**
+
+**Entrevistador:** Juan David Saldaña De Souza
+
+**Entrevistado:** Joseph Rodriguez
+
+**Link de la entrevista:** <enlace del video>
+
+<div align="center">
+  <img src="imagen" alt="Entrevista_cliente 2" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+
+En la segunda entrevista, el cliente Joseph Rodriguez, estudiante de Ingeniería de Software de 21 años, relató ser un consumidor recurrente de muebles a medida debido a la distribución inusual de su hogar, describiendo el proceso general como grato pero lento. Identificó como sus principales dificultades el lograr transmitir la idea exacta del diseño con las medidas precisas al fabricante y tener que lidiar con pequeños retrasos recurrentes en las entregas. Asimismo, el entrevistado expresó que solicitar actualizaciones constantemente por WhatsApp le resulta tedioso y monótono, por lo que valoraría contar con un enlace que detalle la fase exacta de fabricación de su pedido. Finalmente, indicó que pagaría un costo extra por este seguimiento detallado, pero condicionó este pago a que la empresa ya cuente con una sólida reputación, reseñas comprobables y un portafolio de trabajos previos.
+
+**Entrevista 3**
+
+**Entrevistador:** 
+
+**Entrevistado:** 
+
+**Link de la entrevista:** <enlace del video>
+
+<div align="center">
+  <img src="imagen" alt="Entrevista_cliente 3" width="100%">
+</div>
+
+**Resumen de la entrevista:**
+
+
 ### Análisis de entrevistas
