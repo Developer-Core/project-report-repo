@@ -297,6 +297,86 @@ Aquí se presenta el Lean UX Canvas desarrollado para **Alimenta**:
 
 **Enlace al Lean UX Canvas:** https://miro.com/welcomeonboard/ZVFaMVdKblhINnB5d1dnbWcxT2RLZ3ZjVFlQNWpsS2VKLzVQQ3dQMWUxS1pkY3hJbStyWENZNnc1cjIvd01lNkltV283MkVGRUM3MS94a1Q0dXp4U3QzclBsK0ZrZ24zQXZhRG14blV5YXdtMUlaMlV5alRXNTFMT21PL0tXbzJzVXVvMm53MW9OWFg5bkJoVXZxdFhRPT0hdjE=?share_link_id=533296594528
 
+### 2.2. Entrevistas.
+
+#### 2.2.1. Diseño de entrevistas.
+
+### SEGMENTO 1: Carpintero / Taller
+
+¿Cómo gestionas actualmente tus pedidos de muebles?
+
+¿Qué pasos sigues desde que recibes un pedido hasta la entrega?
+
+¿Usas alguna herramienta (cuaderno, Excel, WhatsApp)? ¿Cuál?
+
+¿Cómo decides si puedes hacer un mueble con los materiales que tienes?
+
+¿Cómo calculas la cantidad de material que vas a necesitar?
+
+¿Te ha pasado que te falta material durante un trabajo? ¿Qué ocurrió?
+
+¿Cómo estimas cuánto tiempo te tomará hacer un mueble?
+
+¿Sueles retrasarte en las entregas? ¿Por qué razones?
+
+¿Trabajas solo o con un equipo? ¿Cómo organizan el trabajo?
+
+¿Cómo controlas tu inventario de madera o materiales?
+
+¿Cómo informas a tus clientes sobre el avance de sus pedidos?
+
+¿Te sería útil una app que calcule materiales, estime tiempos y te diga si un mueble es viable? ¿Por qué?
+
+
+### SEGMENTO 2: Cliente
+
+¿Has mandado a hacer un mueble alguna vez? ¿Cómo fue tu experiencia?
+
+¿Qué fue lo más difícil o incómodo durante el proceso?
+
+¿El carpintero cumplió con el tiempo de entrega?
+
+¿Tuviste que preguntar varias veces por el estado del mueble?
+
+¿Cómo te informaban el avance del trabajo?
+
+¿Te hubiera gustado ver el progreso sin tener que preguntar?
+
+¿Qué te haría confiar más en un carpintero?
+
+¿Te gustaría ver fotos o estados del proceso de fabricación?
+
+¿Te serviría tener un link donde puedas ver el estado de tu pedido?
+
+¿Pagarías un poco más por un servicio con mejor seguimiento y comunicación?
+
+#### 2.2.2. Registro de entrevistas
+
+**Segmento 2:** 
+
+**Entrevista 1:**
+
+![Entrevista 1 - Segmento 2.png](report/assets/Interviews/Entrevista%201%20-%20Segmento%202.png)
+
+Nombre del entrevistado: Eduardo Rojas
+
+Edad: 20 años
+
+Resumen de la entrevista: Eduardo Alonso, estudiante residente del distrito de Magdalena, indicó haber tenido una experiencia "regular" al mandar a fabricar un escritorio. Mencionó que enfrentó problemas de comunicación, percibió un trato poco amable por parte del carpintero y experimentó retrasos en la entrega final. Además, señaló que la selección adecuada de materiales y asegurar que el resultado reflejara su idea inicial fueron los aspectos más complicados del proceso. Para generar confianza, el entrevistado requiere respuestas rápidas y evidencia visual del avance, por lo que consideró sumamente útil la implementación de un enlace de seguimiento automático y afirmó estar dispuesto a pagar un monto adicional por un servicio premium que mejore la comunicación y el monitoreo de su pedido.
+
+Link a la entrevista completa: https://drive.google.com/file/d/14ETbpC-OaXpmp6Nne9q4cWdRk1JviVvI/view?usp=sharing
+
+**Entrevista 2:**
+
+![Entrevista 2 - Segmento 2.png](report/assets/Interviews/Entrevista%202%20-%20Segmento%202.png)
+
+Nombre del entrevistado: Joseph Rodriguez
+
+Edad: 21 años
+
+Resumen de la entrevista: Joseph Rodriguez, estudiante de Ingeniería de Software de 21 años, relató ser un consumidor recurrente de muebles a medida debido a la distribución inusual de su hogar, describiendo el proceso general como grato pero lento. Identificó como sus principales dificultades el lograr transmitir la idea exacta del diseño con las medidas precisas al fabricante y tener que lidiar con pequeños retrasos recurrentes en las entregas. Asimismo, el entrevistado expresó que solicitar actualizaciones constantemente por WhatsApp le resulta tedioso y monótono, por lo que valoraría contar con un enlace que detalle la fase exacta de fabricación de su pedido. Finalmente, indicó que pagaría un costo extra por este seguimiento detallado, pero condicionó este pago a que la empresa ya cuente con una sólida reputación, reseñas comprobables y un portafolio de trabajos previos.
+
+Link a la entrevista completa: https://drive.google.com/file/d/1yprqlqczeSu0gGd91PL32-cKOIW98TKg/view?usp=sharing
 
 
 
