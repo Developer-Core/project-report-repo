@@ -84,4 +84,14 @@ Importancia: Escala de 1 a 5 (1 = Poco importante / Prescindible, 5 = Crítica /
 
 ### User Journey Mapping
 
+En esta sección se presentan los User Journey Maps para los dos segmentos objetivo identificados:
+
+1. Carpintero independiente / pequeño taller (Carlos Gutiérrez)
+
+2. Cliente que manda a hacer el mueble (Valeria Méndez)
+
+El journey representado cubre el end-to-end de la experiencia actual desde que el cliente detecta una necesidad de un mueble personalizado hasta que recibe el producto final y realiza el pago. Se ilustran las etapas, acciones, emociones, puntos de dolor y oportunidades de mejora que posteriormente abordará la plataforma propuesta.
+
+
+
 ### Empathy Mapping
