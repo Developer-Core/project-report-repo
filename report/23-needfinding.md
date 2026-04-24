@@ -106,3 +106,4 @@ Los diagramas fueron elaborados en UXPressia y se adjuntan las capturas a contin
 
 ![Empathy Mapping](./assets/needfinding/Empathy%20mapping%201.png)
 
+![Empathy Mapping](./assets/needfinding/Empathy%20mapping%202.png)
