@@ -8,6 +8,12 @@ input-files:
   - report/41-style-guidelines.md
   - report/42-information-architecture.md
   - report/43-landing-page-ui-design.md
+  - report/51-software-configuration-management.md
+  - report/52-implementacion.md
+  - report/53-sprint-1.md
+  - report/54-sprint-2.md
+  - report/55-sprint-3.md
+  - report/56-sprint-4.md
 
 file-scope: true
 resource-path: [".", "report", "report/assets", "report/annexes"]
