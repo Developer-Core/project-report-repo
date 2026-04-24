@@ -59,6 +59,18 @@ Importancia: Escala de 1 a 5 (1 = Poco importante / Prescindible, 5 = Crítica /
 | **2** | Semanalmente | Poco importante |
 | **1** | Rara vez (mensual o menos) | Prescindible |
 
+
+
+#### Análisis de hallazgos clave
+
+| Hallazgo | Implicancia para la plataforma |
+|:---|:---|
+| Las tareas de **registro de pedidos, consulta de stock y cálculo de tiempos** tienen frecuencia e importancia 5 para el carpintero | El módulo de **planificación y viabilidad** debe ser el núcleo de la plataforma |
+| **Consultar estado del pedido** es frecuencia 5 e importancia 5 para el cliente | El **seguimiento en tiempo real** es una feature crítica, no opcional |
+| **Tomar fotos del proceso** tiene baja importancia para el carpintero (3) pero alta necesidad para el cliente (no lo hace él, pero lo consume) | La plataforma debe **automatizar la captura y asociación de fotos** a cada etapa del pedido, sin esfuerzo extra para el carpintero |
+| **Buscar carpintero confiable y comparar presupuestos** son tareas de alta importancia solo para el cliente | La plataforma podría incluir un **directorio o sistema de reputación** a futuro |
+| **Recordar fechas de entrega** es muy importante para ambos (5 y 5) | El sistema debe tener **alertas automáticas de vencimiento** tanto para carpintero como para cliente |
+
 ### User Journey Mapping
 
 ### Empathy Mapping
