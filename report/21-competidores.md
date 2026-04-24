@@ -25,10 +25,10 @@ En esta sección evaluamos los competidores de nuestro nicho.
       <td align="center">Buildertrend</td>
     </tr>
     <tr>
-      <td valign="top" align="center"><img src="report/assets/members/WoodRoute.png"/></td>
-      <td valign="top" align="center"><img src="report/assets/members/cleri.png"/></td>
-      <td valign="top" align="center"><img src="report/assets/members/craftybase.png"/></td>
-      <td valign="top" align="center"><img src="report/assets/members/buildertrend.png"/></td>
+      <td valign="top" align="center"><img src="assets/members/WoodRoute.png"/></td>
+      <td valign="top" align="center"><img src="assets/members/cleri.png"/></td>
+      <td valign="top" align="center"><img src="assets/members/craftybase.png"/></td>
+      <td valign="top" align="center"><img src="assets/members/buildertrend.png"/></td>
     </tr>
     <tr>
       <td rowspan="2">Perfil</td>
