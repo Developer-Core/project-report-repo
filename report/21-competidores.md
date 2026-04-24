@@ -116,3 +116,20 @@ En esta sección evaluamos los competidores de nuestro nicho.
 </table>
 
 ### Estrategias y tácticas frente a competidores
+
+**Estrategias:**
+
+- Diferenciación mediante especialización en carpinterías y talleres pequeños.
+- Enfoque en apoyo a la toma de decisiones (viabilidad, tiempos y materiales), no solo gestión.
+- Ofrecer una solución integral: pedidos + inventario + planificación + seguimiento al cliente.
+- Priorizar simplicidad y facilidad de uso para usuarios no técnicos.
+- Implementar modelo SaaS freemium para facilitar adopción inicial.
+
+**Tácticas:**
+
+- Desarrollar un asistente que calcule automáticamente materiales y valide la viabilidad del mueble.
+- Incorporar estimación de tiempos basada en capacidad del taller (número de trabajadores y carga).
+- Crear un sistema de seguimiento con estados visibles para el cliente mediante enlace.
+- Integrar control de inventario con alertas de stock bajo.
+- Implementar notificaciones automáticas para reducir consultas repetitivas de clientes.
+- Ofrecer funcionalidades avanzadas (reportes, IoT, multiusuario) en planes de pago.
