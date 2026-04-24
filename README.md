@@ -378,6 +378,86 @@ Resumen de la entrevista: Joseph Rodriguez, estudiante de Ingeniería de Softwar
 
 Link a la entrevista completa: https://drive.google.com/file/d/1yprqlqczeSu0gGd91PL32-cKOIW98TKg/view?usp=sharing
 
+
+
+
+
+
+
+
+
+### 5.2.1. Sprint 1
+
+En este primer sprint se desarrolló la landing page y la documentación inicial del proyecto WoodRoute.
+
+#### 5.2.1.1. Sprint Planning 1
+
+| Sprint # | Sprint 1 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| Date | 10/04/2026 |
+| Time | 3:30 PM |
+| Location | Google Meet |
+| Prepared By | Torres Sanchez, Dalila Victoria |
+| Attendees (to planning meeting) | Gonza Morales, Anderson<br>Justo Yauricasa, Alexander Paolo<br>Saldaña De Souza, Juan David<br>Sulca Sanchez, Piero Angel<br>Torres Sanchez, Dalila Victoria |
+| **Sprint 1 Review Summary** | Durante este sprint, el equipo se enfocó en sentar las bases estratégicas del proyecto WoodRoute. Se completaron entregables clave de UX como User Personas, Journey Maps y la arquitectura de información, que guiaron el diseño de la plataforma. Con esta base, se diseñó, maquetó y desplegó la primera versión funcional de la landing page. Esta página incluye la propuesta de valor del SaaS, los planes de suscripción y una sección que destaca los beneficios para carpinteros y clientes finales. |
+| **Sprint 1 Retrospective Summary** | Los miembros del equipo coincidieron en que la colaboración fue fluida gracias a la correcta asignación de roles. Se destacó la sinergia entre el diseño en Figma y la configuración inicial de los repositorios. Para el siguiente sprint, se identificó la oportunidad de mejorar la estimación de tiempos de desarrollo al iniciar la integración del backend. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 1 Goal** | Nos enfocamos en entregar una primera versión de la landing page desplegada y la documentación de los primeros capítulos del informe. Creemos que esto entrega una propuesta de valor validada para atraer a nuestro segmento objetivo. Esto se confirmará cuando la web esté pública y el informe sea aprobado. |
+| **Sprint 1 Velocity** | 20 |
+| **Sum of Story Points** | 20 |
+
+#### 5.2.1.2. Aspect Leaders and Collaborators
+
+| Team Member | GitHub Username | Landing Page | Diseño UI/UX | Documentación |
+| :--- | :--- |:-------------| :--- | :--- |
+| Gonza Morales, Anderson | anderson-gonza | Colaborador  | Colaborador | Colaborador |
+| Justo Yauricasa, Alexander Paolo | alexander-justo | Colaborador  | Colaborador | Líder |
+| Saldaña De Souza, Juan David | jndesouza | Colaborador  | Colaborador | Colaborador |
+| Sulca Sanchez, Piero Angel | piero-sulca | Lider        | Líder | Colaborador |
+| Torres Sanchez, Dalila Victoria | dalila-torres | Colaborador  | Colaborador | Colaborador |
+
+#### 5.2.1.3. Sprint Backlog 1
+
+| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| US-LP01 | Landing Page – Estructura inicial | T01 | Maquetado HTML base | Construcción de la estructura inicial: header, hero section y footer. | 8h | Piero Sulca | Done |
+| US-LP02 | Landing Page – Diseño visual | T02 | Aplicación de estilos CSS | Implementación de estilos visuales según el manual de marca. | 10h | Piero Sulca | Done |
+| US-LP03 | Arquitectura y Entorno | T03 | Configuración del proyecto | Creación de repositorios y definición de la arquitectura base. | 4h | Juan David Saldaña | Done |
+| US-LP04 | Contenido estratégico UX | T04 | User Personas & Journey Maps | Creación de perfiles de usuarios y Lean UX Canvas. | 6h | Alexander Justo | Done |
+| US-LP05 | Diagramas de Arquitectura | T05 | Definición de C4 Model | Diseño de arquitectura Context y Container Diagrams. | 5h | Juan David Saldaña | Done |
+| US-LP06 | Despliegue de la web | T06 | Configuración de Hosting | Publicación del sitio estático en GitHub Pages. | 4h | Dalila Torres | Done |
+| US-INF01 | Documentación del informe | T07 | Redacción Capítulos Iniciales | Startup Profile, UX Research y estructura del informe. | 10h | Equipo Completo | Done |
+
+#### 5.2.1.4. Development Evidence for Sprint Review
+
+En este primer Sprint hemos realizado la implementación de nuestra Landing Page y la configuración inicial de los repositorios, donde todo el equipo ha aportado mediante la gestión de ramas. En la siguiente tabla se muestran los commits realizados.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Developer-Core/WoodRoute-Landing | main | 15ad028 | Initial commit | Initial commit | 10/04/2026 |
+| Developer-Core/WoodRoute-Landing | main | 33ad2a9 | Actualización de index.html | Agregado de estilos principales y la vista de la propuesta de valor. | 12/04/2026 |
+| Developer-Core/WoodRoute-Landing | main | 3694000 | Configuración de assets y diagramas | Se incluyeron los diagramas y el esquema inicial en los assets. | 14/04/2026 |
+
+#### 5.2.1.5. Execution Evidence for Sprint Review
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h1>Bibliografía</h1>
 
 <div class="bibliography">
