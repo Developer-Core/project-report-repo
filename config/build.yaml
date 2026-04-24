@@ -5,6 +5,7 @@ input-files:
   - report/10-student-outcome.md
   - report/12-startup-profile.md
   - report/13-solution-profile.md
+  - report/98-bibliografia.md
 
 file-scope: true
 resource-path: [".", "report/assets"]
@@ -13,10 +14,6 @@ output-file: build/project-report.pdf
 pdf-engine: weasyprint
 css:
   - css/report.css
-
-bibliography: references.bib
-csl: config/apa.csl
-citeproc: true
 
 toc: true
 toc-depth: 4
