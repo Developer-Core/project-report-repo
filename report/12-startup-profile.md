@@ -16,7 +16,7 @@ WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes 
     </tr>
     <tr>
       <td class="member-photo"><img src="assets/members/alexander.jpeg" alt="Foto de Justo Yauricasa, Alexander Paolo"></td>
-      <td><strong>Justo Yauricasa, Alexander Paolo -- U20191C054</strong><br><br><em>Descripción.</em></td>
+      <td><strong>Justo Yauricasa, Alexander Paolo -- U20191C054</strong><br><br>Estudio Ingeniería de Software y cuento con experiencia en desarrollo web dentro de equipos pequeños. Me interesa especialmente en Base de datos, en particular en diseño y arqueitectura de base de datos. Dentro del equipo, puedo contribuir en el levantamiento de requerimientos, el diseño de interfaces, así como en el diseño de bases de datos. Además, destaco por mi capacidad de organización y trabajo colaborativo.</td>
     </tr>
     <tr>
       <td class="member-photo"><img src="assets/members/juan-saldaña.jpeg" alt="Foto de Saldaña De Souza, Juan David"></td>
