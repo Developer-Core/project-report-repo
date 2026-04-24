@@ -29,6 +29,24 @@ Frecuencia: Escala de 1 a 5 (1 = Muy baja / Rara vez, 5 = Muy alta / Varias vece
 Importancia: Escala de 1 a 5 (1 = Poco importante / Prescindible, 5 = Crítica / Indispensable)
 
 
+| Tarea (Task) | Carlos Gutiérrez (Carpintero) Frec. | Carlos Gutiérrez (Carpintero) Import. | Valeria Méndez (Cliente) Frec. | Valeria Méndez (Cliente) Import. |
+|:---|:---:|:---:|:---:|:---:|
+| **1. Registrar un nuevo pedido de mueble** | 5 | 5 | 5 | 5 |
+| **2. Consultar disponibilidad de materiales** (madera, herrajes, etc.) | 5 | 5 | 4 | 5 |
+| **3. Calcular tiempo estimado de fabricación** | 5 | 5 | 3 | 5 |
+| **4. Consultar el estado/avance de un pedido** | 5 | 4 | 5 | 5 |
+| **5. Comunicarse con el carpintero/cliente para resolver dudas** | 5 | 5 | 4 | 4 |
+| **6. Registrar salida de materiales del inventario** | 5 | 5 | 1 | 2 |
+| **7. Tomar fotos del proceso de fabricación** | 4 | 3 | 1 | 1 |
+| **8. Comparar pedidos similares para no confundirlos** | 4 | 4 | 2 | 3 |
+| **9. Calcular costo final del mueble** (materiales + mano de obra) | 5 | 5 | 3 | 4 |
+| **10. Anotar especificaciones técnicas** (medidas, acabados, diseño) | 5 | 5 | 4 | 5 |
+| **11. Asignar prioridad a pedidos urgentes** | 4 | 4 | 3 | 3 |
+| **12. Verificar si un pedido está atrasado** | 4 | 5 | 4 | 5 |
+| **13. Buscar un carpintero/taller confiable** | 1 | 2 | 4 | 5 |
+| **14. Comparar presupuestos entre diferentes talleres** | 1 | 2 | 4 | 5 |
+| **15. Recordar fechas de entrega prometidas** | 5 | 5 | 4 | 5 |
+
 
 ### User Journey Mapping
 
