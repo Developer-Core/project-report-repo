@@ -123,7 +123,7 @@ En la segunda entrevista, el cliente Joseph Rodriguez, estudiante de Ingeniería
 **Link de la entrevista:** <[enlace del video](https://drive.google.com/file/d/19W5K1V3g7HjvXkpX5zqU805OR1HmuKla/view?usp=sharing)>
 
 <div align="center">
-  <img src="assets/Entrevista3Cliente" alt="Entrevista_cliente 3" width="100%">
+  <img src="assets/Entrevista3Cliente.png" alt="Entrevista_cliente 3" width="100%">
 </div>
 
 **Resumen de la entrevista:**
