@@ -114,19 +114,21 @@ En la primera entrevista, el cliente Eduardo Alonso, estudiante residente del di
 
 En la segunda entrevista, el cliente Joseph Rodriguez, estudiante de Ingeniería de Software de 21 años, relató ser un consumidor recurrente de muebles a medida debido a la distribución inusual de su hogar, describiendo el proceso general como grato pero lento. Identificó como sus principales dificultades el lograr transmitir la idea exacta del diseño con las medidas precisas al fabricante y tener que lidiar con pequeños retrasos recurrentes en las entregas. Asimismo, el entrevistado expresó que solicitar actualizaciones constantemente por WhatsApp le resulta tedioso y monótono, por lo que valoraría contar con un enlace que detalle la fase exacta de fabricación de su pedido. Finalmente, indicó que pagaría un costo extra por este seguimiento detallado, pero condicionó este pago a que la empresa ya cuente con una sólida reputación, reseñas comprobables y un portafolio de trabajos previos.
 
-**Entrevista 3**
+**Entrevista 3** 
 
-**Entrevistador:** 
+**Entrevistador:**  Alexander Paolo Justo Yauricasa
 
-**Entrevistado:** 
+**Entrevistado:** Renzo Carlos Baldeon Galindo
 
-**Link de la entrevista:** <enlace del video>
+**Link de la entrevista:** <[enlace del video](https://drive.google.com/file/d/19W5K1V3g7HjvXkpX5zqU805OR1HmuKla/view?usp=sharing)>
 
 <div align="center">
-  <img src="imagen" alt="Entrevista_cliente 3" width="100%">
+  <img src="assets/Entrevista3Cliente" alt="Entrevista_cliente 3" width="100%">
 </div>
 
 **Resumen de la entrevista:**
+
+En la tercera entrevista, el cliente Renzo Baldeón comenta que, durante la elaboración de su ropero, tuvo varios inconvenientes que afectaron su experiencia. Señala que los tiempos de respuesta fueron lentos, lo que generó demoras en la entrega, además de una comunicación deficiente con el proveedor a lo largo del proceso. Esta falta de información le causó incertidumbre sobre el estado de su pedido.Asimismo, menciona que le gustaría contar con una forma de visualizar el avance de sus encargos y tener un contacto más directo con el carpintero para resolver dudas o coordinar detalles. Finalmente, indica que estaría dispuesto a pagar un poco más por una aplicación que le permita solucionar estos problemas y mejorar la experiencia del servicio.
 
 
 ### Análisis de entrevistas
