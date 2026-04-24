@@ -396,6 +396,13 @@ nav#TOC > ul > li > ul > li > ul > li > a {
   break-before: page;
 }
 
+.bibliography p {
+  padding-left: 2em;
+  text-indent: -2em;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
 .cover-page {
   display: flex;
   flex-direction: column;
