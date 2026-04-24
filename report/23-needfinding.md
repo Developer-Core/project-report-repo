@@ -92,6 +92,6 @@ En esta sección se presentan los User Journey Maps para los dos segmentos objet
 
 El journey representado cubre el end-to-end de la experiencia actual desde que el cliente detecta una necesidad de un mueble personalizado hasta que recibe el producto final y realiza el pago. Se ilustran las etapas, acciones, emociones, puntos de dolor y oportunidades de mejora que posteriormente abordará la plataforma propuesta.
 
-
+![User Journey Mapping](./assets/needfinding/User%20Journey%20Mapping%201%20AW.png)
 
 ### Empathy Mapping
