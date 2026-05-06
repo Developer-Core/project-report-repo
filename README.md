@@ -136,7 +136,7 @@ WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes 
       <td><strong>Justo Yauricasa, Alexander Paolo -- U20191C054</strong><br><br>Estudio Ingeniería de Software y cuento con experiencia en desarrollo web dentro de equipos pequeños. Me interesa especialmente en Base de datos, en particular en diseño y arqueitectura de base de datos. Dentro del equipo, puedo contribuir en el levantamiento de requerimientos, el diseño de interfaces, así como en el diseño de bases de datos. Además, destaco por mi capacidad de organización y trabajo colaborativo.</td>
     </tr>
     <tr>
-      <td class="member-photo"><img src="assets/members/juan-saldaña.jpeg" alt="Foto de Saldaña De Souza, Juan David"></td>
+      <td class="member-photo"><img src="assets/members/juan-saldana.jpeg" alt="Foto de Saldaña De Souza, Juan David"></td>
       <td><strong>Saldaña De Souza, Juan David -- U20221F192</strong><br><br><em>Descripción.</em></td>
     </tr>
     <tr>
@@ -360,9 +360,9 @@ En esta sección evaluamos los competidores de nuestro nicho.
     </tr>
     <tr>
       <td valign="top" align="center"><img src="assets/logo.png"/></td>
-      <td valign="top" align="center"><img src="assets/competidor-cleri.png"/></td>
-      <td valign="top" align="center"><img src="assets/competidor-craftybase.png"/></td>
-      <td valign="top" align="center"><img src="assets/competidor-buildertrend.png"/></td>
+      <td valign="top" align="center"><img src="assets/competitor-cleri.png"/></td>
+      <td valign="top" align="center"><img src="assets/competitor-craftybase.png"/></td>
+      <td valign="top" align="center"><img src="assets/competitor-buildertrend.png"/></td>
     </tr>
     <tr>
       <td rowspan="2">Perfil</td>
@@ -514,7 +514,7 @@ En esta sección evaluamos los competidores de nuestro nicho.
 **Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQBIxTsDiMoMQ7UmxqokSxBtAbzjckIXgF8fW8kP5-aSU14?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LRldwg>
 
 <div align="center">
-  <img src="assets/carpintero-1.png" alt="Entrevista_carp 1" width="100%">
+  <img src="assets/interviews/interview-segment-1-1.png" alt="Interview segment 1 - 1" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
@@ -529,7 +529,7 @@ La entrevista realizada a un Maestro de carpintería independiente, menciona que
 **Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQA-72r7kw1ETKLhkTOknwcFAfMyGR4WulQY5KCh3gmHGxo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=lJhikH>
 
 <div align="center">
-  <img src="assets/carpintero-2.png" alt="Entrevista_carp 2" width="100%">
+  <img src="assets/interviews/interview-segment-1-2.png" alt="Interview segment 1 - 2" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
@@ -544,7 +544,7 @@ La entrevista realizada a un ayudante de carpintería evidencio que la gestión 
 **Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQChpwCTvVG-TJqmM0qE2yvnAWHSrGpBMxOBJK0kUSS8z88?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=g0kCLa>
 
 <div align="center">
-  <img src="assets/carpintero-3.png" alt="Entrevista_carp 3" width="100%">
+  <img src="assets/interviews/interview-segment-1-3.png" alt="Interview segment 1 - 3" width="100%">
 </div>
 
 **Resumen de la entrevista:**
@@ -563,7 +563,7 @@ La entrevista a un joven carpintero que trabaja junto a su padre evidenció que 
 **Link de la entrevista:** <https://drive.google.com/file/d/14ETbpC-OaXpmp6Nne9q4cWdRk1JviVvI/view?usp=sharing>
 
 <div align="center">
-  <img src="assets/interviews/entrevista-1-segmento-2.png" alt="Entrevista cliente 1" width="100%">
+  <img src="assets/interviews/interview-segment-2-1.png" alt="Interview segment 2 - 1" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
@@ -582,7 +582,7 @@ Eduardo Alonso, estudiante residente del distrito de Magdalena, indicó haber te
 **Link de la entrevista:** <https://drive.google.com/file/d/1yprqlqczeSu0gGd91PL32-cKOIW98TKg/view?usp=sharing>
 
 <div align="center">
-  <img src="assets/interviews/entrevista-2-segmento-2.png" alt="Entrevista cliente 2" width="100%">
+  <img src="assets/interviews/interview-segment-2-2.png" alt="Interview segment 2 - 2" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
@@ -598,7 +598,7 @@ Joseph Rodriguez, estudiante de Ingeniería de Software de 21 años, relató ser
 **Link de la entrevista:** <[enlace del video](https://drive.google.com/file/d/19W5K1V3g7HjvXkpX5zqU805OR1HmuKla/view?usp=sharing)>
 
 <div align="center">
-  <img src="assets/Entrevista3Cliente.png" alt="Entrevista_cliente 3" width="100%">
+  <img src="assets/interviews/interview-segment-2-3.png" alt="Interview segment 2 - 3" width="100%">
 </div>
 
 **Resumen de la entrevista:**
@@ -626,9 +626,9 @@ En esta sección se presentan las fichas de User Persona elaboradas para los dos
 La construcción de estos arquetipos se sustenta en el análisis cualitativo de entrevistas realizadas a potenciales usuarios del rubro de carpintería y diseño de interiores, así como en el estudio comparativo de la competencia directa e indirecta. De dicho análisis se extrajeron las principales características demográficas, comportamientos, objetivos, frustraciones y necesidades no satisfechas que hoy presentan ambos segmentos.
 
 
-![User Persona 1](assets/needfinding/User%20persona%201%20_%20Carpintero.png)
+![User Persona 1](assets/needfinding/user-persona-1.png)
 
-![User Persona 2](assets/needfinding/User%20Persona%202%20%20_%20Compradora.png)
+![User Persona 2](assets/needfinding/user-persona-2.png)
 
 
 ### User Task Matrix
@@ -711,9 +711,9 @@ En esta sección se presentan los User Journey Maps para los dos segmentos objet
 
 El journey representado cubre el end-to-end de la experiencia actual desde que el cliente detecta una necesidad de un mueble personalizado hasta que recibe el producto final y realiza el pago. Se ilustran las etapas, acciones, emociones, puntos de dolor y oportunidades de mejora que posteriormente abordará la plataforma propuesta.
 
-![User Journey Mapping](assets/needfinding/User%20Journey%20Mapping%201%20AW.png)
+![User Journey Mapping](assets/needfinding/user-journey-mapping-1.png)
 
-![User Journey Mapping](assets/needfinding/User%20Journey%20Mapping%202%20AW.png)
+![User Journey Mapping](assets/needfinding/user-journey-mapping-2.png)
 
 ### Empathy Mapping
 
@@ -723,9 +723,9 @@ El proceso de elaboración consistió en colocar cada User Persona en el centro 
 
 Los diagramas fueron elaborados en UXPressia y se adjuntan las capturas a continuación.
 
-![Empathy Mapping](assets/needfinding/Empathy%20mapping%201.png)
+![Empathy Mapping](assets/needfinding/empathy-mapping-1.png)
 
-![Empathy Mapping](assets/needfinding/Empathy%20mapping%202.png)
+![Empathy Mapping](assets/needfinding/empathy-mapping-2.png)
 
 
 # Requirements Specification
@@ -774,7 +774,7 @@ EP07    Comunicación y Transparencia con el Cliente <br><br>
 
 
 ## Impact Mapping
-<img src="assets/ImpactMaping.png">
+<img src="assets/impact-mapping.png">
 
 
 ## Product Backlog
@@ -1298,4 +1298,64 @@ de features colapsan a una columna, el navbar se convierte en menú hamburguesa 
 el CTA de conversión permanece visible y accesible en todo momento. El espaciado
 entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm`.
 
+<div class="page-break"></div>
+
+## Capítulo V: Product Implementation, Validation & Deployment
+
+### 5.1. Software Configuration Management
+
+### 5.2. Landing Page, Services & Applications Implementation
+
+### 5.2.1. Sprint 1
+
+En este primer sprint se desarrolló la landing page y la documentación inicial del proyecto WoodRoute.
+
+#### 5.2.1.1. Sprint Planning 1
+
+| Sprint # | Sprint 1 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| Date | 10/04/2026 |
+| Time | 3:30 PM |
+| Location | Google Meet |
+| Prepared By | Torres Sanchez, Dalila Victoria |
+| Attendees (to planning meeting) | Gonza Morales, Anderson<br>Justo Yauricasa, Alexander Paolo<br>Saldaña De Souza, Juan David<br>Sulca Sanchez, Piero Angel<br>Torres Sanchez, Dalila Victoria |
+| **Sprint 1 Review Summary** | Durante este sprint, el equipo se enfocó en sentar las bases estratégicas del proyecto WoodRoute. Se completaron entregables clave de UX como User Personas, Journey Maps y la arquitectura de información, que guiaron el diseño de la plataforma. Con esta base, se diseñó, maquetó y desplegó la primera versión funcional de la landing page. Esta página incluye la propuesta de valor del SaaS, los planes de suscripción y una sección que destaca los beneficios para carpinteros y clientes finales. |
+| **Sprint 1 Retrospective Summary** | Los miembros del equipo coincidieron en que la colaboración fue fluida gracias a la correcta asignación de roles. Se destacó la sinergia entre el diseño en Figma y la configuración inicial de los repositorios. Para el siguiente sprint, se identificó la oportunidad de mejorar la estimación de tiempos de desarrollo al iniciar la integración del backend. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 1 Goal** | Nos enfocamos en entregar una primera versión de la landing page desplegada y la documentación de los primeros capítulos del informe. Creemos que esto entrega una propuesta de valor validada para atraer a nuestro segmento objetivo. Esto se confirmará cuando la web esté pública y el informe sea aprobado. |
+| **Sprint 1 Velocity** | 20 |
+| **Sum of Story Points** | 20 |
+
+#### 5.2.1.2. Aspect Leaders and Collaborators
+
+| Team Member | GitHub Username | Landing Page | Diseño UI/UX | Documentación |
+| :--- | :--- | :--- | :--- | :--- |
+| Gonza Morales, Anderson | anderson-gonza | Colaborador | Colaborador | Colaborador |
+| Justo Yauricasa, Alexander Paolo | alexander-justo | Colaborador | Colaborador | Líder |
+| Saldaña De Souza, Juan David | jndesouza | Colaborador | Colaborador | Colaborador |
+| Sulca Sanchez, Piero Angel | piero-sulca | Líder | Líder | Colaborador |
+| Torres Sanchez, Dalila Victoria | dalila-torres | Colaborador | Colaborador | Colaborador |
+
+#### 5.2.1.3. Sprint Backlog 1
+
+| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| US-LP01 | Landing Page – Estructura inicial | T01 | Maquetado HTML base | Construcción de la estructura inicial: header, hero section y footer. | 8h | Piero Sulca | Done |
+| US-LP02 | Landing Page – Diseño visual | T02 | Aplicación de estilos CSS | Implementación de estilos visuales según el manual de marca. | 10h | Piero Sulca | Done |
+| US-LP03 | Arquitectura y Entorno | T03 | Configuración del proyecto | Creación de repositorios y definición de la arquitectura base. | 4h | Juan David Saldaña | Done |
+| US-LP04 | Contenido estratégico UX | T04 | User Personas & Journey Maps | Creación de perfiles de usuarios y Lean UX Canvas. | 6h | Alexander Justo | Done |
+| US-LP05 | Diagramas de Arquitectura | T05 | Definición de C4 Model | Diseño de arquitectura Context y Container Diagrams. | 5h | Juan David Saldaña | Done |
+| US-LP06 | Despliegue de la web | T06 | Configuración de Hosting | Publicación del sitio estático en GitHub Pages. | 4h | Dalila Torres | Done |
+| US-INF01 | Documentación del informe | T07 | Redacción Capítulos Iniciales | Startup Profile, UX Research y estructura del informe. | 10h | Equipo Completo | Done |
+
+#### 5.2.1.4. Development Evidence for Sprint Review
+
+En este primer Sprint hemos realizado la implementación de nuestra Landing Page y la configuración inicial de los repositorios, donde todo el equipo ha aportado mediante la gestión de ramas. En la siguiente tabla se muestran los commits realizados.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Developer-Core/WoodRoute-Landing | main | 15ad028 | Initial commit | Initial commit | 10/04/2026 |
+| Developer-Core/WoodRoute-Landing | main | 33ad2a9 | Actualización de index.html | Agregado de estilos principales y la vista de la propuesta de valor. | 12/04/2026 |
+| Developer-Core/WoodRoute-Landing | main | 3694000 | Configuración de assets y diagramas | Se incluyeron los diagramas y el esquema inicial en los assets. | 14/04/2026 |
 
