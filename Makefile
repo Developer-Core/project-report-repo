@@ -32,7 +32,24 @@ $(OUTPUT): $(SOURCES) $(FRONT_HTML)
 readme: $(README)
 
 $(README): $(MD_FILES)
-	@cat $(MD_FILES) | sed 's/ *{[^}]*}//g' | sed '/<div class="page-break"><\/div>/d' | sed 's|src="assets/|src="report/assets/|g' | sed 's|src="annexes/|src="report/annexes/|g' > $(README)
+	@tmp_file=$$(mktemp); \
+	for file in $(MD_FILES); do \
+		cat "$$file" >> "$$tmp_file"; \
+		printf '\n\n' >> "$$tmp_file"; \
+	done; \
+	sed \
+		-e 's/ *{[^}]*}//g' \
+		-e '/<div class="page-break"><\/div>/d' \
+		-e 's|src="./assets/|src="report/assets/|g' \
+		-e 's|src="assets/|src="report/assets/|g' \
+		-e 's|src="./annexes/|src="report/annexes/|g' \
+		-e 's|src="annexes/|src="report/annexes/|g' \
+		-e 's|](./assets/|](report/assets/|g' \
+		-e 's|](assets/|](report/assets/|g' \
+		-e 's|](./annexes/|](report/annexes/|g' \
+		-e 's|](annexes/|](report/annexes/|g' \
+		"$$tmp_file" > $(README); \
+	rm -f "$$tmp_file"
 
 clean:
 	@rm -rf build/

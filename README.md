@@ -31,6 +31,8 @@
 </div>
 </div>
 
+
+
 # Registro de Versiones del Informe
 
 <table>
@@ -45,11 +47,17 @@
 </table>
 
 
+
+
 # Project Report Collaboration Insights
 
 **URL del Repositorio:** [https://github.com/Developer-Core/project-report-repo](https://github.com/Developer-Core/project-report-repo)
 
+
+
 # Contenido
+
+
 <h1>Student Outcome</h1>
 
 En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET -- EAC - Student Outcome 5.
@@ -105,6 +113,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
   </tbody>
 </table>
 
+
+
 # Introducción
 
 ## Startup Profile
@@ -139,6 +149,8 @@ WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes 
     </tr>
   </tbody>
 </table>
+
+
 
 ## Solution Profile
 
@@ -296,6 +308,505 @@ Aquí se presenta el Lean UX Canvas desarrollado para **Alimenta**:
 </div>
 
 **Enlace al Lean UX Canvas:** https://miro.com/welcomeonboard/ZVFaMVdKblhINnB5d1dnbWcxT2RLZ3ZjVFlQNWpsS2VKLzVQQ3dQMWUxS1pkY3hJbStyWENZNnc1cjIvd01lNkltV283MkVGRUM3MS94a1Q0dXp4U3QzclBsK0ZrZ24zQXZhRG14blV5YXdtMUlaMlV5alRXNTFMT21PL0tXbzJzVXVvMm53MW9OWFg5bkJoVXZxdFhRPT0hdjE=?share_link_id=533296594528
+
+
+## Segmentos objetivo
+
+En el análisis del segmento objetivo para WoodRoute, se han identificado dos grupos principales de usuarios que interactúan dentro de la plataforma: **los Carpinteros (Talleres)**, quienes gestionan y producen los muebles, y **los Clientes**, quienes solicitan muebles personalizados y requieren seguimiento del proceso.
+
+**Carpinteros: Talleres y trabajadores independientes**
+
+Este segmento está compuesto por carpinteros independientes y pequeños talleres que fabrican muebles personalizados bajo pedido. Buscan mejorar la organización de su trabajo, optimizar el uso de materiales y brindar un mejor servicio a sus clientes.
+
+- **Perfil:** Carpinteros independientes, maestros de taller, ayudantes y pequeños negocios familiares dedicados a la fabricación de muebles.
+- **Edad:** 20 a 60 años.
+- **Necesidad clave:** Organizar pedidos, calcular materiales, estimar tiempos de producción y mejorar la comunicación con los clientes.
+- **Uso de tecnología:** Nivel medio. Utilizan principalmente smartphones, WhatsApp y en algunos casos herramientas básicas como Excel, pero no cuentan con sistemas especializados.
+
+**Clientes: Usuarios que solicitan muebles personalizados**
+
+Este segmento incluye a personas que requieren la fabricación de muebles a medida y desean tener mayor visibilidad del proceso, así como una mejor experiencia durante el servicio.
+
+- **Perfil:** Personas que solicitan muebles para el hogar, oficinas o negocios, interesados en soluciones personalizadas.
+- **Edad:** 25 a 60 años.
+- **Necesidad clave:** Conocer el estado del pedido, recibir información clara sobre tiempos de entrega y tener mayor confianza en el proceso de fabricación.
+- **Uso de tecnología:** Nivel medio-alto. Están familiarizados con el uso de smartphones, aplicaciones web, redes sociales y servicios digitales.
+
+# Requirements Elicitation & Analysis
+
+## Competidores
+
+### Análisis competitivo
+
+En esta sección evaluamos los competidores de nuestro nicho.
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="7"><b>Competitive Analysis Landscape</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" align="center">¿Por qué llevar a cabo este análisis?</td>
+      <td colspan="5" align="center">El objetivo de este análisis es identificar las brechas en la gestión y planificación de trabajos en carpinterías, evaluar cómo operan las soluciones actuales y posicionar a WoodRoute como una plataforma que optimiza la toma de decisiones, el uso de materiales y la comunicación con clientes.</td>
+    </tr>
+    <tr>
+      <td colspan="2" rowspan="2" valign="top">Startup y Competidores</td>S
+      <td align="center"><b>Nuestra Startup: WoodRoute</b></td>
+      <td align="center">Cleri</td>
+      <td align="center">Craftybase</td>
+      <td align="center">Buildertrend</td>
+    </tr>
+    <tr>
+      <td valign="top" align="center"><img src="report/assets/logo.png"/></td>
+      <td valign="top" align="center"><img src="report/assets/competidor-cleri.png"/></td>
+      <td valign="top" align="center"><img src="report/assets/competidor-craftybase.png"/></td>
+      <td valign="top" align="center"><img src="report/assets/competidor-buildertrend.png"/></td>
+    </tr>
+    <tr>
+      <td rowspan="2">Perfil</td>
+      <td>Overview</td>
+      <td>Plataforma web SaaS para carpinterías que permite gestionar pedidos, hacer seguimiento del proceso de fabricación y asistir en la planificación del mueble, validando materiales, tiempos y viabilidad según el inventario y capacidad del taller.</td>
+      <td>Software especializado en carpintería que ayuda a gestionar proyectos, clientes, materiales y presupuestos dentro del taller.</td>
+      <td>Plataforma enfocada en control de inventario y costos de producción para negocios que fabrican productos físicos.</td>
+      <td>Software de gestión de proyectos para construcción que permite planificar trabajos, coordinar equipos y comunicarse con clientes.</td>
+    </tr>
+    <tr>
+      <td>Ventaja competitiva ¿Qué valor ofrece a los clientes?</td>
+      <td>Asistencia en la toma de decisiones: calcula viabilidad de muebles, estima tiempos según capacidad del taller e integra inventario con producción y seguimiento al cliente.</td>
+      <td>Enfoque específico en carpintería con herramientas de gestión de proyectos y clientes.</td>
+      <td>Control detallado de inventario y costos de materiales.</td>
+      <td>Gestión avanzada de proyectos y comunicación profesional con clientes.</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Perfil de Marketing</td>
+      <td>Mercado objetivo</td>
+      <td>Carpinteros independientes y pequeños talleres que necesitan organizar su trabajo y mejorar la comunicación con clientes.</td>
+      <td>Carpinterías que buscan digitalizar la gestión de sus proyectos.</td>
+      <td>Pequeños fabricantes y negocios de productos físicos.</td>
+      <td>Empresas de construcción, contratistas y remodeladores.</td>
+    </tr>
+    <tr>
+      <td>Estrategias de marketing</td>
+      <td>Modelo freemium, enfoque en simplicidad y solución a problemas reales del carpintero (tiempo, materiales y organización).</td>
+      <td>Marketing enfocado en productividad y gestión profesional del taller.</td>
+      <td>Enfoque en control financiero y eficiencia de producción.</td>
+      <td>Marketing empresarial orientado a gestión de proyectos grandes.</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Perfil de Producto</td>
+      <td>Productos & Servicios</td>
+      <td>Gestión de pedidos, seguimiento en tiempo real, asistente de viabilidad de muebles, estimación de tiempos, control de inventario y monitoreo IoT.</td>
+      <td>Gestión de proyectos, presupuestos, clientes e inventario.</td>
+      <td>Gestión de inventario, costos, producción y reportes.</td>
+      <td>Gestión de proyectos, cronogramas, comunicación con clientes y seguimiento de obras.</td>
+    </tr>
+    <tr>
+      <td>Precios & Costos</td>
+      <td>Modelo freemium con suscripción mensual para funciones avanzadas como estimación inteligente, reportes e integración IoT.</td>
+      <td>Suscripción mensual basada en funcionalidades de gestión.</td>
+      <td>Suscripción mensual según uso y funcionalidades.</td>
+      <td>Suscripción premium orientada a empresas.</td>
+    </tr>
+    <tr>
+      <td>Canales de distribución (Web y/o Móvil)</td>
+      <td>Aplicación web con posible extensión móvil para clientes (seguimiento).</td>
+      <td>Plataforma web.</td>
+      <td>Plataforma web.</td>
+      <td>Web y aplicación móvil.</td>
+    </tr>
+    <tr>
+      <td rowspan="4">Análisis SWOT</td>
+      <td>Fortalezas</td>
+      <td>Enfoque específico en carpintería, integración de planificación + inventario + seguimiento, facilidad de uso.</td>
+      <td>Especialización en el rubro de carpintería.</td>
+      <td>Fuerte control de inventario y costos.</td>
+      <td>Gestión profesional de proyectos complejos.</td>
+    </tr>
+    <tr>
+      <td>Debilidades</td>
+      <td>Startup nueva, sin posicionamiento en el mercado.</td>
+      <td>No integra estimación inteligente ni validación de viabilidad.</td>
+      <td>No está especializado en carpintería.</td>
+      <td>Demasiado complejo para pequeños talleres.</td>
+    </tr>
+    <tr>
+      <td>Oportunidades</td>
+      <td>Digitalización de talleres pequeños y necesidad de optimización en producción.</td>
+      <td>Expansión a más mercados de carpintería.</td>
+      <td>Integración con más industrias productivas.</td>
+      <td>Expansión en el sector construcción.</td>
+    </tr>
+    <tr>
+      <td>Amenazas</td>
+      <td>Competidores más grandes que integren funciones similares.</td>
+      <td>Nuevas plataformas más completas.</td>
+      <td>Herramientas más especializadas por industria.</td>
+      <td>Soluciones más simples para pequeños negocios.</td>
+    </tr>
+
+  </tbody>
+</table>
+
+### Estrategias y tácticas frente a competidores
+
+**Estrategias:**
+
+- Diferenciación mediante especialización en carpinterías y talleres pequeños.
+- Enfoque en apoyo a la toma de decisiones (viabilidad, tiempos y materiales), no solo gestión.
+- Ofrecer una solución integral: pedidos + inventario + planificación + seguimiento al cliente.
+- Priorizar simplicidad y facilidad de uso para usuarios no técnicos.
+- Implementar modelo SaaS freemium para facilitar adopción inicial.
+
+**Tácticas:**
+
+- Desarrollar un asistente que calcule automáticamente materiales y valide la viabilidad del mueble.
+- Incorporar estimación de tiempos basada en capacidad del taller (número de trabajadores y carga).
+- Crear un sistema de seguimiento con estados visibles para el cliente mediante enlace.
+- Integrar control de inventario con alertas de stock bajo.
+- Implementar notificaciones automáticas para reducir consultas repetitivas de clientes.
+- Ofrecer funcionalidades avanzadas (reportes, IoT, multiusuario) en planes de pago.
+
+
+## Entrevistas
+
+### Diseño de entrevistas
+
+**Segmento 1: Carpintero/Taller**
+
+- ¿Cómo gestionas actualmente tus pedidos de muebles?
+- ¿Qué pasos sigues desde que recibes un pedido hasta la entrega?
+- ¿Usas alguna herramienta (cuaderno, Excel, WhatsApp)? ¿Cuál?
+- ¿Cómo decides si puedes hacer un mueble con los materiales que tienes?
+- ¿Cómo calculas la cantidad de material que vas a necesitar?
+- ¿Te ha pasado que te falta material durante un trabajo? ¿Qué ocurrió?
+- ¿Cómo estimas cuánto tiempo te tomará hacer un mueble?
+- ¿Sueles retrasarte en las entregas? ¿Por qué razones?
+- ¿Trabajas solo o con un equipo? ¿Cómo organizan el trabajo?
+- ¿Cómo controlas tu inventario de madera o materiales?
+- ¿Cómo informas a tus clientes sobre el avance de sus pedidos?
+- ¿Te sería útil una app que calcule materiales, estime tiempos y te diga si un mueble es viable? ¿Por qué?
+
+**Segmento 2: Cliente**
+
+- ¿Has mandado a hacer un mueble alguna vez? ¿Cómo fue tu experiencia?
+- ¿Qué fue lo más difícil o incómodo durante el proceso?
+- ¿El carpintero cumplió con el tiempo de entrega?
+- ¿Tuviste que preguntar varias veces por el estado del mueble?
+- ¿Cómo te informaban el avance del trabajo?
+- ¿Te hubiera gustado ver el progreso sin tener que preguntar?
+- ¿Qué te haría confiar más en un carpintero?
+- ¿Te gustaría ver fotos o estados del proceso de fabricación?
+- ¿Te serviría tener un link donde puedas ver el estado de tu pedido?
+- ¿Pagarías un poco más por un servicio con mejor seguimiento y comunicación?
+
+### Registro de entrevistas
+
+#### Segmento 1: Carpintero/Taller
+
+**Entrevista 1**
+
+**Entrevistador:** Anderson Gonza Morales
+
+**Entrevistado:** Victor Garcia
+
+**Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQBIxTsDiMoMQ7UmxqokSxBtAbzjckIXgF8fW8kP5-aSU14?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LRldwg>
+
+<div align="center">
+  <img src="report/assets/carpintero-1.png" alt="Entrevista_carp 1" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+La entrevista realizada a un Maestro de carpintería independiente, menciona que la gestión de pedidos se realiza principalmente mediante WhatsApp y anotaciones manuales en un cuaderno. El calcula cuanto materiales y el tiempo que tomara hacer el mueble, se basa en la experiencia de años en el rubro. Tambien menciona que aveces compra se le escapa y compra una pieza menos o mas de material. Además, la comunicación se hace mediante fotos por WhatsApp. El entrevistado considera que si le seria util una herramienta que le ayude hacer todo lo mencionada anteriormente.
+
+**Entrevista 2**
+
+**Entrevistador:** Anderson Gonza Morales
+
+**Entrevistado:** Marco
+
+**Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQA-72r7kw1ETKLhkTOknwcFAfMyGR4WulQY5KCh3gmHGxo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=lJhikH>
+
+<div align="center">
+  <img src="report/assets/carpintero-2.png" alt="Entrevista_carp 2" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+La entrevista realizada a un ayudante de carpintería evidencio que la gestión de pedidos se realiza principalmente mediante WhatsApp y anotaciones manuales, sin el uso de herramientas digitales especializadas. Las decisiones sobre materiales y tiempos se basan en la experiencia del maestro. MEnciona que algunas veces hay retrasos por falta de material al hacer un mal calculo y problemas como falta de stock durante la producción. Además, la comunicación con los clientes que solicitan actualizaciones se hace mediante fotos por WhatsApp. En este contexto, el entrevistado considero que una aplicación que apoye en la planificación, cálculo de materiales y estimación de tiempos sería de gran utilidad para mejorar la organización y eficiencia del trabajo.
+
+**Entrevista 3**
+
+**Entrevistador:** Anderson Gonza Morales
+
+**Entrevistado:** Ronaldo
+
+**Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQChpwCTvVG-TJqmM0qE2yvnAWHSrGpBMxOBJK0kUSS8z88?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=g0kCLa>
+
+<div align="center">
+  <img src="report/assets/carpintero-3.png" alt="Entrevista_carp 3" width="100%">
+</div>
+
+**Resumen de la entrevista:**
+La entrevista a un joven carpintero que trabaja junto a su padre evidenció que la gestión de pedidos se realiza principalmente mediante WhatsApp y registros manuales, sin herramientas digitales especializadas. Las decisiones sobre materiales y tiempos se basan en la experiencia del maestro, lo que en ocasiones genera errores como falta de material y retrasos en la entrega. Además, el control de inventario es visual y poco preciso, y la comunicación con los clientes es mayormente reactiva. El entrevistado considera que una aplicación que permita calcular materiales, estimar tiempos y validar la viabilidad de los muebles sería de gran utilidad para mejorar la organización y eficiencia del taller.
+
+#### Segmento 2: Cliente
+
+**Entrevista 1**
+
+**Entrevistador:** Juan David Saldaña De Souza
+
+**Entrevistado:** Eduardo Rojas
+
+**Link de la entrevista:** <enlace del video>
+
+<div align="center">
+  <img src="imagen" alt="Entrevista_cliente 1" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+
+En la primera entrevista, el cliente Eduardo Alonso, estudiante residente del distrito de Magdalena, indicó haber tenido una experiencia "regular" al mandar a fabricar un escritorio. Mencionó que enfrentó problemas de comunicación, percibió un trato poco amable por parte del carpintero y experimentó retrasos en la entrega final. Además, señaló que la selección adecuada de materiales y asegurar que el resultado reflejara su idea inicial fueron los aspectos más complicados del proceso. Para generar confianza, el entrevistado requiere respuestas rápidas y evidencia visual del avance, por lo que consideró sumamente útil la implementación de un enlace de seguimiento automático y afirmó estar dispuesto a pagar un monto adicional por un servicio premium que mejore la comunicación y el monitoreo de su pedido.
+
+
+**Entrevista 2**
+
+**Entrevistador:** Juan David Saldaña De Souza
+
+**Entrevistado:** Joseph Rodriguez
+
+**Link de la entrevista:** <enlace del video>
+
+<div align="center">
+  <img src="imagen" alt="Entrevista_cliente 2" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+
+En la segunda entrevista, el cliente Joseph Rodriguez, estudiante de Ingeniería de Software de 21 años, relató ser un consumidor recurrente de muebles a medida debido a la distribución inusual de su hogar, describiendo el proceso general como grato pero lento. Identificó como sus principales dificultades el lograr transmitir la idea exacta del diseño con las medidas precisas al fabricante y tener que lidiar con pequeños retrasos recurrentes en las entregas. Asimismo, el entrevistado expresó que solicitar actualizaciones constantemente por WhatsApp le resulta tedioso y monótono, por lo que valoraría contar con un enlace que detalle la fase exacta de fabricación de su pedido. Finalmente, indicó que pagaría un costo extra por este seguimiento detallado, pero condicionó este pago a que la empresa ya cuente con una sólida reputación, reseñas comprobables y un portafolio de trabajos previos.
+
+**Entrevista 3** 
+
+**Entrevistador:**  Alexander Paolo Justo Yauricasa
+
+**Entrevistado:** Renzo Carlos Baldeon Galindo
+
+**Link de la entrevista:** <[enlace del video](https://drive.google.com/file/d/19W5K1V3g7HjvXkpX5zqU805OR1HmuKla/view?usp=sharing)>
+
+<div align="center">
+  <img src="report/assets/Entrevista3Cliente.png" alt="Entrevista_cliente 3" width="100%">
+</div>
+
+**Resumen de la entrevista:**
+
+En la tercera entrevista, el cliente Renzo Baldeón comenta que, durante la elaboración de su ropero, tuvo varios inconvenientes que afectaron su experiencia. Señala que los tiempos de respuesta fueron lentos, lo que generó demoras en la entrega, además de una comunicación deficiente con el proveedor a lo largo del proceso. Esta falta de información le causó incertidumbre sobre el estado de su pedido.Asimismo, menciona que le gustaría contar con una forma de visualizar el avance de sus encargos y tener un contacto más directo con el carpintero para resolver dudas o coordinar detalles. Finalmente, indica que estaría dispuesto a pagar un poco más por una aplicación que le permita solucionar estos problemas y mejorar la experiencia del servicio.
+
+
+### Análisis de entrevistas
+
+A partir de las entrevistas realizadas a clientes y carpinteros, se identificaron diversos problemas recurrentes en el proceso de fabricación de muebles personalizados. En primer lugar, se evidenció una deficiente comunicación entre ambas partes, ya que los clientes deben recurrir constantemente a mensajes por WhatsApp para solicitar actualizaciones sobre el estado de sus pedidos. Esta comunicación suele ser reactiva y poco estructurada, lo que genera incertidumbre, percepción de desorganización e incluso desconfianza en algunos casos.
+
+Asimismo, se observó una clara falta de visibilidad del proceso de producción. Los clientes no cuentan con una forma directa de conocer el avance de sus muebles, dependiendo únicamente de fotos o mensajes enviados por el carpintero. Esto no solo afecta la experiencia del usuario, sino que también incrementa la carga de comunicación para el taller. En paralelo, los carpinteros gestionan sus pedidos mediante herramientas informales como cuadernos o aplicaciones de mensajería, lo que limita la organización y el control de la información.
+
+Por otro lado, se identificaron problemas en la planificación del trabajo, especialmente en el cálculo de materiales y la estimación de tiempos. Los carpinteros suelen basarse en su experiencia para tomar estas decisiones, lo que en varios casos deriva en errores como falta de material durante la producción o compras innecesarias. Estas imprecisiones generan retrasos en las entregas y afectan la eficiencia del proceso productivo.
+
+En conjunto, estos hallazgos evidencian una oportunidad clara para la implementación de una solución tecnológica que permita mejorar la organización del taller, optimizar la planificación de los muebles y brindar mayor transparencia al cliente. En este contexto, WoodRoute se posiciona como una alternativa que responde directamente a estas necesidades, integrando gestión de pedidos, control de inventario y seguimiento del proceso en una sola plataforma.
+
+
+## Needfinding
+
+### User Personas
+
+En esta sección se presentan las fichas de User Persona elaboradas para los dos segmentos objetivo identificados en el proyecto: carpinteros independientes o pequeños talleres, y clientes que solicitan muebles a medida.
+
+La construcción de estos arquetipos se sustenta en el análisis cualitativo de entrevistas realizadas a potenciales usuarios del rubro de carpintería y diseño de interiores, así como en el estudio comparativo de la competencia directa e indirecta. De dicho análisis se extrajeron las principales características demográficas, comportamientos, objetivos, frustraciones y necesidades no satisfechas que hoy presentan ambos segmentos.
+
+
+![User Persona 1](report/assets/needfinding/User%20persona%201%20_%20Carpintero.png)
+
+![User Persona 2](report/assets/needfinding/User%20Persona%202%20%20_%20Compradora.png)
+
+
+### User Task Matrix
+Para la elaboración de la User Task Matrix se consideran los dos segmentos objetivo identificados en el proyecto:
+
+
+1. Carpinteros independientes o pequeños talleres (representado por el User Persona Carlos Gutiérrez)
+
+2. Clientes que mandan a hacer el mueble (representado por el User Persona Valeria Fernández)
+
+Las tareas listadas corresponden a actividades reales que estos usuarios realizan actualmente en su día a día, con independencia de que exista o no la plataforma web propuesta. Cada tarea ha sido identificada a partir del análisis de entrevistas, observación contextual y benchmarking con la competencia.
+
+Para cada tarea se evalúa:
+
+Frecuencia: Escala de 1 a 5 (1 = Muy baja / Rara vez, 5 = Muy alta / Varias veces al día)
+
+Importancia: Escala de 1 a 5 (1 = Poco importante / Prescindible, 5 = Crítica / Indispensable)
+
+
+| Tarea (Task) | Carlos Gutiérrez (Carpintero) Frec. | Carlos Gutiérrez (Carpintero) Import. | Valeria Méndez (Cliente) Frec. | Valeria Méndez (Cliente) Import. |
+|:---|:---:|:---:|:---:|:---:|
+| **1. Registrar un nuevo pedido de mueble** | 5 | 5 | 5 | 5 |
+| **2. Consultar disponibilidad de materiales** (madera, herrajes, etc.) | 5 | 5 | 4 | 5 |
+| **3. Calcular tiempo estimado de fabricación** | 5 | 5 | 3 | 5 |
+| **4. Consultar el estado/avance de un pedido** | 5 | 4 | 5 | 5 |
+| **5. Comunicarse con el carpintero/cliente para resolver dudas** | 5 | 5 | 4 | 4 |
+| **6. Registrar salida de materiales del inventario** | 5 | 5 | 1 | 2 |
+| **7. Tomar fotos del proceso de fabricación** | 4 | 3 | 1 | 1 |
+| **8. Comparar pedidos similares para no confundirlos** | 4 | 4 | 2 | 3 |
+| **9. Calcular costo final del mueble** (materiales + mano de obra) | 5 | 5 | 3 | 4 |
+| **10. Anotar especificaciones técnicas** (medidas, acabados, diseño) | 5 | 5 | 4 | 5 |
+| **11. Asignar prioridad a pedidos urgentes** | 4 | 4 | 3 | 3 |
+| **12. Verificar si un pedido está atrasado** | 4 | 5 | 4 | 5 |
+| **13. Buscar un carpintero/taller confiable** | 1 | 2 | 4 | 5 |
+| **14. Comparar presupuestos entre diferentes talleres** | 1 | 2 | 4 | 5 |
+| **15. Recordar fechas de entrega prometidas** | 5 | 5 | 4 | 5 |
+
+
+
+#### Escala utilizada
+
+| Valor | Frecuencia | Importancia |
+|:---:|:---|:---|
+| **5** | Varias veces al día | Crítica / Indispensable |
+| **4** | A diario | Muy importante |
+| **3** | 2-3 veces por semana | Moderadamente importante |
+| **2** | Semanalmente | Poco importante |
+| **1** | Rara vez (mensual o menos) | Prescindible |
+
+
+
+## Principales coincidencias entre ambos segmentos
+
+| Coincidencia | Implicancia para la plataforma |
+|:---|:---|
+| **Registro de pedidos** es crítico para ambos (5/5 y 5/5) | La interfaz de creación de pedidos debe ser colaborativa o permitir visualización compartida |
+| **Especificaciones técnicas** son muy importantes para ambos (5/5 y 4/5) | Debe existir un registro estructurado de medidas, materiales, acabados y diseño, accesible para ambos |
+| **Fechas de entrega** son igualmente valoradas (5/5 y 4/5) | El sistema debe mostrar claramente la fecha prometida y enviar alertas de proximidad |
+| **Comunicación fluida** es necesaria para resolver dudas (5/5 y 4/4) | La plataforma debe integrar un canal de mensajería o comentarios asociado a cada pedido |
+| **Estado/avance del pedido** es importante para ambos (4/5 y 5/5) | El seguimiento debe ser visual y en tiempo real, con hitos claros |
+
+
+#### Análisis de hallazgos clave
+
+| Hallazgo | Implicancia para la plataforma |
+|:---|:---|
+| Las tareas de **registro de pedidos, consulta de stock y cálculo de tiempos** tienen frecuencia e importancia 5 para el carpintero | El módulo de **planificación y viabilidad** debe ser el núcleo de la plataforma |
+| **Consultar estado del pedido** es frecuencia 5 e importancia 5 para el cliente | El **seguimiento en tiempo real** es una feature crítica, no opcional |
+| **Tomar fotos del proceso** tiene baja importancia para el carpintero (3) pero alta necesidad para el cliente (no lo hace él, pero lo consume) | La plataforma debe **automatizar la captura y asociación de fotos** a cada etapa del pedido, sin esfuerzo extra para el carpintero |
+| **Buscar carpintero confiable y comparar presupuestos** son tareas de alta importancia solo para el cliente | La plataforma podría incluir un **directorio o sistema de reputación** a futuro |
+| **Recordar fechas de entrega** es muy importante para ambos (5 y 5) | El sistema debe tener **alertas automáticas de vencimiento** tanto para carpintero como para cliente |
+
+### User Journey Mapping
+
+En esta sección se presentan los User Journey Maps para los dos segmentos objetivo identificados:
+
+1. Carpintero independiente / pequeño taller (Carlos Gutiérrez)
+
+2. Cliente que manda a hacer el mueble (Valeria Méndez)
+
+El journey representado cubre el end-to-end de la experiencia actual desde que el cliente detecta una necesidad de un mueble personalizado hasta que recibe el producto final y realiza el pago. Se ilustran las etapas, acciones, emociones, puntos de dolor y oportunidades de mejora que posteriormente abordará la plataforma propuesta.
+
+![User Journey Mapping](report/assets/needfinding/User%20Journey%20Mapping%201%20AW.png)
+
+![User Journey Mapping](report/assets/needfinding/User%20Journey%20Mapping%202%20AW.png)
+
+### Empathy Mapping
+
+En esta sección se presentan los Empathy Maps elaborados para los dos User Personas del proyecto: Carlos Gutiérrez (carpintero) y Valeria Fernández (cliente).
+
+El proceso de elaboración consistió en colocar cada User Persona en el centro del canvas y registrar observaciones del equipo para responder: ¿Con quién empatizamos? ¿Qué necesita hacer? ¿Qué dice? ¿Qué ve? ¿Qué hace? ¿Qué escucha? ¿Qué piensa y siente? Finalmente, se identificaron Pains (¿Qué le preocupa?) y Gains (¿Qué ayuda? ¿Qué lo convence? ¿Qué dice?).
+
+Los diagramas fueron elaborados en UXPressia y se adjuntan las capturas a continuación.
+
+![Empathy Mapping](report/assets/needfinding/Empathy%20mapping%201.png)
+
+![Empathy Mapping](report/assets/needfinding/Empathy%20mapping%202.png)
+
+
+# Requirements Specification
+
+## User Stories
+EP01	Gestión del Landing Pague <br>
+EP02    Gestión de Usuarios y Perfiles <br>
+EP03    Gestión de Pedidos de Muebles Personalizados <br>
+EP04    Planificación y Seguimiento de Producción <br>
+EP05    Validación de Materiales y Control de Inventario <br>
+EP06    Estimación de Costos y Tiempos de Fabricación <br>
+EP07    Comunicación y Transparencia con el Cliente <br><br>
+
+
+| Epic | titulo | descripcion |Criterios de Aceptacion|Relacionado con Epic ID|
+|------|--------|-------------|-------------|-------------|
+| HU01 | Descarga de la aplicación | Como visitante, quiero acceder a enlaces de descarga para instalar la aplicación en mi dispositivo. | **Escenario 1: Descarga exitosa de la aplicación** <br> _Dado_ que el usuario se encuentra en la landing page <br> _Cuando_ selecciona el botón de descarga correspondiente a su dispositivo <br> _Entonces_ el sistema redirige a la tienda de aplicaciones correspondiente <br> _Y_ permite iniciar la descarga de la aplicación | EP01 |
+| HU02 | Visualización de información de la plataforma | Como visitante, quiero ver información clara sobre InstAlert para entender sus beneficios y funcionamiento. | **Escenario 1: Visualización de información en la landing page** <br> _Dado_ que el usuario accede a la landing page <br> _Cuando_ navega por las secciones informativas <br> _Entonces_ el sistema muestra contenido sobre funcionalidades, beneficios y uso de la plataforma <br> _Y_ presenta la información de manera clara y estructurada | EP01 |
+| HU03 | Registro desde la landing page | Como visitante, quiero registrarme directamente desde la landing page para comenzar a usar la aplicación rápidamente. | **Escenario 1: Registro exitoso desde la landing page** <br> _Dado_ que el usuario se encuentra en la landing page <br> _Cuando_ completa el formulario de registro con datos válidos <br> _Entonces_ el sistema crea la cuenta exitosamente <br> _Y_ redirige al usuario a la aplicación o confirma el registro | EP01 |
+| HU04 | Visualización de testimonios o casos de uso | Como visitante, quiero ver experiencias de otros usuarios para confiar en la efectividad de la plataforma. | **Escenario 1: Visualización de testimonios** <br> _Dado_ que el usuario accede a la landing page <br> _Cuando_ navega a la sección de testimonios o casos de uso <br> _Entonces_ el sistema muestra opiniones y experiencias de usuarios <br> _Y_ presenta contenido que refuerza la confianza en la plataforma | EP01 |
+| HU05 | Suscripción a notificaciones o novedades | Como visitante, quiero suscribirme para recibir noticias o actualizaciones sobre la plataforma. | **Escenario 1: Suscripción exitosa** <br> _Dado_ que el usuario se encuentra en la landing page <br> _Cuando_ ingresa su correo electrónico y se suscribe <br> _Entonces_ el sistema registra la suscripción correctamente <br> _Y_ confirma al usuario que recibirá futuras notificaciones o novedades | EP01 |
+| HU06 | Registro de usuario | Como visitante, quiero registrarme en la plataforma para poder acceder a sus funcionalidades. | **Escenario 1: Registro exitoso** <br> _Dado_ que el usuario se encuentra en la página de registro <br> _Cuando_ completa correctamente sus datos y envía el formulario <br> _Entonces_ el sistema crea su cuenta <br> _Y_ le permite acceder a la plataforma | EP02 |
+| HU07 | Inicio de sesión | Como usuario registrado, quiero iniciar sesión en la plataforma para acceder a mi cuenta. | **Escenario 1: Inicio de sesión exitoso** <br> _Dado_ que el usuario ya tiene una cuenta registrada <br> _Cuando_ ingresa sus credenciales correctas <br> _Entonces_ el sistema valida la información <br> _Y_ le permite acceder a su panel principal | EP02 |
+| HU08 | Gestión de perfil | Como usuario, quiero editar mi información personal para mantener mis datos actualizados. | **Escenario 1: Actualización de perfil** <br> _Dado_ que el usuario está en su perfil <br> _Cuando_ modifica sus datos y guarda los cambios <br> _Entonces_ el sistema actualiza la información <br> _Y_ muestra los datos actualizados correctamente | EP02 |
+| HU09 | Selección de tipo de usuario | Como usuario, quiero definir si soy carpintero o cliente para acceder a funcionalidades específicas. | **Escenario 1: Selección de rol** <br> _Dado_ que el usuario se encuentra en el registro <br> _Cuando_ selecciona su tipo de usuario (carpintero o cliente) <br> _Entonces_ el sistema guarda esta información <br> _Y_ adapta la experiencia según el rol seleccionado | EP02 |
+| HU10 | Creación de pedido personalizado | Como cliente, quiero crear un pedido de mueble personalizado para solicitar un diseño específico. | **Escenario 1: Creación exitosa de pedido** <br> _Dado_ que el cliente se encuentra en la sección de pedidos <br> _Cuando_ completa los detalles del mueble (medidas, material, diseño) y envía la solicitud <br> _Entonces_ el sistema registra el pedido <br> _Y_ lo envía al carpintero para su revisión | EP03 |
+| HU11 | Visualización de pedidos | Como usuario, quiero visualizar la lista de pedidos para hacer seguimiento a su estado. | **Escenario 1: Visualización de pedidos** <br> _Dado_ que el usuario accede a la sección de pedidos <br> _Cuando_ el sistema carga la información <br> _Entonces_ se muestran los pedidos registrados <br> _Y_ su estado actual (pendiente, en proceso, finalizado) | EP03 |
+| HU12 | Aceptación o rechazo de pedidos | Como carpintero, quiero aceptar o rechazar pedidos para gestionar mi carga de trabajo. | **Escenario 1: Aceptación de pedido** <br> _Dado_ que el carpintero recibe un pedido <br> _Cuando_ revisa los detalles y decide aceptarlo <br> _Entonces_ el sistema actualiza el estado del pedido <br> _Y_ lo marca como "en proceso" | EP03 |
+| HU13 | Modificación de pedido | Como cliente, quiero modificar un pedido antes de que sea aceptado para ajustar los detalles. | **Escenario 1: Modificación exitosa** <br> _Dado_ que el pedido aún no ha sido aceptado <br> _Cuando_ el cliente edita la información del pedido <br> _Entonces_ el sistema actualiza los cambios <br> _Y_ notifica al carpintero | EP03 |
+| HU14 | Cancelación de pedido | Como cliente, quiero cancelar un pedido para detener el proceso si ya no lo necesito. | **Escenario 1: Cancelación de pedido** <br> _Dado_ que el cliente tiene un pedido activo <br> _Cuando_ selecciona la opción de cancelar <br> _Entonces_ el sistema cambia el estado del pedido a "cancelado" <br> _Y_ notifica al carpintero | EP03 |
+| HU15 | Definición de etapas de producción | Como carpintero, quiero definir las etapas de producción de un pedido para organizar mejor el trabajo. | **Escenario 1: Creación de etapas** <br> _Dado_ que el carpintero ha aceptado un pedido <br> _Cuando_ define las etapas (diseño, corte, ensamblado, acabado, entrega) <br> _Entonces_ el sistema registra las etapas <br> _Y_ las asocia al pedido | EP04 |
+| HU16 | Actualización del estado de producción | Como carpintero, quiero actualizar el estado de cada etapa para reflejar el progreso del pedido. | **Escenario 1: Actualización de estado** <br> _Dado_ que el pedido está en proceso <br> _Cuando_ el carpintero cambia el estado de una etapa <br> _Entonces_ el sistema actualiza el progreso <br> _Y_ refleja el cambio en el seguimiento del pedido | EP04 |
+| HU17 | Visualización del progreso | Como cliente, quiero ver el progreso de mi pedido para conocer en qué etapa se encuentra. | **Escenario 1: Visualización de progreso** <br> _Dado_ que el cliente tiene un pedido activo <br> _Cuando_ accede al detalle del pedido <br> _Entonces_ el sistema muestra las etapas completadas y pendientes <br> _Y_ el estado actual del pedido | EP04 |
+| HU18 | Estimación de tiempos por etapa | Como carpintero, quiero asignar tiempos estimados a cada etapa para planificar mejor la entrega. | **Escenario 1: Asignación de tiempos** <br> _Dado_ que el carpintero está planificando un pedido <br> _Cuando_ define el tiempo estimado por etapa <br> _Entonces_ el sistema guarda la información <br> _Y_ calcula el tiempo total estimado | EP04 |
+| HU19 | Registro de materiales | Como carpintero, quiero registrar los materiales disponibles para llevar un control del inventario. | **Escenario 1: Registro exitoso** <br> _Dado_ que el carpintero accede al módulo de inventario <br> _Cuando_ ingresa los datos del material (tipo, cantidad, unidad) <br> _Entonces_ el sistema guarda la información <br> _Y_ actualiza el inventario disponible | EP05 |
+| HU20 | Actualización de inventario | Como carpintero, quiero actualizar las cantidades de materiales para reflejar el consumo o reposición. | **Escenario 1: Actualización de stock** <br> _Dado_ que el carpintero utiliza o repone materiales <br> _Cuando_ modifica la cantidad en el sistema <br> _Entonces_ el inventario se actualiza correctamente <br> _Y_ refleja el stock actual | EP05 |
+| HU21 | Validación de materiales para pedidos | Como carpintero, quiero validar si tengo materiales suficientes para aceptar un pedido. | **Escenario 1: Validación automática** <br> _Dado_ que el carpintero revisa un pedido <br> _Cuando_ el sistema compara los materiales requeridos con el inventario <br> _Entonces_ indica si el pedido es viable <br> _Y_ muestra los materiales faltantes si aplica | EP05 |
+| HU22 | Alerta de bajo inventario | Como carpintero, quiero recibir alertas cuando el stock sea bajo para evitar retrasos en producción. | **Escenario 1: Generación de alerta** <br> _Dado_ que un material alcanza el nivel mínimo definido <br> _Cuando_ el sistema detecta esta condición <br> _Entonces_ genera una alerta <br> _Y_ notifica al carpintero | EP05 |
+| HU23 | Cálculo de costo estimado | Como carpintero, quiero calcular el costo estimado de un pedido para definir un precio adecuado. | **Escenario 1: Cálculo de costo** <br> _Dado_ que el carpintero tiene los detalles del pedido <br> _Cuando_ ingresa los costos de materiales y mano de obra <br> _Entonces_ el sistema calcula el costo total <br> _Y_ muestra el resultado estimado | EP06 |
+| HU24 | Estimación de tiempo total | Como carpintero, quiero estimar el tiempo total de fabricación para planificar la entrega del pedido. | **Escenario 1: Estimación de tiempo** <br> _Dado_ que el carpintero define los tiempos por etapa <br> _Cuando_ el sistema procesa la información <br> _Entonces_ calcula el tiempo total estimado <br> _Y_ lo muestra al usuario | EP06 |
+| HU25 | Evaluación de rentabilidad | Como carpintero, quiero evaluar la rentabilidad de un pedido para tomar decisiones informadas. | **Escenario 1: Evaluación de rentabilidad** <br> _Dado_ que el carpintero tiene el costo estimado <br> _Cuando_ compara con el precio de venta <br> _Entonces_ el sistema calcula la ganancia <br> _Y_ muestra si el pedido es rentable | EP06 |
+| HU26 | Generación de presupuesto | Como carpintero, quiero generar un presupuesto para presentar al cliente antes de iniciar el trabajo. | **Escenario 1: Generación de presupuesto** <br> _Dado_ que el carpintero ha calculado costos y tiempos <br> _Cuando_ solicita generar el presupuesto <br> _Entonces_ el sistema crea un documento <br> _Y_ lo deja listo para compartir con el cliente | EP06 |
+| HU27 | Envío de mensajes | Como usuario, quiero enviar mensajes dentro de la plataforma para comunicarme sobre el pedido. | **Escenario 1: Envío de mensaje exitoso** <br> _Dado_ que el usuario accede al chat del pedido <br> _Cuando_ escribe un mensaje y lo envía <br> _Entonces_ el sistema entrega el mensaje <br> _Y_ lo muestra en la conversación | EP07 |
+| HU28 | Recepción de mensajes | Como usuario, quiero recibir mensajes para mantenerme informado sobre el pedido. | **Escenario 1: Recepción de mensaje** <br> _Dado_ que otro usuario envía un mensaje <br> _Cuando_ el sistema procesa el envío <br> _Entonces_ el mensaje se recibe correctamente <br> _Y_ se muestra en la conversación | EP07 |
+| HU29 | Historial de comunicación | Como usuario, quiero ver el historial de mensajes para revisar conversaciones anteriores. | **Escenario 1: Visualización de historial** <br> _Dado_ que el usuario accede al chat <br> _Cuando_ el sistema carga los mensajes <br> _Entonces_ muestra el historial completo <br> _Y_ ordenado cronológicamente | EP07 |
+
+
+## Impact Mapping
+<img src="report/assets/ImpactMaping.png">
+
+
+## Product Backlog
+| Orden | User Story ID | Título                                        | Descripción                                                                                                           | Story Points |
+| ----- | ------------- | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------ |
+| 1     | HU01          | Descarga de la aplicación                     | Como visitante, quiero acceder a enlaces de descarga para instalar la aplicación en mi dispositivo.                   | 2            |
+| 2     | HU02          | Visualización de información de la plataforma | Como visitante, quiero ver información clara sobre InstAlert para entender sus beneficios y funcionamiento.           | 1            |
+| 3     | HU03          | Registro desde la landing page                | Como visitante, quiero registrarme directamente desde la landing page para comenzar a usar la aplicación rápidamente. | 3            |
+| 4     | HU04          | Visualización de testimonios o casos de uso   | Como visitante, quiero ver experiencias de otros usuarios para confiar en la efectividad de la plataforma.            | 1            |
+| 5     | HU05          | Suscripción a notificaciones o novedades      | Como visitante, quiero suscribirme para recibir noticias o actualizaciones sobre la plataforma.                       | 2            |
+| 6     | HU06          | Registro de usuario                           | Como visitante, quiero registrarme en la plataforma para poder acceder a sus funcionalidades.                         | 3            |
+| 7     | HU07          | Inicio de sesión                              | Como usuario registrado, quiero iniciar sesión en la plataforma para acceder a mi cuenta.                             | 2            |
+| 8     | HU08          | Gestión de perfil                             | Como usuario, quiero editar mi información personal para mantener mis datos actualizados.                             | 3            |
+| 9     | HU09          | Selección de tipo de usuario                  | Como usuario, quiero definir si soy carpintero o cliente para acceder a funcionalidades específicas.                  | 2            |
+| 10    | HU10          | Creación de pedido personalizado              | Como cliente, quiero crear un pedido de mueble personalizado para solicitar un diseño específico.                     | 5            |
+| 11    | HU11          | Visualización de pedidos                      | Como usuario, quiero visualizar la lista de pedidos para hacer seguimiento a su estado.                               | 3            |
+| 12    | HU12          | Aceptación o rechazo de pedidos               | Como carpintero, quiero aceptar o rechazar pedidos para gestionar mi carga de trabajo.                                | 3            |
+| 13    | HU13          | Modificación de pedido                        | Como cliente, quiero modificar un pedido antes de que sea aceptado para ajustar los detalles.                         | 3            |
+| 14    | HU14          | Cancelación de pedido                         | Como cliente, quiero cancelar un pedido para detener el proceso si ya no lo necesito.                                 | 2            |
+| 15    | HU15          | Definición de etapas de producción            | Como carpintero, quiero definir las etapas de producción de un pedido para organizar mejor el trabajo.                | 5            |
+| 16    | HU16          | Actualización del estado de producción        | Como carpintero, quiero actualizar el estado de cada etapa para reflejar el progreso del pedido.                      | 3            |
+| 17    | HU17          | Visualización del progreso                    | Como cliente, quiero ver el progreso de mi pedido para conocer en qué etapa se encuentra.                             | 3            |
+| 18    | HU18          | Estimación de tiempos por etapa               | Como carpintero, quiero asignar tiempos estimados a cada etapa para planificar mejor la entrega.                      | 5            |
+| 19    | HU19          | Registro de materiales                        | Como carpintero, quiero registrar los materiales disponibles para llevar un control del inventario.                   | 3            |
+| 20    | HU20          | Actualización de inventario                   | Como carpintero, quiero actualizar las cantidades de materiales para reflejar el consumo o reposición.                | 3            |
+| 21    | HU21          | Validación de materiales para pedidos         | Como carpintero, quiero validar si tengo materiales suficientes para aceptar un pedido.                               | 5            |
+| 22    | HU22          | Alerta de bajo inventario                     | Como carpintero, quiero recibir alertas cuando el stock sea bajo para evitar retrasos en producción.                  | 5            |
+| 23    | HU23          | Cálculo de costo estimado                     | Como carpintero, quiero calcular el costo estimado de un pedido para definir un precio adecuado.                      | 5            |
+| 24    | HU24          | Estimación de tiempo total                    | Como carpintero, quiero estimar el tiempo total de fabricación para planificar la entrega del pedido.                 | 5            |
+| 25    | HU25          | Evaluación de rentabilidad                    | Como carpintero, quiero evaluar la rentabilidad de un pedido para tomar decisiones informadas.                        | 5            |
+| 26    | HU26          | Generación de presupuesto                     | Como carpintero, quiero generar un presupuesto para presentar al cliente antes de iniciar el trabajo.                 | 5            |
+| 27    | HU27          | Envío de mensajes                             | Como usuario, quiero enviar mensajes dentro de la plataforma para comunicarme sobre el pedido.                        | 3            |
+| 28    | HU28          | Recepción de mensajes                         | Como usuario, quiero recibir mensajes para mantenerme informado sobre el pedido.                                      | 3            |
+| 29    | HU29          | Historial de comunicación                     | Como usuario, quiero ver el historial de mensajes para revisar conversaciones anteriores.                             | 2            |
+
+
 # Product Design
 
 ## Style Guidelines
@@ -515,6 +1026,8 @@ Los patrones responsive principales que aplican a la landing y la web app son:
 - **Secciones**: `--spacing-section-sm` (4rem) en mobile, `--spacing-section` (6rem) en desktop
 - **Tipografía**: escala reducida en mobile (H1 baja de `5xl` a `4xl`, hero de `6xl` a `5xl`)
 - **Imágenes**: `max-width: 100%` en todos los elementos `img` y `svg` por defecto
+
+
 
 ## Information Architecture
 
@@ -745,6 +1258,8 @@ del pedido, el historial de estados anteriores y los datos del mueble. No hay me
 no hay links a otras secciones, no hay posibilidad de confundirse. El único punto de
 salida opcional es un link al sitio de WoodRoute para que el cliente conozca el producto.
 
+
+
 ## Landing Page UI Design
 
 ### Landing Page Wireframe
@@ -778,4 +1293,6 @@ La versión mobile mantiene la misma jerarquía de contenido que desktop. Las gr
 de features colapsan a una columna, el navbar se convierte en menú hamburguesa y
 el CTA de conversión permanece visible y accesible en todo momento. El espaciado
 entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm`.
+
+
 
