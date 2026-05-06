@@ -359,10 +359,10 @@ En esta sección evaluamos los competidores de nuestro nicho.
       <td align="center">Buildertrend</td>
     </tr>
     <tr>
-      <td valign="top" align="center"><img src="assets/logo.png"/></td>
-      <td valign="top" align="center"><img src="assets/competitor-cleri.png"/></td>
-      <td valign="top" align="center"><img src="assets/competitor-craftybase.png"/></td>
-      <td valign="top" align="center"><img src="assets/competitor-buildertrend.png"/></td>
+      <td valign="top" align="center"><img src="assets/logo-woodroute.png"/></td>
+      <td valign="top" align="center"><img src="assets/competitors/cleri.png"/></td>
+      <td valign="top" align="center"><img src="assets/competitors/craftybase.png"/></td>
+      <td valign="top" align="center"><img src="assets/competitors/buildertrend.png"/></td>
     </tr>
     <tr>
       <td rowspan="2">Perfil</td>
@@ -880,7 +880,7 @@ exactamente dónde hacer clic.
 Los tokens semánticos son el nivel de abstracción que conecta la paleta con los componentes.
 La interfaz nunca referencia valores de color crudos: siempre usa tokens.
 
-![Paleta de colores de WoodRoute](assets/style-color-palette.png)
+![Paleta de colores de WoodRoute](assets/product-design/style/color-palette.png)
 
 **Colores de marca:**
 
@@ -927,7 +927,7 @@ elementos de heading (h1–h6) con `font-weight` semibold o superior.
 **Inter** es la fuente de cuerpo para texto corrido, UI y datos. Optimizada para lectura en pantalla
 a cualquier tamaño. Neutral y funcional, no compite con los títulos.
 
-![Specimen tipográfico](assets/style-typography-specimen.png)
+![Specimen tipográfico](assets/product-design/style/typography-specimen.png)
 
 La escala tipográfica define tamaños, pesos e interlineado para cada nivel jerárquico:
 
@@ -968,7 +968,7 @@ El interlineado varía según el contexto de lectura:
 El espaciado base sigue la escala de Tailwind (múltiplos de 4px). Adicionalmente, se definen
 dos tokens de sección para controlar la separación vertical entre bloques de contenido en la interfaz:
 
-![Escala de espaciado](assets/style-spacing-scale.png)
+![Escala de espaciado](assets/product-design/style/spacing-scale.png)
 
 | Token | Valor | Px | Uso |
 |---|---|---|---|
@@ -979,7 +979,7 @@ dos tokens de sección para controlar la separación vertical entre bloques de c
 
 #### Border radius
 
-![Border radius tokens de WoodRoute](assets/style-border-radius.png)
+![Border radius tokens de WoodRoute](assets/product-design/style/border-radius.png)
 
 El sistema de radios define la personalidad de los componentes. WoodRoute usa radios moderados:
 ni completamente cuadrado (frío, técnico) ni completamente redondo (demasiado informal). La
@@ -998,7 +998,7 @@ esquina redondeada evoca la madera trabajada y lijada.
 Las sombras usan el color del foreground con opacidad controlada, manteniendo la temperatura
 cálida del sistema. Definen la jerarquía de elevación de los elementos en el plano Z:
 
-![Escala de sombras](assets/style-shadow-scale.png)
+![Escala de sombras](assets/product-design/style/shadow-scale.png)
 
 | Token | Elevación | Uso |
 |---|---|---|
@@ -1013,7 +1013,7 @@ La interfaz sigue la estrategia mobile-first: los estilos base se definen para m
 sobreescriben hacia arriba con media queries. Los breakpoints siguen la escala estándar de
 Tailwind CSS:
 
-![Breakpoints responsive](assets/style-responsive-breakpoints.png)
+![Breakpoints responsive](assets/product-design/style/responsive-breakpoints.png)
 
 | Breakpoint | Ancho mínimo | Contexto |
 |---|---|---|
@@ -1287,11 +1287,11 @@ La página está estructurada en ocho secciones en el siguiente orden:
 
 **Vista desktop**
 
-![Mock-up landing page — desktop](assets/desktop.png)
+![Mock-up landing page — desktop](assets/product-design/landing/mockup-desktop.png)
 
 **Vista mobile**
 
-![Mock-up landing page — mobile](assets/mobile.png)
+![Mock-up landing page — mobile](assets/product-design/landing/mockup-mobile.png)
 
 La versión mobile mantiene la misma jerarquía de contenido que desktop. Las grillas
 de features colapsan a una columna, el navbar se convierte en menú hamburguesa y
