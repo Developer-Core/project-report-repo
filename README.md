@@ -558,15 +558,17 @@ La entrevista a un joven carpintero que trabaja junto a su padre evidenció que 
 
 **Entrevistado:** Eduardo Rojas
 
-**Link de la entrevista:** <enlace del video>
+**Edad:** 20 años
+
+**Link de la entrevista:** <https://drive.google.com/file/d/14ETbpC-OaXpmp6Nne9q4cWdRk1JviVvI/view?usp=sharing>
 
 <div align="center">
-  <img src="imagen" alt="Entrevista_cliente 1" width="100%">
+  <img src="assets/interviews/entrevista-1-segmento-2.png" alt="Entrevista cliente 1" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
 
-En la primera entrevista, el cliente Eduardo Alonso, estudiante residente del distrito de Magdalena, indicó haber tenido una experiencia "regular" al mandar a fabricar un escritorio. Mencionó que enfrentó problemas de comunicación, percibió un trato poco amable por parte del carpintero y experimentó retrasos en la entrega final. Además, señaló que la selección adecuada de materiales y asegurar que el resultado reflejara su idea inicial fueron los aspectos más complicados del proceso. Para generar confianza, el entrevistado requiere respuestas rápidas y evidencia visual del avance, por lo que consideró sumamente útil la implementación de un enlace de seguimiento automático y afirmó estar dispuesto a pagar un monto adicional por un servicio premium que mejore la comunicación y el monitoreo de su pedido.
+Eduardo Alonso, estudiante residente del distrito de Magdalena, indicó haber tenido una experiencia "regular" al mandar a fabricar un escritorio. Mencionó que enfrentó problemas de comunicación, percibió un trato poco amable por parte del carpintero y experimentó retrasos en la entrega final. Además, señaló que la selección adecuada de materiales y asegurar que el resultado reflejara su idea inicial fueron los aspectos más complicados del proceso. Para generar confianza, el entrevistado requiere respuestas rápidas y evidencia visual del avance, por lo que consideró sumamente útil la implementación de un enlace de seguimiento automático y afirmó estar dispuesto a pagar un monto adicional por un servicio premium que mejore la comunicación y el monitoreo de su pedido.
 
 
 **Entrevista 2**
@@ -575,15 +577,17 @@ En la primera entrevista, el cliente Eduardo Alonso, estudiante residente del di
 
 **Entrevistado:** Joseph Rodriguez
 
-**Link de la entrevista:** <enlace del video>
+**Edad:** 21 años
+
+**Link de la entrevista:** <https://drive.google.com/file/d/1yprqlqczeSu0gGd91PL32-cKOIW98TKg/view?usp=sharing>
 
 <div align="center">
-  <img src="imagen" alt="Entrevista_cliente 2" width="100%">
+  <img src="assets/interviews/entrevista-2-segmento-2.png" alt="Entrevista cliente 2" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
 
-En la segunda entrevista, el cliente Joseph Rodriguez, estudiante de Ingeniería de Software de 21 años, relató ser un consumidor recurrente de muebles a medida debido a la distribución inusual de su hogar, describiendo el proceso general como grato pero lento. Identificó como sus principales dificultades el lograr transmitir la idea exacta del diseño con las medidas precisas al fabricante y tener que lidiar con pequeños retrasos recurrentes en las entregas. Asimismo, el entrevistado expresó que solicitar actualizaciones constantemente por WhatsApp le resulta tedioso y monótono, por lo que valoraría contar con un enlace que detalle la fase exacta de fabricación de su pedido. Finalmente, indicó que pagaría un costo extra por este seguimiento detallado, pero condicionó este pago a que la empresa ya cuente con una sólida reputación, reseñas comprobables y un portafolio de trabajos previos.
+Joseph Rodriguez, estudiante de Ingeniería de Software de 21 años, relató ser un consumidor recurrente de muebles a medida debido a la distribución inusual de su hogar, describiendo el proceso general como grato pero lento. Identificó como sus principales dificultades el lograr transmitir la idea exacta del diseño con las medidas precisas al fabricante y tener que lidiar con pequeños retrasos recurrentes en las entregas. Asimismo, el entrevistado expresó que solicitar actualizaciones constantemente por WhatsApp le resulta tedioso y monótono, por lo que valoraría contar con un enlace que detalle la fase exacta de fabricación de su pedido. Finalmente, indicó que pagaría un costo extra por este seguimiento detallado, pero condicionó este pago a que la empresa ya cuente con una sólida reputación, reseñas comprobables y un portafolio de trabajos previos.
 
 **Entrevista 3** 
 
@@ -1293,6 +1297,5 @@ La versión mobile mantiene la misma jerarquía de contenido que desktop. Las gr
 de features colapsan a una columna, el navbar se convierte en menú hamburguesa y
 el CTA de conversión permanece visible y accesible en todo momento. El espaciado
 entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm`.
-
 
 
