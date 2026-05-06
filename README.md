@@ -1,6 +1,6 @@
 <div class="cover-page">
 <div class="cover-top">
-<img src="report/assets/logo-upc.png" alt="UPC" class="cover-logo">
+<img src="assets/logo-upc.png" alt="UPC" class="cover-logo">
 <div class="cover-university">Universidad Peruana de Ciencias Aplicadas</div>
 <div class="cover-program">Ingeniería de Software</div>
 <div class="cover-ciclo">Ciclo 2026-10</div>
@@ -128,23 +128,23 @@ WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes 
 <table>
   <tbody>
     <tr>
-      <td class="member-photo"><img src="report/assets/members/anderson.png" alt="Foto de Gonza Morales, Anderson"></td>
+      <td class="member-photo"><img src="assets/members/anderson.png" alt="Foto de Gonza Morales, Anderson"></td>
       <td><strong>Gonza Morales, Anderson -- U202120836</strong><br><br>Estudiante de sexto ciclo de la carrera de Ingenieria de Software. Destaca por su capacidad de liderazgo y organizacion en equipos de trabajo. Tiene habilidades en coordinacion de tareas, comunicacion efectiva, analisis de requerimientos y seguimiento de actividades orientadas a cumplir objetivos del proyecto.</td>
     </tr>
     <tr>
-      <td class="member-photo"><img src="report/assets/members/alexander.jpeg" alt="Foto de Justo Yauricasa, Alexander Paolo"></td>
+      <td class="member-photo"><img src="assets/members/alexander.jpeg" alt="Foto de Justo Yauricasa, Alexander Paolo"></td>
       <td><strong>Justo Yauricasa, Alexander Paolo -- U20191C054</strong><br><br>Estudio Ingeniería de Software y cuento con experiencia en desarrollo web dentro de equipos pequeños. Me interesa especialmente en Base de datos, en particular en diseño y arqueitectura de base de datos. Dentro del equipo, puedo contribuir en el levantamiento de requerimientos, el diseño de interfaces, así como en el diseño de bases de datos. Además, destaco por mi capacidad de organización y trabajo colaborativo.</td>
     </tr>
     <tr>
-      <td class="member-photo"><img src="report/assets/members/juan-saldaña.jpeg" alt="Foto de Saldaña De Souza, Juan David"></td>
+      <td class="member-photo"><img src="assets/members/juan-saldaña.jpeg" alt="Foto de Saldaña De Souza, Juan David"></td>
       <td><strong>Saldaña De Souza, Juan David -- U20221F192</strong><br><br><em>Descripción.</em></td>
     </tr>
     <tr>
-      <td class="member-photo"><img src="report/assets/members/piero-sulca.jpg" alt="Foto de Sulca Sanchez, Piero Angel"></td>
+      <td class="member-photo"><img src="assets/members/piero-sulca.jpg" alt="Foto de Sulca Sanchez, Piero Angel"></td>
       <td><strong>Sulca Sanchez, Piero Angel -- U202423711</strong><br><br>Curso la carrera de Ingeniería de Software y tengo experiencia en desarrollo web trabajando con equipos pequeños. Me apasiona el Front End, sobre todo cuando hay espacio para el diseño creativo: interfaces 3D, animaciones, productos que se ven y se sienten distintos. En el equipo puedo aportar en levantamiento de requerimientos, diseño de interfaces, desarrollo web con React y TypeScript, diseño de bases de datos. En el equipo aporto organización y colaboración.</td>
     </tr>
     <tr>
-      <td class="member-photo"><img src="report/assets/members/dalila.jpeg" alt="Foto de Torres Sanchez, Dalila Victoria"></td>
+      <td class="member-photo"><img src="assets/members/dalila.jpeg" alt="Foto de Torres Sanchez, Dalila Victoria"></td>
       <td><strong>Torres Sanchez, Dalila Victoria -- U20221F734</strong><br><br><em>Soy estudiante de Ingeniería de Software, he programado en C#, C++, PHP, Java y Python, además manejo de bases de datos relacionales. También he trabajado con Git y metodologías ágiles como Scrum, lo cual me ha ayudado a organizarme mejor y a trabajar en equipo con más fluidez. Me interesa mucho el desarrollo backend, porque me gusta entender la lógica detrás de las cosas, cómo se procesan los datos y cómo se asegura que todo funcione correctamente. También me gusta colaborar en el frontend, porque entiendo que un buen producto requiere que ambas partes trabajen en armonía. Disfruto ver cómo una idea se vuelve algo real, desde los primeros bocetos hasta la parte funcional donde las personas terminan usando. Actualmente, mi objetivo es seguir consolidando mis habilidades técnicas y blandas para desempeñarme con confianza en el entorno laboral. Me interesa participar en proyectos donde pueda aplicar lo que sé y aportar soluciones prácticas a problemas reales.</em></td>
     </tr>
   </tbody>
@@ -304,7 +304,7 @@ Aquí se presenta el Lean UX Canvas desarrollado para **Alimenta**:
 **Figura 1. Lean UX Canvas de WoodRoute**
 
 <div align="center">
-  <img src="report/assets/lean-ux-canvas.png" alt="Entrevista_carp 3" width="100%">
+  <img src="assets/lean-ux-canvas.png" alt="Entrevista_carp 3" width="100%">
 </div>
 
 **Enlace al Lean UX Canvas:** https://miro.com/welcomeonboard/ZVFaMVdKblhINnB5d1dnbWcxT2RLZ3ZjVFlQNWpsS2VKLzVQQ3dQMWUxS1pkY3hJbStyWENZNnc1cjIvd01lNkltV283MkVGRUM3MS94a1Q0dXp4U3QzclBsK0ZrZ24zQXZhRG14blV5YXdtMUlaMlV5alRXNTFMT21PL0tXbzJzVXVvMm53MW9OWFg5bkJoVXZxdFhRPT0hdjE=?share_link_id=533296594528
@@ -359,10 +359,10 @@ En esta sección evaluamos los competidores de nuestro nicho.
       <td align="center">Buildertrend</td>
     </tr>
     <tr>
-      <td valign="top" align="center"><img src="report/assets/logo.png"/></td>
-      <td valign="top" align="center"><img src="report/assets/competidor-cleri.png"/></td>
-      <td valign="top" align="center"><img src="report/assets/competidor-craftybase.png"/></td>
-      <td valign="top" align="center"><img src="report/assets/competidor-buildertrend.png"/></td>
+      <td valign="top" align="center"><img src="assets/logo.png"/></td>
+      <td valign="top" align="center"><img src="assets/competidor-cleri.png"/></td>
+      <td valign="top" align="center"><img src="assets/competidor-craftybase.png"/></td>
+      <td valign="top" align="center"><img src="assets/competidor-buildertrend.png"/></td>
     </tr>
     <tr>
       <td rowspan="2">Perfil</td>
@@ -514,7 +514,7 @@ En esta sección evaluamos los competidores de nuestro nicho.
 **Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQBIxTsDiMoMQ7UmxqokSxBtAbzjckIXgF8fW8kP5-aSU14?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LRldwg>
 
 <div align="center">
-  <img src="report/assets/carpintero-1.png" alt="Entrevista_carp 1" width="100%">
+  <img src="assets/carpintero-1.png" alt="Entrevista_carp 1" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
@@ -529,7 +529,7 @@ La entrevista realizada a un Maestro de carpintería independiente, menciona que
 **Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQA-72r7kw1ETKLhkTOknwcFAfMyGR4WulQY5KCh3gmHGxo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=lJhikH>
 
 <div align="center">
-  <img src="report/assets/carpintero-2.png" alt="Entrevista_carp 2" width="100%">
+  <img src="assets/carpintero-2.png" alt="Entrevista_carp 2" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
@@ -544,7 +544,7 @@ La entrevista realizada a un ayudante de carpintería evidencio que la gestión 
 **Link de la entrevista:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQChpwCTvVG-TJqmM0qE2yvnAWHSrGpBMxOBJK0kUSS8z88?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=g0kCLa>
 
 <div align="center">
-  <img src="report/assets/carpintero-3.png" alt="Entrevista_carp 3" width="100%">
+  <img src="assets/carpintero-3.png" alt="Entrevista_carp 3" width="100%">
 </div>
 
 **Resumen de la entrevista:**
@@ -594,7 +594,7 @@ En la segunda entrevista, el cliente Joseph Rodriguez, estudiante de Ingeniería
 **Link de la entrevista:** <[enlace del video](https://drive.google.com/file/d/19W5K1V3g7HjvXkpX5zqU805OR1HmuKla/view?usp=sharing)>
 
 <div align="center">
-  <img src="report/assets/Entrevista3Cliente.png" alt="Entrevista_cliente 3" width="100%">
+  <img src="assets/Entrevista3Cliente.png" alt="Entrevista_cliente 3" width="100%">
 </div>
 
 **Resumen de la entrevista:**
@@ -622,9 +622,9 @@ En esta sección se presentan las fichas de User Persona elaboradas para los dos
 La construcción de estos arquetipos se sustenta en el análisis cualitativo de entrevistas realizadas a potenciales usuarios del rubro de carpintería y diseño de interiores, así como en el estudio comparativo de la competencia directa e indirecta. De dicho análisis se extrajeron las principales características demográficas, comportamientos, objetivos, frustraciones y necesidades no satisfechas que hoy presentan ambos segmentos.
 
 
-![User Persona 1](report/assets/needfinding/User%20persona%201%20_%20Carpintero.png)
+![User Persona 1](assets/needfinding/User%20persona%201%20_%20Carpintero.png)
 
-![User Persona 2](report/assets/needfinding/User%20Persona%202%20%20_%20Compradora.png)
+![User Persona 2](assets/needfinding/User%20Persona%202%20%20_%20Compradora.png)
 
 
 ### User Task Matrix
@@ -707,9 +707,9 @@ En esta sección se presentan los User Journey Maps para los dos segmentos objet
 
 El journey representado cubre el end-to-end de la experiencia actual desde que el cliente detecta una necesidad de un mueble personalizado hasta que recibe el producto final y realiza el pago. Se ilustran las etapas, acciones, emociones, puntos de dolor y oportunidades de mejora que posteriormente abordará la plataforma propuesta.
 
-![User Journey Mapping](report/assets/needfinding/User%20Journey%20Mapping%201%20AW.png)
+![User Journey Mapping](assets/needfinding/User%20Journey%20Mapping%201%20AW.png)
 
-![User Journey Mapping](report/assets/needfinding/User%20Journey%20Mapping%202%20AW.png)
+![User Journey Mapping](assets/needfinding/User%20Journey%20Mapping%202%20AW.png)
 
 ### Empathy Mapping
 
@@ -719,9 +719,9 @@ El proceso de elaboración consistió en colocar cada User Persona en el centro 
 
 Los diagramas fueron elaborados en UXPressia y se adjuntan las capturas a continuación.
 
-![Empathy Mapping](report/assets/needfinding/Empathy%20mapping%201.png)
+![Empathy Mapping](assets/needfinding/Empathy%20mapping%201.png)
 
-![Empathy Mapping](report/assets/needfinding/Empathy%20mapping%202.png)
+![Empathy Mapping](assets/needfinding/Empathy%20mapping%202.png)
 
 
 # Requirements Specification
@@ -770,7 +770,7 @@ EP07    Comunicación y Transparencia con el Cliente <br><br>
 
 
 ## Impact Mapping
-<img src="report/assets/ImpactMaping.png">
+<img src="assets/ImpactMaping.png">
 
 
 ## Product Backlog
@@ -828,7 +828,7 @@ El logo combina un símbolo que evoca la veta de la madera con la idea de rutas 
 representando el flujo de trabajo del taller. El wordmark utiliza la fuente de display del sistema
 tipográfico en peso ExtraBold para transmitir solidez y presencia.
 
-![Logo de WoodRoute](report/assets/logo-woodroute.png)
+![Logo de WoodRoute](assets/logo-woodroute.png)
 
 Los tres principios que guían todas las decisiones de diseño son:
 
@@ -876,7 +876,7 @@ exactamente dónde hacer clic.
 Los tokens semánticos son el nivel de abstracción que conecta la paleta con los componentes.
 La interfaz nunca referencia valores de color crudos: siempre usa tokens.
 
-![Paleta de colores de WoodRoute](report/assets/style-color-palette.png)
+![Paleta de colores de WoodRoute](assets/style-color-palette.png)
 
 **Colores de marca:**
 
@@ -923,7 +923,7 @@ elementos de heading (h1–h6) con `font-weight` semibold o superior.
 **Inter** es la fuente de cuerpo para texto corrido, UI y datos. Optimizada para lectura en pantalla
 a cualquier tamaño. Neutral y funcional, no compite con los títulos.
 
-![Specimen tipográfico](report/assets/style-typography-specimen.png)
+![Specimen tipográfico](assets/style-typography-specimen.png)
 
 La escala tipográfica define tamaños, pesos e interlineado para cada nivel jerárquico:
 
@@ -964,7 +964,7 @@ El interlineado varía según el contexto de lectura:
 El espaciado base sigue la escala de Tailwind (múltiplos de 4px). Adicionalmente, se definen
 dos tokens de sección para controlar la separación vertical entre bloques de contenido en la interfaz:
 
-![Escala de espaciado](report/assets/style-spacing-scale.png)
+![Escala de espaciado](assets/style-spacing-scale.png)
 
 | Token | Valor | Px | Uso |
 |---|---|---|---|
@@ -975,7 +975,7 @@ dos tokens de sección para controlar la separación vertical entre bloques de c
 
 #### Border radius
 
-![Border radius tokens de WoodRoute](report/assets/style-border-radius.png)
+![Border radius tokens de WoodRoute](assets/style-border-radius.png)
 
 El sistema de radios define la personalidad de los componentes. WoodRoute usa radios moderados:
 ni completamente cuadrado (frío, técnico) ni completamente redondo (demasiado informal). La
@@ -994,7 +994,7 @@ esquina redondeada evoca la madera trabajada y lijada.
 Las sombras usan el color del foreground con opacidad controlada, manteniendo la temperatura
 cálida del sistema. Definen la jerarquía de elevación de los elementos en el plano Z:
 
-![Escala de sombras](report/assets/style-shadow-scale.png)
+![Escala de sombras](assets/style-shadow-scale.png)
 
 | Token | Elevación | Uso |
 |---|---|---|
@@ -1009,7 +1009,7 @@ La interfaz sigue la estrategia mobile-first: los estilos base se definen para m
 sobreescriben hacia arriba con media queries. Los breakpoints siguen la escala estándar de
 Tailwind CSS:
 
-![Breakpoints responsive](report/assets/style-responsive-breakpoints.png)
+![Breakpoints responsive](assets/style-responsive-breakpoints.png)
 
 | Breakpoint | Ancho mínimo | Contexto |
 |---|---|---|
@@ -1283,11 +1283,11 @@ La página está estructurada en ocho secciones en el siguiente orden:
 
 **Vista desktop**
 
-![Mock-up landing page — desktop](report/assets/desktop.png)
+![Mock-up landing page — desktop](assets/desktop.png)
 
 **Vista mobile**
 
-![Mock-up landing page — mobile](report/assets/mobile.png)
+![Mock-up landing page — mobile](assets/mobile.png)
 
 La versión mobile mantiene la misma jerarquía de contenido que desktop. Las grillas
 de features colapsan a una columna, el navbar se convierte en menú hamburguesa y
