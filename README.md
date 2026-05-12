@@ -357,9 +357,9 @@ Debe ser simple, clara y fácil de usar, con una interfaz intuitiva que permita 
 
 #### 1.2.2.4. Lean UX Canvas
 
-El Lean UX Canvas es una herramienta visual que permite alinear al equipo en torno a problemas, usuarios e hipótesis de manera ágil. En este proyecto se utilizó para comprender mejor a los restaurantes y albergues, identificar sus necesidades y definir cómo **Alimenta** puede generar valor real en su gestión diaria.
+El Lean UX Canvas es una herramienta visual que permite alinear al equipo en torno a problemas, usuarios e hipótesis de manera ágil. En este proyecto se utilizó para comprender mejor a los carpinteros independientes, pequeños talleres y a los clientes que solicitan muebles personalizados, identificar sus principales pain points y definir cómo **WoodRoute** puede generar valor real en la gestión diaria del taller y en la experiencia del cliente.
 
-Aquí se presenta el Lean UX Canvas desarrollado para **Alimenta**:
+Aquí se presenta el Lean UX Canvas desarrollado para **WoodRoute**:
 
 **Figura 1. Lean UX Canvas de WoodRoute**
 
