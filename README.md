@@ -381,7 +381,7 @@ Aquí se presenta el Lean UX Canvas desarrollado para **WoodRoute**:
   <img src="assets/lean-ux-canvas.png" alt="Lean UX Canvas de WoodRoute" width="100%">
 </div>
 
-**Enlace al Lean UX Canvas:** https://miro.com/welcomeonboard/ZVFaMVdKblhINnB5d1dnbWcxT2RLZ3ZjVFlQNWpsS2VKLzVQQ3dQMWUxS1pkY3hJbStyWENZNnc1cjIvd01lNkltV283MkVGRUM3MS94a1Q0dXp4U3QzclBsK0ZrZ24zQXZhRG14blV5YXdtMUlaMlV5alRXNTFMT21PL0tXbzJzVXVvMm53MW9OWFg5bkJoVXZxdFhRPT0hdjE=?share_link_id=533296594528
+**Enlace al Lean UX Canvas:** https://miro.com/app/board/uXjVHUJnMJM=/?share_link_id=898353122563
 
 
 ## 1.3. Segmentos objetivo
