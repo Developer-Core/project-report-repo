@@ -788,18 +788,64 @@ Los diagramas fueron elaborados en UXPressia y se adjuntan las capturas a contin
 
 ## 2.4. Big Picture EventStorming
 
-Para el desarrollo de la plataforma WoodRoute, el equipo se reunió de manera síncrona a través de una sesión de Google Meet, utilizando Miro como lienzo interactivo para simular el proceso de Big Picture EventStorming en formato digital. La sesión se extendió por aproximadamente dos horas, en las que los integrantes asumieron de manera colaborativa roles tanto técnicos como de negocio para modelar todo el flujo de valor del SaaS.
+Para el desarrollo de la plataforma WoodRoute, el equipo se reunió de manera síncrona a través de una sesión de Google Meet, utilizando Miro como lienzo interactivo para simular el proceso de Big Picture EventStorming siguiendo la metodología de Alberto Brandolini. La sesión se extendió por aproximadamente dos horas, en las que los integrantes asumieron de manera colaborativa roles tanto técnicos como de negocio para modelar todo el flujo de valor del SaaS.
 
-El proceso comenzó con una lluvia de ideas desordenada en la que se colocaron post-its virtuales para identificar los eventos clave del negocio en tiempo pasado. Luego, los eventos se organizaron cronológicamente de izquierda a derecha, abarcando desde la cotización inicial del mueble hasta su entrega final. Posteriormente, el equipo enriqueció el mapa identificando a los actores involucrados, como el carpintero y el cliente, e integrando sistemas externos críticos como las pasarelas de pago.
+El ejercicio se desarrolló en tres pasos progresivos: primero una lluvia de ideas para recolectar todos los domain events relevantes, luego un ordenamiento cronológico organizando los eventos en swimlanes por bounded context, y finalmente la incorporación de actores y sistemas externos. Cerramos el taller con dos pases narrativos (storytelling y reverse storytelling) que permitieron identificar eventos faltantes, hot spots y zonas de ambigüedad.
 
-La dinámica también permitió abrir debates importantes sobre las zonas de conflicto o desafíos del proyecto, tales como la automatización del inventario y el recálculo de tiempos en el taller, culminando con la división del sistema en tres grandes módulos de desarrollo: **Ventas**, **Inventario** y **Producción**.
+La actividad culminó con la división del sistema en cinco grandes bounded contexts: **Onboarding** (landing y gestión de usuarios), **Inventario**, **Cotización y Venta**, **Producción** y **Seguimiento y Comunicación**. Se identificaron tres actores principales (Visitante, Cliente, Carpintero) y tres sistemas externos clave (Tienda de aplicaciones, Email/Sender y Pasarela de pagos), además de un sistema externo adicional (Proveedor de madera) emergido durante el reverse storytelling.
 
-Esta actividad no solo garantizó que todo el equipo tuviera una visión unificada y clara del funcionamiento de la plataforma antes de escribir la primera línea de código, sino que también definió con precisión el alcance del producto mínimo viable y sentó las bases para el diseño de la arquitectura técnica y de la interfaz de usuario.
+Esta actividad no solo garantizó que todo el equipo tuviera una visión unificada y clara del funcionamiento de la plataforma antes de escribir la primera línea de código, sino que también definió con precisión el alcance del producto mínimo viable y sentó las bases para el diseño de la arquitectura técnica.
 
-**Tablero en Miro:** <https://miro.com/app/board/uXjVHWUB1RI=/>
+**Tablero en Miro:** <https://miro.com/app/board/uXjVHUq0794=/>
+
+**Paso 1 — Recolectando eventos.** Lluvia de ideas para capturar todos los domain events del dominio en pasado, sin orden ni jerarquía.
 
 <div align="center">
-  <img src="assets/big-picture-eventstorming.png" alt="Big Picture EventStorming de WoodRoute" width="100%">
+  <img src="assets/big-picture-eventstorming/paso-1/recolectando-eventos.jpg" alt="Paso 1: Recolectando eventos" width="100%">
+</div>
+
+**Paso 2 — Ordenando cronológicamente.** Los eventos se agruparon en cinco swimlanes (uno por bounded context) y se ordenaron cronológicamente de izquierda a derecha dentro de cada uno.
+
+<div align="center">
+  <img src="assets/big-picture-eventstorming/paso-2/onboarding.jpg" alt="Paso 2: Onboarding" width="100%">
+</div>
+
+<div align="center">
+  <img src="assets/big-picture-eventstorming/paso-2/inventario.jpg" alt="Paso 2: Inventario" width="100%">
+</div>
+
+<div align="center">
+  <img src="assets/big-picture-eventstorming/paso-2/cotizacion-y-venta.jpg" alt="Paso 2: Cotización y Venta" width="100%">
+</div>
+
+<div align="center">
+  <img src="assets/big-picture-eventstorming/paso-2/produccion.jpg" alt="Paso 2: Producción" width="100%">
+</div>
+
+<div align="center">
+  <img src="assets/big-picture-eventstorming/paso-2/seguimiento-y-comunicacion.jpg" alt="Paso 2: Seguimiento y Comunicación" width="100%">
+</div>
+
+**Paso 3 — Añadiendo actores y sistemas externos.** Sobre los swimlanes ordenados se incorporaron los actores (post-its amarillos) que disparan los eventos y los sistemas externos (post-its azules) con los que la plataforma interactúa. Se añadieron también hot spots (post-its rosas) para marcar las preguntas o decisiones pendientes identificadas durante el storytelling.
+
+<div align="center">
+  <img src="assets/big-picture-eventstorming/paso-3/onboarding.jpg" alt="Paso 3: Onboarding" width="100%">
+</div>
+
+<div align="center">
+  <img src="assets/big-picture-eventstorming/paso-3/inventario.jpg" alt="Paso 3: Inventario" width="100%">
+</div>
+
+<div align="center">
+  <img src="assets/big-picture-eventstorming/paso-3/cotizacion-y-venta.jpg" alt="Paso 3: Cotización y Venta" width="100%">
+</div>
+
+<div align="center">
+  <img src="assets/big-picture-eventstorming/paso-3/produccion.jpg" alt="Paso 3: Producción" width="100%">
+</div>
+
+<div align="center">
+  <img src="assets/big-picture-eventstorming/paso-3/seguimiento-y-comunicacion.jpg" alt="Paso 3: Seguimiento y Comunicación" width="100%">
 </div>
 
 ## 2.5. Ubiquitous Language
