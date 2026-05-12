@@ -744,18 +744,19 @@ Esta actividad no solo garantizó que todo el equipo tuviera una visión unifica
 </div>
 
 ## Ubiquitous Language
-**Custom Furniture (Mueble Personalizado):** Pieza única de mobiliario diseñada, dimensionada y fabricada de acuerdo con los requisitos estéticos, funcionales y de espacio específicos de un cliente particular, en lugar de ser producida en masa.<br>
-**WoodRoute:** Plataforma web en la nube (SaaS) que centraliza y optimiza la gestión de pedidos, los procesos de fabricación, el inventario y la comunicación con los clientes para carpinteros independientes y pequeños talleres.<br>
-**Carpentry Workshop (Taller de Carpintería):** El espacio físico de trabajo donde se almacenan, procesan y ensamblan las materias primas para fabricar los muebles.<br>
-**Feasibility Evaluation (Evaluación de Viabilidad):** Proceso de análisis para determinar si es posible construir un mueble solicitado en función del stock actual de madera y herrajes, la estimación de horas de trabajo necesarias y la capacidad operativa disponible en el taller.<br>
-**Production Schedule (Planificación de la Producción):** Calendario estructurado que organiza el uso del tiempo, los operarios y la maquinaria del taller para cumplir con los plazos de entrega de todos los pedidos activos sin generar cuellos de botella.<br>
-**Manufacturing Stage (Fase de Fabricación):** Cada uno de los pasos físicos y secuenciales necesarios para construir un mueble en el taller (por ejemplo: corte, lijado, ensamble, pintado o acabado).<br>
-**Route Sheet (Hoja de Ruta):** Documento o registro digital que detalla el paso a paso de las instrucciones de fabricación, las medidas, los materiales y las fases específicas que debe seguir un operario para construir un mueble determinado.<br>
-**Active Workload (Capacidad del Taller):** El límite máximo de trabajo que el taller puede asumir en un periodo de tiempo determinado, medido en horas hombre y disponibilidad de maquinaria.<br>
-**Real-Time Tracking (Seguimiento en Tiempo Real):** Funcionalidad orientada al cliente final que le permite visualizar de manera transparente y automática el estado actual o la fase de fabricación en la que se encuentra su mueble.<br>
-**Friction Point / Hot Spot (Punto de Conflicto):** Cualquier cuello de botella, duda operativa o riesgo en el flujo de trabajo del taller (como la falta de stock o retrasos de proveedores) que pueda afectar la entrega del producto.<br>
-**Inventory (Inventario):** El registro y control de las materias primas (madera, tableros) y consumibles (tornillos, bisagras, rieles, pintura) físicamente disponibles en el taller.<br>
-**Down Payment (Anticipo de Pago):** Depósito monetario inicial que realiza el cliente para formalizar el pedido, financiar la compra de los materiales necesarios y autorizar el inicio de la fabricación en el taller.<br>
+
+- **Custom Furniture (Mueble Personalizado):** pieza única de mobiliario diseñada, dimensionada y fabricada de acuerdo con los requisitos estéticos, funcionales y de espacio específicos de un cliente particular, en lugar de ser producida en masa.
+- **WoodRoute:** plataforma web en la nube (SaaS) que centraliza y optimiza la gestión de pedidos, los procesos de fabricación, el inventario y la comunicación con los clientes para carpinteros independientes y pequeños talleres.
+- **Carpentry Workshop (Taller de Carpintería):** espacio físico de trabajo donde se almacenan, procesan y ensamblan las materias primas para fabricar los muebles.
+- **Feasibility Evaluation (Evaluación de Viabilidad):** proceso de análisis para determinar si es posible construir un mueble solicitado en función del stock actual de madera y herrajes, la estimación de horas de trabajo necesarias y la capacidad operativa disponible en el taller.
+- **Production Schedule (Planificación de la Producción):** calendario estructurado que organiza el uso del tiempo, los operarios y la maquinaria del taller para cumplir con los plazos de entrega de todos los pedidos activos sin generar cuellos de botella.
+- **Manufacturing Stage (Fase de Fabricación):** cada uno de los pasos físicos y secuenciales necesarios para construir un mueble en el taller (por ejemplo: corte, lijado, ensamble, pintado o acabado).
+- **Route Sheet (Hoja de Ruta):** documento o registro digital que detalla el paso a paso de las instrucciones de fabricación, las medidas, los materiales y las fases específicas que debe seguir un operario para construir un mueble determinado.
+- **Active Workload (Capacidad del Taller):** límite máximo de trabajo que el taller puede asumir en un periodo de tiempo determinado, medido en horas hombre y disponibilidad de maquinaria.
+- **Real-Time Tracking (Seguimiento en Tiempo Real):** funcionalidad orientada al cliente final que le permite visualizar de manera transparente y automática el estado actual o la fase de fabricación en la que se encuentra su mueble.
+- **Friction Point / Hot Spot (Punto de Conflicto):** cualquier cuello de botella, duda operativa o riesgo en el flujo de trabajo del taller (como la falta de stock o retrasos de proveedores) que pueda afectar la entrega del producto.
+- **Inventory (Inventario):** registro y control de las materias primas (madera, tableros) y consumibles (tornillos, bisagras, rieles, pintura) físicamente disponibles en el taller.
+- **Down Payment (Anticipo de Pago):** depósito monetario inicial que realiza el cliente para formalizar el pedido, financiar la compra de los materiales necesarios y autorizar el inicio de la fabricación en el taller.
 
 # Requirements Specification
 
