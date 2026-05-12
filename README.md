@@ -793,7 +793,7 @@ Como resultado de aplicar Big Picture EventStorming al dominio de WoodRoute iden
 
 Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming Journal, 2022](#ref-eventstorming-journal-2022)), cuyo desarrollo se presenta a continuación.
 
-**Tablero en Miro:** <https://miro.com/app/board/uXjVHUq0794=/>
+**Tablero en Miro:** <https://miro.com/app/board/uXjVHUq0794=/?share_link_id=247883985666>
 
 **Paso 1 — Recolectando eventos.** Lluvia de ideas para capturar todos los domain events del dominio en pasado, sin orden ni jerarquía.
 
