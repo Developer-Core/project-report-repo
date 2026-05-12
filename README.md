@@ -727,6 +727,24 @@ Los diagramas fueron elaborados en UXPressia y se adjuntan las capturas a contin
 
 ![Empathy Mapping](assets/needfinding/empathy-mapping-2.png)
 
+## Big Picture EventStorming
+Para el desarrollo de la plataforma WoodRoute, el equipo de trabajo se reunió de manera síncrona a través de una sesión de Google Meet, utilizando la herramienta Miro como lienzo interactivo para simular el proceso de Big Picture Event Storming en formato digital. Durante la sesión, que se extendió por aproximadamente dos horas, los integrantes asumieron de manera colaborativa roles tanto técnicos como de negocio para modelar todo el flujo de valor del SaaS. El proceso comenzó con una lluvia de ideas desordenada donde se colocaron post-its virtuales para identificar los eventos clave del negocio en tiempo pasado, los cuales luego se organizan cronológicamente de izquierda a derecha abarcando desde la cotización inicial del mueble hasta su entrega final. Posteriormente, el grupo enriqueció el mapa identificando a los actores involucrados, como el carpintero y el cliente, e integrando sistemas externos críticos como las pasarelas de pago. La dinámica también permitió abrir debates importantes sobre las zonas de conflicto o desafíos del proyecto, tales como la automatización del inventario y el recálculo de tiempos en el taller, culminando con la división del sistema en tres grandes módulos de desarrollo: Ventas, Inventario y Producción. Esta actividad no solo garantizó que todo el equipo tuviera una visión unificada y clara del funcionamiento de la plataforma antes de escribir la primera línea de código, sino que también definió con precisión el alcance del producto mínimo viable y sentó las bases para el diseño de la arquitectura técnica y de la interfaz de usuario. <br>
+LINK: https://miro.com/app/board/uXjVHWUB1RI=/ <br>
+<img src="assets/needfinding/Big-picture.png">
+
+## Ubiquitous Language
+**Custom Furniture (Mueble Personalizado):** Pieza única de mobiliario diseñada, dimensionada y fabricada de acuerdo con los requisitos estéticos, funcionales y de espacio específicos de un cliente particular, en lugar de ser producida en masa.<br>
+**WoodRoute:** Plataforma web en la nube (SaaS) que centraliza y optimiza la gestión de pedidos, los procesos de fabricación, el inventario y la comunicación con los clientes para carpinteros independientes y pequeños talleres.<br>
+**Carpentry Workshop (Taller de Carpintería):** El espacio físico de trabajo donde se almacenan, procesan y ensamblan las materias primas para fabricar los muebles.<br>
+**Feasibility Evaluation (Evaluación de Viabilidad):** Proceso de análisis para determinar si es posible construir un mueble solicitado en función del stock actual de madera y herrajes, la estimación de horas de trabajo necesarias y la capacidad operativa disponible en el taller.<br>
+**Production Schedule (Planificación de la Producción):** Calendario estructurado que organiza el uso del tiempo, los operarios y la maquinaria del taller para cumplir con los plazos de entrega de todos los pedidos activos sin generar cuellos de botella.<br>
+**Manufacturing Stage (Fase de Fabricación):** Cada uno de los pasos físicos y secuenciales necesarios para construir un mueble en el taller (por ejemplo: corte, lijado, ensamble, pintado o acabado).<br>
+**Route Sheet (Hoja de Ruta):** Documento o registro digital que detalla el paso a paso de las instrucciones de fabricación, las medidas, los materiales y las fases específicas que debe seguir un operario para construir un mueble determinado.<br>
+**Active Workload (Capacidad del Taller):** El límite máximo de trabajo que el taller puede asumir en un periodo de tiempo determinado, medido en horas hombre y disponibilidad de maquinaria.<br>
+**Real-Time Tracking (Seguimiento en Tiempo Real):** Funcionalidad orientada al cliente final que le permite visualizar de manera transparente y automática el estado actual o la fase de fabricación en la que se encuentra su mueble.<br>
+**Friction Point / Hot Spot (Punto de Conflicto):** Cualquier cuello de botella, duda operativa o riesgo en el flujo de trabajo del taller (como la falta de stock o retrasos de proveedores) que pueda afectar la entrega del producto.<br>
+**Inventory (Inventario):** El registro y control de las materias primas (madera, tableros) y consumibles (tornillos, bisagras, rieles, pintura) físicamente disponibles en el taller.<br>
+**Down Payment (Anticipo de Pago):** Depósito monetario inicial que realiza el cliente para formalizar el pedido, financiar la compra de los materiales necesarios y autorizar el inicio de la fabricación en el taller.<br>
 
 # Requirements Specification
 
