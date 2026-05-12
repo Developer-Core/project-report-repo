@@ -1531,5 +1531,19 @@ En este primer Sprint hemos realizado la implementación de nuestra Landing Page
 
 # Bibliografía
 
+<a id="ref-apeim-nse-2024"></a>Asociación Peruana de Empresas de Inteligencia de Mercados [APEIM]. (2024). *Niveles socioeconómicos 2023-2024*. APEIM. https://apeim.com.pe/wp-content/uploads/2024/01/APEIM-Informe-de-Niveles-Socioeconomicos-2023-2024-Version-WEB.pdf
+
+<a id="ref-comexperu-mype-2025"></a>ComexPerú. (2025). *Informe anual MYPE 2024: Las micro y pequeñas empresas en el Perú. Resultados en 2024*. Sociedad de Comercio Exterior del Perú. https://www.comexperu.org.pe/articulo/informe-anual-mype-2024
+
+<a id="ref-ebiz-mypes-2022"></a>eBIZ. (2022, 29 de julio). *78% de las mypes usó herramientas digitales en el último año*. https://ebiz.pe/noticias/78-de-las-mypes-uso-herramientas-digitales-en-el-ultimo-ano/
+
 <a id="ref-eventstorming-journal-2022"></a>EventStorming Journal. (2022, marzo 29). *Step by step guide to run your big picture event storming*. https://www.eventstormingjournal.com/big%20picture/step-by-step-guide-to-run-your-big-picture-event-storming/
+
+<a id="ref-inei-internet-trim1-2024"></a>Instituto Nacional de Estadística e Informática [INEI]. (2024a). *Aumentó la población usuaria de internet en todos los grupos de edad en el primer trimestre de 2024*. https://www.gob.pe/institucion/inei/noticias/980106-aumento-la-poblacion-usuaria-de-internet-en-todos-los-grupos-de-edad-en-el-primer-trimestre-de-2024
+
+<a id="ref-inei-internet-trim3-2024"></a>Instituto Nacional de Estadística e Informática [INEI]. (2024b). *Uso de internet alcanzó al 80.2% de la población de 6 y más años de edad en el tercer trimestre de 2024*. https://www.gob.pe/institucion/inei/noticias/1081936-uso-de-internet-alcanzo-al-80-2-de-la-poblacion-de-6-y-mas-anos-de-edad-en-el-tercer-trimestre-de-2024
+
+<a id="ref-produce-empresas-2025"></a>Ministerio de la Producción [PRODUCE]. (2025). *PRODUCE: Perú cerró el 2024 con 2.34 millones de empresas formales*. https://www.gob.pe/institucion/produce/noticias/1168972-produce-peru-cerro-el-2024-con-2-34-millones-de-empresas-formales
+
+<a id="ref-osiptel-erestel-2024"></a>Organismo Supervisor de Inversión Privada en Telecomunicaciones [OSIPTEL]. (2024). *ERESTEL: el 92.8% de las familias peruanas contó con un smartphone en 2023*. https://www.osiptel.gob.pe/portal-del-usuario/noticias/erestel-el-92-8-de-las-familias-peruanas-conto-con-un-smartphone-en-2023/
 
