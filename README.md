@@ -290,13 +290,25 @@ El Lean UX Process es una metodología ágil centrada en la colaboración, la ex
 
 **Problem Statement 1: El Carpintero / Taller**
 
-Nuestro sistema busca facilitar a los carpinteros la planificación y gestión de pedidos de muebles personalizados. Hemos observado que muchos talleres trabajan de forma manual y basada en experiencia, lo que genera errores en el cálculo de materiales, estimaciones imprecisas de tiempo y desorganización en los pedidos.
-**¿Cómo podemos ayudar a los carpinteros a planificar sus trabajos de forma más precisa y organizada, reduciendo errores y mejorando su productividad?**
+- **Domain:** Gestión operativa de talleres de carpintería dedicados a la fabricación de muebles personalizados bajo pedido.
+- **Customer Segments:** Carpinteros independientes y pequeños talleres con baja digitalización, ubicados principalmente en zonas urbanas de Lima Metropolitana.
+- **Pain Points:** Cálculo manual y propenso a errores de materiales, estimaciones imprecisas de tiempos de entrega, desorganización en la recepción de pedidos, control de inventario empírico y comunicación reactiva con los clientes a través de WhatsApp.
+- **Gap:** Las herramientas existentes son genéricas (ERPs grandes u hojas de cálculo) y no se adaptan al flujo de trabajo ni al lenguaje del rubro de la carpintería; las MYPE rechazan adoptarlas por su complejidad y costo.
+- **Vision / Strategy:** Ofrecer una plataforma web especializada que integre gestión de pedidos, asistente de viabilidad, estimación de tiempos y control simple de inventario, priorizando una experiencia minimalista alineada con el flujo real del taller.
+- **Initial Segment:** Talleres independientes urbanos en Lima Metropolitana, de 1 a 5 trabajadores, con uso activo de smartphone y disposición a probar herramientas digitales.
+
+**¿Cómo podemos ayudar a los carpinteros independientes y pequeños talleres a planificar sus pedidos de forma más precisa y organizada, reduciendo errores en el cálculo de materiales y mejorando el cumplimiento de tiempos, sin agregar complejidad a su jornada de trabajo?**
 
 **Problem Statement 2: El Cliente**
 
-El producto tiene como objetivo mejorar la experiencia de los clientes que mandan a fabricar muebles. Actualmente, los clientes no tienen visibilidad del avance de sus pedidos y deben comunicarse constantemente con el carpintero para obtener información.
-**¿Cómo podemos brindar a los clientes acceso claro y en tiempo real al estado de sus pedidos para mejorar la transparencia y confianza en el servicio?**
+- **Domain:** Experiencia del cliente final que solicita la fabricación de muebles a medida a un taller independiente.
+- **Customer Segments:** Personas adultas (25 a 55 años) de NSE B y C que solicitan muebles personalizados para el hogar, oficinas o negocios.
+- **Pain Points:** Ausencia de visibilidad sobre el avance del pedido, dependencia de mensajes informales por WhatsApp o llamadas, incertidumbre sobre fechas reales de entrega y poca confianza en el proceso.
+- **Gap:** No existe un canal estandarizado que permita al cliente consultar el estado de su mueble sin tener que interrumpir al carpintero, ni evidencia clara de las etapas de producción.
+- **Vision / Strategy:** Brindar al cliente acceso vía enlace —sin requerir registro— para consultar en tiempo real el estado de su pedido, fechas estimadas y notificaciones automáticas de cambios de etapa.
+- **Initial Segment:** Clientes urbanos de Lima Metropolitana que ya solicitan muebles a talleres independientes y utilizan WhatsApp como canal habitual de seguimiento.
+
+**¿Cómo podemos brindar a los clientes acceso claro y en tiempo real al estado de sus pedidos para mejorar la transparencia, reducir las consultas repetitivas al carpintero y aumentar la confianza en el servicio?**
 
 #### 1.2.2.2. Lean UX Assumptions
 
