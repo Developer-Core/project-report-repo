@@ -114,15 +114,15 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 
 
-# Introducción
+# Capítulo I: Introducción
 
-## Startup Profile
+## 1.1. Startup Profile
 
-### Descripción de la Startup
+### 1.1.1. Descripción de la Startup
 
 WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes y pequeños talleres, que permite gestionar pedidos de muebles personalizados, realizar el seguimiento del proceso de fabricación y optimizar la planificación de la producción. La solución asiste al carpintero en la toma de decisiones, evaluando la viabilidad de construir un mueble en función del inventario disponible, la estimación de tiempos de trabajo y la capacidad del taller. Asimismo, la plataforma mejora la comunicación con los clientes al ofrecer un sistema de seguimiento en tiempo real del estado de los pedidos, brindando mayor transparencia y confianza durante todo el proceso.
 
-### Perfiles de integrantes del equipo
+### 1.1.2. Perfiles de integrantes del equipo
 
 <table>
   <tbody>
@@ -151,9 +151,9 @@ WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes 
 
 
 
-## Solution Profile
+## 1.2. Solution Profile
 
-### Antecedentes y problemática
+### 1.2.1. Antecedentes y problemática
 
 **What? (¿Qué?)**
 
@@ -219,11 +219,11 @@ Estadísticas que sustentan la problemática:
 
 Estas condiciones evidencian la necesidad de una solución tecnológica que permita optimizar la gestión del taller, mejorar la planificación y brindar mayor transparencia en el proceso de fabricación de muebles.
 
-### Lean UX Process
+### 1.2.2. Lean UX Process
 
 El Lean UX Process es una metodología ágil centrada en la colaboración, la experimentación rápida y el aprendizaje validado. En este proyecto se utiliza este enfoque para comprender las necesidades de carpinteros y clientes, identificando sus principales problemas en la gestión, planificación y seguimiento de muebles. A través de hipótesis, prototipos y retroalimentación constante, se busca validar soluciones que optimicen la toma de decisiones dentro del taller y mejoren la experiencia del cliente.
 
-#### Lean UX Problem Statements
+#### 1.2.2.1. Lean UX Problem Statements
 
 **Problem Statement 1: El Carpintero / Taller**
 
@@ -235,7 +235,7 @@ Nuestro sistema busca facilitar a los carpinteros la planificación y gestión d
 El producto tiene como objetivo mejorar la experiencia de los clientes que mandan a fabricar muebles. Actualmente, los clientes no tienen visibilidad del avance de sus pedidos y deben comunicarse constantemente con el carpintero para obtener información.
 **¿Cómo podemos brindar a los clientes acceso claro y en tiempo real al estado de sus pedidos para mejorar la transparencia y confianza en el servicio?**
 
-#### Lean UX Assumptions
+#### 1.2.2.2. Lean UX Assumptions
 
 **Business Assumptions**
 
@@ -272,7 +272,7 @@ Durante la recepción de pedidos, planificación de trabajos y seguimiento del p
 Debe ser simple, clara y fácil de usar, con una interfaz intuitiva que permita tomar decisiones rápidas sin complicaciones.
 
 
-#### Lean UX Hypothesis Statements
+#### 1.2.2.3. Lean UX Hypothesis Statements
 
 - **Hypothesis 01:**
   Creemos que los carpinteros podrán planificar mejor sus trabajos si cuentan con una herramienta que calcule automáticamente materiales y valide la viabilidad del mueble.
@@ -294,7 +294,7 @@ Debe ser simple, clara y fácil de usar, con una interfaz intuitiva que permita 
   Creemos que los carpinteros adoptarán la plataforma si esta es simple y rápida de usar.
   Sabremos que hemos tenido éxito cuando al menos el 60% de los usuarios continúen usando la plataforma después del primer mes.
 
-#### Lean UX Canvas
+#### 1.2.2.4. Lean UX Canvas
 
 El Lean UX Canvas es una herramienta visual que permite alinear al equipo en torno a problemas, usuarios e hipótesis de manera ágil. En este proyecto se utilizó para comprender mejor a los restaurantes y albergues, identificar sus necesidades y definir cómo **Alimenta** puede generar valor real en su gestión diaria.
 
@@ -309,7 +309,7 @@ Aquí se presenta el Lean UX Canvas desarrollado para **Alimenta**:
 **Enlace al Lean UX Canvas:** https://miro.com/welcomeonboard/ZVFaMVdKblhINnB5d1dnbWcxT2RLZ3ZjVFlQNWpsS2VKLzVQQ3dQMWUxS1pkY3hJbStyWENZNnc1cjIvd01lNkltV283MkVGRUM3MS94a1Q0dXp4U3QzclBsK0ZrZ24zQXZhRG14blV5YXdtMUlaMlV5alRXNTFMT21PL0tXbzJzVXVvMm53MW9OWFg5bkJoVXZxdFhRPT0hdjE=?share_link_id=533296594528
 
 
-## Segmentos objetivo
+## 1.3. Segmentos objetivo
 
 En el análisis del segmento objetivo para WoodRoute, se han identificado dos grupos principales de usuarios que interactúan dentro de la plataforma: **los Carpinteros (Talleres)**, quienes gestionan y producen los muebles, y **los Clientes**, quienes solicitan muebles personalizados y requieren seguimiento del proceso.
 
@@ -331,11 +331,11 @@ Este segmento incluye a personas que requieren la fabricación de muebles a medi
 - **Necesidad clave:** Conocer el estado del pedido, recibir información clara sobre tiempos de entrega y tener mayor confianza en el proceso de fabricación.
 - **Uso de tecnología:** Nivel medio-alto. Están familiarizados con el uso de smartphones, aplicaciones web, redes sociales y servicios digitales.
 
-# Requirements Elicitation & Analysis
+# Capítulo II: Requirements Elicitation & Analysis
 
-## Competidores
+## 2.1. Competidores
 
-### Análisis competitivo
+### 2.1.1. Análisis competitivo
 
 En esta sección evaluamos los competidores de nuestro nicho.
 
@@ -448,7 +448,7 @@ En esta sección evaluamos los competidores de nuestro nicho.
   </tbody>
 </table>
 
-### Estrategias y tácticas frente a competidores
+### 2.1.2. Estrategias y tácticas frente a competidores
 
 **Estrategias:**
 
@@ -468,9 +468,9 @@ En esta sección evaluamos los competidores de nuestro nicho.
 - Ofrecer funcionalidades avanzadas (reportes, IoT, multiusuario) en planes de pago.
 
 
-## Entrevistas
+## 2.2. Entrevistas
 
-### Diseño de entrevistas
+### 2.2.1. Diseño de entrevistas
 
 **Segmento 1: Carpintero/Taller**
 
@@ -500,7 +500,7 @@ En esta sección evaluamos los competidores de nuestro nicho.
 - ¿Te serviría tener un link donde puedas ver el estado de tu pedido?
 - ¿Pagarías un poco más por un servicio con mejor seguimiento y comunicación?
 
-### Registro de entrevistas
+### 2.2.2. Registro de entrevistas
 
 #### Segmento 1: Carpintero/Taller
 
@@ -605,7 +605,7 @@ Joseph Rodriguez, estudiante de Ingeniería de Software de 21 años, relató ser
 En la tercera entrevista, el cliente Renzo Baldeón comenta que, durante la elaboración de su ropero, tuvo varios inconvenientes que afectaron su experiencia. Señala que los tiempos de respuesta fueron lentos, lo que generó demoras en la entrega, además de una comunicación deficiente con el proveedor a lo largo del proceso. Esta falta de información le causó incertidumbre sobre el estado de su pedido.Asimismo, menciona que le gustaría contar con una forma de visualizar el avance de sus encargos y tener un contacto más directo con el carpintero para resolver dudas o coordinar detalles. Finalmente, indica que estaría dispuesto a pagar un poco más por una aplicación que le permita solucionar estos problemas y mejorar la experiencia del servicio.
 
 
-### Análisis de entrevistas
+### 2.2.3. Análisis de entrevistas
 
 A partir de las entrevistas realizadas a clientes y carpinteros, se identificaron diversos problemas recurrentes en el proceso de fabricación de muebles personalizados. En primer lugar, se evidenció una deficiente comunicación entre ambas partes, ya que los clientes deben recurrir constantemente a mensajes por WhatsApp para solicitar actualizaciones sobre el estado de sus pedidos. Esta comunicación suele ser reactiva y poco estructurada, lo que genera incertidumbre, percepción de desorganización e incluso desconfianza en algunos casos.
 
@@ -616,9 +616,9 @@ Por otro lado, se identificaron problemas en la planificación del trabajo, espe
 En conjunto, estos hallazgos evidencian una oportunidad clara para la implementación de una solución tecnológica que permita mejorar la organización del taller, optimizar la planificación de los muebles y brindar mayor transparencia al cliente. En este contexto, WoodRoute se posiciona como una alternativa que responde directamente a estas necesidades, integrando gestión de pedidos, control de inventario y seguimiento del proceso en una sola plataforma.
 
 
-## Needfinding
+## 2.3. Needfinding
 
-### User Personas
+### 2.3.1. User Personas
 
 En esta sección se presentan las fichas de User Persona elaboradas para los dos segmentos objetivo identificados en el proyecto: carpinteros independientes o pequeños talleres, y clientes que solicitan muebles a medida.
 
@@ -630,7 +630,7 @@ La construcción de estos arquetipos se sustenta en el análisis cualitativo de 
 ![User Persona 2](assets/needfinding/user-persona-2.png)
 
 
-### User Task Matrix
+### 2.3.2. User Task Matrix
 Para la elaboración de la User Task Matrix se consideran los dos segmentos objetivo identificados en el proyecto:
 
 
@@ -700,7 +700,7 @@ Importancia: Escala de 1 a 5 (1 = Poco importante / Prescindible, 5 = Crítica /
 | **Buscar carpintero confiable y comparar presupuestos** son tareas de alta importancia solo para el cliente | La plataforma podría incluir un **directorio o sistema de reputación** a futuro |
 | **Recordar fechas de entrega** es muy importante para ambos (5 y 5) | El sistema debe tener **alertas automáticas de vencimiento** tanto para carpintero como para cliente |
 
-### User Journey Mapping
+### 2.3.3. User Journey Mapping
 
 En esta sección se presentan los User Journey Maps para los dos segmentos objetivo identificados:
 
@@ -714,7 +714,7 @@ El journey representado cubre el end-to-end de la experiencia actual desde que e
 
 ![User Journey Mapping](assets/needfinding/user-journey-mapping-2.png)
 
-### Empathy Mapping
+### 2.3.4. Empathy Mapping
 
 En esta sección se presentan los Empathy Maps elaborados para los dos User Personas del proyecto: Carlos Gutiérrez (carpintero) y Valeria Fernández (cliente).
 
@@ -726,7 +726,7 @@ Los diagramas fueron elaborados en UXPressia y se adjuntan las capturas a contin
 
 ![Empathy Mapping](assets/needfinding/empathy-mapping-2.png)
 
-## Big Picture EventStorming
+## 2.4. Big Picture EventStorming
 
 Para el desarrollo de la plataforma WoodRoute, el equipo se reunió de manera síncrona a través de una sesión de Google Meet, utilizando Miro como lienzo interactivo para simular el proceso de Big Picture EventStorming en formato digital. La sesión se extendió por aproximadamente dos horas, en las que los integrantes asumieron de manera colaborativa roles tanto técnicos como de negocio para modelar todo el flujo de valor del SaaS.
 
@@ -742,7 +742,7 @@ Esta actividad no solo garantizó que todo el equipo tuviera una visión unifica
   <img src="assets/big-picture-eventstorming.png" alt="Big Picture EventStorming de WoodRoute" width="100%">
 </div>
 
-## Ubiquitous Language
+## 2.5. Ubiquitous Language
 
 - **Custom Furniture (Mueble Personalizado):** pieza única de mobiliario diseñada, dimensionada y fabricada de acuerdo con los requisitos estéticos, funcionales y de espacio específicos de un cliente particular, en lugar de ser producida en masa.
 - **WoodRoute:** plataforma web en la nube (SaaS) que centraliza y optimiza la gestión de pedidos, los procesos de fabricación, el inventario y la comunicación con los clientes para carpinteros independientes y pequeños talleres.
@@ -757,9 +757,9 @@ Esta actividad no solo garantizó que todo el equipo tuviera una visión unifica
 - **Inventory (Inventario):** registro y control de las materias primas (madera, tableros) y consumibles (tornillos, bisagras, rieles, pintura) físicamente disponibles en el taller.
 - **Down Payment (Anticipo de Pago):** depósito monetario inicial que realiza el cliente para formalizar el pedido, financiar la compra de los materiales necesarios y autorizar el inicio de la fabricación en el taller.
 
-# Requirements Specification
+# Capítulo III: Requirements Specification
 
-## User Stories
+## 3.1. User Stories
 EP01	Gestión del Landing Pague <br>
 EP02    Gestión de Usuarios y Perfiles <br>
 EP03    Gestión de Pedidos de Muebles Personalizados <br>
@@ -802,11 +802,11 @@ EP07    Comunicación y Transparencia con el Cliente <br><br>
 | HU29 | Historial de comunicación | Como usuario, quiero ver el historial de mensajes para revisar conversaciones anteriores. | **Escenario 1: Visualización de historial** <br> _Dado_ que el usuario accede al chat <br> _Cuando_ el sistema carga los mensajes <br> _Entonces_ muestra el historial completo <br> _Y_ ordenado cronológicamente | EP07 |
 
 
-## Impact Mapping
+## 3.2. Impact Mapping
 <img src="assets/impact-mapping.png">
 
 
-## Product Backlog
+## 3.3. Product Backlog
 | Orden | User Story ID | Título                                        | Descripción                                                                                                           | Story Points |
 | ------ | -------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------ |
 | 1      | HU06           | Registro de usuario                            | Como visitante, quiero registrarme en la plataforma para poder acceder a sus funcionalidades.                         | 3            |
@@ -840,11 +840,11 @@ EP07    Comunicación y Transparencia con el Cliente <br><br>
 | 29     | HU08           | Gestión de perfil                              | Como usuario, quiero editar mi información personal para mantener mis datos actualizados.                             | 3            |
 
 
-# Product Design
+# Capítulo IV: Product Design
 
-## Style Guidelines
+## 4.1. Style Guidelines
 
-### General Style Guidelines
+### 4.1.1. General Style Guidelines
 
 #### Branding
 
@@ -1004,7 +1004,7 @@ dos tokens de sección para controlar la separación vertical entre bloques de c
 | `--spacing-section` | 6rem | 96px | Separación entre secciones en desktop |
 | `--spacing-section-sm` | 4rem | 64px | Separación entre secciones en mobile |
 
-### Web Style Guidelines
+### 4.1.2. Web Style Guidelines
 
 #### Border radius
 
@@ -1062,7 +1062,7 @@ Los patrones responsive principales que aplican a la landing y la web app son:
 
 
 
-## Information Architecture
+## 4.2. Information Architecture
 
 Las decisiones de arquitectura de información de WoodRoute están orientadas a dos
 experiencias distintas con objetivos complementarios: la landing page, enfocada en
@@ -1070,7 +1070,7 @@ convertir visitantes en usuarios, y la aplicación web, enfocada en que carpinte
 gestionen su taller con la menor fricción posible. En ambos casos, el principio rector
 es que el usuario encuentre lo que necesita sin esfuerzo y sin necesidad de instrucción.
 
-### Organization Systems
+### 4.2.1. Organization Systems
 
 El contenido de WoodRoute se organiza según el contexto de uso de cada superficie.
 
@@ -1109,7 +1109,7 @@ Dentro de los listados (pedidos, materiales), el contenido se organiza de forma
 reflejando el flujo natural de trabajo donde el carpintero atiende los pedidos activos
 antes que los históricos.
 
-### Labeling Systems
+### 4.2.2. Labeling Systems
 
 Las etiquetas de WoodRoute siguen el principio de mínima carga cognitiva: una palabra
 cuando es suficiente, dos cuando es necesario para evitar ambigüedad. Se usa el
@@ -1153,7 +1153,7 @@ vocabulario del carpintero, no el vocabulario técnico del software.
 | Precios | Planes y comparativa |
 | Preguntas frecuentes | FAQ |
 
-### SEO Tags and Meta Tags
+### 4.2.3. SEO Tags and Meta Tags
 
 **Landing Page**
 
@@ -1197,7 +1197,7 @@ Las páginas internas de la aplicación (pedidos, inventario, planificación) us
 `noindex, nofollow` ya que son contenido privado detrás de autenticación. Solo la
 landing page está indexada para motores de búsqueda.
 
-### Searching Systems
+### 4.2.4. Searching Systems
 
 WoodRoute ofrece búsqueda y filtrado en los módulos donde el volumen de información
 puede desorientar al usuario. El sistema no expone un buscador global: cada módulo
@@ -1242,7 +1242,7 @@ de pedidos activos.
 No requiere búsqueda: el cliente accede mediante un enlace único que lleva directamente
 al estado de su pedido. No hay navegación ni descubrimiento de contenido en esta vista.
 
-### Navigation Systems
+### 4.2.5. Navigation Systems
 
 **Landing Page**
 
@@ -1293,11 +1293,11 @@ salida opcional es un link al sitio de WoodRoute para que el cliente conozca el 
 
 
 
-## Landing Page UI Design
+## 4.3. Landing Page UI Design
 
-### Landing Page Wireframe
+### 4.3.1. Landing Page Wireframe
 
-### Landing Page Mock-up
+### 4.3.2. Landing Page Mock-up
 
 El mock-up de la landing page de WoodRoute aplica el design system definido en la
 sección anterior: tipografía Plus Jakarta Sans / Inter, paleta cálida con primario
