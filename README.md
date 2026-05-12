@@ -197,7 +197,7 @@ WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes 
     </tr>
     <tr>
       <td class="member-photo"><img src="assets/members/juan-saldana.jpeg" alt="Foto de Saldaña De Souza, Juan David"></td>
-      <td><strong>Saldaña De Souza, Juan David -- U20221F192</strong><br><br><em>Descripción.</em></td>
+      <td><strong>Saldaña De Souza, Juan David -- U20221F192</strong><br><br>Mi nombre es Juan David, tengo 20 años y estoy cursando la carrera de Ingeniería de Software en la UPC. Me considero una persona dedicada y analítica en los proyectos que requieren un enfoque técnico sólido. Tengo habilidades enfocadas en la resolución de problemas y el desarrollo eficiente, apoyando siempre a mi equipo para lograr un software de calidad. Mis conocimientos se centran en Java, C++ y Python, acompañados de frameworks y herramientas para desarrollo web como Astro.js y Svelte. De la misma forma, manejo SQL Server, MongoDB, redes y algoritmos de complejidad. Algunos de mis hobbies son los videojuegos y la tecnología.</td>
     </tr>
     <tr>
       <td class="member-photo"><img src="assets/members/piero-sulca.jpg" alt="Foto de Sulca Sanchez, Piero Angel"></td>
