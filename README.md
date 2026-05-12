@@ -374,25 +374,27 @@ Aquí se presenta el Lean UX Canvas desarrollado para **WoodRoute**:
 
 ## 1.3. Segmentos objetivo
 
-En el análisis del segmento objetivo para WoodRoute, se han identificado dos grupos principales de usuarios que interactúan dentro de la plataforma: **los Carpinteros (Talleres)**, quienes gestionan y producen los muebles, y **los Clientes**, quienes solicitan muebles personalizados y requieren seguimiento del proceso.
+En el análisis del segmento objetivo para WoodRoute, se identifican dos grupos principales de usuarios: **los carpinteros o talleres**, encargados de fabricar y gestionar los pedidos de muebles, y **los clientes**, quienes solicitan muebles personalizados y necesitan conocer el avance del proceso.
 
-**Carpinteros: Talleres y trabajadores independientes**
+**Carpinteros: talleres y trabajadores independientes**
 
-Este segmento está compuesto por carpinteros independientes y pequeños talleres que fabrican muebles personalizados bajo pedido. Buscan mejorar la organización de su trabajo, optimizar el uso de materiales y brindar un mejor servicio a sus clientes.
+Este segmento está compuesto por carpinteros independientes, maestros de taller, ayudantes y pequeños negocios familiares dedicados a la fabricación de muebles personalizados bajo pedido. Forman parte del ecosistema de micro y pequeñas empresas del país, el cual representa una parte significativa de la actividad empresarial peruana.
 
-- **Perfil:** Carpinteros independientes, maestros de taller, ayudantes y pequeños negocios familiares dedicados a la fabricación de muebles.
-- **Edad:** 20 a 60 años.
-- **Necesidad clave:** Organizar pedidos, calcular materiales, estimar tiempos de producción y mejorar la comunicación con los clientes.
-- **Uso de tecnología:** Nivel medio. Utilizan principalmente smartphones, WhatsApp y en algunos casos herramientas básicas como Excel, pero no cuentan con sistemas especializados.
+- **Perfil:** Carpinteros independientes, maestros de taller y pequeños negocios dedicados a la fabricación de muebles a medida. En 2024, las MYPE representaron el 99.7% de las empresas peruanas y emplearon al 45.2% de la PEA, lo que evidencia la importancia de este tipo de negocios dentro del mercado nacional ([ComexPerú, 2025](#ref-comexperu-mype-2025)).
+- **Tamaño del mercado:** En 2024, el Perú cerró con 2,346,592 empresas formales, de las cuales 2,326,126 fueron MYPE, equivalentes al 99.1% del total formal. Dentro de estas, el sector manufactura representó el 8.5%, donde se ubican actividades productivas como la fabricación de muebles ([PRODUCE, 2025](#ref-produce-empresas-2025)).
+- **Ubicación geográfica:** El mercado objetivo se concentra principalmente en zonas urbanas con presencia de talleres y actividad comercial. A nivel formal, el 43.8% de las MYPE se concentra en Lima, equivalente a 1,018,308 empresas, lo que justifica enfocar inicialmente la solución en Lima Metropolitana ([PRODUCE, 2025](#ref-produce-empresas-2025)).
+- **Uso de tecnología:** El acceso a smartphones es alto en el país: en 2023, el 92.8% de los hogares peruanos contaba con al menos un smartphone. Esto permite plantear una solución digital accesible para talleres pequeños que ya usan el celular como herramienta de trabajo ([OSIPTEL, 2024](#ref-osiptel-erestel-2024)).
+- **Necesidad clave:** Organizar pedidos, calcular materiales, controlar avances de producción, estimar tiempos de entrega y mejorar la comunicación con los clientes.
 
-**Clientes: Usuarios que solicitan muebles personalizados**
+**Clientes: usuarios que solicitan muebles personalizados**
 
-Este segmento incluye a personas que requieren la fabricación de muebles a medida y desean tener mayor visibilidad del proceso, así como una mejor experiencia durante el servicio.
+Este segmento está compuesto por personas que requieren muebles a medida para hogares, oficinas o negocios, y que necesitan mayor claridad sobre tiempos, costos y avance del pedido.
 
-- **Perfil:** Personas que solicitan muebles para el hogar, oficinas o negocios, interesados en soluciones personalizadas.
-- **Edad:** 25 a 60 años.
-- **Necesidad clave:** Conocer el estado del pedido, recibir información clara sobre tiempos de entrega y tener mayor confianza en el proceso de fabricación.
-- **Uso de tecnología:** Nivel medio-alto. Están familiarizados con el uso de smartphones, aplicaciones web, redes sociales y servicios digitales.
+- **Perfil:** Adultos que solicitan muebles personalizados y buscan una alternativa distinta a los muebles estándar. Este perfil se relaciona con usuarios urbanos familiarizados con el uso de internet, redes sociales y comunicación digital.
+- **Edad y uso digital:** El público adulto joven y adulto presenta alta familiaridad con internet. En el primer trimestre de 2024, el 91.4% de la población de 25 a 40 años accedió a internet, lo que respalda el uso de una plataforma digital para consultar pedidos, avances y entregas ([INEI, 2024a](#ref-inei-internet-trim1-2024)).
+- **Nivel socioeconómico:** Puede orientarse principalmente a usuarios de NSE B y C, ya que son segmentos con capacidad de compra para productos personalizados de mediana inversión. Esta clasificación debe tomarse como criterio de segmentación comercial, usando como referencia los reportes de niveles socioeconómicos de APEIM, elaborados a partir de la ENAHO ([APEIM, 2024](#ref-apeim-nse-2024)).
+- **Uso de tecnología:** En 2024, el 80.2% de la población peruana de 6 años a más usó internet en el tercer trimestre, y en el primer trimestre del mismo año el 91.3% de quienes usaban internet accedía mediante celular. Esto respalda que los clientes puedan consultar información del pedido desde una plataforma web ([INEI, 2024b](#ref-inei-internet-trim3-2024)).
+- **Necesidad clave:** Conocer el estado del pedido, recibir información clara sobre fechas de entrega, reducir la incertidumbre y tener mayor confianza durante el proceso de fabricación.
 
 # Capítulo II: Requirements Elicitation & Analysis
 
