@@ -57,8 +57,7 @@
 
 # Contenido
 
-
-<h1>Student Outcome</h1>
+# Student Outcome
 
 En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET -- EAC - Student Outcome 5.
 
@@ -680,7 +679,7 @@ Importancia: Escala de 1 a 5 (1 = Poco importante / Prescindible, 5 = Crítica /
 
 
 
-## Principales coincidencias entre ambos segmentos
+#### Principales coincidencias entre ambos segmentos
 
 | Coincidencia | Implicancia para la plataforma |
 |:---|:---|
@@ -1330,11 +1329,11 @@ entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm
 
 <div class="page-break"></div>
 
-## Capítulo V: Product Implementation, Validation & Deployment
+# Capítulo V: Product Implementation, Validation & Deployment
 
-### 5.1. Software Configuration Management
+## 5.1. Software Configuration Management
 
-### 5.2. Landing Page, Services & Applications Implementation
+## 5.2. Landing Page, Services & Applications Implementation
 
 ### 5.2.1. Sprint 1
 
