@@ -114,6 +114,7 @@
             - [5.2.1.2. Aspect Leaders and Collaborators](#5212-aspect-leaders-and-collaborators)
             - [5.2.1.3. Sprint Backlog 1](#5213-sprint-backlog-1)
             - [5.2.1.4. Development Evidence for Sprint Review](#5214-development-evidence-for-sprint-review)
+- [Bibliografía](#bibliografía)
 
 <div class="page-break"></div>
 
@@ -788,13 +789,9 @@ Los diagramas fueron elaborados en UXPressia y se adjuntan las capturas a contin
 
 ## 2.4. Big Picture EventStorming
 
-Para el desarrollo de la plataforma WoodRoute, el equipo se reunió de manera síncrona a través de una sesión de Google Meet, utilizando Miro como lienzo interactivo para simular el proceso de Big Picture EventStorming siguiendo la metodología de Alberto Brandolini. La sesión se extendió por aproximadamente dos horas, en las que los integrantes asumieron de manera colaborativa roles tanto técnicos como de negocio para modelar todo el flujo de valor del SaaS.
+Como resultado de aplicar Big Picture EventStorming al dominio de WoodRoute identificamos cinco bounded contexts (**Onboarding**, **Inventario**, **Cotización y Venta**, **Producción** y **Seguimiento y Comunicación**), tres actores principales (Visitante, Cliente y Carpintero) y cuatro sistemas externos (Tienda de aplicaciones, Email/Sender, Pasarela de pagos y Proveedor de madera). Adicionalmente surgieron hot spots que documentamos como decisiones pendientes para futuras iteraciones.
 
-El ejercicio se desarrolló en tres pasos progresivos: primero una lluvia de ideas para recolectar todos los domain events relevantes, luego un ordenamiento cronológico organizando los eventos en swimlanes por bounded context, y finalmente la incorporación de actores y sistemas externos. Cerramos el taller con dos pases narrativos (storytelling y reverse storytelling) que permitieron identificar eventos faltantes, hot spots y zonas de ambigüedad.
-
-La actividad culminó con la división del sistema en cinco grandes bounded contexts: **Onboarding** (landing y gestión de usuarios), **Inventario**, **Cotización y Venta**, **Producción** y **Seguimiento y Comunicación**. Se identificaron tres actores principales (Visitante, Cliente, Carpintero) y tres sistemas externos clave (Tienda de aplicaciones, Email/Sender y Pasarela de pagos), además de un sistema externo adicional (Proveedor de madera) emergido durante el reverse storytelling.
-
-Esta actividad no solo garantizó que todo el equipo tuviera una visión unificada y clara del funcionamiento de la plataforma antes de escribir la primera línea de código, sino que también definió con precisión el alcance del producto mínimo viable y sentó las bases para el diseño de la arquitectura técnica.
+Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming Journal, 2022](#ref-eventstorming-journal-2022)), cuyo desarrollo se presenta a continuación.
 
 **Tablero en Miro:** <https://miro.com/app/board/uXjVHUq0794=/>
 
@@ -806,21 +803,31 @@ Esta actividad no solo garantizó que todo el equipo tuviera una visión unifica
 
 **Paso 2 — Ordenando cronológicamente.** Los eventos se agruparon en cinco swimlanes (uno por bounded context) y se ordenaron cronológicamente de izquierda a derecha dentro de cada uno.
 
+**Onboarding (Landing + Usuarios)**
+
 <div align="center">
-  <img src="assets/big-picture-eventstorming/paso-2/onboarding.jpg" alt="Paso 2: Onboarding" width="100%">
+  <img src="assets/big-picture-eventstorming/paso-2/onboarding.jpg" alt="Paso 2: Onboarding (Landing + Usuarios)" width="100%">
 </div>
+
+**Inventario**
 
 <div align="center">
   <img src="assets/big-picture-eventstorming/paso-2/inventario.jpg" alt="Paso 2: Inventario" width="100%">
 </div>
 
+**Cotización y Venta**
+
 <div align="center">
   <img src="assets/big-picture-eventstorming/paso-2/cotizacion-y-venta.jpg" alt="Paso 2: Cotización y Venta" width="100%">
 </div>
 
+**Producción**
+
 <div align="center">
   <img src="assets/big-picture-eventstorming/paso-2/produccion.jpg" alt="Paso 2: Producción" width="100%">
 </div>
+
+**Seguimiento y Comunicación**
 
 <div align="center">
   <img src="assets/big-picture-eventstorming/paso-2/seguimiento-y-comunicacion.jpg" alt="Paso 2: Seguimiento y Comunicación" width="100%">
@@ -828,21 +835,31 @@ Esta actividad no solo garantizó que todo el equipo tuviera una visión unifica
 
 **Paso 3 — Añadiendo actores y sistemas externos.** Sobre los swimlanes ordenados se incorporaron los actores (post-its amarillos) que disparan los eventos y los sistemas externos (post-its azules) con los que la plataforma interactúa. Se añadieron también hot spots (post-its rosas) para marcar las preguntas o decisiones pendientes identificadas durante el storytelling.
 
+**Onboarding (Landing + Usuarios)**
+
 <div align="center">
-  <img src="assets/big-picture-eventstorming/paso-3/onboarding.jpg" alt="Paso 3: Onboarding" width="100%">
+  <img src="assets/big-picture-eventstorming/paso-3/onboarding.jpg" alt="Paso 3: Onboarding (Landing + Usuarios)" width="100%">
 </div>
+
+**Inventario**
 
 <div align="center">
   <img src="assets/big-picture-eventstorming/paso-3/inventario.jpg" alt="Paso 3: Inventario" width="100%">
 </div>
 
+**Cotización y Venta**
+
 <div align="center">
   <img src="assets/big-picture-eventstorming/paso-3/cotizacion-y-venta.jpg" alt="Paso 3: Cotización y Venta" width="100%">
 </div>
 
+**Producción**
+
 <div align="center">
   <img src="assets/big-picture-eventstorming/paso-3/produccion.jpg" alt="Paso 3: Producción" width="100%">
 </div>
+
+**Seguimiento y Comunicación**
 
 <div align="center">
   <img src="assets/big-picture-eventstorming/paso-3/seguimiento-y-comunicacion.jpg" alt="Paso 3: Seguimiento y Comunicación" width="100%">
@@ -1493,4 +1510,10 @@ En este primer Sprint hemos realizado la implementación de nuestra Landing Page
 | Developer-Core/WoodRoute-Landing | main | 15ad028 | Initial commit | Initial commit | 10/04/2026 |
 | Developer-Core/WoodRoute-Landing | main | 33ad2a9 | Actualización de index.html | Agregado de estilos principales y la vista de la propuesta de valor. | 12/04/2026 |
 | Developer-Core/WoodRoute-Landing | main | 3694000 | Configuración de assets y diagramas | Se incluyeron los diagramas y el esquema inicial en los assets. | 14/04/2026 |
+
+<div class="page-break"></div>
+
+# Bibliografía
+
+<a id="ref-eventstorming-journal-2022"></a>EventStorming Journal. (2022, marzo 29). *Step by step guide to run your big picture event storming*. https://www.eventstormingjournal.com/big%20picture/step-by-step-guide-to-run-your-big-picture-event-storming/
 
