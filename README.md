@@ -671,7 +671,7 @@ Joseph Rodriguez, estudiante de Ingeniería de Software de 21 años, relató ser
 
 **Entrevistado:** Renzo Carlos Baldeon Galindo
 
-**Link de la entrevista:** <[enlace del video](https://drive.google.com/file/d/19W5K1V3g7HjvXkpX5zqU805OR1HmuKla/view?usp=sharing)>
+**Link de la entrevista:** <https://drive.google.com/file/d/19W5K1V3g7HjvXkpX5zqU805OR1HmuKla/view?usp=sharing>
 
 <div align="center">
   <img src="assets/interviews/interview-segment-2-3.png" alt="Interview segment 2 - 3" width="100%">
