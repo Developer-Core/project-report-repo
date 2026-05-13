@@ -2196,26 +2196,6 @@ La página está estructurada en ocho secciones en el siguiente orden:
 
 La versión mobile mantiene la misma jerarquía de contenido que desktop. Las grillas de features colapsan a una columna, el navbar se convierte en menú hamburguesa y el CTA de conversión permanece visible y accesible en todo momento. El espaciado entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm`.
 
-### 4.6.2. Software Architecture Context Diagram
-
-<div align="center">
-  <img src="assets/architecture/context-diagram.png" alt="Context Diagram" width="100%">
-</div>
-
-### 4.6.3. Software Architecture Container Diagrams
-
-<div align="center">
-  <img src="assets/architecture/container-diagram.png" alt="Container Diagram" width="100%">
-</div>
-
-### 4.6.4. Software Architecture Components Diagrams
-
-<div align="center">
-  <img src="assets/architecture/component-diagram.png" alt="Component Diagram" width="100%">
-</div>
-
-<div style="page-break-after: always;"></div>
-
 ## 4.6. Domain-Driven Software Architecture
 
 ### 4.6.1. Design Level Event Storming
@@ -2257,6 +2237,26 @@ La versión mobile mantiene la misma jerarquía de contenido que desktop. Las gr
 #### Step 9+10 — Aggregates & Bounded Contexts
 
 ![Step 9+10 — Aggregates & Bounded Contexts](assets/design-level-event-storming/9-10-aggregates-and-bounded-contexts.jpg)
+
+<div style="page-break-after: always;"></div>
+
+### 4.6.2. Software Architecture Context Diagram
+
+<div align="center">
+  <img src="assets/architecture/context-diagram.png" alt="Context Diagram" width="100%">
+</div>
+
+### 4.6.3. Software Architecture Container Diagrams
+
+<div align="center">
+  <img src="assets/architecture/container-diagram.png" alt="Container Diagram" width="100%">
+</div>
+
+### 4.6.4. Software Architecture Components Diagrams
+
+<div align="center">
+  <img src="assets/architecture/component-diagram.png" alt="Component Diagram" width="100%">
+</div>
 
 <div style="page-break-after: always;"></div>
 
