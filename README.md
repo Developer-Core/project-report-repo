@@ -899,7 +899,7 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
 # Capítulo III: Requirements Specification
 
 ## 3.1. User Stories
-EP01	Gestión del Landing Pague <br>
+EP01	Gestión del Landing Page <br>
 EP02    Gestión de Usuarios y Perfiles <br>
 EP03    Gestión de Pedidos de Muebles Personalizados <br>
 EP04    Planificación y Seguimiento de Producción <br>
