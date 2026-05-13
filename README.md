@@ -889,10 +889,7 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
 - **Feasibility Evaluation (Evaluación de Viabilidad):** proceso de análisis para determinar si es posible construir un mueble solicitado en función del stock actual de madera y herrajes, la estimación de horas de trabajo necesarias y la capacidad operativa disponible en el taller.
 - **Production Schedule (Planificación de la Producción):** calendario estructurado que organiza el uso del tiempo, los operarios y la maquinaria del taller para cumplir con los plazos de entrega de todos los pedidos activos sin generar cuellos de botella.
 - **Manufacturing Stage (Fase de Fabricación):** cada uno de los pasos físicos y secuenciales necesarios para construir un mueble en el taller (por ejemplo: corte, lijado, ensamble, pintado o acabado).
-- **Route Sheet (Hoja de Ruta):** documento o registro digital que detalla el paso a paso de las instrucciones de fabricación, las medidas, los materiales y las fases específicas que debe seguir un operario para construir un mueble determinado.
-- **Active Workload (Capacidad del Taller):** límite máximo de trabajo que el taller puede asumir en un periodo de tiempo determinado, medido en horas hombre y disponibilidad de maquinaria.
 - **Real-Time Tracking (Seguimiento en Tiempo Real):** funcionalidad orientada al cliente final que le permite visualizar de manera transparente y automática el estado actual o la fase de fabricación en la que se encuentra su mueble.
-- **Friction Point / Hot Spot (Punto de Conflicto):** cualquier cuello de botella, duda operativa o riesgo en el flujo de trabajo del taller (como la falta de stock o retrasos de proveedores) que pueda afectar la entrega del producto.
 - **Inventory (Inventario):** registro y control de las materias primas (madera, tableros) y consumibles (tornillos, bisagras, rieles, pintura) físicamente disponibles en el taller.
 - **Down Payment (Anticipo de Pago):** depósito monetario inicial que realiza el cliente para formalizar el pedido, financiar la compra de los materiales necesarios y autorizar el inicio de la fabricación en el taller.
 
