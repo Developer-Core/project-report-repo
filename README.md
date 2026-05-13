@@ -2698,6 +2698,34 @@ A continuación se presentan las capturas de las principales vistas implementada
 
 No disponemos de documentación como evidencia, ya que en el primer sprint nuestro enfoque se centró en la elaboración de la landing page.
 
+#### 5.2.1.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 1 el equipo configuró y puso en marcha el despliegue continuo de la landing page de WoodRoute sobre la plataforma Vercel. Las actividades realizadas comprendieron la creación de la cuenta de equipo en Vercel, la autorización de la integración con la organización **Developer-Core** en GitHub, la importación del repositorio `landing-page-woodroute`, la configuración del proyecto (framework preset, rama de despliegue, build command y variables de entorno) y la activación del despliegue automático ante cada push a la rama `develop`. Como resultado, la landing quedó publicada en <https://landing-page-woodroute.vercel.app/>. A continuación se evidencian los pasos realizados.
+
+**Paso 1: Acceso a Vercel.**
+
+El equipo accede a la plataforma de Vercel para iniciar la creación del nuevo proyecto.
+
+<div align="center">
+  <img src="assets/deployment/vercel-step-1-connect.png" alt="Acceso inicial a Vercel" width="100%">
+</div>
+
+**Paso 2: Importación del repositorio desde GitHub.**
+
+Desde la sección *Import Git Repository* se selecciona la organización **Developer-Core** y se importa el repositorio de la landing page.
+
+<div align="center">
+  <img src="assets/deployment/vercel-step-2-import-repo.png" alt="Importación del repositorio desde Developer-Core" width="100%">
+</div>
+
+**Paso 3: Configuración y despliegue.**
+
+Se selecciona la rama de despliegue, el *Application Preset* (Vite), el *Root Directory*, los *Build and Output Settings* y las *Environment Variables* necesarias para producción. Al presionar el botón **Deploy**, Vercel ejecuta el build y publica el sitio.
+
+<div align="center">
+  <img src="assets/deployment/vercel-step-3-deploy.png" alt="Despliegue del proyecto en Vercel" width="100%">
+</div>
+
 <div style="page-break-after: always;"></div>
 
 # Bibliografía
