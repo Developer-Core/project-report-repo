@@ -911,7 +911,7 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
 
 ### User Stories
 
-| Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+| Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
 |------|--------|-------------|-------------|-------------|
 | HU01 | Navegación clara dentro de la landing | Como visitante, quiero navegar de forma rápida y clara por las distintas partes de la landing para encontrar la información que busco sin perder tiempo. | **Escenario 1: Acceso directo a una sección de interés** <br> _Dado_ que el visitante se encuentra en la landing <br> _Cuando_ selecciona una opción de navegación que apunta a una sección específica <br> _Entonces_ la página lo lleva directamente a esa sección <br> _Y_ conserva el contexto visual para no perder orientación | EP01 |
 | HU02 | Entender la propuesta de valor de WoodRoute | Como visitante, quiero entender rápidamente qué problema resuelve WoodRoute y cómo lo resuelve para decidir si me interesa probar la plataforma. | **Escenario 1: Visualización de la propuesta de valor al entrar a la landing** <br> _Dado_ que el visitante accede a la landing por primera vez <br> _Cuando_ la página termina de cargar <br> _Entonces_ se le presenta de forma destacada qué problema resuelve WoodRoute y los principales beneficios que ofrece <br> _Y_ la información es comprensible sin necesidad de leer detalles técnicos | EP01 |
