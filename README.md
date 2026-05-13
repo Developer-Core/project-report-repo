@@ -2660,6 +2660,40 @@ En este primer Sprint el equipo implementó la landing page de WoodRoute aplican
 | Developer-Core/landing-page-woodroute | develop | 4c25f30 | feat: add vercel.json with build config | Configuración de build para el despliegue automático en Vercel. | 24/04/2026 |
 | Developer-Core/landing-page-woodroute | develop | ce0388e | feat: update logo woodroute | Actualización del logo oficial de WoodRoute en la landing page. | 13/05/2026 |
 
+#### 5.2.1.5. Execution Evidence for Sprint Review
+
+Durante el Sprint 1 el equipo completó la implementación de la landing page de WoodRoute siguiendo el diseño definido en el capítulo IV. La landing presenta la propuesta de valor del SaaS, el flujo de uso del producto, los planes de suscripción, una sección de preguntas frecuentes y la presentación del equipo, todo con soporte de internacionalización en español e inglés. La aplicación se encuentra desplegada de forma pública en Vercel y accesible desde cualquier dispositivo.
+
+**URL pública de la landing page:** <https://landing-page-woodroute.vercel.app/>
+
+**Video demostrativo del Sprint 1:** *(en proceso de edición; el enlace se incorporará una vez que se publique en YouTube)*
+
+A continuación se presentan las capturas de las principales vistas implementadas en este sprint.
+
+**Vista 1 — Hero section con propuesta de valor (HU02)**
+
+<div align="center">
+  <img src="assets/sprint-1-execution/landing-hero.png" alt="Hero section de la landing page de WoodRoute" width="100%">
+</div>
+
+**Vista 2 — Sección "Cómo funciona" con el flujo de uso (HU04)**
+
+<div align="center">
+  <img src="assets/sprint-1-execution/landing-how-it-works.png" alt="Sección Cómo funciona de la landing page" width="100%">
+</div>
+
+**Vista 3 — Sección de preguntas frecuentes**
+
+<div align="center">
+  <img src="assets/sprint-1-execution/landing-faq.png" alt="Sección de Preguntas Frecuentes de la landing page" width="100%">
+</div>
+
+**Vista 4 — Sección del equipo detrás del producto (HU07)**
+
+<div align="center">
+  <img src="assets/sprint-1-execution/landing-team.png" alt="Sección Nuestro Equipo con los integrantes de WoodRoute" width="100%">
+</div>
+
 <div style="page-break-after: always;"></div>
 
 # Bibliografía
