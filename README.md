@@ -114,6 +114,8 @@ Mayo 2026
     - [4.3. Landing Page UI Design](#43-landing-page-ui-design)
         - [4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)
         - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
+    - [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
+        - [4.6.1. Design Level Event Storming](#461-design-level-event-storming)
 - [Capítulo V: Product Implementation, Validation & Deployment](#capítulo-v-product-implementation-validation--deployment)
     - [5.1. Software Configuration Management](#51-software-configuration-management)
     - [5.2. Landing Page, Services & Applications Implementation](#52-landing-page-services--applications-implementation)
@@ -2159,7 +2161,7 @@ Es una experiencia de una sola página sin navegación interna. El cliente ve el
 
 ### 4.3.1. Landing Page Wireframe
 
-Wireframes low-fidelity de la landing en sus dos breakpoints principales.
+Wireframes de la landing en sus dos breakpoints principales.
 
 **Vista desktop**
 
@@ -2211,6 +2213,50 @@ La versión mobile mantiene la misma jerarquía de contenido que desktop. Las gr
 <div align="center">
   <img src="assets/architecture/component-diagram.png" alt="Component Diagram" width="100%">
 </div>
+
+<div style="page-break-after: always;"></div>
+
+## 4.6. Domain-Driven Software Architecture
+
+### 4.6.1. Design Level Event Storming
+
+**Board completo en Miro:** [https://miro.com/app/board/uXjVHUVIGxY=/?share_link_id=166196211611](https://miro.com/app/board/uXjVHUVIGxY=/?share_link_id=166196211611)
+
+#### Step 1 — Unstructured Exploration
+
+![Step 1 — Unstructured Exploration](assets/design-level-event-storming/1-unstructured-exploration.jpg)
+
+#### Step 2 — Timelines
+
+![Step 2 — Timelines](assets/design-level-event-storming/2-timelines.jpg)
+
+#### Step 3 — Hot Spots
+
+![Step 3 — Hot Spots](assets/design-level-event-storming/3-hot-spots.jpg)
+
+#### Step 4 — Pivotal Points
+
+![Step 4 — Pivotal Points](assets/design-level-event-storming/4-pivotal-points.jpg)
+
+#### Step 5 — Commands
+
+![Step 5 — Commands](assets/design-level-event-storming/5-commands.jpg)
+
+#### Step 6 — Policies
+
+![Step 6 — Policies](assets/design-level-event-storming/6-policies.jpg)
+
+#### Step 7 — Read Models
+
+![Step 7 — Read Models](assets/design-level-event-storming/7-read-models.jpg)
+
+#### Step 8 — External Systems
+
+![Step 8 — External Systems](assets/design-level-event-storming/8-external-systems.jpg)
+
+#### Step 9+10 — Aggregates & Bounded Contexts
+
+![Step 9+10 — Aggregates & Bounded Contexts](assets/design-level-event-storming/9-10-aggregates-and-bounded-contexts.jpg)
 
 <div style="page-break-after: always;"></div>
 
