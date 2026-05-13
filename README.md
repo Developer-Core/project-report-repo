@@ -2370,6 +2370,8 @@ Diagrama relacional consolidado de WoodRoute. Las tablas se agrupan visualmente 
 
 ## 5.1. Software Configuration Management
 
+Esta sección documenta la gestión de configuración del software de WoodRoute, definiendo las herramientas, entornos y convenciones que sostienen el ciclo de desarrollo del equipo. Se describen el entorno de desarrollo, la estrategia de control de versiones y los lineamientos de despliegue que aseguran la trazabilidad y consistencia del producto.
+
 ### 5.1.1. Software Development Environment Configuration
 
 ## 5.2. Landing Page, Services & Applications Implementation
