@@ -1,21 +1,28 @@
-<div class="cover-page">
-<div class="cover-top">
-<img src="assets/logo-upc.png" alt="UPC" class="cover-logo">
-<div class="cover-university">Universidad Peruana de Ciencias Aplicadas</div>
-<div class="cover-program">Ingeniería de Software</div>
-<div class="cover-ciclo">Ciclo 2026-10</div>
-<div class="cover-course">1ASI0730 – Aplicaciones Web</div>
-<div class="cover-nrc">NRC: 10215</div>
-<div class="cover-professor">Docente: Velasquez Nuñez, Angel Augusto</div>
-</div>
-<div class="cover-middle">
-<div class="cover-document-type">Informe de Trabajo Final</div>
-<hr class="cover-separator">
-<div class="cover-product-name">Nombre del Producto</div>
-<hr class="cover-separator">
-</div>
-<div class="cover-bottom">
-<table class="cover-team">
+<article class="markdown-body">
+
+<div align="center">
+
+<img src="assets/logo-upc.png" alt="UPC" width="200">
+
+**Universidad Peruana de Ciencias Aplicadas**
+
+**Ingeniería de Software**
+
+**Ciclo 2026-10**
+
+**1ASI0730 – Aplicaciones Web**
+
+**NRC: 10215**
+
+**Docente: Velasquez Nuñez, Angel Augusto**
+
+**Informe de Trabajo Final**
+
+
+**WoodRoute**
+
+
+<table>
 <thead>
 <tr><th>Integrante</th><th>Código</th></tr>
 </thead>
@@ -27,11 +34,12 @@
 <tr><td>Torres Sanchez, Dalila Victoria</td><td>U20221F734</td></tr>
 </tbody>
 </table>
-<div class="cover-date">Abril 2026</div>
-</div>
+
+Mayo 2026
+
 </div>
 
-
+<div style="page-break-after: always;"></div>
 
 # Registro de Versiones del Informe
 
@@ -46,14 +54,14 @@
 </tbody>
 </table>
 
-
+<div style="page-break-after: always;"></div>
 
 
 # Project Report Collaboration Insights
 
 **URL del Repositorio:** [https://github.com/Developer-Core/project-report-repo](https://github.com/Developer-Core/project-report-repo)
 
-
+<div style="page-break-after: always;"></div>
 
 # Contenido
 
@@ -116,7 +124,7 @@
             - [5.2.1.4. Development Evidence for Sprint Review](#5214-development-evidence-for-sprint-review)
 - [Bibliografía](#bibliografía)
 
-<div class="page-break"></div>
+<div style="page-break-after: always;"></div>
 
 # Student Outcome
 
@@ -173,7 +181,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
   </tbody>
 </table>
 
-
+<div style="page-break-after: always;"></div>
 
 # Capítulo I: Introducción
 
@@ -210,7 +218,7 @@ WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes 
   </tbody>
 </table>
 
-
+<div style="page-break-after: always;"></div>
 
 ## 1.2. Solution Profile
 
@@ -407,6 +415,8 @@ Este segmento está compuesto por personas que requieren muebles a medida para h
 - **Nivel socioeconómico:** Puede orientarse principalmente a usuarios de NSE B y C, ya que son segmentos con capacidad de compra para productos personalizados de mediana inversión. Esta clasificación debe tomarse como criterio de segmentación comercial, usando como referencia los reportes de niveles socioeconómicos de APEIM, elaborados a partir de la ENAHO ([APEIM, 2024](#ref-apeim-nse-2024)).
 - **Uso de tecnología:** En 2024, el 80.2% de la población peruana de 6 años a más usó internet en el tercer trimestre, y en el primer trimestre del mismo año el 91.3% de quienes usaban internet accedía mediante celular. Esto respalda que los clientes puedan consultar información del pedido desde una plataforma web ([INEI, 2024b](#ref-inei-internet-trim3-2024)).
 - **Necesidad clave:** Conocer el estado del pedido, recibir información clara sobre fechas de entrega, reducir la incertidumbre y tener mayor confianza durante el proceso de fabricación.
+
+<div style="page-break-after: always;"></div>
 
 # Capítulo II: Requirements Elicitation & Analysis
 
@@ -701,10 +711,13 @@ En esta sección se presentan las fichas de User Persona elaboradas para los dos
 
 La construcción de estos arquetipos se sustenta en el análisis cualitativo de entrevistas realizadas a potenciales usuarios del rubro de carpintería y diseño de interiores, así como en el estudio comparativo de la competencia directa e indirecta. De dicho análisis se extrajeron las principales características demográficas, comportamientos, objetivos, frustraciones y necesidades no satisfechas que hoy presentan ambos segmentos.
 
+<div align="center">
+  <img src="assets/needfinding/user-persona-1.png" alt="User Persona 1">
+</div>
 
-![User Persona 1](assets/needfinding/user-persona-1.png)
-
-![User Persona 2](assets/needfinding/user-persona-2.png)
+<div align="center">
+  <img src="assets/needfinding/user-persona-2.png" alt="User Persona 2">
+</div>
 
 
 ### 2.3.2. User Task Matrix
@@ -893,6 +906,8 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
 - **Inventory (Inventario):** registro y control de las materias primas (madera, tableros) y consumibles (tornillos, bisagras, rieles, pintura) físicamente disponibles en el taller.
 - **Down Payment (Anticipo de Pago):** depósito monetario inicial que realiza el cliente para formalizar el pedido, financiar la compra de los materiales necesarios y autorizar el inicio de la fabricación en el taller.
 
+<div style="page-break-after: always;"></div>
+
 # Capítulo III: Requirements Specification
 
 ## 3.1. User Stories
@@ -911,60 +926,383 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
 
 ### User Stories
 
-| Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
-|------|--------|-------------|-------------|-------------|
-| HU01 | Navegación clara dentro de la landing | Como visitante, quiero navegar de forma rápida y clara por las distintas partes de la landing para encontrar la información que busco sin perder tiempo. | **Escenario 1: Acceso directo a una sección de interés** <br> _Dado_ que el visitante se encuentra en la landing <br> _Cuando_ selecciona una opción de navegación que apunta a una sección específica <br> _Entonces_ la página lo lleva directamente a esa sección <br> _Y_ conserva el contexto visual para no perder orientación | EP01 |
-| HU02 | Entender la propuesta de valor de WoodRoute | Como visitante, quiero entender rápidamente qué problema resuelve WoodRoute y cómo lo resuelve para decidir si me interesa probar la plataforma. | **Escenario 1: Visualización de la propuesta de valor al entrar a la landing** <br> _Dado_ que el visitante accede a la landing por primera vez <br> _Cuando_ la página termina de cargar <br> _Entonces_ se le presenta de forma destacada qué problema resuelve WoodRoute y los principales beneficios que ofrece <br> _Y_ la información es comprensible sin necesidad de leer detalles técnicos | EP01 |
-| HU03 | Conocer las funcionalidades del producto | Como visitante, quiero conocer las principales funcionalidades de WoodRoute para evaluar si cubren las necesidades de mi taller o de mi pedido. | **Escenario 1: Exploración de funcionalidades** <br> _Dado_ que el visitante está en la landing <br> _Cuando_ accede a la información de funcionalidades <br> _Entonces_ se muestran las capacidades clave del producto <br> _Y_ cada funcionalidad incluye una descripción comprensible para el segmento al que va dirigida | EP01 |
-| HU04 | Comprender cómo se usa el producto | Como visitante, quiero comprender el flujo de uso del producto para saber qué esperar antes de registrarme. | **Escenario 1: Visualización del flujo de uso** <br> _Dado_ que el visitante está en la landing <br> _Cuando_ consulta la información sobre cómo funciona WoodRoute <br> _Entonces_ se presentan los pasos del flujo de uso de forma ordenada y clara <br> _Y_ cada paso incluye una breve descripción de qué ocurre | EP01 |
-| HU05 | Conocer los planes y precios disponibles | Como visitante, quiero conocer los planes y precios disponibles para evaluar cuál se ajusta a mi presupuesto y necesidades. | **Escenario 1: Visualización de planes** <br> _Dado_ que el visitante está en la landing <br> _Cuando_ accede a la información de precios <br> _Entonces_ se muestran los planes disponibles con sus precios, características y diferencias <br> _Y_ cada plan incluye un llamado a la acción para empezar a usarlo | EP01 |
-| HU06 | Empezar a usar la plataforma desde la landing | Como visitante (carpintero o cliente), quiero empezar a usar la plataforma desde la landing según mi rol para arrancar el flujo sin fricción. | **Escenario 1: Empezar como carpintero** <br> _Dado_ que el visitante se identifica como carpintero <br> _Cuando_ elige iniciar como carpintero desde la landing <br> _Entonces_ la plataforma lo lleva al flujo correspondiente para carpinteros en la aplicación <br><br> **Escenario 2: Empezar como cliente** <br> _Dado_ que el visitante se identifica como cliente <br> _Cuando_ elige iniciar como cliente desde la landing <br> _Entonces_ la plataforma lo lleva al flujo correspondiente para clientes en la aplicación | EP01 |
-| HU07 | Conocer al equipo detrás del producto | Como visitante, quiero conocer al equipo detrás de WoodRoute para generar confianza en la plataforma. | **Escenario 1: Visualización del equipo** <br> _Dado_ que el visitante está en la landing <br> _Cuando_ accede a la presentación del equipo <br> _Entonces_ se muestran los integrantes con su información identificativa <br> _Y_ la presentación refuerza la transparencia y profesionalismo del proyecto | EP01 |
-| HU08 | Conocer el producto a través de un video | Como visitante, quiero ver un video que presente el producto y sus características para entenderlo de forma más visual y rápida. | **Escenario 1: Reproducción del video del producto** <br> _Dado_ que el visitante está en la landing <br> _Cuando_ inicia la reproducción del video About-the-Product <br> _Entonces_ el contenido del video se reproduce sin interrupciones <br> _Y_ muestra las características principales del producto explicadas con apoyo visual | EP01 |
-| HU09 | Conocer el proceso del equipo a través de un video | Como visitante, quiero ver un video que muestre al equipo y su proceso de trabajo para confiar en quienes desarrollan WoodRoute. | **Escenario 1: Reproducción del video del equipo** <br> _Dado_ que el visitante está en la landing <br> _Cuando_ inicia la reproducción del video About-the-Team <br> _Entonces_ el contenido del video se reproduce sin interrupciones <br> _Y_ muestra al equipo presentando su proceso de trabajo y testimonios | EP01 |
-| HU10 | Leer la landing en mi idioma preferido | Como visitante, quiero leer el contenido de la landing en mi idioma preferido (inglés por defecto, o español) para comprenderlo sin barreras. | **Escenario 1: Idioma por defecto** <br> _Dado_ que un visitante accede a la landing por primera vez sin preferencia previa <br> _Cuando_ se carga el contenido <br> _Entonces_ el idioma mostrado por defecto es inglés <br><br> **Escenario 2: Cambio de idioma a español** <br> _Dado_ que el visitante está leyendo la landing en inglés <br> _Cuando_ elige cambiar el idioma a español <br> _Entonces_ todo el contenido de la página se traduce al español <br> _Y_ la preferencia de idioma se mantiene mientras el visitante recorre las distintas partes de la landing | EP01 |
-| HU11 | Conocer los términos y condiciones del servicio | Como visitante, quiero conocer los términos y condiciones del servicio antes de registrarme para entender mis compromisos como usuario. | **Escenario 1: Acceso a los términos** <br> _Dado_ que el visitante está en la landing <br> _Cuando_ elige consultar los términos y condiciones <br> _Entonces_ se le presenta el documento completo con las condiciones de uso <br> _Y_ se incluye información sobre responsabilidad ética y profesional según los estándares aplicables (ACM/IEEE/CIP) | EP01 |
-| HU12 | Seguir a WoodRoute en redes sociales | Como visitante, quiero seguir a WoodRoute en redes sociales para mantenerme al tanto de novedades, promociones y contenido del rubro. | **Escenario 1: Acceso a una red social** <br> _Dado_ que el visitante está en la landing <br> _Cuando_ elige seguir a WoodRoute en una red social <br> _Entonces_ el sistema lo redirige al perfil oficial de WoodRoute en esa red <br> _Y_ se abre en una pestaña separada para no perder el contexto de la landing | EP01 |
-| HU13 | Registro de usuario | Como visitante, quiero registrarme en la plataforma para poder acceder a sus funcionalidades. | **Escenario 1: Registro exitoso** <br> _Dado_ que el usuario se encuentra en la página de registro <br> _Cuando_ completa correctamente sus datos y envía el formulario <br> _Entonces_ el sistema crea su cuenta <br> _Y_ le permite acceder a la plataforma | EP02 |
-| HU14 | Inicio de sesión | Como usuario registrado, quiero iniciar sesión en la plataforma para acceder a mi cuenta. | **Escenario 1: Inicio de sesión exitoso** <br> _Dado_ que el usuario ya tiene una cuenta registrada <br> _Cuando_ ingresa sus credenciales correctas <br> _Entonces_ el sistema valida la información <br> _Y_ le permite acceder a su panel principal | EP02 |
-| HU15 | Gestión de perfil | Como usuario, quiero editar mi información personal para mantener mis datos actualizados. | **Escenario 1: Actualización de perfil** <br> _Dado_ que el usuario está en su perfil <br> _Cuando_ modifica sus datos y guarda los cambios <br> _Entonces_ el sistema actualiza la información <br> _Y_ muestra los datos actualizados correctamente | EP02 |
-| HU16 | Selección de tipo de usuario | Como usuario, quiero definir si soy carpintero o cliente para acceder a funcionalidades específicas. | **Escenario 1: Selección de rol** <br> _Dado_ que el usuario se encuentra en el registro <br> _Cuando_ selecciona su tipo de usuario (carpintero o cliente) <br> _Entonces_ el sistema guarda esta información <br> _Y_ adapta la experiencia según el rol seleccionado | EP02 |
-| HU17 | Creación de pedido personalizado | Como cliente, quiero crear un pedido de mueble personalizado para solicitar un diseño específico. | **Escenario 1: Creación exitosa de pedido** <br> _Dado_ que el cliente se encuentra en la sección de pedidos <br> _Cuando_ completa los detalles del mueble (medidas, material, diseño) y envía la solicitud <br> _Entonces_ el sistema registra el pedido <br> _Y_ lo envía al carpintero para su revisión | EP03 |
-| HU18 | Visualización de pedidos | Como usuario, quiero visualizar la lista de pedidos para hacer seguimiento a su estado. | **Escenario 1: Visualización de pedidos** <br> _Dado_ que el usuario accede a la sección de pedidos <br> _Cuando_ el sistema carga la información <br> _Entonces_ se muestran los pedidos registrados <br> _Y_ su estado actual (pendiente, en proceso, finalizado) | EP03 |
-| HU19 | Aceptación o rechazo de pedidos | Como carpintero, quiero aceptar o rechazar pedidos para gestionar mi carga de trabajo. | **Escenario 1: Aceptación de pedido** <br> _Dado_ que el carpintero recibe un pedido <br> _Cuando_ revisa los detalles y decide aceptarlo <br> _Entonces_ el sistema actualiza el estado del pedido <br> _Y_ lo marca como "en proceso" | EP03 |
-| HU20 | Modificación de pedido | Como cliente, quiero modificar un pedido antes de que sea aceptado para ajustar los detalles. | **Escenario 1: Modificación exitosa** <br> _Dado_ que el pedido aún no ha sido aceptado <br> _Cuando_ el cliente edita la información del pedido <br> _Entonces_ el sistema actualiza los cambios <br> _Y_ notifica al carpintero | EP03 |
-| HU21 | Cancelación de pedido | Como cliente, quiero cancelar un pedido para detener el proceso si ya no lo necesito. | **Escenario 1: Cancelación de pedido** <br> _Dado_ que el cliente tiene un pedido activo <br> _Cuando_ selecciona la opción de cancelar <br> _Entonces_ el sistema cambia el estado del pedido a "cancelado" <br> _Y_ notifica al carpintero | EP03 |
-| HU22 | Definición de etapas de producción | Como carpintero, quiero definir las etapas de producción de un pedido para organizar mejor el trabajo. | **Escenario 1: Creación de etapas** <br> _Dado_ que el carpintero ha aceptado un pedido <br> _Cuando_ define las etapas (diseño, corte, ensamblado, acabado, entrega) <br> _Entonces_ el sistema registra las etapas <br> _Y_ las asocia al pedido | EP04 |
-| HU23 | Actualización del estado de producción | Como carpintero, quiero actualizar el estado de cada etapa para reflejar el progreso del pedido. | **Escenario 1: Actualización de estado** <br> _Dado_ que el pedido está en proceso <br> _Cuando_ el carpintero cambia el estado de una etapa <br> _Entonces_ el sistema actualiza el progreso <br> _Y_ refleja el cambio en el seguimiento del pedido | EP04 |
-| HU24 | Visualización del progreso | Como cliente, quiero ver el progreso de mi pedido para conocer en qué etapa se encuentra. | **Escenario 1: Visualización de progreso** <br> _Dado_ que el cliente tiene un pedido activo <br> _Cuando_ accede al detalle del pedido <br> _Entonces_ el sistema muestra las etapas completadas y pendientes <br> _Y_ el estado actual del pedido | EP04 |
-| HU25 | Estimación de tiempos por etapa | Como carpintero, quiero asignar tiempos estimados a cada etapa para planificar mejor la entrega. | **Escenario 1: Asignación de tiempos** <br> _Dado_ que el carpintero está planificando un pedido <br> _Cuando_ define el tiempo estimado por etapa <br> _Entonces_ el sistema guarda la información <br> _Y_ calcula el tiempo total estimado | EP04 |
-| HU26 | Registro de materiales | Como carpintero, quiero registrar los materiales disponibles para llevar un control del inventario. | **Escenario 1: Registro exitoso** <br> _Dado_ que el carpintero accede al módulo de inventario <br> _Cuando_ ingresa los datos del material (tipo, cantidad, unidad) <br> _Entonces_ el sistema guarda la información <br> _Y_ actualiza el inventario disponible | EP05 |
-| HU27 | Actualización de inventario | Como carpintero, quiero actualizar las cantidades de materiales para reflejar el consumo o reposición. | **Escenario 1: Actualización de stock** <br> _Dado_ que el carpintero utiliza o repone materiales <br> _Cuando_ modifica la cantidad en el sistema <br> _Entonces_ el inventario se actualiza correctamente <br> _Y_ refleja el stock actual | EP05 |
-| HU28 | Validación de materiales para pedidos | Como carpintero, quiero validar si tengo materiales suficientes para aceptar un pedido. | **Escenario 1: Validación automática** <br> _Dado_ que el carpintero revisa un pedido <br> _Cuando_ el sistema compara los materiales requeridos con el inventario <br> _Entonces_ indica si el pedido es viable <br> _Y_ muestra los materiales faltantes si aplica | EP05 |
-| HU29 | Alerta de bajo inventario | Como carpintero, quiero recibir alertas cuando el stock sea bajo para evitar retrasos en producción. | **Escenario 1: Generación de alerta** <br> _Dado_ que un material alcanza el nivel mínimo definido <br> _Cuando_ el sistema detecta esta condición <br> _Entonces_ genera una alerta <br> _Y_ notifica al carpintero | EP05 |
-| HU30 | Cálculo de costo estimado | Como carpintero, quiero calcular el costo estimado de un pedido para definir un precio adecuado. | **Escenario 1: Cálculo de costo** <br> _Dado_ que el carpintero tiene los detalles del pedido <br> _Cuando_ ingresa los costos de materiales y mano de obra <br> _Entonces_ el sistema calcula el costo total <br> _Y_ muestra el resultado estimado | EP06 |
-| HU31 | Estimación de tiempo total | Como carpintero, quiero estimar el tiempo total de fabricación para planificar la entrega del pedido. | **Escenario 1: Estimación de tiempo** <br> _Dado_ que el carpintero define los tiempos por etapa <br> _Cuando_ el sistema procesa la información <br> _Entonces_ calcula el tiempo total estimado <br> _Y_ lo muestra al usuario | EP06 |
-| HU32 | Evaluación de rentabilidad | Como carpintero, quiero evaluar la rentabilidad de un pedido para tomar decisiones informadas. | **Escenario 1: Evaluación de rentabilidad** <br> _Dado_ que el carpintero tiene el costo estimado <br> _Cuando_ compara con el precio de venta <br> _Entonces_ el sistema calcula la ganancia <br> _Y_ muestra si el pedido es rentable | EP06 |
-| HU33 | Generación de presupuesto | Como carpintero, quiero generar un presupuesto para presentar al cliente antes de iniciar el trabajo. | **Escenario 1: Generación de presupuesto** <br> _Dado_ que el carpintero ha calculado costos y tiempos <br> _Cuando_ solicita generar el presupuesto <br> _Entonces_ el sistema crea un documento <br> _Y_ lo deja listo para compartir con el cliente | EP06 |
-| HU34 | Envío de mensajes | Como usuario, quiero enviar mensajes dentro de la plataforma para comunicarme sobre el pedido. | **Escenario 1: Envío de mensaje exitoso** <br> _Dado_ que el usuario accede al chat del pedido <br> _Cuando_ escribe un mensaje y lo envía <br> _Entonces_ el sistema entrega el mensaje <br> _Y_ lo muestra en la conversación | EP07 |
-| HU35 | Recepción de mensajes | Como usuario, quiero recibir mensajes para mantenerme informado sobre el pedido. | **Escenario 1: Recepción de mensaje** <br> _Dado_ que otro usuario envía un mensaje <br> _Cuando_ el sistema procesa el envío <br> _Entonces_ el mensaje se recibe correctamente <br> _Y_ se muestra en la conversación | EP07 |
-| HU36 | Historial de comunicación | Como usuario, quiero ver el historial de mensajes para revisar conversaciones anteriores. | **Escenario 1: Visualización de historial** <br> _Dado_ que el usuario accede al chat <br> _Cuando_ el sistema carga los mensajes <br> _Entonces_ muestra el historial completo <br> _Y_ ordenado cronológicamente | EP07 |
-| HU37 | Aceptación del presupuesto por el cliente | Como cliente, quiero aceptar el presupuesto generado por el carpintero para confirmar que estoy de acuerdo con el costo y los tiempos antes de iniciar la fabricación. | **Escenario 1: Aceptación exitosa** <br> _Dado_ que el cliente recibe un presupuesto <br> _Cuando_ revisa los detalles y selecciona "Aceptar" <br> _Entonces_ el sistema actualiza el estado del presupuesto a "Aceptado" <br> _Y_ notifica al carpintero para coordinar el anticipo | EP06 |
-| HU38 | Registro de comprobante de anticipo | Como cliente, quiero registrar el comprobante de mi anticipo de pago (Yape, transferencia bancaria) para que el carpintero pueda iniciar la producción. | **Escenario 1: Registro de comprobante** <br> _Dado_ que el cliente aceptó el presupuesto <br> _Cuando_ sube un comprobante (imagen o PDF) e ingresa el monto y la fecha del pago <br> _Entonces_ el sistema registra el anticipo como "Pendiente de validación" <br> _Y_ notifica al carpintero para que lo verifique | EP06 |
-| HU39 | Validación de anticipo por el carpintero | Como carpintero, quiero validar el comprobante del anticipo enviado por el cliente para confirmar que el pago llegó y autorizar el inicio de la producción. | **Escenario 1: Anticipo validado** <br> _Dado_ que el carpintero revisa el comprobante en la plataforma <br> _Cuando_ confirma que el monto y la cuenta destino son correctos y marca "Validado" <br> _Entonces_ el sistema cambia el estado del anticipo a "Confirmado" <br> _Y_ habilita el pedido para iniciar la producción <br><br> **Escenario 2: Anticipo rechazado** <br> _Dado_ que el carpintero detecta un comprobante inválido o monto incorrecto <br> _Cuando_ marca "Rechazado" y deja una nota <br> _Entonces_ el sistema mantiene el pedido en estado "Pendiente" <br> _Y_ notifica al cliente para que envíe un nuevo comprobante | EP06 |
-| HU40 | Solicitud de pago final | Como carpintero, quiero emitir una solicitud de pago final al cliente cuando el mueble esté listo para entrega, para coordinar el cobro del saldo restante. | **Escenario 1: Solicitud emitida** <br> _Dado_ que el pedido se encuentra en estado "Listo para entrega" <br> _Cuando_ el carpintero genera la solicitud de pago final <br> _Entonces_ el sistema envía la solicitud al cliente con el monto pendiente y las cuentas destino <br> _Y_ registra la solicitud en el historial del pedido | EP06 |
-| HU41 | Registro de comprobante de pago final | Como cliente, quiero registrar el comprobante del pago final (Yape, transferencia bancaria) para coordinar la entrega de mi mueble. | **Escenario 1: Registro de comprobante final** <br> _Dado_ que el cliente recibió la solicitud de pago final <br> _Cuando_ sube el comprobante e ingresa el monto y la fecha <br> _Entonces_ el sistema registra el pago final como "Pendiente de validación" <br> _Y_ notifica al carpintero para que lo verifique | EP06 |
-| HU42 | Validación de pago final | Como carpintero, quiero validar el comprobante del pago final para confirmar el cobro completo y autorizar la entrega del mueble. | **Escenario 1: Pago final validado** <br> _Dado_ que el carpintero revisa el comprobante del pago final <br> _Cuando_ confirma que el monto y la cuenta destino son correctos y marca "Validado" <br> _Entonces_ el sistema cambia el estado del pedido a "Pagado completamente" <br> _Y_ habilita la coordinación de entrega con el cliente | EP06 |
-| HU43 | Consulta pública del estado del pedido | Como cliente, quiero consultar el estado y el progreso de mi pedido mediante un enlace público, sin necesidad de iniciar sesión, para acceder de forma rápida y sin fricción desde cualquier dispositivo. | **Escenario 1: Acceso público al estado** <br> _Dado_ que el cliente recibe un enlace público con su `publicTrackingId` <br> _Cuando_ accede al enlace <br> _Entonces_ el sistema muestra el estado actual, la etapa de producción, la fecha estimada de entrega y el porcentaje de avance <br> _Y_ no solicita credenciales para acceder <br><br> **Escenario 2: Pedido cancelado o inexistente** <br> _Dado_ que el `publicTrackingId` no existe o el pedido fue cancelado <br> _Cuando_ el cliente accede al enlace <br> _Entonces_ el sistema muestra un mensaje claro indicando que el pedido no está disponible | EP07 |
-| HU44 | Generación de orden de compra al proveedor | Como carpintero, quiero generar una orden de compra hacia un proveedor de madera cuando un material esté por agotarse, para reponer el inventario sin retrasar la producción. | **Escenario 1: Orden generada manualmente** <br> _Dado_ que el carpintero detecta un material con stock bajo o agotado <br> _Cuando_ selecciona el material y genera una orden de compra al proveedor (cantidad, tipo, fecha estimada) <br> _Entonces_ el sistema registra la orden con estado "Enviada al proveedor" <br> _Y_ la asocia al material para su reposición <br><br> **Escenario 2: Recepción de material** <br> _Dado_ que la orden fue enviada al proveedor <br> _Cuando_ el carpintero confirma la recepción del material <br> _Entonces_ el sistema cierra la orden <br> _Y_ actualiza automáticamente el inventario | EP05 |
-| TS01 | Endpoint de autenticación de usuarios | Como Developer, quiero exponer un endpoint `POST /auth/login` que valide credenciales y devuelva un token JWT para permitir el acceso autenticado a la plataforma. | **Escenario 1: Login exitoso** <br> _Dado_ que el body contiene `email` y `password` válidos <br> _Cuando_ el cliente envía `POST /auth/login` <br> _Entonces_ el servicio responde `200 OK` <br> _Y_ el body incluye `accessToken` y `refreshToken` <br><br> **Escenario 2: Credenciales inválidas** <br> _Dado_ que el body contiene credenciales incorrectas <br> _Cuando_ el cliente envía `POST /auth/login` <br> _Entonces_ el servicio responde `401 Unauthorized` <br> _Y_ el body incluye un mensaje de error genérico sin exponer si el correo existe | EP02 |
-| TS02 | Endpoints REST de gestión de pedidos | Como Developer, quiero exponer endpoints REST `/orders` para crear, listar y consultar pedidos, persistiendo la información desde la Web Application. | **Escenario 1: Creación de pedido** <br> _Dado_ que el cliente está autenticado <br> _Y_ el body contiene los detalles válidos del pedido <br> _Cuando_ envía `POST /orders` <br> _Entonces_ el servicio responde `201 Created` <br> _Y_ devuelve `orderId` y `publicTrackingId` <br><br> **Escenario 2: Listado paginado** <br> _Dado_ un usuario autenticado <br> _Cuando_ envía `GET /orders?role={carpenter\|client}&page=1&size=20` <br> _Entonces_ el servicio responde `200 OK` <br> _Y_ devuelve la lista paginada de pedidos asociados al usuario | EP03 |
-| TS03 | Endpoint de actualización de etapa de producción | Como Developer, quiero exponer un endpoint `PATCH /orders/{orderId}/stages/{stageId}` para que el carpintero actualice el estado de cada etapa de fabricación. | **Escenario 1: Actualización exitosa** <br> _Dado_ que el carpintero es propietario del pedido <br> _Y_ el body contiene `status` válido (`pending`, `in_progress`, `completed`) <br> _Cuando_ envía `PATCH /orders/{orderId}/stages/{stageId}` <br> _Entonces_ el servicio responde `200 OK` <br> _Y_ publica el evento `StageUpdated` para notificar al cliente <br><br> **Escenario 2: Sin permisos** <br> _Dado_ que el usuario no es el carpintero del pedido <br> _Cuando_ envía la petición <br> _Entonces_ el servicio responde `403 Forbidden` | EP04 |
-| TS04 | API CRUD de inventario | Como Developer, quiero exponer endpoints REST `/inventory` para que el carpintero gestione registro, actualización y consulta de materiales del taller. | **Escenario 1: Registrar material** <br> _Dado_ que el carpintero está autenticado <br> _Y_ el body contiene `materialType`, `quantity`, `unit` y `minStock` <br> _Cuando_ envía `POST /inventory` <br> _Entonces_ el servicio responde `201 Created` <br> _Y_ devuelve el `materialId` generado <br><br> **Escenario 2: Stock bajo tras actualización** <br> _Dado_ que la cantidad resultante es menor a `minStock` <br> _Cuando_ se ejecuta `PATCH /inventory/{materialId}` <br> _Entonces_ el servicio responde `200 OK` <br> _Y_ publica el evento `LowStockDetected` para disparar la alerta | EP05 |
-| TS05 | Endpoint de validación de viabilidad de pedido | Como Developer, quiero exponer un endpoint `POST /orders/{orderId}/feasibility` que valide si el inventario y la capacidad del taller permiten construir el mueble solicitado. | **Escenario 1: Pedido viable** <br> _Dado_ que el inventario cubre los materiales requeridos <br> _Cuando_ se envía `POST /orders/{orderId}/feasibility` <br> _Entonces_ el servicio responde `200 OK` <br> _Y_ el body incluye `feasible: true` y `estimatedTime` <br><br> **Escenario 2: Materiales insuficientes** <br> _Dado_ que el inventario no cubre todos los materiales <br> _Cuando_ se envía la petición <br> _Entonces_ el servicio responde `200 OK` <br> _Y_ el body incluye `feasible: false` con la lista de `missingMaterials` | EP05 |
-| TS06 | Endpoint público de seguimiento de pedido | Como Developer, quiero exponer un endpoint público `GET /tracking/{publicTrackingId}` que permita al cliente consultar el estado de su pedido sin autenticación. | **Escenario 1: Pedido encontrado** <br> _Dado_ un `publicTrackingId` válido <br> _Cuando_ se envía `GET /tracking/{publicTrackingId}` <br> _Entonces_ el servicio responde `200 OK` <br> _Y_ devuelve `status`, `currentStage`, `estimatedDeliveryDate` y `progressPercent` <br><br> **Escenario 2: ID inválido o pedido cancelado** <br> _Dado_ un `publicTrackingId` inexistente o asociado a un pedido cancelado <br> _Cuando_ se envía la petición <br> _Entonces_ el servicio responde `404 Not Found` | EP07 |
-| TS07 | Endpoints REST de mensajería por pedido | Como Developer, quiero exponer endpoints REST `/orders/{orderId}/messages` para que cliente y carpintero intercambien y consulten mensajes asociados a un pedido específico. | **Escenario 1: Envío de mensaje** <br> _Dado_ que el usuario es participante del pedido <br> _Y_ el body contiene `content` no vacío <br> _Cuando_ envía `POST /orders/{orderId}/messages` <br> _Entonces_ el servicio responde `201 Created` <br> _Y_ publica el evento `MessageSent` <br><br> **Escenario 2: Consulta paginada de historial** <br> _Dado_ el `orderId` <br> _Cuando_ se envía `GET /orders/{orderId}/messages?limit=20&before={cursor}` <br> _Entonces_ el servicio responde `200 OK` <br> _Y_ devuelve los mensajes en orden cronológico descendente | EP07 |
-| TS08 | Endpoint de cálculo de costos y tiempos | Como Developer, quiero exponer un endpoint `POST /orders/{orderId}/estimate` que calcule costos y tiempos totales del pedido a partir de materiales, mano de obra y etapas. | **Escenario 1: Estimación exitosa** <br> _Dado_ que el pedido tiene etapas y materiales definidos <br> _Cuando_ se envía `POST /orders/{orderId}/estimate` <br> _Entonces_ el servicio responde `200 OK` <br> _Y_ devuelve `totalCost`, `totalDuration` y el desglose por etapa <br><br> **Escenario 2: Pedido sin etapas** <br> _Dado_ un pedido sin etapas definidas <br> _Cuando_ se envía la petición <br> _Entonces_ el servicio responde `422 Unprocessable Entity` con el detalle del error | EP06 |
+<table style="table-layout: fixed; width: 100%; display: table;">
+  <thead>
+    <tr>
+      <th style="width: 7%;">Story ID</th>
+      <th style="width: 12%;">Título</th>
+      <th style="width: 20%;">Descripción</th>
+      <th style="width: 45%;">Criterios de Aceptación</th>
+      <th style="width: 10%;">Relacionado con (Epic ID)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HU01</td>
+      <td>Navegación clara dentro de la landing</td>
+      <td>Como visitante, quiero navegar de forma rápida y clara por las distintas partes de la landing para encontrar la información que busco sin perder tiempo.</td>
+      <td><strong>Escenario 1: Acceso directo a una sección de interés</strong><br><em>Dado</em> que el visitante se encuentra en la landing<br><em>Cuando</em> selecciona una opción de navegación que apunta a una sección específica<br><em>Entonces</em> la página lo lleva directamente a esa sección<br><em>Y</em> conserva el contexto visual para no perder orientación</td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>HU02</td>
+      <td>Entender la propuesta de valor de WoodRoute</td>
+      <td>Como visitante, quiero entender rápidamente qué problema resuelve WoodRoute y cómo lo resuelve para decidir si me interesa probar la plataforma.</td>
+      <td><strong>Escenario 1: Visualización de la propuesta de valor al entrar a la landing</strong><br><em>Dado</em> que el visitante accede a la landing por primera vez<br><em>Cuando</em> la página termina de cargar<br><em>Entonces</em> se le presenta de forma destacada qué problema resuelve WoodRoute y los principales beneficios que ofrece<br><em>Y</em> la información es comprensible sin necesidad de leer detalles técnicos</td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>HU03</td>
+      <td>Conocer las funcionalidades del producto</td>
+      <td>Como visitante, quiero conocer las principales funcionalidades de WoodRoute para evaluar si cubren las necesidades de mi taller o de mi pedido.</td>
+      <td><strong>Escenario 1: Exploración de funcionalidades</strong><br><em>Dado</em> que el visitante está en la landing<br><em>Cuando</em> accede a la información de funcionalidades<br><em>Entonces</em> se muestran las capacidades clave del producto<br><em>Y</em> cada funcionalidad incluye una descripción comprensible para el segmento al que va dirigida</td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>HU04</td>
+      <td>Comprender cómo se usa el producto</td>
+      <td>Como visitante, quiero comprender el flujo de uso del producto para saber qué esperar antes de registrarme.</td>
+      <td><strong>Escenario 1: Visualización del flujo de uso</strong><br><em>Dado</em> que el visitante está en la landing<br><em>Cuando</em> consulta la información sobre cómo funciona WoodRoute<br><em>Entonces</em> se presentan los pasos del flujo de uso de forma ordenada y clara<br><em>Y</em> cada paso incluye una breve descripción de qué ocurre</td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>HU05</td>
+      <td>Conocer los planes y precios disponibles</td>
+      <td>Como visitante, quiero conocer los planes y precios disponibles para evaluar cuál se ajusta a mi presupuesto y necesidades.</td>
+      <td><strong>Escenario 1: Visualización de planes</strong><br><em>Dado</em> que el visitante está en la landing<br><em>Cuando</em> accede a la información de precios<br><em>Entonces</em> se muestran los planes disponibles con sus precios, características y diferencias<br><em>Y</em> cada plan incluye un llamado a la acción para empezar a usarlo</td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>HU06</td>
+      <td>Empezar a usar la plataforma desde la landing</td>
+      <td>Como visitante (carpintero o cliente), quiero empezar a usar la plataforma desde la landing según mi rol para arrancar el flujo sin fricción.</td>
+      <td><strong>Escenario 1: Empezar como carpintero</strong><br><em>Dado</em> que el visitante se identifica como carpintero<br><em>Cuando</em> elige iniciar como carpintero desde la landing<br><em>Entonces</em> la plataforma lo lleva al flujo correspondiente para carpinteros en la aplicación<br><br><strong>Escenario 2: Empezar como cliente</strong><br><em>Dado</em> que el visitante se identifica como cliente<br><em>Cuando</em> elige iniciar como cliente desde la landing<br><em>Entonces</em> la plataforma lo lleva al flujo correspondiente para clientes en la aplicación</td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>HU07</td>
+      <td>Conocer al equipo detrás del producto</td>
+      <td>Como visitante, quiero conocer al equipo detrás de WoodRoute para generar confianza en la plataforma.</td>
+      <td><strong>Escenario 1: Visualización del equipo</strong><br><em>Dado</em> que el visitante está en la landing<br><em>Cuando</em> accede a la presentación del equipo<br><em>Entonces</em> se muestran los integrantes con su información identificativa<br><em>Y</em> la presentación refuerza la transparencia y profesionalismo del proyecto</td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>HU08</td>
+      <td>Conocer el producto a través de un video</td>
+      <td>Como visitante, quiero ver un video que presente el producto y sus características para entenderlo de forma más visual y rápida.</td>
+      <td><strong>Escenario 1: Reproducción del video del producto</strong><br><em>Dado</em> que el visitante está en la landing<br><em>Cuando</em> inicia la reproducción del video About-the-Product<br><em>Entonces</em> el contenido del video se reproduce sin interrupciones<br><em>Y</em> muestra las características principales del producto explicadas con apoyo visual</td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>HU09</td>
+      <td>Conocer el proceso del equipo a través de un video</td>
+      <td>Como visitante, quiero ver un video que muestre al equipo y su proceso de trabajo para confiar en quienes desarrollan WoodRoute.</td>
+      <td><strong>Escenario 1: Reproducción del video del equipo</strong><br><em>Dado</em> que el visitante está en la landing<br><em>Cuando</em> inicia la reproducción del video About-the-Team<br><em>Entonces</em> el contenido del video se reproduce sin interrupciones<br><em>Y</em> muestra al equipo presentando su proceso de trabajo y testimonios</td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>HU10</td>
+      <td>Leer la landing en mi idioma preferido</td>
+      <td>Como visitante, quiero leer el contenido de la landing en mi idioma preferido (inglés por defecto, o español) para comprenderlo sin barreras.</td>
+      <td><strong>Escenario 1: Idioma por defecto</strong><br><em>Dado</em> que un visitante accede a la landing por primera vez sin preferencia previa<br><em>Cuando</em> se carga el contenido<br><em>Entonces</em> el idioma mostrado por defecto es inglés<br><br><strong>Escenario 2: Cambio de idioma a español</strong><br><em>Dado</em> que el visitante está leyendo la landing en inglés<br><em>Cuando</em> elige cambiar el idioma a español<br><em>Entonces</em> todo el contenido de la página se traduce al español<br><em>Y</em> la preferencia de idioma se mantiene mientras el visitante recorre las distintas partes de la landing</td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>HU11</td>
+      <td>Conocer los términos y condiciones del servicio</td>
+      <td>Como visitante, quiero conocer los términos y condiciones del servicio antes de registrarme para entender mis compromisos como usuario.</td>
+      <td><strong>Escenario 1: Acceso a los términos</strong><br><em>Dado</em> que el visitante está en la landing<br><em>Cuando</em> elige consultar los términos y condiciones<br><em>Entonces</em> se le presenta el documento completo con las condiciones de uso<br><em>Y</em> se incluye información sobre responsabilidad ética y profesional según los estándares aplicables (ACM/IEEE/CIP)</td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>HU12</td>
+      <td>Seguir a WoodRoute en redes sociales</td>
+      <td>Como visitante, quiero seguir a WoodRoute en redes sociales para mantenerme al tanto de novedades, promociones y contenido del rubro.</td>
+      <td><strong>Escenario 1: Acceso a una red social</strong><br><em>Dado</em> que el visitante está en la landing<br><em>Cuando</em> elige seguir a WoodRoute en una red social<br><em>Entonces</em> el sistema lo redirige al perfil oficial de WoodRoute en esa red<br><em>Y</em> se abre en una pestaña separada para no perder el contexto de la landing</td>
+      <td>EP01</td>
+    </tr>
+    <tr>
+      <td>HU13</td>
+      <td>Registro de usuario</td>
+      <td>Como visitante, quiero registrarme en la plataforma para poder acceder a sus funcionalidades.</td>
+      <td><strong>Escenario 1: Registro exitoso</strong><br><em>Dado</em> que el usuario se encuentra en la página de registro<br><em>Cuando</em> completa correctamente sus datos y envía el formulario<br><em>Entonces</em> el sistema crea su cuenta<br><em>Y</em> le permite acceder a la plataforma</td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>HU14</td>
+      <td>Inicio de sesión</td>
+      <td>Como usuario registrado, quiero iniciar sesión en la plataforma para acceder a mi cuenta.</td>
+      <td><strong>Escenario 1: Inicio de sesión exitoso</strong><br><em>Dado</em> que el usuario ya tiene una cuenta registrada<br><em>Cuando</em> ingresa sus credenciales correctas<br><em>Entonces</em> el sistema valida la información<br><em>Y</em> le permite acceder a su panel principal</td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>HU15</td>
+      <td>Gestión de perfil</td>
+      <td>Como usuario, quiero editar mi información personal para mantener mis datos actualizados.</td>
+      <td><strong>Escenario 1: Actualización de perfil</strong><br><em>Dado</em> que el usuario está en su perfil<br><em>Cuando</em> modifica sus datos y guarda los cambios<br><em>Entonces</em> el sistema actualiza la información<br><em>Y</em> muestra los datos actualizados correctamente</td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>HU16</td>
+      <td>Selección de tipo de usuario</td>
+      <td>Como usuario, quiero definir si soy carpintero o cliente para acceder a funcionalidades específicas.</td>
+      <td><strong>Escenario 1: Selección de rol</strong><br><em>Dado</em> que el usuario se encuentra en el registro<br><em>Cuando</em> selecciona su tipo de usuario (carpintero o cliente)<br><em>Entonces</em> el sistema guarda esta información<br><em>Y</em> adapta la experiencia según el rol seleccionado</td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>HU17</td>
+      <td>Creación de pedido personalizado</td>
+      <td>Como cliente, quiero crear un pedido de mueble personalizado para solicitar un diseño específico.</td>
+      <td><strong>Escenario 1: Creación exitosa de pedido</strong><br><em>Dado</em> que el cliente se encuentra en la sección de pedidos<br><em>Cuando</em> completa los detalles del mueble (medidas, material, diseño) y envía la solicitud<br><em>Entonces</em> el sistema registra el pedido<br><em>Y</em> lo envía al carpintero para su revisión</td>
+      <td>EP03</td>
+    </tr>
+    <tr>
+      <td>HU18</td>
+      <td>Visualización de pedidos</td>
+      <td>Como usuario, quiero visualizar la lista de pedidos para hacer seguimiento a su estado.</td>
+      <td><strong>Escenario 1: Visualización de pedidos</strong><br><em>Dado</em> que el usuario accede a la sección de pedidos<br><em>Cuando</em> el sistema carga la información<br><em>Entonces</em> se muestran los pedidos registrados<br><em>Y</em> su estado actual (pendiente, en proceso, finalizado)</td>
+      <td>EP03</td>
+    </tr>
+    <tr>
+      <td>HU19</td>
+      <td>Aceptación o rechazo de pedidos</td>
+      <td>Como carpintero, quiero aceptar o rechazar pedidos para gestionar mi carga de trabajo.</td>
+      <td><strong>Escenario 1: Aceptación de pedido</strong><br><em>Dado</em> que el carpintero recibe un pedido<br><em>Cuando</em> revisa los detalles y decide aceptarlo<br><em>Entonces</em> el sistema actualiza el estado del pedido<br><em>Y</em> lo marca como "en proceso"</td>
+      <td>EP03</td>
+    </tr>
+    <tr>
+      <td>HU20</td>
+      <td>Modificación de pedido</td>
+      <td>Como cliente, quiero modificar un pedido antes de que sea aceptado para ajustar los detalles.</td>
+      <td><strong>Escenario 1: Modificación exitosa</strong><br><em>Dado</em> que el pedido aún no ha sido aceptado<br><em>Cuando</em> el cliente edita la información del pedido<br><em>Entonces</em> el sistema actualiza los cambios<br><em>Y</em> notifica al carpintero</td>
+      <td>EP03</td>
+    </tr>
+    <tr>
+      <td>HU21</td>
+      <td>Cancelación de pedido</td>
+      <td>Como cliente, quiero cancelar un pedido para detener el proceso si ya no lo necesito.</td>
+      <td><strong>Escenario 1: Cancelación de pedido</strong><br><em>Dado</em> que el cliente tiene un pedido activo<br><em>Cuando</em> selecciona la opción de cancelar<br><em>Entonces</em> el sistema cambia el estado del pedido a "cancelado"<br><em>Y</em> notifica al carpintero</td>
+      <td>EP03</td>
+    </tr>
+    <tr>
+      <td>HU22</td>
+      <td>Definición de etapas de producción</td>
+      <td>Como carpintero, quiero definir las etapas de producción de un pedido para organizar mejor el trabajo.</td>
+      <td><strong>Escenario 1: Creación de etapas</strong><br><em>Dado</em> que el carpintero ha aceptado un pedido<br><em>Cuando</em> define las etapas (diseño, corte, ensamblado, acabado, entrega)<br><em>Entonces</em> el sistema registra las etapas<br><em>Y</em> las asocia al pedido</td>
+      <td>EP04</td>
+    </tr>
+    <tr>
+      <td>HU23</td>
+      <td>Actualización del estado de producción</td>
+      <td>Como carpintero, quiero actualizar el estado de cada etapa para reflejar el progreso del pedido.</td>
+      <td><strong>Escenario 1: Actualización de estado</strong><br><em>Dado</em> que el pedido está en proceso<br><em>Cuando</em> el carpintero cambia el estado de una etapa<br><em>Entonces</em> el sistema actualiza el progreso<br><em>Y</em> refleja el cambio en el seguimiento del pedido</td>
+      <td>EP04</td>
+    </tr>
+    <tr>
+      <td>HU24</td>
+      <td>Visualización del progreso</td>
+      <td>Como cliente, quiero ver el progreso de mi pedido para conocer en qué etapa se encuentra.</td>
+      <td><strong>Escenario 1: Visualización de progreso</strong><br><em>Dado</em> que el cliente tiene un pedido activo<br><em>Cuando</em> accede al detalle del pedido<br><em>Entonces</em> el sistema muestra las etapas completadas y pendientes<br><em>Y</em> el estado actual del pedido</td>
+      <td>EP04</td>
+    </tr>
+    <tr>
+      <td>HU25</td>
+      <td>Estimación de tiempos por etapa</td>
+      <td>Como carpintero, quiero asignar tiempos estimados a cada etapa para planificar mejor la entrega.</td>
+      <td><strong>Escenario 1: Asignación de tiempos</strong><br><em>Dado</em> que el carpintero está planificando un pedido<br><em>Cuando</em> define el tiempo estimado por etapa<br><em>Entonces</em> el sistema guarda la información<br><em>Y</em> calcula el tiempo total estimado</td>
+      <td>EP04</td>
+    </tr>
+    <tr>
+      <td>HU26</td>
+      <td>Registro de materiales</td>
+      <td>Como carpintero, quiero registrar los materiales disponibles para llevar un control del inventario.</td>
+      <td><strong>Escenario 1: Registro exitoso</strong><br><em>Dado</em> que el carpintero accede al módulo de inventario<br><em>Cuando</em> ingresa los datos del material (tipo, cantidad, unidad)<br><em>Entonces</em> el sistema guarda la información<br><em>Y</em> actualiza el inventario disponible</td>
+      <td>EP05</td>
+    </tr>
+    <tr>
+      <td>HU27</td>
+      <td>Actualización de inventario</td>
+      <td>Como carpintero, quiero actualizar las cantidades de materiales para reflejar el consumo o reposición.</td>
+      <td><strong>Escenario 1: Actualización de stock</strong><br><em>Dado</em> que el carpintero utiliza o repone materiales<br><em>Cuando</em> modifica la cantidad en el sistema<br><em>Entonces</em> el inventario se actualiza correctamente<br><em>Y</em> refleja el stock actual</td>
+      <td>EP05</td>
+    </tr>
+    <tr>
+      <td>HU28</td>
+      <td>Validación de materiales para pedidos</td>
+      <td>Como carpintero, quiero validar si tengo materiales suficientes para aceptar un pedido.</td>
+      <td><strong>Escenario 1: Validación automática</strong><br><em>Dado</em> que el carpintero revisa un pedido<br><em>Cuando</em> el sistema compara los materiales requeridos con el inventario<br><em>Entonces</em> indica si el pedido es viable<br><em>Y</em> muestra los materiales faltantes si aplica</td>
+      <td>EP05</td>
+    </tr>
+    <tr>
+      <td>HU29</td>
+      <td>Alerta de bajo inventario</td>
+      <td>Como carpintero, quiero recibir alertas cuando el stock sea bajo para evitar retrasos en producción.</td>
+      <td><strong>Escenario 1: Generación de alerta</strong><br><em>Dado</em> que un material alcanza el nivel mínimo definido<br><em>Cuando</em> el sistema detecta esta condición<br><em>Entonces</em> genera una alerta<br><em>Y</em> notifica al carpintero</td>
+      <td>EP05</td>
+    </tr>
+    <tr>
+      <td>HU30</td>
+      <td>Cálculo de costo estimado</td>
+      <td>Como carpintero, quiero calcular el costo estimado de un pedido para definir un precio adecuado.</td>
+      <td><strong>Escenario 1: Cálculo de costo</strong><br><em>Dado</em> que el carpintero tiene los detalles del pedido<br><em>Cuando</em> ingresa los costos de materiales y mano de obra<br><em>Entonces</em> el sistema calcula el costo total<br><em>Y</em> muestra el resultado estimado</td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>HU31</td>
+      <td>Estimación de tiempo total</td>
+      <td>Como carpintero, quiero estimar el tiempo total de fabricación para planificar la entrega del pedido.</td>
+      <td><strong>Escenario 1: Estimación de tiempo</strong><br><em>Dado</em> que el carpintero define los tiempos por etapa<br><em>Cuando</em> el sistema procesa la información<br><em>Entonces</em> calcula el tiempo total estimado<br><em>Y</em> lo muestra al usuario</td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>HU32</td>
+      <td>Evaluación de rentabilidad</td>
+      <td>Como carpintero, quiero evaluar la rentabilidad de un pedido para tomar decisiones informadas.</td>
+      <td><strong>Escenario 1: Evaluación de rentabilidad</strong><br><em>Dado</em> que el carpintero tiene el costo estimado<br><em>Cuando</em> compara con el precio de venta<br><em>Entonces</em> el sistema calcula la ganancia<br><em>Y</em> muestra si el pedido es rentable</td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>HU33</td>
+      <td>Generación de presupuesto</td>
+      <td>Como carpintero, quiero generar un presupuesto para presentar al cliente antes de iniciar el trabajo.</td>
+      <td><strong>Escenario 1: Generación de presupuesto</strong><br><em>Dado</em> que el carpintero ha calculado costos y tiempos<br><em>Cuando</em> solicita generar el presupuesto<br><em>Entonces</em> el sistema crea un documento<br><em>Y</em> lo deja listo para compartir con el cliente</td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>HU34</td>
+      <td>Envío de mensajes</td>
+      <td>Como usuario, quiero enviar mensajes dentro de la plataforma para comunicarme sobre el pedido.</td>
+      <td><strong>Escenario 1: Envío de mensaje exitoso</strong><br><em>Dado</em> que el usuario accede al chat del pedido<br><em>Cuando</em> escribe un mensaje y lo envía<br><em>Entonces</em> el sistema entrega el mensaje<br><em>Y</em> lo muestra en la conversación</td>
+      <td>EP07</td>
+    </tr>
+    <tr>
+      <td>HU35</td>
+      <td>Recepción de mensajes</td>
+      <td>Como usuario, quiero recibir mensajes para mantenerme informado sobre el pedido.</td>
+      <td><strong>Escenario 1: Recepción de mensaje</strong><br><em>Dado</em> que otro usuario envía un mensaje<br><em>Cuando</em> el sistema procesa el envío<br><em>Entonces</em> el mensaje se recibe correctamente<br><em>Y</em> se muestra en la conversación</td>
+      <td>EP07</td>
+    </tr>
+    <tr>
+      <td>HU36</td>
+      <td>Historial de comunicación</td>
+      <td>Como usuario, quiero ver el historial de mensajes para revisar conversaciones anteriores.</td>
+      <td><strong>Escenario 1: Visualización de historial</strong><br><em>Dado</em> que el usuario accede al chat<br><em>Cuando</em> el sistema carga los mensajes<br><em>Entonces</em> muestra el historial completo<br><em>Y</em> ordenado cronológicamente</td>
+      <td>EP07</td>
+    </tr>
+    <tr>
+      <td>HU37</td>
+      <td>Aceptación del presupuesto por el cliente</td>
+      <td>Como cliente, quiero aceptar el presupuesto generado por el carpintero para confirmar que estoy de acuerdo con el costo y los tiempos antes de iniciar la fabricación.</td>
+      <td><strong>Escenario 1: Aceptación exitosa</strong><br><em>Dado</em> que el cliente recibe un presupuesto<br><em>Cuando</em> revisa los detalles y selecciona "Aceptar"<br><em>Entonces</em> el sistema actualiza el estado del presupuesto a "Aceptado"<br><em>Y</em> notifica al carpintero para coordinar el anticipo</td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>HU38</td>
+      <td>Registro de comprobante de anticipo</td>
+      <td>Como cliente, quiero registrar el comprobante de mi anticipo de pago (Yape, transferencia bancaria) para que el carpintero pueda iniciar la producción.</td>
+      <td><strong>Escenario 1: Registro de comprobante</strong><br><em>Dado</em> que el cliente aceptó el presupuesto<br><em>Cuando</em> sube un comprobante (imagen o PDF) e ingresa el monto y la fecha del pago<br><em>Entonces</em> el sistema registra el anticipo como "Pendiente de validación"<br><em>Y</em> notifica al carpintero para que lo verifique</td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>HU39</td>
+      <td>Validación de anticipo por el carpintero</td>
+      <td>Como carpintero, quiero validar el comprobante del anticipo enviado por el cliente para confirmar que el pago llegó y autorizar el inicio de la producción.</td>
+      <td><strong>Escenario 1: Anticipo validado</strong><br><em>Dado</em> que el carpintero revisa el comprobante en la plataforma<br><em>Cuando</em> confirma que el monto y la cuenta destino son correctos y marca "Validado"<br><em>Entonces</em> el sistema cambia el estado del anticipo a "Confirmado"<br><em>Y</em> habilita el pedido para iniciar la producción<br><br><strong>Escenario 2: Anticipo rechazado</strong><br><em>Dado</em> que el carpintero detecta un comprobante inválido o monto incorrecto<br><em>Cuando</em> marca "Rechazado" y deja una nota<br><em>Entonces</em> el sistema mantiene el pedido en estado "Pendiente"<br><em>Y</em> notifica al cliente para que envíe un nuevo comprobante</td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>HU40</td>
+      <td>Solicitud de pago final</td>
+      <td>Como carpintero, quiero emitir una solicitud de pago final al cliente cuando el mueble esté listo para entrega, para coordinar el cobro del saldo restante.</td>
+      <td><strong>Escenario 1: Solicitud emitida</strong><br><em>Dado</em> que el pedido se encuentra en estado "Listo para entrega"<br><em>Cuando</em> el carpintero genera la solicitud de pago final<br><em>Entonces</em> el sistema envía la solicitud al cliente con el monto pendiente y las cuentas destino<br><em>Y</em> registra la solicitud en el historial del pedido</td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>HU41</td>
+      <td>Registro de comprobante de pago final</td>
+      <td>Como cliente, quiero registrar el comprobante del pago final (Yape, transferencia bancaria) para coordinar la entrega de mi mueble.</td>
+      <td><strong>Escenario 1: Registro de comprobante final</strong><br><em>Dado</em> que el cliente recibió la solicitud de pago final<br><em>Cuando</em> sube el comprobante e ingresa el monto y la fecha<br><em>Entonces</em> el sistema registra el pago final como "Pendiente de validación"<br><em>Y</em> notifica al carpintero para que lo verifique</td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>HU42</td>
+      <td>Validación de pago final</td>
+      <td>Como carpintero, quiero validar el comprobante del pago final para confirmar el cobro completo y autorizar la entrega del mueble.</td>
+      <td><strong>Escenario 1: Pago final validado</strong><br><em>Dado</em> que el carpintero revisa el comprobante del pago final<br><em>Cuando</em> confirma que el monto y la cuenta destino son correctos y marca "Validado"<br><em>Entonces</em> el sistema cambia el estado del pedido a "Pagado completamente"<br><em>Y</em> habilita la coordinación de entrega con el cliente</td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>HU43</td>
+      <td>Consulta pública del estado del pedido</td>
+      <td>Como cliente, quiero consultar el estado y el progreso de mi pedido mediante un enlace público, sin necesidad de iniciar sesión, para acceder de forma rápida y sin fricción desde cualquier dispositivo.</td>
+      <td><strong>Escenario 1: Acceso público al estado</strong><br><em>Dado</em> que el cliente recibe un enlace público con su <code>publicTrackingId</code><br><em>Cuando</em> accede al enlace<br><em>Entonces</em> el sistema muestra el estado actual, la etapa de producción, la fecha estimada de entrega y el porcentaje de avance<br><em>Y</em> no solicita credenciales para acceder<br><br><strong>Escenario 2: Pedido cancelado o inexistente</strong><br><em>Dado</em> que el <code>publicTrackingId</code> no existe o el pedido fue cancelado<br><em>Cuando</em> el cliente accede al enlace<br><em>Entonces</em> el sistema muestra un mensaje claro indicando que el pedido no está disponible</td>
+      <td>EP07</td>
+    </tr>
+    <tr>
+      <td>HU44</td>
+      <td>Generación de orden de compra al proveedor</td>
+      <td>Como carpintero, quiero generar una orden de compra hacia un proveedor de madera cuando un material esté por agotarse, para reponer el inventario sin retrasar la producción.</td>
+      <td><strong>Escenario 1: Orden generada manualmente</strong><br><em>Dado</em> que el carpintero detecta un material con stock bajo o agotado<br><em>Cuando</em> selecciona el material y genera una orden de compra al proveedor (cantidad, tipo, fecha estimada)<br><em>Entonces</em> el sistema registra la orden con estado "Enviada al proveedor"<br><em>Y</em> la asocia al material para su reposición<br><br><strong>Escenario 2: Recepción de material</strong><br><em>Dado</em> que la orden fue enviada al proveedor<br><em>Cuando</em> el carpintero confirma la recepción del material<br><em>Entonces</em> el sistema cierra la orden<br><em>Y</em> actualiza automáticamente el inventario</td>
+      <td>EP05</td>
+    </tr>
+    <tr>
+      <td>TS01</td>
+      <td>Endpoint de autenticación de usuarios</td>
+      <td>Como Developer, quiero exponer un endpoint <code>POST /auth/login</code> que valide credenciales y devuelva un token JWT para permitir el acceso autenticado a la plataforma.</td>
+      <td><strong>Escenario 1: Login exitoso</strong><br><em>Dado</em> que el body contiene <code>email</code> y <code>password</code> válidos<br><em>Cuando</em> el cliente envía <code>POST /auth/login</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> el body incluye <code>accessToken</code> y <code>refreshToken</code><br><br><strong>Escenario 2: Credenciales inválidas</strong><br><em>Dado</em> que el body contiene credenciales incorrectas<br><em>Cuando</em> el cliente envía <code>POST /auth/login</code><br><em>Entonces</em> el servicio responde <code>401 Unauthorized</code><br><em>Y</em> el body incluye un mensaje de error genérico sin exponer si el correo existe</td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>TS02</td>
+      <td>Endpoints REST de gestión de pedidos</td>
+      <td>Como Developer, quiero exponer endpoints REST <code>/orders</code> para crear, listar y consultar pedidos, persistiendo la información desde la Web Application.</td>
+      <td><strong>Escenario 1: Creación de pedido</strong><br><em>Dado</em> que el cliente está autenticado<br><em>Y</em> el body contiene los detalles válidos del pedido<br><em>Cuando</em> envía <code>POST /orders</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> devuelve <code>orderId</code> y <code>publicTrackingId</code><br><br><strong>Escenario 2: Listado paginado</strong><br><em>Dado</em> un usuario autenticado<br><em>Cuando</em> envía <code>GET /orders?role={carpenter|client}&page=1&size=20</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> devuelve la lista paginada de pedidos asociados al usuario</td>
+      <td>EP03</td>
+    </tr>
+    <tr>
+      <td>TS03</td>
+      <td>Endpoint de actualización de etapa de producción</td>
+      <td>Como Developer, quiero exponer un endpoint <code>PATCH /orders/{orderId}/stages/{stageId}</code> para que el carpintero actualice el estado de cada etapa de fabricación.</td>
+      <td><strong>Escenario 1: Actualización exitosa</strong><br><em>Dado</em> que el carpintero es propietario del pedido<br><em>Y</em> el body contiene <code>status</code> válido (<code>pending</code>, <code>in_progress</code>, <code>completed</code>)<br><em>Cuando</em> envía <code>PATCH /orders/{orderId}/stages/{stageId}</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> publica el evento <code>StageUpdated</code> para notificar al cliente<br><br><strong>Escenario 2: Sin permisos</strong><br><em>Dado</em> que el usuario no es el carpintero del pedido<br><em>Cuando</em> envía la petición<br><em>Entonces</em> el servicio responde <code>403 Forbidden</code></td>
+      <td>EP04</td>
+    </tr>
+    <tr>
+      <td>TS04</td>
+      <td>API CRUD de inventario</td>
+      <td>Como Developer, quiero exponer endpoints REST <code>/inventory</code> para que el carpintero gestione registro, actualización y consulta de materiales del taller.</td>
+      <td><strong>Escenario 1: Registrar material</strong><br><em>Dado</em> que el carpintero está autenticado<br><em>Y</em> el body contiene <code>materialType</code>, <code>quantity</code>, <code>unit</code> y <code>minStock</code><br><em>Cuando</em> envía <code>POST /inventory</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> devuelve el <code>materialId</code> generado<br><br><strong>Escenario 2: Stock bajo tras actualización</strong><br><em>Dado</em> que la cantidad resultante es menor a <code>minStock</code><br><em>Cuando</em> se ejecuta <code>PATCH /inventory/{materialId}</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> publica el evento <code>LowStockDetected</code> para disparar la alerta</td>
+      <td>EP05</td>
+    </tr>
+    <tr>
+      <td>TS05</td>
+      <td>Endpoint de validación de viabilidad de pedido</td>
+      <td>Como Developer, quiero exponer un endpoint <code>POST /orders/{orderId}/feasibility</code> que valide si el inventario y la capacidad del taller permiten construir el mueble solicitado.</td>
+      <td><strong>Escenario 1: Pedido viable</strong><br><em>Dado</em> que el inventario cubre los materiales requeridos<br><em>Cuando</em> se envía <code>POST /orders/{orderId}/feasibility</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> el body incluye <code>feasible: true</code> y <code>estimatedTime</code><br><br><strong>Escenario 2: Materiales insuficientes</strong><br><em>Dado</em> que el inventario no cubre todos los materiales<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> el body incluye <code>feasible: false</code> con la lista de <code>missingMaterials</code></td>
+      <td>EP05</td>
+    </tr>
+    <tr>
+      <td>TS06</td>
+      <td>Endpoint público de seguimiento de pedido</td>
+      <td>Como Developer, quiero exponer un endpoint público <code>GET /tracking/{publicTrackingId}</code> que permita al cliente consultar el estado de su pedido sin autenticación.</td>
+      <td><strong>Escenario 1: Pedido encontrado</strong><br><em>Dado</em> un <code>publicTrackingId</code> válido<br><em>Cuando</em> se envía <code>GET /tracking/{publicTrackingId}</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> devuelve <code>status</code>, <code>currentStage</code>, <code>estimatedDeliveryDate</code> y <code>progressPercent</code><br><br><strong>Escenario 2: ID inválido o pedido cancelado</strong><br><em>Dado</em> un <code>publicTrackingId</code> inexistente o asociado a un pedido cancelado<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>404 Not Found</code></td>
+      <td>EP07</td>
+    </tr>
+    <tr>
+      <td>TS07</td>
+      <td>Endpoints REST de mensajería por pedido</td>
+      <td>Como Developer, quiero exponer endpoints REST <code>/orders/{orderId}/messages</code> para que cliente y carpintero intercambien y consulten mensajes asociados a un pedido específico.</td>
+      <td><strong>Escenario 1: Envío de mensaje</strong><br><em>Dado</em> que el usuario es participante del pedido<br><em>Y</em> el body contiene <code>content</code> no vacío<br><em>Cuando</em> envía <code>POST /orders/{orderId}/messages</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> publica el evento <code>MessageSent</code><br><br><strong>Escenario 2: Consulta paginada de historial</strong><br><em>Dado</em> el <code>orderId</code><br><em>Cuando</em> se envía <code>GET /orders/{orderId}/messages?limit=20&before={cursor}</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> devuelve los mensajes en orden cronológico descendente</td>
+      <td>EP07</td>
+    </tr>
+    <tr>
+      <td>TS08</td>
+      <td>Endpoint de cálculo de costos y tiempos</td>
+      <td>Como Developer, quiero exponer un endpoint <code>POST /orders/{orderId}/estimate</code> que calcule costos y tiempos totales del pedido a partir de materiales, mano de obra y etapas.</td>
+      <td><strong>Escenario 1: Estimación exitosa</strong><br><em>Dado</em> que el pedido tiene etapas y materiales definidos<br><em>Cuando</em> se envía <code>POST /orders/{orderId}/estimate</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> devuelve <code>totalCost</code>, <code>totalDuration</code> y el desglose por etapa<br><br><strong>Escenario 2: Pedido sin etapas</strong><br><em>Dado</em> un pedido sin etapas definidas<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>422 Unprocessable Entity</code> con el detalle del error</td>
+      <td>EP06</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ## 3.2. Impact Mapping
@@ -980,60 +1318,383 @@ A continuación se visualiza el Impact Map del proyecto WoodRoute, donde se mues
 
 El Product Backlog se elabora a continuación, listando cada User Story con su orden de prioridad, identificador, título, descripción y Story Points. Posteriormente se presenta el enlace público y la captura del board en Trello, herramienta utilizada por el equipo para la gestión colaborativa del backlog.
 
-| Orden | User Story ID | Título                                          | Descripción                                                                                                              | Story Points |
-| ----- | ------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------ |
-| 1     | HU01          | Navegación clara dentro de la landing             | Como visitante, quiero navegar de forma rápida y clara por las distintas partes de la landing para encontrar lo que busco. | 1            |
-| 2     | HU02          | Entender la propuesta de valor de WoodRoute       | Como visitante, quiero entender rápidamente qué problema resuelve WoodRoute y cómo lo resuelve.                            | 2            |
-| 3     | HU03          | Conocer las funcionalidades del producto          | Como visitante, quiero conocer las principales funcionalidades de WoodRoute para evaluar si cubren mis necesidades.        | 1            |
-| 4     | HU04          | Comprender cómo se usa el producto                | Como visitante, quiero comprender el flujo de uso del producto para saber qué esperar antes de registrarme.                | 1            |
-| 5     | HU05          | Conocer los planes y precios disponibles          | Como visitante, quiero conocer los planes y precios disponibles para evaluar cuál se ajusta a mis necesidades.             | 2            |
-| 6     | HU07          | Conocer al equipo detrás del producto             | Como visitante, quiero conocer al equipo detrás de WoodRoute para generar confianza en la plataforma.                      | 1            |
-| 7     | HU12          | Seguir a WoodRoute en redes sociales              | Como visitante, quiero seguir a WoodRoute en redes sociales para mantenerme al tanto de novedades.                         | 1            |
-| 8     | HU11          | Conocer los términos y condiciones del servicio   | Como visitante, quiero conocer los términos y condiciones del servicio antes de registrarme.                               | 1            |
-| 9     | HU06          | Empezar a usar la plataforma desde la landing     | Como visitante (carpintero o cliente), quiero empezar a usar la plataforma desde la landing según mi rol.                  | 3            |
-| 10    | HU10          | Leer la landing en mi idioma preferido            | Como visitante, quiero leer el contenido de la landing en mi idioma preferido (inglés por defecto, o español).             | 3            |
-| 11    | HU17          | Creación de pedido personalizado                  | Como cliente, quiero crear un pedido de mueble personalizado para solicitar un diseño específico.                          | 5            |
-| 12    | HU19          | Aceptación o rechazo de pedidos                   | Como carpintero, quiero aceptar o rechazar pedidos para gestionar mi carga de trabajo.                                     | 3            |
-| 13    | HU18          | Visualización de pedidos                          | Como usuario, quiero visualizar la lista de pedidos para hacer seguimiento a su estado.                                    | 3            |
-| 14    | HU24          | Visualización del progreso                        | Como cliente, quiero ver el progreso de mi pedido para conocer en qué etapa se encuentra.                                  | 3            |
-| 15    | HU22          | Definición de etapas de producción                | Como carpintero, quiero definir las etapas de producción de un pedido para organizar mejor el trabajo.                     | 5            |
-| 16    | HU23          | Actualización del estado de producción            | Como carpintero, quiero actualizar el estado de cada etapa para reflejar el progreso del pedido.                           | 3            |
-| 17    | HU43          | Consulta pública del estado del pedido            | Como cliente, quiero consultar el estado de mi pedido mediante un enlace público sin necesidad de iniciar sesión.          | 3            |
-| 18    | HU34          | Envío de mensajes                                 | Como usuario, quiero enviar mensajes dentro de la plataforma para comunicarme sobre el pedido.                             | 3            |
-| 19    | HU35          | Recepción de mensajes                             | Como usuario, quiero recibir mensajes para mantenerme informado sobre el pedido.                                           | 3            |
-| 20    | HU36          | Historial de comunicación                         | Como usuario, quiero ver el historial de mensajes para revisar conversaciones anteriores.                                  | 2            |
-| 21    | HU25          | Estimación de tiempos por etapa                   | Como carpintero, quiero asignar tiempos estimados a cada etapa para planificar mejor la entrega.                           | 5            |
-| 22    | HU26          | Registro de materiales                            | Como carpintero, quiero registrar los materiales disponibles para llevar un control del inventario.                        | 3            |
-| 23    | HU27          | Actualización de inventario                       | Como carpintero, quiero actualizar las cantidades de materiales para reflejar el consumo o reposición.                     | 3            |
-| 24    | HU28          | Validación de materiales para pedidos             | Como carpintero, quiero validar si tengo materiales suficientes para aceptar un pedido.                                    | 5            |
-| 25    | HU29          | Alerta de bajo inventario                         | Como carpintero, quiero recibir alertas cuando el stock sea bajo para evitar retrasos en producción.                       | 5            |
-| 26    | HU30          | Cálculo de costo estimado                         | Como carpintero, quiero calcular el costo estimado de un pedido para definir un precio adecuado.                           | 5            |
-| 27    | HU31          | Estimación de tiempo total                        | Como carpintero, quiero estimar el tiempo total de fabricación para planificar la entrega del pedido.                      | 5            |
-| 28    | HU33          | Generación de presupuesto                         | Como carpintero, quiero generar un presupuesto para presentar al cliente antes de iniciar el trabajo.                      | 5            |
-| 29    | HU32          | Evaluación de rentabilidad                        | Como carpintero, quiero evaluar la rentabilidad de un pedido para tomar decisiones informadas.                             | 5            |
-| 30    | HU20          | Modificación de pedido                            | Como cliente, quiero modificar un pedido antes de que sea aceptado para ajustar los detalles.                              | 3            |
-| 31    | HU21          | Cancelación de pedido                             | Como cliente, quiero cancelar un pedido para detener el proceso si ya no lo necesito.                                      | 2            |
-| 32    | HU16          | Selección de tipo de usuario                      | Como usuario, quiero definir si soy carpintero o cliente para acceder a funcionalidades específicas.                       | 2            |
-| 33    | HU13          | Registro de usuario                               | Como visitante, quiero registrarme en la plataforma para poder acceder a sus funcionalidades.                              | 3            |
-| 34    | HU14          | Inicio de sesión                                  | Como usuario registrado, quiero iniciar sesión en la plataforma para acceder a mi cuenta.                                  | 2            |
-| 35    | HU15          | Gestión de perfil                                 | Como usuario, quiero editar mi información personal para mantener mis datos actualizados.                                  | 3            |
-| 36    | HU37          | Aceptación del presupuesto por el cliente         | Como cliente, quiero aceptar el presupuesto generado por el carpintero para confirmar el costo y los tiempos.              | 2            |
-| 37    | HU38          | Registro de comprobante de anticipo               | Como cliente, quiero registrar el comprobante de mi anticipo de pago para que el carpintero inicie la producción.          | 3            |
-| 38    | HU39          | Validación de anticipo por el carpintero          | Como carpintero, quiero validar el comprobante del anticipo para autorizar el inicio de la producción.                     | 3            |
-| 39    | HU40          | Solicitud de pago final                           | Como carpintero, quiero emitir una solicitud de pago final al cliente cuando el mueble esté listo para entrega.            | 2            |
-| 40    | HU41          | Registro de comprobante de pago final             | Como cliente, quiero registrar el comprobante del pago final para coordinar la entrega de mi mueble.                       | 3            |
-| 41    | HU42          | Validación de pago final                          | Como carpintero, quiero validar el comprobante del pago final para autorizar la entrega del mueble.                        | 3            |
-| 42    | HU44          | Generación de orden de compra al proveedor        | Como carpintero, quiero generar una orden de compra a un proveedor de madera para reponer el inventario.                   | 5            |
-| 43    | TS01          | Endpoint de autenticación de usuarios             | Como Developer, quiero exponer un endpoint `POST /auth/login` que valide credenciales y devuelva un token JWT.             | 2            |
-| 44    | TS02          | Endpoints REST de gestión de pedidos              | Como Developer, quiero exponer endpoints REST `/orders` para crear, listar y consultar pedidos desde la Web Application.   | 5            |
-| 45    | TS03          | Endpoint de actualización de etapa de producción  | Como Developer, quiero exponer `PATCH /orders/{orderId}/stages/{stageId}` para actualizar el estado de cada etapa.         | 3            |
-| 46    | TS04          | API CRUD de inventario                            | Como Developer, quiero exponer endpoints REST `/inventory` para gestionar registro y actualización de materiales.          | 5            |
-| 47    | TS05          | Endpoint de validación de viabilidad de pedido    | Como Developer, quiero exponer `POST /orders/{orderId}/feasibility` que valide inventario y capacidad del taller.          | 3            |
-| 48    | TS06          | Endpoint público de seguimiento de pedido         | Como Developer, quiero exponer un endpoint público `GET /tracking/{publicTrackingId}` sin autenticación.                   | 2            |
-| 49    | TS07          | Endpoints REST de mensajería por pedido           | Como Developer, quiero exponer endpoints REST `/orders/{orderId}/messages` para intercambio de mensajes.                   | 3            |
-| 50    | TS08          | Endpoint de cálculo de costos y tiempos           | Como Developer, quiero exponer `POST /orders/{orderId}/estimate` que calcule costos y tiempos totales del pedido.          | 3            |
-| 51    | HU08          | Conocer el producto a través de un video          | Como visitante, quiero ver un video que presente el producto y sus características.                                        | 2            |
-| 52    | HU09          | Conocer el proceso del equipo a través de un video| Como visitante, quiero ver un video que muestre al equipo y su proceso de trabajo.                                         | 2            |
+<table>
+  <thead>
+    <tr>
+      <th>Orden</th>
+      <th>User Story ID</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Story Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>HU01</td>
+      <td>Navegación clara dentro de la landing</td>
+      <td>Como visitante, quiero navegar de forma rápida y clara por las distintas partes de la landing para encontrar lo que busco.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>HU02</td>
+      <td>Entender la propuesta de valor de WoodRoute</td>
+      <td>Como visitante, quiero entender rápidamente qué problema resuelve WoodRoute y cómo lo resuelve.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>HU03</td>
+      <td>Conocer las funcionalidades del producto</td>
+      <td>Como visitante, quiero conocer las principales funcionalidades de WoodRoute para evaluar si cubren mis necesidades.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>HU04</td>
+      <td>Comprender cómo se usa el producto</td>
+      <td>Como visitante, quiero comprender el flujo de uso del producto para saber qué esperar antes de registrarme.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>HU05</td>
+      <td>Conocer los planes y precios disponibles</td>
+      <td>Como visitante, quiero conocer los planes y precios disponibles para evaluar cuál se ajusta a mis necesidades.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>HU07</td>
+      <td>Conocer al equipo detrás del producto</td>
+      <td>Como visitante, quiero conocer al equipo detrás de WoodRoute para generar confianza en la plataforma.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>HU12</td>
+      <td>Seguir a WoodRoute en redes sociales</td>
+      <td>Como visitante, quiero seguir a WoodRoute en redes sociales para mantenerme al tanto de novedades.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>HU11</td>
+      <td>Conocer los términos y condiciones del servicio</td>
+      <td>Como visitante, quiero conocer los términos y condiciones del servicio antes de registrarme.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>HU06</td>
+      <td>Empezar a usar la plataforma desde la landing</td>
+      <td>Como visitante (carpintero o cliente), quiero empezar a usar la plataforma desde la landing según mi rol.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>HU10</td>
+      <td>Leer la landing en mi idioma preferido</td>
+      <td>Como visitante, quiero leer el contenido de la landing en mi idioma preferido (inglés por defecto, o español).</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>HU17</td>
+      <td>Creación de pedido personalizado</td>
+      <td>Como cliente, quiero crear un pedido de mueble personalizado para solicitar un diseño específico.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>HU19</td>
+      <td>Aceptación o rechazo de pedidos</td>
+      <td>Como carpintero, quiero aceptar o rechazar pedidos para gestionar mi carga de trabajo.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>HU18</td>
+      <td>Visualización de pedidos</td>
+      <td>Como usuario, quiero visualizar la lista de pedidos para hacer seguimiento a su estado.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>HU24</td>
+      <td>Visualización del progreso</td>
+      <td>Como cliente, quiero ver el progreso de mi pedido para conocer en qué etapa se encuentra.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>HU22</td>
+      <td>Definición de etapas de producción</td>
+      <td>Como carpintero, quiero definir las etapas de producción de un pedido para organizar mejor el trabajo.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>HU23</td>
+      <td>Actualización del estado de producción</td>
+      <td>Como carpintero, quiero actualizar el estado de cada etapa para reflejar el progreso del pedido.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>HU43</td>
+      <td>Consulta pública del estado del pedido</td>
+      <td>Como cliente, quiero consultar el estado de mi pedido mediante un enlace público sin necesidad de iniciar sesión.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>HU34</td>
+      <td>Envío de mensajes</td>
+      <td>Como usuario, quiero enviar mensajes dentro de la plataforma para comunicarme sobre el pedido.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>HU35</td>
+      <td>Recepción de mensajes</td>
+      <td>Como usuario, quiero recibir mensajes para mantenerme informado sobre el pedido.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>HU36</td>
+      <td>Historial de comunicación</td>
+      <td>Como usuario, quiero ver el historial de mensajes para revisar conversaciones anteriores.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>HU25</td>
+      <td>Estimación de tiempos por etapa</td>
+      <td>Como carpintero, quiero asignar tiempos estimados a cada etapa para planificar mejor la entrega.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>HU26</td>
+      <td>Registro de materiales</td>
+      <td>Como carpintero, quiero registrar los materiales disponibles para llevar un control del inventario.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>HU27</td>
+      <td>Actualización de inventario</td>
+      <td>Como carpintero, quiero actualizar las cantidades de materiales para reflejar el consumo o reposición.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>HU28</td>
+      <td>Validación de materiales para pedidos</td>
+      <td>Como carpintero, quiero validar si tengo materiales suficientes para aceptar un pedido.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>HU29</td>
+      <td>Alerta de bajo inventario</td>
+      <td>Como carpintero, quiero recibir alertas cuando el stock sea bajo para evitar retrasos en producción.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>HU30</td>
+      <td>Cálculo de costo estimado</td>
+      <td>Como carpintero, quiero calcular el costo estimado de un pedido para definir un precio adecuado.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>HU31</td>
+      <td>Estimación de tiempo total</td>
+      <td>Como carpintero, quiero estimar el tiempo total de fabricación para planificar la entrega del pedido.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>HU33</td>
+      <td>Generación de presupuesto</td>
+      <td>Como carpintero, quiero generar un presupuesto para presentar al cliente antes de iniciar el trabajo.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>HU32</td>
+      <td>Evaluación de rentabilidad</td>
+      <td>Como carpintero, quiero evaluar la rentabilidad de un pedido para tomar decisiones informadas.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>HU20</td>
+      <td>Modificación de pedido</td>
+      <td>Como cliente, quiero modificar un pedido antes de que sea aceptado para ajustar los detalles.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>HU21</td>
+      <td>Cancelación de pedido</td>
+      <td>Como cliente, quiero cancelar un pedido para detener el proceso si ya no lo necesito.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>HU16</td>
+      <td>Selección de tipo de usuario</td>
+      <td>Como usuario, quiero definir si soy carpintero o cliente para acceder a funcionalidades específicas.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>HU13</td>
+      <td>Registro de usuario</td>
+      <td>Como visitante, quiero registrarme en la plataforma para poder acceder a sus funcionalidades.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>HU14</td>
+      <td>Inicio de sesión</td>
+      <td>Como usuario registrado, quiero iniciar sesión en la plataforma para acceder a mi cuenta.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>HU15</td>
+      <td>Gestión de perfil</td>
+      <td>Como usuario, quiero editar mi información personal para mantener mis datos actualizados.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>HU37</td>
+      <td>Aceptación del presupuesto por el cliente</td>
+      <td>Como cliente, quiero aceptar el presupuesto generado por el carpintero para confirmar el costo y los tiempos.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>HU38</td>
+      <td>Registro de comprobante de anticipo</td>
+      <td>Como cliente, quiero registrar el comprobante de mi anticipo de pago para que el carpintero inicie la producción.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>HU39</td>
+      <td>Validación de anticipo por el carpintero</td>
+      <td>Como carpintero, quiero validar el comprobante del anticipo para autorizar el inicio de la producción.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>HU40</td>
+      <td>Solicitud de pago final</td>
+      <td>Como carpintero, quiero emitir una solicitud de pago final al cliente cuando el mueble esté listo para entrega.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>HU41</td>
+      <td>Registro de comprobante de pago final</td>
+      <td>Como cliente, quiero registrar el comprobante del pago final para coordinar la entrega de mi mueble.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>HU42</td>
+      <td>Validación de pago final</td>
+      <td>Como carpintero, quiero validar el comprobante del pago final para autorizar la entrega del mueble.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>HU44</td>
+      <td>Generación de orden de compra al proveedor</td>
+      <td>Como carpintero, quiero generar una orden de compra a un proveedor de madera para reponer el inventario.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>TS01</td>
+      <td>Endpoint de autenticación de usuarios</td>
+      <td>Como Developer, quiero exponer un endpoint <code>POST /auth/login</code> que valide credenciales y devuelva un token JWT.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>TS02</td>
+      <td>Endpoints REST de gestión de pedidos</td>
+      <td>Como Developer, quiero exponer endpoints REST <code>/orders</code> para crear, listar y consultar pedidos desde la Web Application.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>TS03</td>
+      <td>Endpoint de actualización de etapa de producción</td>
+      <td>Como Developer, quiero exponer <code>PATCH /orders/{orderId}/stages/{stageId}</code> para actualizar el estado de cada etapa.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>TS04</td>
+      <td>API CRUD de inventario</td>
+      <td>Como Developer, quiero exponer endpoints REST <code>/inventory</code> para gestionar registro y actualización de materiales.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>TS05</td>
+      <td>Endpoint de validación de viabilidad de pedido</td>
+      <td>Como Developer, quiero exponer <code>POST /orders/{orderId}/feasibility</code> que valide inventario y capacidad del taller.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>TS06</td>
+      <td>Endpoint público de seguimiento de pedido</td>
+      <td>Como Developer, quiero exponer un endpoint público <code>GET /tracking/{publicTrackingId}</code> sin autenticación.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>TS07</td>
+      <td>Endpoints REST de mensajería por pedido</td>
+      <td>Como Developer, quiero exponer endpoints REST <code>/orders/{orderId}/messages</code> para intercambio de mensajes.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>TS08</td>
+      <td>Endpoint de cálculo de costos y tiempos</td>
+      <td>Como Developer, quiero exponer <code>POST /orders/{orderId}/estimate</code> que calcule costos y tiempos totales del pedido.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td>HU08</td>
+      <td>Conocer el producto a través de un video</td>
+      <td>Como visitante, quiero ver un video que presente el producto y sus características.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td>HU09</td>
+      <td>Conocer el proceso del equipo a través de un video</td>
+      <td>Como visitante, quiero ver un video que muestre al equipo y su proceso de trabajo.</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
 
 **Enlace público al Product Backlog:** <https://trello.com/b/8CdOWxGE/woodroute>
 
@@ -1041,6 +1702,7 @@ El Product Backlog se elabora a continuación, listando cada User Story con su o
   <img src="assets/product-backlog.png" alt="Product Backlog de WoodRoute en Trello" width="100%">
 </div>
 
+<div style="page-break-after: always;"></div>
 
 # Capítulo IV: Product Design
 
@@ -1529,7 +2191,7 @@ de features colapsan a una columna, el navbar se convierte en menú hamburguesa 
 el CTA de conversión permanece visible y accesible en todo momento. El espaciado
 entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm`.
 
-<div class="page-break"></div>
+<div style="page-break-after: always;"></div>
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
@@ -1590,7 +2252,7 @@ En este primer Sprint hemos realizado la implementación de nuestra Landing Page
 | Developer-Core/WoodRoute-Landing | main | 33ad2a9 | Actualización de index.html | Agregado de estilos principales y la vista de la propuesta de valor. | 12/04/2026 |
 | Developer-Core/WoodRoute-Landing | main | 3694000 | Configuración de assets y diagramas | Se incluyeron los diagramas y el esquema inicial en los assets. | 14/04/2026 |
 
-<div class="page-break"></div>
+<div style="page-break-after: always;"></div>
 
 # Bibliografía
 
@@ -1609,4 +2271,6 @@ En este primer Sprint hemos realizado la implementación de nuestra Landing Page
 <a id="ref-produce-empresas-2025"></a>Ministerio de la Producción [PRODUCE]. (2025). *PRODUCE: Perú cerró el 2024 con 2.34 millones de empresas formales*. https://www.gob.pe/institucion/produce/noticias/1168972-produce-peru-cerro-el-2024-con-2-34-millones-de-empresas-formales
 
 <a id="ref-osiptel-erestel-2024"></a>Organismo Supervisor de Inversión Privada en Telecomunicaciones [OSIPTEL]. (2024). *ERESTEL: el 92.8% de las familias peruanas contó con un smartphone en 2023*. https://www.osiptel.gob.pe/portal-del-usuario/noticias/erestel-el-92-8-de-las-familias-peruanas-conto-con-un-smartphone-en-2023/
+
+</article>
 
