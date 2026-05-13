@@ -2666,7 +2666,7 @@ Durante el Sprint 1 el equipo completó la implementación de la landing page de
 
 **URL pública de la landing page:** <https://landing-page-woodroute.vercel.app/>
 
-**Video demostrativo del Sprint 1:** *(en proceso de edición; el enlace se incorporará una vez que se publique en YouTube)*
+**Video demostrativo del Sprint 1:** <https://youtu.be/kCCwd5l2dD0>
 
 A continuación se presentan las capturas de las principales vistas implementadas en este sprint.
 
