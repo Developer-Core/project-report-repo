@@ -724,7 +724,7 @@ Frecuencia: Escala de 1 a 5 (1 = Muy baja / Rara vez, 5 = Muy alta / Varias vece
 Importancia: Escala de 1 a 5 (1 = Poco importante / Prescindible, 5 = Crítica / Indispensable)
 
 
-| Tarea (Task) | Carlos Gutiérrez (Carpintero) Frec. | Carlos Gutiérrez (Carpintero) Import. | Valeria Méndez (Cliente) Frec. | Valeria Méndez (Cliente) Import. |
+| Tarea (Task) | Carlos Gutiérrez (Carpintero) Frec. | Carlos Gutiérrez (Carpintero) Import. | Valeria Fernández (Cliente) Frec. | Valeria Fernández (Cliente) Import. |
 |:---|:---:|:---:|:---:|:---:|
 | **1. Registrar un nuevo pedido de mueble** | 5 | 5 | 5 | 5 |
 | **2. Consultar disponibilidad de materiales** (madera, herrajes, etc.) | 5 | 5 | 4 | 5 |
@@ -783,7 +783,7 @@ En esta sección se presentan los User Journey Maps para los dos segmentos objet
 
 1. Carpintero independiente / pequeño taller (Carlos Gutiérrez)
 
-2. Cliente que manda a hacer el mueble (Valeria Méndez)
+2. Cliente que manda a hacer el mueble (Valeria Fernández)
 
 El journey representado cubre el end-to-end de la experiencia actual desde que el cliente detecta una necesidad de un mueble personalizado hasta que recibe el producto final y realiza el pago. Se ilustran las etapas, acciones, emociones, puntos de dolor y oportunidades de mejora que posteriormente abordará la plataforma propuesta.
 
