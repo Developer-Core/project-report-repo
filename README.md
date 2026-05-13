@@ -428,7 +428,7 @@ En esta sección evaluamos los competidores de nuestro nicho.
       <td colspan="5" align="center">El objetivo de este análisis es identificar las brechas en la gestión y planificación de trabajos en carpinterías, evaluar cómo operan las soluciones actuales y posicionar a WoodRoute como una plataforma que optimiza la toma de decisiones, el uso de materiales y la comunicación con clientes.</td>
     </tr>
     <tr>
-      <td colspan="2" rowspan="2" valign="top">Startup y Competidores</td>S
+      <td colspan="2" rowspan="2" valign="top">Startup y Competidores</td>
       <td align="center"><b>Nuestra Startup: WoodRoute</b></td>
       <td align="center">Cleri</td>
       <td align="center">Craftybase</td>
