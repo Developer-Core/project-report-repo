@@ -2430,6 +2430,43 @@ A continuación se listan los productos de software utilizados por el equipo a l
 | Google Drive | Almacenamiento y compartición de grabaciones de entrevistas, evidencias de needfinding y materiales de apoyo. | <https://drive.google.com/> |
 | Google Meet | Plataforma de videoconferencia para sprint planning, sprint review, retrospectivas y entrevistas a usuarios. | <https://meet.google.com/> |
 
+### 5.1.2. Source Code Management
+
+El proyecto WoodRoute utiliza GitHub como plataforma de control de versiones bajo el modelo GitFlow, lo que garantiza la trazabilidad del código, una colaboración organizada entre los miembros del equipo y la estabilidad en cada release del producto.
+
+**Organización en GitHub:** <https://github.com/Developer-Core>
+
+**Repositorio del informe:** <https://github.com/Developer-Core/project-report-repo>
+
+#### Ramas principales
+
+- **`main`:** Contiene la versión estable y desplegada en producción. Solo recibe merges desde ramas `release/*` y `hotfix/*`. Cada merge a `main` corresponde a una entrega oficial (AV1, AV2, TF) y queda etiquetado con su versión SemVer.
+- **`develop`:** Rama de integración de nuevas funcionalidades. Contiene la historia completa del proyecto y sirve como base para las ramas `feature/*` y `release/*`.
+
+#### Ramas secundarias
+
+- **`feature/*`:** Ramas temporales para el desarrollo de funcionalidades o secciones específicas del informe. Nacen de `develop` y se reintegran a `develop` mediante Pull Request. La convención de nombrado es `feature/NN-descriptive-name` cuando la tarea corresponde a una sección numerada del reporte; en caso contrario se usa `feature/descriptive-name`.
+- **`release/*`:** Ramas de preparación para entregas. Nacen de `develop` y solo aceptan correcciones de bugs y ajustes de documentación, nunca nuevas funcionalidades. Al finalizar se integran a `main` y a `develop`.
+- **`hotfix/*`:** Ramas para parches críticos posteriores a una entrega. Nacen de `main` y se reintegran tanto a `main` como a `develop`.
+
+#### Convenciones de commits
+
+El equipo aplica el estándar **Conventional Commits** con el formato `type(scope): description`. Los tipos utilizados en este repositorio incluyen `docs` para cambios de contenido del informe, `fix` para correcciones, `build` para configuración de exportación a PDF, `chore` para mantenimiento, `style` para cambios de formato y `refactor` para reestructuración sin cambio de salida.
+
+#### Versionado
+
+Se emplea **Semantic Versioning (SemVer 2.0.0)** con el formato `MAJOR.MINOR.PATCH`. Los commits de tipo `docs` incrementan la versión MINOR, los de tipo `fix` incrementan PATCH y los cambios marcados con `!` o `BREAKING CHANGE` incrementan MAJOR. Los tags se publican con el prefijo `v` (por ejemplo, `v0.1.0`). Las versiones se mapean a las entregas del curso de la siguiente manera:
+
+| Entregable | Versión | Rama de release |
+| :--- | :--- | :--- |
+| AV1 | `v0.1.0` | `release/0.1.0` |
+| AV2 | `v0.2.0` | `release/0.2.0` |
+| TF | `v1.0.0` | `release/1.0.0` |
+
+#### Política de integración
+
+Todas las integraciones hacia `develop` o `main` requieren la creación de un **Pull Request** revisado y aprobado por al menos un miembro del equipo. No se permiten commits directos a `develop` ni a `main`, y las ramas `feature/*` nunca interactúan directamente con `main`: siempre lo hacen a través de `develop`.
+
 ## 5.2. Landing Page, Services & Applications Implementation
 
 ### 5.2.1. Sprint 1
