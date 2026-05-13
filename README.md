@@ -197,7 +197,7 @@ WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes 
     </tr>
     <tr>
       <td class="member-photo"><img src="assets/members/juan-saldana.jpeg" alt="Foto de Saldaña De Souza, Juan David"></td>
-      <td><strong>Saldaña De Souza, Juan David -- U20221F192</strong><br><br><em>Descripción.</em></td>
+      <td><strong>Saldaña De Souza, Juan David -- U20221F192</strong><br><br>Mi nombre es Juan David, tengo 20 años y estoy cursando la carrera de Ingeniería de Software en la UPC. Me considero una persona dedicada y analítica en los proyectos que requieren un enfoque técnico sólido. Tengo habilidades enfocadas en la resolución de problemas y el desarrollo eficiente, apoyando siempre a mi equipo para lograr un software de calidad. Mis conocimientos se centran en Java, C++ y Python, acompañados de frameworks y herramientas para desarrollo web como Astro.js y Svelte. De la misma forma, manejo SQL Server, MongoDB, redes y algoritmos de complejidad. Algunos de mis hobbies son los videojuegos y la tecnología.</td>
     </tr>
     <tr>
       <td class="member-photo"><img src="assets/members/piero-sulca.jpg" alt="Foto de Sulca Sanchez, Piero Angel"></td>
@@ -205,7 +205,7 @@ WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes 
     </tr>
     <tr>
       <td class="member-photo"><img src="assets/members/dalila.jpeg" alt="Foto de Torres Sanchez, Dalila Victoria"></td>
-      <td><strong>Torres Sanchez, Dalila Victoria -- U20221F734</strong><br><br><em>Soy estudiante de Ingeniería de Software, he programado en C#, C++, PHP, Java y Python, además manejo de bases de datos relacionales. También he trabajado con Git y metodologías ágiles como Scrum, lo cual me ha ayudado a organizarme mejor y a trabajar en equipo con más fluidez. Me interesa mucho el desarrollo backend, porque me gusta entender la lógica detrás de las cosas, cómo se procesan los datos y cómo se asegura que todo funcione correctamente. También me gusta colaborar en el frontend, porque entiendo que un buen producto requiere que ambas partes trabajen en armonía. Disfruto ver cómo una idea se vuelve algo real, desde los primeros bocetos hasta la parte funcional donde las personas terminan usando. Actualmente, mi objetivo es seguir consolidando mis habilidades técnicas y blandas para desempeñarme con confianza en el entorno laboral. Me interesa participar en proyectos donde pueda aplicar lo que sé y aportar soluciones prácticas a problemas reales.</em></td>
+      <td><strong>Torres Sanchez, Dalila Victoria -- U20221F734</strong><br><br>Soy estudiante de Ingeniería de Software, he programado en C#, C++, PHP, Java y Python, además manejo de bases de datos relacionales. También he trabajado con Git y metodologías ágiles como Scrum, lo cual me ha ayudado a organizarme mejor y a trabajar en equipo con más fluidez. Me interesa mucho el desarrollo backend, porque me gusta entender la lógica detrás de las cosas, cómo se procesan los datos y cómo se asegura que todo funcione correctamente. También me gusta colaborar en el frontend, porque entiendo que un buen producto requiere que ambas partes trabajen en armonía. Disfruto ver cómo una idea se vuelve algo real, desde los primeros bocetos hasta la parte funcional donde las personas terminan usando. Actualmente, mi objetivo es seguir consolidando mis habilidades técnicas y blandas para desempeñarme con confianza en el entorno laboral. Me interesa participar en proyectos donde pueda aplicar lo que sé y aportar soluciones prácticas a problemas reales.</td>
     </tr>
   </tbody>
 </table>
@@ -273,10 +273,12 @@ Los carpinteros preferirán una aplicación web sencilla y accesible desde compu
 
 Estadísticas que sustentan la problemática:
 
-- Alta informalidad: En muchos países de Latinoamérica, una gran parte de los talleres de carpintería operan sin sistemas digitales de gestión.
-- Baja digitalización: La mayoría de pequeños negocios aún utiliza métodos manuales para organizar pedidos e inventarios.
-- Ineficiencia operativa: La falta de planificación genera retrasos, reprocesos y desperdicio de materiales.
-- Impacto en clientes: Los retrasos y la falta de comunicación afectan la confianza y satisfacción del cliente.
+- Las MYPE representan el 99.7% de las empresas peruanas y emplean al 45.2% de la PEA, lo que demuestra que el problema afecta a un sector empresarial de gran alcance en el país ([ComexPerú, 2025](#ref-comexperu-mype-2025)).
+- En 2024, las MYPE registraron ventas por S/ 154,380 millones, equivalentes al 14.2% del PBI, por lo que sus limitaciones de gestión tienen impacto económico relevante ([ComexPerú, 2025](#ref-comexperu-mype-2025)).
+- El 86.8% de las MYPE opera en la informalidad, medida por la ausencia de RUC, lo que limita su acceso a registros formales, financiamiento y herramientas de gestión empresarial ([ComexPerú, 2025](#ref-comexperu-mype-2025)).
+- El 76.5% de las MYPE no lleva ningún registro de cuentas, mientras que solo el 3.7% cuenta con libros contables o un sistema completo de contabilidad, evidenciando una baja capacidad de control financiero y operativo ([ComexPerú, 2025](#ref-comexperu-mype-2025)).
+- Aunque el 78% de las micro y pequeñas empresas usó herramientas digitales, esto no implica necesariamente el uso de software especializado para pedidos, inventarios o producción ([eBIZ, 2022](#ref-ebiz-mypes-2022)).
+- Entre las MYPE en línea, el 55% usó WhatsApp para comunicarse con clientes y el 48% con proveedores, lo que muestra una dependencia de canales de comunicación no estructurados para actividades empresariales ([eBIZ, 2022](#ref-ebiz-mypes-2022)).
 
 Estas condiciones evidencian la necesidad de una solución tecnológica que permita optimizar la gestión del taller, mejorar la planificación y brindar mayor transparencia en el proceso de fabricación de muebles.
 
@@ -288,13 +290,25 @@ El Lean UX Process es una metodología ágil centrada en la colaboración, la ex
 
 **Problem Statement 1: El Carpintero / Taller**
 
-Nuestro sistema busca facilitar a los carpinteros la planificación y gestión de pedidos de muebles personalizados. Hemos observado que muchos talleres trabajan de forma manual y basada en experiencia, lo que genera errores en el cálculo de materiales, estimaciones imprecisas de tiempo y desorganización en los pedidos.
-**¿Cómo podemos ayudar a los carpinteros a planificar sus trabajos de forma más precisa y organizada, reduciendo errores y mejorando su productividad?**
+- **Domain:** Gestión operativa de talleres de carpintería dedicados a la fabricación de muebles personalizados bajo pedido.
+- **Customer Segments:** Carpinteros independientes y pequeños talleres con baja digitalización, ubicados principalmente en zonas urbanas de Lima Metropolitana.
+- **Pain Points:** Cálculo manual y propenso a errores de materiales, estimaciones imprecisas de tiempos de entrega, desorganización en la recepción de pedidos, control de inventario empírico y comunicación reactiva con los clientes a través de WhatsApp.
+- **Gap:** Las herramientas existentes son genéricas (ERPs grandes u hojas de cálculo) y no se adaptan al flujo de trabajo ni al lenguaje del rubro de la carpintería; las MYPE rechazan adoptarlas por su complejidad y costo.
+- **Vision / Strategy:** Ofrecer una plataforma web especializada que integre gestión de pedidos, asistente de viabilidad, estimación de tiempos y control simple de inventario, priorizando una experiencia minimalista alineada con el flujo real del taller.
+- **Initial Segment:** Talleres independientes urbanos en Lima Metropolitana, de 1 a 5 trabajadores, con uso activo de smartphone y disposición a probar herramientas digitales.
+
+**¿Cómo podemos ayudar a los carpinteros independientes y pequeños talleres a planificar sus pedidos de forma más precisa y organizada, reduciendo errores en el cálculo de materiales y mejorando el cumplimiento de tiempos, sin agregar complejidad a su jornada de trabajo?**
 
 **Problem Statement 2: El Cliente**
 
-El producto tiene como objetivo mejorar la experiencia de los clientes que mandan a fabricar muebles. Actualmente, los clientes no tienen visibilidad del avance de sus pedidos y deben comunicarse constantemente con el carpintero para obtener información.
-**¿Cómo podemos brindar a los clientes acceso claro y en tiempo real al estado de sus pedidos para mejorar la transparencia y confianza en el servicio?**
+- **Domain:** Experiencia del cliente final que solicita la fabricación de muebles a medida a un taller independiente.
+- **Customer Segments:** Personas adultas (25 a 55 años) de NSE B y C que solicitan muebles personalizados para el hogar, oficinas o negocios.
+- **Pain Points:** Ausencia de visibilidad sobre el avance del pedido, dependencia de mensajes informales por WhatsApp o llamadas, incertidumbre sobre fechas reales de entrega y poca confianza en el proceso.
+- **Gap:** No existe un canal estandarizado que permita al cliente consultar el estado de su mueble sin tener que interrumpir al carpintero, ni evidencia clara de las etapas de producción.
+- **Vision / Strategy:** Brindar al cliente acceso vía enlace —sin requerir registro— para consultar en tiempo real el estado de su pedido, fechas estimadas y notificaciones automáticas de cambios de etapa.
+- **Initial Segment:** Clientes urbanos de Lima Metropolitana que ya solicitan muebles a talleres independientes y utilizan WhatsApp como canal habitual de seguimiento.
+
+**¿Cómo podemos brindar a los clientes acceso claro y en tiempo real al estado de sus pedidos para mejorar la transparencia, reducir las consultas repetitivas al carpintero y aumentar la confianza en el servicio?**
 
 #### 1.2.2.2. Lean UX Assumptions
 
@@ -357,40 +371,42 @@ Debe ser simple, clara y fácil de usar, con una interfaz intuitiva que permita 
 
 #### 1.2.2.4. Lean UX Canvas
 
-El Lean UX Canvas es una herramienta visual que permite alinear al equipo en torno a problemas, usuarios e hipótesis de manera ágil. En este proyecto se utilizó para comprender mejor a los restaurantes y albergues, identificar sus necesidades y definir cómo **Alimenta** puede generar valor real en su gestión diaria.
+El Lean UX Canvas es una herramienta visual que permite alinear al equipo en torno a problemas, usuarios e hipótesis de manera ágil. En este proyecto se utilizó para comprender mejor a los carpinteros independientes, pequeños talleres y a los clientes que solicitan muebles personalizados, identificar sus principales pain points y definir cómo **WoodRoute** puede generar valor real en la gestión diaria del taller y en la experiencia del cliente.
 
-Aquí se presenta el Lean UX Canvas desarrollado para **Alimenta**:
+Aquí se presenta el Lean UX Canvas desarrollado para **WoodRoute**:
 
 **Figura 1. Lean UX Canvas de WoodRoute**
 
 <div align="center">
-  <img src="assets/lean-ux-canvas.png" alt="Entrevista_carp 3" width="100%">
+  <img src="assets/lean-ux-canvas.jpg" alt="Lean UX Canvas de WoodRoute" width="100%">
 </div>
 
-**Enlace al Lean UX Canvas:** https://miro.com/welcomeonboard/ZVFaMVdKblhINnB5d1dnbWcxT2RLZ3ZjVFlQNWpsS2VKLzVQQ3dQMWUxS1pkY3hJbStyWENZNnc1cjIvd01lNkltV283MkVGRUM3MS94a1Q0dXp4U3QzclBsK0ZrZ24zQXZhRG14blV5YXdtMUlaMlV5alRXNTFMT21PL0tXbzJzVXVvMm53MW9OWFg5bkJoVXZxdFhRPT0hdjE=?share_link_id=533296594528
+**Enlace al Lean UX Canvas:** https://miro.com/app/board/uXjVHUJnMJM=/?share_link_id=898353122563
 
 
 ## 1.3. Segmentos objetivo
 
-En el análisis del segmento objetivo para WoodRoute, se han identificado dos grupos principales de usuarios que interactúan dentro de la plataforma: **los Carpinteros (Talleres)**, quienes gestionan y producen los muebles, y **los Clientes**, quienes solicitan muebles personalizados y requieren seguimiento del proceso.
+En el análisis del segmento objetivo para WoodRoute, se identifican dos grupos principales de usuarios: **los carpinteros o talleres**, encargados de fabricar y gestionar los pedidos de muebles, y **los clientes**, quienes solicitan muebles personalizados y necesitan conocer el avance del proceso.
 
-**Carpinteros: Talleres y trabajadores independientes**
+**Carpinteros: talleres y trabajadores independientes**
 
-Este segmento está compuesto por carpinteros independientes y pequeños talleres que fabrican muebles personalizados bajo pedido. Buscan mejorar la organización de su trabajo, optimizar el uso de materiales y brindar un mejor servicio a sus clientes.
+Este segmento está compuesto por carpinteros independientes, maestros de taller, ayudantes y pequeños negocios familiares dedicados a la fabricación de muebles personalizados bajo pedido. Forman parte del ecosistema de micro y pequeñas empresas del país, el cual representa una parte significativa de la actividad empresarial peruana.
 
-- **Perfil:** Carpinteros independientes, maestros de taller, ayudantes y pequeños negocios familiares dedicados a la fabricación de muebles.
-- **Edad:** 20 a 60 años.
-- **Necesidad clave:** Organizar pedidos, calcular materiales, estimar tiempos de producción y mejorar la comunicación con los clientes.
-- **Uso de tecnología:** Nivel medio. Utilizan principalmente smartphones, WhatsApp y en algunos casos herramientas básicas como Excel, pero no cuentan con sistemas especializados.
+- **Perfil:** Carpinteros independientes, maestros de taller y pequeños negocios dedicados a la fabricación de muebles a medida. En 2024, las MYPE representaron el 99.7% de las empresas peruanas y emplearon al 45.2% de la PEA, lo que evidencia la importancia de este tipo de negocios dentro del mercado nacional ([ComexPerú, 2025](#ref-comexperu-mype-2025)).
+- **Tamaño del mercado:** En 2024, el Perú cerró con 2,346,592 empresas formales, de las cuales 2,326,126 fueron MYPE, equivalentes al 99.1% del total formal. Dentro de estas, el sector manufactura representó el 8.5%, donde se ubican actividades productivas como la fabricación de muebles ([PRODUCE, 2025](#ref-produce-empresas-2025)).
+- **Ubicación geográfica:** El mercado objetivo se concentra principalmente en zonas urbanas con presencia de talleres y actividad comercial. A nivel formal, el 43.8% de las MYPE se concentra en Lima, equivalente a 1,018,308 empresas, lo que justifica enfocar inicialmente la solución en Lima Metropolitana ([PRODUCE, 2025](#ref-produce-empresas-2025)).
+- **Uso de tecnología:** El acceso a smartphones es alto en el país: en 2023, el 92.8% de los hogares peruanos contaba con al menos un smartphone. Esto permite plantear una solución digital accesible para talleres pequeños que ya usan el celular como herramienta de trabajo ([OSIPTEL, 2024](#ref-osiptel-erestel-2024)).
+- **Necesidad clave:** Organizar pedidos, calcular materiales, controlar avances de producción, estimar tiempos de entrega y mejorar la comunicación con los clientes.
 
-**Clientes: Usuarios que solicitan muebles personalizados**
+**Clientes: usuarios que solicitan muebles personalizados**
 
-Este segmento incluye a personas que requieren la fabricación de muebles a medida y desean tener mayor visibilidad del proceso, así como una mejor experiencia durante el servicio.
+Este segmento está compuesto por personas que requieren muebles a medida para hogares, oficinas o negocios, y que necesitan mayor claridad sobre tiempos, costos y avance del pedido.
 
-- **Perfil:** Personas que solicitan muebles para el hogar, oficinas o negocios, interesados en soluciones personalizadas.
-- **Edad:** 25 a 60 años.
-- **Necesidad clave:** Conocer el estado del pedido, recibir información clara sobre tiempos de entrega y tener mayor confianza en el proceso de fabricación.
-- **Uso de tecnología:** Nivel medio-alto. Están familiarizados con el uso de smartphones, aplicaciones web, redes sociales y servicios digitales.
+- **Perfil:** Adultos que solicitan muebles personalizados y buscan una alternativa distinta a los muebles estándar. Este perfil se relaciona con usuarios urbanos familiarizados con el uso de internet, redes sociales y comunicación digital.
+- **Edad y uso digital:** El público adulto joven y adulto presenta alta familiaridad con internet. En el primer trimestre de 2024, el 91.4% de la población de 25 a 40 años accedió a internet, lo que respalda el uso de una plataforma digital para consultar pedidos, avances y entregas ([INEI, 2024a](#ref-inei-internet-trim1-2024)).
+- **Nivel socioeconómico:** Puede orientarse principalmente a usuarios de NSE B y C, ya que son segmentos con capacidad de compra para productos personalizados de mediana inversión. Esta clasificación debe tomarse como criterio de segmentación comercial, usando como referencia los reportes de niveles socioeconómicos de APEIM, elaborados a partir de la ENAHO ([APEIM, 2024](#ref-apeim-nse-2024)).
+- **Uso de tecnología:** En 2024, el 80.2% de la población peruana de 6 años a más usó internet en el tercer trimestre, y en el primer trimestre del mismo año el 91.3% de quienes usaban internet accedía mediante celular. Esto respalda que los clientes puedan consultar información del pedido desde una plataforma web ([INEI, 2024b](#ref-inei-internet-trim3-2024)).
+- **Necesidad clave:** Conocer el estado del pedido, recibir información clara sobre fechas de entrega, reducir la incertidumbre y tener mayor confianza durante el proceso de fabricación.
 
 # Capítulo II: Requirements Elicitation & Analysis
 
@@ -1515,5 +1531,19 @@ En este primer Sprint hemos realizado la implementación de nuestra Landing Page
 
 # Bibliografía
 
+<a id="ref-apeim-nse-2024"></a>Asociación Peruana de Empresas de Inteligencia de Mercados [APEIM]. (2024). *Niveles socioeconómicos 2023-2024*. APEIM. https://apeim.com.pe/wp-content/uploads/2024/01/APEIM-Informe-de-Niveles-Socioeconomicos-2023-2024-Version-WEB.pdf
+
+<a id="ref-comexperu-mype-2025"></a>ComexPerú. (2025). *Informe anual MYPE 2024: Las micro y pequeñas empresas en el Perú. Resultados en 2024*. Sociedad de Comercio Exterior del Perú. https://www.comexperu.org.pe/articulo/informe-anual-mype-2024
+
+<a id="ref-ebiz-mypes-2022"></a>eBIZ. (2022, 29 de julio). *78% de las mypes usó herramientas digitales en el último año*. https://ebiz.pe/noticias/78-de-las-mypes-uso-herramientas-digitales-en-el-ultimo-ano/
+
 <a id="ref-eventstorming-journal-2022"></a>EventStorming Journal. (2022, marzo 29). *Step by step guide to run your big picture event storming*. https://www.eventstormingjournal.com/big%20picture/step-by-step-guide-to-run-your-big-picture-event-storming/
+
+<a id="ref-inei-internet-trim1-2024"></a>Instituto Nacional de Estadística e Informática [INEI]. (2024a). *Aumentó la población usuaria de internet en todos los grupos de edad en el primer trimestre de 2024*. https://www.gob.pe/institucion/inei/noticias/980106-aumento-la-poblacion-usuaria-de-internet-en-todos-los-grupos-de-edad-en-el-primer-trimestre-de-2024
+
+<a id="ref-inei-internet-trim3-2024"></a>Instituto Nacional de Estadística e Informática [INEI]. (2024b). *Uso de internet alcanzó al 80.2% de la población de 6 y más años de edad en el tercer trimestre de 2024*. https://www.gob.pe/institucion/inei/noticias/1081936-uso-de-internet-alcanzo-al-80-2-de-la-poblacion-de-6-y-mas-anos-de-edad-en-el-tercer-trimestre-de-2024
+
+<a id="ref-produce-empresas-2025"></a>Ministerio de la Producción [PRODUCE]. (2025). *PRODUCE: Perú cerró el 2024 con 2.34 millones de empresas formales*. https://www.gob.pe/institucion/produce/noticias/1168972-produce-peru-cerro-el-2024-con-2-34-millones-de-empresas-formales
+
+<a id="ref-osiptel-erestel-2024"></a>Organismo Supervisor de Inversión Privada en Telecomunicaciones [OSIPTEL]. (2024). *ERESTEL: el 92.8% de las familias peruanas contó con un smartphone en 2023*. https://www.osiptel.gob.pe/portal-del-usuario/noticias/erestel-el-92-8-de-las-familias-peruanas-conto-con-un-smartphone-en-2023/
 
