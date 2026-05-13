@@ -2726,6 +2726,28 @@ Se selecciona la rama de despliegue, el *Application Preset* (Vite), el *Root Di
   <img src="assets/deployment/vercel-step-3-deploy.png" alt="Despliegue del proyecto en Vercel" width="100%">
 </div>
 
+#### 5.2.1.8. Team Collaboration Insights for Sprint Review
+
+Durante el Sprint 1 el equipo organizó la colaboración siguiendo el modelo de Aspect Leaders presentado en la sección 5.2.1.2: Piero Sulca lideró la implementación técnica de la landing page, mientras que el resto de los integrantes contribuyó como colaboradores en el diseño UI/UX, la elaboración de los artefactos de descubrimiento (User Personas, Journey Maps, Lean UX Canvas) y la redacción de los capítulos del informe. La integración del código se gestionó íntegramente bajo el modelo GitFlow, con ramas `feature/*` reintegradas a `develop` a través de Pull Requests revisados.
+
+A continuación se presentan las capturas de los analíticos de GitHub Insights correspondientes al repositorio de la landing page durante el Sprint 1.
+
+**Pulse del repositorio**
+
+La vista *Pulse* resume la actividad del repositorio durante el período del sprint, evidenciando los Pull Requests integrados y los commits realizados sobre la rama `develop`.
+
+<div align="center">
+  <img src="assets/sprint-1-insights/github-pulse.png" alt="Pulse de GitHub Insights del repositorio landing-page-woodroute" width="100%">
+</div>
+
+**Contribuciones por miembro del equipo**
+
+La vista *Contributors* muestra la distribución de commits a lo largo del sprint y la participación de cada integrante del equipo en la implementación de la landing page.
+
+<div align="center">
+  <img src="assets/sprint-1-insights/github-contributors.png" alt="Contributors de GitHub Insights del repositorio landing-page-woodroute" width="100%">
+</div>
+
 <div style="page-break-after: always;"></div>
 
 # Bibliografía
