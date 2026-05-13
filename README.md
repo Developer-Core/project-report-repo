@@ -972,45 +972,52 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
 
 
 ## 3.3. Product Backlog
-| Orden | User Story ID | Título                                         | Descripción                                                                                                           | Story Points |
-| ----- | ------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------ |
-| 1     | HU02          | Visualización de información de la plataforma  | Como visitante, quiero ver información clara sobre WoodRoute para entender sus beneficios y funcionamiento.           | 1            |
-| 2     | HU04          | Visualización de testimonios o casos de uso    | Como visitante, quiero ver experiencias de otros usuarios para confiar en la efectividad de la plataforma.            | 1            |
-| 3     | HU01          | Descarga de la aplicación                      | Como visitante, quiero acceder a enlaces de descarga para instalar la aplicación en mi dispositivo.                   | 2            |
-| 4     | HU05          | Suscripción a notificaciones o novedades       | Como visitante, quiero suscribirme para recibir noticias o actualizaciones sobre la plataforma.                       | 2            |
-| 5     | HU03          | Registro desde la landing page                 | Como visitante, quiero registrarme directamente desde la landing page para comenzar a usar la aplicación rápidamente. | 3            |
-| 6     | HU10          | Creación de pedido personalizado               | Como cliente, quiero crear un pedido de mueble personalizado para solicitar un diseño específico.                     | 5            |
-| 7     | HU12          | Aceptación o rechazo de pedidos                | Como carpintero, quiero aceptar o rechazar pedidos para gestionar mi carga de trabajo.                                | 3            |
-| 8     | HU11          | Visualización de pedidos                       | Como usuario, quiero visualizar la lista de pedidos para hacer seguimiento a su estado.                               | 3            |
-| 9     | HU17          | Visualización del progreso                     | Como cliente, quiero ver el progreso de mi pedido para conocer en qué etapa se encuentra.                             | 3            |
-| 10    | HU36          | Consulta pública del estado del pedido         | Como cliente, quiero consultar el estado de mi pedido mediante un enlace público sin necesidad de iniciar sesión.     | 3            |
-| 11    | HU15          | Definición de etapas de producción             | Como carpintero, quiero definir las etapas de producción de un pedido para organizar mejor el trabajo.                | 5            |
-| 12    | HU16          | Actualización del estado de producción         | Como carpintero, quiero actualizar el estado de cada etapa para reflejar el progreso del pedido.                      | 3            |
-| 13    | HU09          | Selección de tipo de usuario                   | Como usuario, quiero definir si soy carpintero o cliente para acceder a funcionalidades específicas.                  | 2            |
-| 14    | HU06          | Registro de usuario                            | Como visitante, quiero registrarme en la plataforma para poder acceder a sus funcionalidades.                         | 3            |
-| 15    | HU07          | Inicio de sesión                               | Como usuario registrado, quiero iniciar sesión en la plataforma para acceder a mi cuenta.                             | 2            |
-| 16    | HU19          | Registro de materiales                         | Como carpintero, quiero registrar los materiales disponibles para llevar un control del inventario.                   | 3            |
-| 17    | HU20          | Actualización de inventario                    | Como carpintero, quiero actualizar las cantidades de materiales para reflejar el consumo o reposición.                | 3            |
-| 18    | HU21          | Validación de materiales para pedidos          | Como carpintero, quiero validar si tengo materiales suficientes para aceptar un pedido.                               | 5            |
-| 19    | HU22          | Alerta de bajo inventario                      | Como carpintero, quiero recibir alertas cuando el stock sea bajo para evitar retrasos en producción.                  | 5            |
-| 20    | HU37          | Generación de orden de compra al proveedor     | Como carpintero, quiero generar una orden de compra a un proveedor de madera para reponer el inventario.              | 5            |
-| 21    | HU23          | Cálculo de costo estimado                      | Como carpintero, quiero calcular el costo estimado de un pedido para definir un precio adecuado.                      | 5            |
-| 22    | HU18          | Estimación de tiempos por etapa                | Como carpintero, quiero asignar tiempos estimados a cada etapa para planificar mejor la entrega.                      | 5            |
-| 23    | HU24          | Estimación de tiempo total                     | Como carpintero, quiero estimar el tiempo total de fabricación para planificar la entrega del pedido.                 | 5            |
-| 24    | HU26          | Generación de presupuesto                      | Como carpintero, quiero generar un presupuesto para presentar al cliente antes de iniciar el trabajo.                 | 5            |
-| 25    | HU25          | Evaluación de rentabilidad                     | Como carpintero, quiero evaluar la rentabilidad de un pedido para tomar decisiones informadas.                        | 5            |
-| 26    | HU30          | Aceptación del presupuesto por el cliente      | Como cliente, quiero aceptar el presupuesto generado por el carpintero para confirmar el costo y los tiempos.         | 2            |
-| 27    | HU31          | Registro de comprobante de anticipo            | Como cliente, quiero registrar el comprobante de mi anticipo de pago para que el carpintero inicie la producción.     | 3            |
-| 28    | HU32          | Validación de anticipo por el carpintero       | Como carpintero, quiero validar el comprobante del anticipo para autorizar el inicio de la producción.                | 3            |
-| 29    | HU33          | Solicitud de pago final                        | Como carpintero, quiero emitir una solicitud de pago final al cliente cuando el mueble esté listo para entrega.       | 2            |
-| 30    | HU34          | Registro de comprobante de pago final          | Como cliente, quiero registrar el comprobante del pago final para coordinar la entrega de mi mueble.                  | 3            |
-| 31    | HU35          | Validación de pago final                       | Como carpintero, quiero validar el comprobante del pago final para autorizar la entrega del mueble.                   | 3            |
-| 32    | HU13          | Modificación de pedido                         | Como cliente, quiero modificar un pedido antes de que sea aceptado para ajustar los detalles.                         | 3            |
-| 33    | HU14          | Cancelación de pedido                          | Como cliente, quiero cancelar un pedido para detener el proceso si ya no lo necesito.                                 | 2            |
-| 34    | HU27          | Envío de mensajes                              | Como usuario, quiero enviar mensajes dentro de la plataforma para comunicarme sobre el pedido.                        | 3            |
-| 35    | HU28          | Recepción de mensajes                          | Como usuario, quiero recibir mensajes para mantenerme informado sobre el pedido.                                      | 3            |
-| 36    | HU29          | Historial de comunicación                      | Como usuario, quiero ver el historial de mensajes para revisar conversaciones anteriores.                             | 2            |
-| 37    | HU08          | Gestión de perfil                              | Como usuario, quiero editar mi información personal para mantener mis datos actualizados.                             | 3            |
+| Orden | User Story ID | Título                                          | Descripción                                                                                                              | Story Points |
+| ----- | ------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| 1     | HU01          | Navegación entre secciones de la landing        | Como visitante, quiero navegar entre Features, How it works y Pricing desde el menú superior sin recargar la página.     | 1            |
+| 2     | HU02          | Hero carrusel con propuesta de valor            | Como visitante, quiero ver un carrusel con la propuesta de valor de WoodRoute al inicio de la landing.                   | 2            |
+| 3     | HU03          | Visualización de funcionalidades (Features)     | Como visitante, quiero ver las funcionalidades clave de WoodRoute para entender qué puedo hacer con la plataforma.       | 1            |
+| 4     | HU04          | Explicación del flujo de uso (How it works)     | Como visitante, quiero ver los pasos del flujo de uso para entender cómo funciona WoodRoute.                             | 1            |
+| 5     | HU05          | Visualización de planes de precios (Pricing)    | Como visitante, quiero ver los planes de precios disponibles para evaluar cuál se ajusta a mi taller.                    | 2            |
+| 6     | HU07          | Visualización del equipo (Team)                 | Como visitante, quiero ver los miembros del equipo detrás de WoodRoute.                                                  | 1            |
+| 7     | HU12          | Acceso a redes sociales desde el footer         | Como visitante, quiero acceder a las redes sociales de WoodRoute desde el footer.                                        | 1            |
+| 8     | HU11          | Acceso a Términos y Condiciones desde el footer | Como visitante, quiero acceder a los Términos y Condiciones del servicio desde un enlace en el footer.                   | 1            |
+| 9     | HU06          | CTA segmentado hacia la Web Application         | Como visitante (carpintero o cliente), quiero que el CTA me redirija a la vista correspondiente de la Web App.           | 3            |
+| 10    | HU08          | Video About-the-Product embebido                | Como visitante, quiero ver un video About-the-Product embebido en la landing para conocer el producto.                   | 2            |
+| 11    | HU09          | Video About-the-Team embebido                   | Como visitante, quiero ver un video About-the-Team embebido en la landing para conocer al equipo.                        | 2            |
+| 12    | HU10          | Cambio de idioma EN ↔ ES                        | Como visitante, quiero cambiar el idioma de la landing entre English (default) y Spanish.                                | 3            |
+| 13    | HU17          | Creación de pedido personalizado                | Como cliente, quiero crear un pedido de mueble personalizado para solicitar un diseño específico.                        | 5            |
+| 14    | HU19          | Aceptación o rechazo de pedidos                 | Como carpintero, quiero aceptar o rechazar pedidos para gestionar mi carga de trabajo.                                   | 3            |
+| 15    | HU18          | Visualización de pedidos                        | Como usuario, quiero visualizar la lista de pedidos para hacer seguimiento a su estado.                                  | 3            |
+| 16    | HU24          | Visualización del progreso                      | Como cliente, quiero ver el progreso de mi pedido para conocer en qué etapa se encuentra.                                | 3            |
+| 17    | HU22          | Definición de etapas de producción              | Como carpintero, quiero definir las etapas de producción de un pedido para organizar mejor el trabajo.                   | 5            |
+| 18    | HU23          | Actualización del estado de producción          | Como carpintero, quiero actualizar el estado de cada etapa para reflejar el progreso del pedido.                         | 3            |
+| 19    | HU16          | Selección de tipo de usuario                    | Como usuario, quiero definir si soy carpintero o cliente para acceder a funcionalidades específicas.                     | 2            |
+| 20    | HU13          | Registro de usuario                             | Como visitante, quiero registrarme en la plataforma para poder acceder a sus funcionalidades.                            | 3            |
+| 21    | HU14          | Inicio de sesión                                | Como usuario registrado, quiero iniciar sesión en la plataforma para acceder a mi cuenta.                                | 2            |
+| 22    | HU26          | Registro de materiales                          | Como carpintero, quiero registrar los materiales disponibles para llevar un control del inventario.                      | 3            |
+| 23    | HU27          | Actualización de inventario                     | Como carpintero, quiero actualizar las cantidades de materiales para reflejar el consumo o reposición.                   | 3            |
+| 24    | HU28          | Validación de materiales para pedidos           | Como carpintero, quiero validar si tengo materiales suficientes para aceptar un pedido.                                  | 5            |
+| 25    | HU29          | Alerta de bajo inventario                       | Como carpintero, quiero recibir alertas cuando el stock sea bajo para evitar retrasos en producción.                     | 5            |
+| 26    | HU30          | Cálculo de costo estimado                       | Como carpintero, quiero calcular el costo estimado de un pedido para definir un precio adecuado.                         | 5            |
+| 27    | HU25          | Estimación de tiempos por etapa                 | Como carpintero, quiero asignar tiempos estimados a cada etapa para planificar mejor la entrega.                         | 5            |
+| 28    | HU31          | Estimación de tiempo total                      | Como carpintero, quiero estimar el tiempo total de fabricación para planificar la entrega del pedido.                    | 5            |
+| 29    | HU33          | Generación de presupuesto                       | Como carpintero, quiero generar un presupuesto para presentar al cliente antes de iniciar el trabajo.                    | 5            |
+| 30    | HU32          | Evaluación de rentabilidad                      | Como carpintero, quiero evaluar la rentabilidad de un pedido para tomar decisiones informadas.                           | 5            |
+| 31    | HU20          | Modificación de pedido                          | Como cliente, quiero modificar un pedido antes de que sea aceptado para ajustar los detalles.                            | 3            |
+| 32    | HU21          | Cancelación de pedido                           | Como cliente, quiero cancelar un pedido para detener el proceso si ya no lo necesito.                                    | 2            |
+| 33    | HU43          | Consulta pública del estado del pedido          | Como cliente, quiero consultar el estado de mi pedido mediante un enlace público sin necesidad de iniciar sesión.        | 3            |
+| 34    | HU34          | Envío de mensajes                               | Como usuario, quiero enviar mensajes dentro de la plataforma para comunicarme sobre el pedido.                           | 3            |
+| 35    | HU35          | Recepción de mensajes                           | Como usuario, quiero recibir mensajes para mantenerme informado sobre el pedido.                                         | 3            |
+| 36    | HU36          | Historial de comunicación                       | Como usuario, quiero ver el historial de mensajes para revisar conversaciones anteriores.                                | 2            |
+| 37    | HU15          | Gestión de perfil                               | Como usuario, quiero editar mi información personal para mantener mis datos actualizados.                                | 3            |
+| 38    | HU37          | Aceptación del presupuesto por el cliente       | Como cliente, quiero aceptar el presupuesto generado por el carpintero para confirmar el costo y los tiempos.            | 2            |
+| 39    | HU38          | Registro de comprobante de anticipo             | Como cliente, quiero registrar el comprobante de mi anticipo de pago para que el carpintero inicie la producción.        | 3            |
+| 40    | HU39          | Validación de anticipo por el carpintero        | Como carpintero, quiero validar el comprobante del anticipo para autorizar el inicio de la producción.                   | 3            |
+| 41    | HU44          | Generación de orden de compra al proveedor      | Como carpintero, quiero generar una orden de compra a un proveedor de madera para reponer el inventario.                 | 5            |
+| 42    | HU40          | Solicitud de pago final                         | Como carpintero, quiero emitir una solicitud de pago final al cliente cuando el mueble esté listo para entrega.          | 2            |
+| 43    | HU41          | Registro de comprobante de pago final           | Como cliente, quiero registrar el comprobante del pago final para coordinar la entrega de mi mueble.                     | 3            |
+| 44    | HU42          | Validación de pago final                        | Como carpintero, quiero validar el comprobante del pago final para autorizar la entrega del mueble.                      | 3            |
 
 
 # Capítulo IV: Product Design
