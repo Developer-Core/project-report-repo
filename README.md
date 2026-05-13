@@ -2639,13 +2639,26 @@ A continuación se muestra el tablero de Sprint Backlog 1 gestionado por el equi
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-En este primer Sprint hemos realizado la implementación de nuestra Landing Page y la configuración inicial de los repositorios, donde todo el equipo ha aportado mediante la gestión de ramas. En la siguiente tabla se muestran los commits realizados.
+En este primer Sprint el equipo implementó la landing page de WoodRoute aplicando el modelo de ramas GitFlow. Todo el trabajo se desarrolló sobre ramas `feature/*` que se integraron a `develop` mediante Pull Requests revisados. El repositorio público es <https://github.com/Developer-Core/landing-page-woodroute>. A continuación se listan los commits más representativos del sprint.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Developer-Core/WoodRoute-Landing | main | 15ad028 | Initial commit | Initial commit | 10/04/2026 |
-| Developer-Core/WoodRoute-Landing | main | 33ad2a9 | Actualización de index.html | Agregado de estilos principales y la vista de la propuesta de valor. | 12/04/2026 |
-| Developer-Core/WoodRoute-Landing | main | 3694000 | Configuración de assets y diagramas | Se incluyeron los diagramas y el esquema inicial en los assets. | 14/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 73dd9cd | chore: initialize project with Vite vanilla and Tailwind v4 | Inicialización del proyecto con Vite y Tailwind CSS v4. | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 51574a7 | style: design system tokens and base styles | Definición de los tokens del design system y estilos base de la landing. | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 585d8cb | feat: base html structure and main entry point | Estructura HTML base y punto de entrada principal de la aplicación. | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | ba30a0b | feat: i18n system with spanish and english translations | Sistema de internacionalización con traducciones en inglés y español (HU10). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 58a97d7 | feat: nav-bar with mobile menu and language switcher | Barra de navegación con menú móvil y selector de idioma (HU01, HU10). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 4306453 | feat: hero section with tagline, ctas and dashboard placeholder | Hero section con la propuesta de valor, CTAs principales y placeholder del dashboard (HU02, HU06). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | a9dbb74 | feat: features grid with 6 product capabilities | Grid de funcionalidades con las seis capacidades principales del producto (HU03). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | fb3e87e | feat: client tracking section with benefits list | Sección dedicada al seguimiento del cliente con lista de beneficios (HU03). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 971b660 | feat: how it works section with numbered steps | Sección "cómo funciona" con pasos numerados que explica el flujo de uso (HU04). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 1a6ccd8 | feat: pricing section with monthly/annual billing toggle | Sección de pricing con tarjetas comparativas y toggle de facturación mensual/anual (HU05). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 84e0774 | feat: cta banner section with primary and secondary actions | Banner de llamada a la acción con acciones primaria y secundaria (HU06). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 9601e99 | feat: footer with nav columns, social icons and copyright | Footer con columnas de navegación, íconos de redes sociales y copyright (HU11, HU12). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 65bb4fc | feat: faq accordion section with 5 questions in es and en | Sección de preguntas frecuentes tipo acordeón con cinco preguntas en inglés y español. | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 0743916 | feat: add team section with member photos | Sección del equipo con fotos de los integrantes del proyecto (HU07). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 4c25f30 | feat: add vercel.json with build config | Configuración de build para el despliegue automático en Vercel. | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | ce0388e | feat: update logo woodroute | Actualización del logo oficial de WoodRoute en la landing page. | 13/05/2026 |
 
 <div style="page-break-after: always;"></div>
 
