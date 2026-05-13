@@ -2374,6 +2374,62 @@ Esta sección documenta la gestión de configuración del software de WoodRoute,
 
 ### 5.1.1. Software Development Environment Configuration
 
+A continuación se listan los productos de software utilizados por el equipo a lo largo del ciclo de vida de WoodRoute, agrupados por tipo de actividad. Para cada producto se indica el propósito de uso en el proyecto y la ruta de referencia (SaaS) o de descarga (instalación local), respetando las restricciones de herramientas establecidas para el curso.
+
+#### Project Management
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia / descarga |
+| :--- | :--- | :--- |
+| Trello | Gestión del Product Backlog, planificación de sprints y seguimiento de tareas mediante tableros Kanban compartidos por el equipo. | <https://trello.com/> |
+| Discord | Canal principal de comunicación sincrónica del equipo: reuniones de daily, coordinación técnica y discusión de avances. | <https://discord.com/download> |
+| WhatsApp | Canal secundario de comunicación rápida y notificaciones del equipo. | <https://www.whatsapp.com/download> |
+
+#### Requirements Management
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia / descarga |
+| :--- | :--- | :--- |
+| Miro | Elaboración del Lean UX Canvas, Big Picture EventStorming, sesiones de needfinding y mapeo colaborativo de hipótesis y dominios. | <https://miro.com/> |
+
+#### Product UX/UI Design
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia / descarga |
+| :--- | :--- | :--- |
+| Figma | Diseño de wireframes, mockups y prototipos de alta fidelidad de la landing page y aplicaciones web. | <https://www.figma.com/> |
+| UXPressia | Construcción de User Personas, Empathy Maps, Journey Maps e Impact Mapping. | <https://uxpressia.com/> |
+| Lucidchart | Modelado de diagramas de flujo, sitemaps y artefactos de arquitectura de información. | <https://www.lucidchart.com/> |
+
+#### Software Development
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia / descarga |
+| :--- | :--- | :--- |
+| WebStorm | IDE principal del equipo para el desarrollo de la landing page y la SPA en Vue 3. | <https://www.jetbrains.com/webstorm/download/> |
+| Vue 3 | Framework JavaScript progresivo para la construcción de la landing page y de la Single Page Application. | <https://vuejs.org/> |
+| Vite | Build tool y dev server para el frontend en Vue 3, con HMR y bundling optimizado. | <https://vitejs.dev/> |
+| Node.js | Runtime de JavaScript necesario para ejecutar Vite, gestores de paquetes y herramientas de tooling del frontend. | <https://nodejs.org/en/download> |
+| .NET 10 SDK | Plataforma de desarrollo para los servicios backend de WoodRoute siguiendo la arquitectura DDD definida en el capítulo IV. | <https://dotnet.microsoft.com/en-us/download/dotnet/10.0> |
+| PostgreSQL | Motor de base de datos relacional ejecutado localmente para soportar la persistencia de los bounded contexts durante el desarrollo. | <https://www.postgresql.org/download/> |
+| Swagger / OpenAPI | Documentación y prueba interactiva de los endpoints REST expuestos por los servicios backend. | <https://swagger.io/> |
+| Git | Sistema de control de versiones distribuido utilizado para el versionado del código fuente y del informe. | <https://git-scm.com/downloads> |
+| Git Flow (extensión) | Extensión de Git que implementa el modelo de ramas definido en CLAUDE.md (main, develop, feature, release, hotfix). | <https://github.com/nvie/gitflow> |
+| GitHub | Hosting remoto de los repositorios del equipo, gestión de Pull Requests y revisión de código. | <https://github.com/> |
+
+#### Software Deployment
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia / descarga |
+| :--- | :--- | :--- |
+| Vercel | Plataforma de despliegue continuo de la landing page y de la aplicación frontend en Vue 3, con previews automáticos por rama. | <https://vercel.com/> |
+
+#### Software Documentation
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia / descarga |
+| :--- | :--- | :--- |
+| Visual Studio Code | Editor utilizado para la redacción del informe en Markdown y la edición de archivos de configuración. | <https://code.visualstudio.com/Download> |
+| Markdown PDF (extensión) | Extensión de VS Code utilizada para exportar el informe Markdown al formato PDF requerido por la entrega UPC. | <https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf> |
+| PlantUML | Generación de diagramas de clases y de base de datos como código, versionados junto al repositorio. | <https://plantuml.com/> |
+| Structurizr | Modelado de diagramas C4 (Contexto, Contenedores y Componentes) para documentar la arquitectura del producto. | <https://structurizr.com/> |
+| Google Drive | Almacenamiento y compartición de grabaciones de entrevistas, evidencias de needfinding y materiales de apoyo. | <https://drive.google.com/> |
+| Google Meet | Plataforma de videoconferencia para sprint planning, sprint review, retrospectivas y entrevistas a usuarios. | <https://meet.google.com/> |
+
 ## 5.2. Landing Page, Services & Applications Implementation
 
 ### 5.2.1. Sprint 1
