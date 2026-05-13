@@ -2551,6 +2551,38 @@ Las guías oficiales adoptadas como base de estas convenciones están detalladas
 - Microsoft ASP.NET Core Coding Guidelines.
 - PostgreSQL Naming Conventions.
 
+### 5.1.4. Software Deployment Configuration
+
+En esta sección se documentan las herramientas y procesos adoptados por el equipo para el despliegue de los componentes de WoodRoute: la landing page, la aplicación frontend y los servicios backend. El objetivo es contar con un flujo de publicación automatizado, reproducible y trazable a lo largo de los sprints.
+
+#### Landing Page y Frontend: Vercel
+
+Para el despliegue de la landing page y de la aplicación frontend en Vue 3 se utiliza **Vercel**, una plataforma especializada en el hosting de aplicaciones web modernas. Vercel se integra de forma nativa con GitHub, lo que habilita despliegues automáticos cada vez que se realiza un push a la rama configurada del repositorio, además de generar previews por cada Pull Request. A continuación se describe el flujo seguido por el equipo:
+
+**Paso 1: Conectar con Vercel.**
+
+El equipo accede a la plataforma de Vercel e inicia el flujo de creación de un nuevo proyecto, autorizando previamente la integración con la cuenta de GitHub de la organización.
+
+<div align="center">
+  <img src="assets/deployment/vercel-step-1-connect.png" alt="Acceso inicial a Vercel para crear un nuevo proyecto" width="100%">
+</div>
+
+**Paso 2: Importar el repositorio desde GitHub.**
+
+Desde la sección *Import Git Repository* se selecciona la organización **Developer-Core** y se importa el repositorio correspondiente a la landing page o a la aplicación frontend.
+
+<div align="center">
+  <img src="assets/deployment/vercel-step-2-import-repo.png" alt="Importación del repositorio desde la organización Developer-Core" width="100%">
+</div>
+
+**Paso 3: Desplegar la aplicación.**
+
+Se selecciona la rama a desplegar, el *Application Preset* (Vite para Vue 3), el *Root Directory*, los *Build and Output Settings* y las *Environment Variables* necesarias para producción. Al presionar el botón **Deploy**, Vercel ejecuta el build, publica el sitio y entrega la URL pública del entorno.
+
+<div align="center">
+  <img src="assets/deployment/vercel-step-3-deploy.png" alt="Despliegue del proyecto en Vercel" width="100%">
+</div>
+
 ## 5.2. Landing Page, Services & Applications Implementation
 
 ### 5.2.1. Sprint 1
