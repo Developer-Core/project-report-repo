@@ -378,7 +378,7 @@ Aquí se presenta el Lean UX Canvas desarrollado para **WoodRoute**:
 **Figura 1. Lean UX Canvas de WoodRoute**
 
 <div align="center">
-  <img src="assets/lean-ux-canvas.png" alt="Lean UX Canvas de WoodRoute" width="100%">
+  <img src="assets/lean-ux-canvas.jpg" alt="Lean UX Canvas de WoodRoute" width="100%">
 </div>
 
 **Enlace al Lean UX Canvas:** https://miro.com/app/board/uXjVHUJnMJM=/?share_link_id=898353122563
