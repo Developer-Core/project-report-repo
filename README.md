@@ -2467,6 +2467,90 @@ Se emplea **Semantic Versioning (SemVer 2.0.0)** con el formato `MAJOR.MINOR.PAT
 
 Todas las integraciones hacia `develop` o `main` requieren la creación de un **Pull Request** revisado y aprobado por al menos un miembro del equipo. No se permiten commits directos a `develop` ni a `main`, y las ramas `feature/*` nunca interactúan directamente con `main`: siempre lo hacen a través de `develop`.
 
+### 5.1.3. Source Code Style Guide & Coding Conventions
+
+El equipo adopta convenciones estándares y reconocidas internacionalmente para los lenguajes utilizados en WoodRoute: **JavaScript** y **Vue 3** en el frontend, **C# / .NET 10** en el backend y **SQL** sobre PostgreSQL para la persistencia. Toda la nomenclatura del código —identificadores, archivos, tablas y columnas— se escribe en **inglés**, garantizando coherencia y legibilidad para cualquier desarrollador.
+
+Como herramienta de soporte se utiliza **Prettier** para el formateo automático del código fuente del frontend, asegurando un estilo consistente entre los miembros del equipo. Actualmente no se ha configurado un linter dedicado; su incorporación queda como mejora planificada para sprints posteriores.
+
+#### JavaScript y Vue 3
+
+Para el código del frontend (landing page y SPA) se adoptan las guías oficiales de **Vue.js** y **Google JavaScript Style Guide**, complementadas con las **MDN JavaScript Guidelines** como referencia normativa.
+
+| Elemento | Convención | Ejemplo |
+| :--- | :--- | :--- |
+| Variables y funciones | `camelCase` | `orderTotal`, `calculateMaterials()` |
+| Constantes globales | `UPPER_SNAKE_CASE` | `MAX_RETRY_COUNT` |
+| Componentes Vue (en código) | `PascalCase` | `OrderSummary`, `MaterialPicker` |
+| Archivos de componentes SFC | `kebab-case` | `order-summary.vue`, `material-picker.vue` |
+| Archivos de utilidades y composables | `kebab-case` | `use-order-state.js`, `format-currency.js` |
+| Props y eventos personalizados | `camelCase` en JS, `kebab-case` en template | `:order-id`, `@order-submitted` |
+| Indentación | 2 espacios | — |
+| Comillas | Comillas simples (`'`) en JS, dobles (`"`) en templates | — |
+| Punto y coma | Obligatorio al final de cada sentencia | — |
+
+**Reglas clave de la Vue Style Guide (Priority A):**
+
+- Nombres de componentes con varias palabras para evitar colisiones con elementos HTML nativos.
+- Definiciones de `data` como función (`data() { return { ... } }`) en componentes reutilizables.
+- Tipado explícito de `props` con validación (tipo, requerido, valor por defecto).
+- Uso de `key` en bucles `v-for`.
+- Evitar `v-if` y `v-for` sobre el mismo elemento.
+
+#### C# y .NET 10
+
+Para el código del backend se adoptan las **Microsoft C# Coding Conventions** y las **ASP.NET Core Coding Guidelines** oficiales.
+
+| Elemento | Convención | Ejemplo |
+| :--- | :--- | :--- |
+| Clases, structs, records, enums | `PascalCase` | `OrderService`, `MaterialEstimate` |
+| Métodos y propiedades públicas | `PascalCase` | `CalculateTotal()`, `OrderId` |
+| Parámetros y variables locales | `camelCase` | `orderId`, `customerName` |
+| Campos privados | `_camelCase` con guion bajo | `_orderRepository` |
+| Interfaces | Prefijo `I` + `PascalCase` | `IOrderRepository`, `IUnitOfWork` |
+| Constantes | `PascalCase` | `MaxRetryCount` |
+| Archivos | `PascalCase` coincidente con el tipo principal | `OrderService.cs` |
+| Indentación | 4 espacios | — |
+| Llaves | En línea nueva (estilo Allman) | — |
+
+**Reglas clave adoptadas:**
+
+- Uso de `var` solo cuando el tipo es evidente desde el contexto.
+- `async`/`await` para toda operación I/O, con sufijo `Async` en métodos asíncronos (`GetOrderAsync`).
+- Una clase pública por archivo, con el archivo nombrado igual que la clase.
+- Organización del proyecto según los bounded contexts y capas DDD definidas en el capítulo IV (Domain, Application, Infrastructure, Presentation).
+
+#### SQL (PostgreSQL)
+
+Para la base de datos relacional se adoptan las convenciones recomendadas por la comunidad **PostgreSQL**, alineadas con el Database Design del capítulo IV.
+
+| Elemento | Convención | Ejemplo |
+| :--- | :--- | :--- |
+| Tablas | `snake_case` plural | `orders`, `material_estimates` |
+| Columnas | `snake_case` | `customer_id`, `created_at` |
+| Claves primarias | `id` (entero o UUID) | `id` |
+| Claves foráneas | `<tabla_singular>_id` | `order_id`, `customer_id` |
+| Índices | `idx_<tabla>_<columnas>` | `idx_orders_customer_id` |
+| Restricciones | `<tipo>_<tabla>_<columna>` | `fk_orders_customer_id` |
+| Palabras reservadas SQL | `UPPERCASE` | `SELECT`, `FROM`, `WHERE` |
+
+**Reglas clave adoptadas:**
+
+- Toda tabla incluye columnas de auditoría `created_at` y `updated_at` con tipo `timestamptz`.
+- Las claves foráneas declaran explícitamente su política `ON DELETE` y `ON UPDATE`.
+- Identificadores en inglés y sin abreviaturas ambiguas.
+
+#### Referencias normativas
+
+Las guías oficiales adoptadas como base de estas convenciones están detalladas en la sección de Referencias del informe e incluyen:
+
+- Vue Style Guide (oficial).
+- Google JavaScript Style Guide.
+- MDN JavaScript Guidelines.
+- Microsoft C# Coding Conventions.
+- Microsoft ASP.NET Core Coding Guidelines.
+- PostgreSQL Naming Conventions.
+
 ## 5.2. Landing Page, Services & Applications Implementation
 
 ### 5.2.1. Sprint 1
