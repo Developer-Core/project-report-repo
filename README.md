@@ -908,7 +908,7 @@ EP06    Estimación de Costos y Tiempos de Fabricación <br>
 EP07    Comunicación y Transparencia con el Cliente <br><br>
 
 
-| Epic | titulo | descripcion |Criterios de Aceptacion|Relacionado con Epic ID|
+| Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
 |------|--------|-------------|-------------|-------------|
 | HU01 | Descarga de la aplicación | Como visitante, quiero acceder a enlaces de descarga para instalar la aplicación en mi dispositivo. | **Escenario 1: Descarga exitosa de la aplicación** <br> _Dado_ que el usuario se encuentra en la landing page <br> _Cuando_ selecciona el botón de descarga correspondiente a su dispositivo <br> _Entonces_ el sistema redirige a la tienda de aplicaciones correspondiente <br> _Y_ permite iniciar la descarga de la aplicación | EP01 |
 | HU02 | Visualización de información de la plataforma | Como visitante, quiero ver información clara sobre WoodRoute para entender sus beneficios y funcionamiento. | **Escenario 1: Visualización de información en la landing page** <br> _Dado_ que el usuario accede a la landing page <br> _Cuando_ navega por las secciones informativas <br> _Entonces_ el sistema muestra contenido sobre funcionalidades, beneficios y uso de la plataforma <br> _Y_ presenta la información de manera clara y estructurada | EP01 |
