@@ -2694,6 +2694,10 @@ A continuación se presentan las capturas de las principales vistas implementada
   <img src="assets/sprint-1-execution/landing-team.png" alt="Sección Nuestro Equipo con los integrantes de WoodRoute" width="100%">
 </div>
 
+#### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+No disponemos de documentación de servicios como evidencia, ya que en el primer sprint nuestro enfoque se centró en la elaboración de la landing page. La documentación de los Web Services del backend será incorporada en los sprints posteriores, cuando inicie la implementación de los servicios bajo la arquitectura por bounded contexts definida en el capítulo IV.
+
 <div style="page-break-after: always;"></div>
 
 # Bibliografía
