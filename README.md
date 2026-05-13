@@ -1018,6 +1018,14 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
 | 42    | HU42          | Validación de pago final                        | Como carpintero, quiero validar el comprobante del pago final para autorizar la entrega del mueble.                      | 3            |
 | 43    | HU08          | Conocer el producto a través de un video          | Como visitante, quiero ver un video que presente el producto y sus características.                                        | 2            |
 | 44    | HU09          | Conocer el proceso del equipo a través de un video| Como visitante, quiero ver un video que muestre al equipo y su proceso de trabajo.                                         | 2            |
+| 45    | TS01          | Endpoint de autenticación de usuarios             | Como Developer, quiero exponer un endpoint `POST /auth/login` que valide credenciales y devuelva un token JWT.             | 2            |
+| 46    | TS02          | Endpoints REST de gestión de pedidos              | Como Developer, quiero exponer endpoints REST `/orders` para crear, listar y consultar pedidos desde la Web Application.   | 5            |
+| 47    | TS03          | Endpoint de actualización de etapa de producción  | Como Developer, quiero exponer `PATCH /orders/{orderId}/stages/{stageId}` para actualizar el estado de cada etapa.         | 3            |
+| 48    | TS04          | API CRUD de inventario                            | Como Developer, quiero exponer endpoints REST `/inventory` para gestionar registro y actualización de materiales.          | 5            |
+| 49    | TS05          | Endpoint de validación de viabilidad de pedido    | Como Developer, quiero exponer `POST /orders/{orderId}/feasibility` que valide inventario y capacidad del taller.          | 3            |
+| 50    | TS06          | Endpoint público de seguimiento de pedido         | Como Developer, quiero exponer un endpoint público `GET /tracking/{publicTrackingId}` sin autenticación.                   | 2            |
+| 51    | TS07          | Endpoints REST de mensajería por pedido           | Como Developer, quiero exponer endpoints REST `/orders/{orderId}/messages` para intercambio de mensajes.                   | 3            |
+| 52    | TS08          | Endpoint de cálculo de costos y tiempos           | Como Developer, quiero exponer `POST /orders/{orderId}/estimate` que calcule costos y tiempos totales del pedido.          | 3            |
 
 
 # Capítulo IV: Product Design
