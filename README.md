@@ -968,10 +968,18 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
 
 
 ## 3.2. Impact Mapping
-<img src="assets/impact-mapping.png">
+
+A continuación se visualiza el Impact Map del proyecto WoodRoute, donde se muestra la relación entre el Business Goal definido, los User Personas identificados, los Impactos esperados en su comportamiento, los Deliverables que como negocio digital podemos ofrecer y las User Stories asociadas que permitirán implementar las funcionalidades necesarias en la aplicación web y la landing page. Este mapa busca asegurar la alineación entre los objetivos estratégicos y el desarrollo de la solución digital.
+
+<div align="center">
+  <img src="assets/impact-mapping.png" alt="Impact Map de WoodRoute" width="100%">
+</div>
 
 
 ## 3.3. Product Backlog
+
+El Product Backlog se elabora a continuación, listando cada User Story con su orden de prioridad, identificador, título, descripción y Story Points. Posteriormente se presenta el enlace público y la captura del board en Trello, herramienta utilizada por el equipo para la gestión colaborativa del backlog.
+
 | Orden | User Story ID | Título                                          | Descripción                                                                                                              | Story Points |
 | ----- | ------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------ |
 | 1     | HU01          | Navegación clara dentro de la landing             | Como visitante, quiero navegar de forma rápida y clara por las distintas partes de la landing para encontrar lo que busco. | 1            |
@@ -1026,6 +1034,12 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
 | 50    | TS08          | Endpoint de cálculo de costos y tiempos           | Como Developer, quiero exponer `POST /orders/{orderId}/estimate` que calcule costos y tiempos totales del pedido.          | 3            |
 | 51    | HU08          | Conocer el producto a través de un video          | Como visitante, quiero ver un video que presente el producto y sus características.                                        | 2            |
 | 52    | HU09          | Conocer el proceso del equipo a través de un video| Como visitante, quiero ver un video que muestre al equipo y su proceso de trabajo.                                         | 2            |
+
+**Enlace público al Product Backlog:** <https://trello.com/b/8CdOWxGE/woodroute>
+
+<div align="center">
+  <img src="assets/product-backlog.png" alt="Product Backlog de WoodRoute en Trello" width="100%">
+</div>
 
 
 # Capítulo IV: Product Design
