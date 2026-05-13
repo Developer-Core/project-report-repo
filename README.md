@@ -594,7 +594,7 @@ En esta sección evaluamos los competidores de nuestro nicho.
 </div>
 
 **Resumen de la entrevista:** 
-La entrevista realizada a un Maestro de carpintería independiente, menciona que la gestión de pedidos se realiza principalmente mediante WhatsApp y anotaciones manuales en un cuaderno. El calcula cuanto materiales y el tiempo que tomara hacer el mueble, se basa en la experiencia de años en el rubro. Tambien menciona que aveces compra se le escapa y compra una pieza menos o mas de material. Además, la comunicación se hace mediante fotos por WhatsApp. El entrevistado considera que si le seria util una herramienta que le ayude hacer todo lo mencionada anteriormente.
+La entrevista realizada a un maestro de carpintería independiente evidencia que la gestión de pedidos se realiza principalmente mediante WhatsApp y anotaciones manuales en un cuaderno. Él calcula la cantidad de material y el tiempo que tomará hacer el mueble basándose en su experiencia de años en el rubro. También menciona que a veces se le escapa y compra una pieza de más o de menos de material. Además, la comunicación con el cliente se hace mediante fotos por WhatsApp. El entrevistado considera que sí le sería útil una herramienta que le ayude a hacer todo lo mencionado anteriormente.
 
 **Entrevista 2**
 
@@ -609,7 +609,7 @@ La entrevista realizada a un Maestro de carpintería independiente, menciona que
 </div>
 
 **Resumen de la entrevista:** 
-La entrevista realizada a un ayudante de carpintería evidencio que la gestión de pedidos se realiza principalmente mediante WhatsApp y anotaciones manuales, sin el uso de herramientas digitales especializadas. Las decisiones sobre materiales y tiempos se basan en la experiencia del maestro. MEnciona que algunas veces hay retrasos por falta de material al hacer un mal calculo y problemas como falta de stock durante la producción. Además, la comunicación con los clientes que solicitan actualizaciones se hace mediante fotos por WhatsApp. En este contexto, el entrevistado considero que una aplicación que apoye en la planificación, cálculo de materiales y estimación de tiempos sería de gran utilidad para mejorar la organización y eficiencia del trabajo.
+La entrevista realizada a un ayudante de carpintería evidenció que la gestión de pedidos se realiza principalmente mediante WhatsApp y anotaciones manuales, sin el uso de herramientas digitales especializadas. Las decisiones sobre materiales y tiempos se basan en la experiencia del maestro. Menciona que algunas veces hay retrasos por falta de material al hacer un mal cálculo y problemas como falta de stock durante la producción. Además, la comunicación con los clientes que solicitan actualizaciones se hace mediante fotos por WhatsApp. En este contexto, el entrevistado considero que una aplicación que apoye en la planificación, cálculo de materiales y estimación de tiempos sería de gran utilidad para mejorar la organización y eficiencia del trabajo.
 
 **Entrevista 3**
 
@@ -679,7 +679,7 @@ Joseph Rodriguez, estudiante de Ingeniería de Software de 21 años, relató ser
 
 **Resumen de la entrevista:**
 
-En la tercera entrevista, el cliente Renzo Baldeón comenta que, durante la elaboración de su ropero, tuvo varios inconvenientes que afectaron su experiencia. Señala que los tiempos de respuesta fueron lentos, lo que generó demoras en la entrega, además de una comunicación deficiente con el proveedor a lo largo del proceso. Esta falta de información le causó incertidumbre sobre el estado de su pedido.Asimismo, menciona que le gustaría contar con una forma de visualizar el avance de sus encargos y tener un contacto más directo con el carpintero para resolver dudas o coordinar detalles. Finalmente, indica que estaría dispuesto a pagar un poco más por una aplicación que le permita solucionar estos problemas y mejorar la experiencia del servicio.
+En la tercera entrevista, el cliente Renzo Baldeón comenta que, durante la elaboración de su ropero, tuvo varios inconvenientes que afectaron su experiencia. Señala que los tiempos de respuesta fueron lentos, lo que generó demoras en la entrega, además de una comunicación deficiente con el proveedor a lo largo del proceso. Esta falta de información le causó incertidumbre sobre el estado de su pedido. Asimismo, menciona que le gustaría contar con una forma de visualizar el avance de sus encargos y tener un contacto más directo con el carpintero para resolver dudas o coordinar detalles. Finalmente, indica que estaría dispuesto a pagar un poco más por una aplicación que le permita solucionar estos problemas y mejorar la experiencia del servicio.
 
 
 ### 2.2.3. Análisis de entrevistas
