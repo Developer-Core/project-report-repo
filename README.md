@@ -1396,7 +1396,7 @@ El Product Backlog se elabora a continuación, listando cada User Story con su o
       <td>HU06</td>
       <td>Empezar a usar la plataforma desde la landing</td>
       <td>Como visitante (carpintero o cliente), quiero empezar a usar la plataforma desde la landing según mi rol.</td>
-      <td>3</td>
+      <td>1</td>
     </tr>
     <tr>
       <td>10</td>
@@ -2603,8 +2603,8 @@ En este primer sprint se desarrolló la landing page y la documentación inicial
 | **Sprint 1 Retrospective Summary** | Los miembros del equipo coincidieron en que la colaboración fue fluida gracias a la correcta asignación de roles. Se destacó la sinergia entre el diseño en Figma y la configuración inicial de los repositorios. Para el siguiente sprint, se identificó la oportunidad de mejorar la estimación de tiempos de desarrollo al iniciar la integración del backend. |
 | **Sprint Goal & User Stories** | |
 | **Sprint 1 Goal** | Nos enfocamos en entregar una primera versión de la landing page desplegada y la documentación de los primeros capítulos del informe. Creemos que esto entrega una propuesta de valor validada para atraer a nuestro segmento objetivo. Esto se confirmará cuando la web esté pública y el informe sea aprobado. |
-| **Sprint 1 Velocity** | 20 |
-| **Sum of Story Points** | 20 |
+| **Sprint 1 Velocity** | 14 |
+| **Sum of Story Points** | 14 |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
@@ -2618,15 +2618,24 @@ En este primer sprint se desarrolló la landing page y la documentación inicial
 
 #### 5.2.1.3. Sprint Backlog 1
 
-| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation | Assigned To | Status |
+| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation (SP) | Assigned To | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| US-LP01 | Landing Page – Estructura inicial | T01 | Maquetado HTML base | Construcción de la estructura inicial: header, hero section y footer. | 8h | Piero Sulca | Done |
-| US-LP02 | Landing Page – Diseño visual | T02 | Aplicación de estilos CSS | Implementación de estilos visuales según el manual de marca. | 10h | Piero Sulca | Done |
-| US-LP03 | Arquitectura y Entorno | T03 | Configuración del proyecto | Creación de repositorios y definición de la arquitectura base. | 4h | Juan David Saldaña | Done |
-| US-LP04 | Contenido estratégico UX | T04 | User Personas & Journey Maps | Creación de perfiles de usuarios y Lean UX Canvas. | 6h | Alexander Justo | Done |
-| US-LP05 | Diagramas de Arquitectura | T05 | Definición de C4 Model | Diseño de arquitectura Context y Container Diagrams. | 5h | Juan David Saldaña | Done |
-| US-LP06 | Despliegue de la web | T06 | Configuración de Hosting | Publicación del sitio estático en GitHub Pages. | 4h | Dalila Torres | Done |
-| US-INF01 | Documentación del informe | T07 | Redacción Capítulos Iniciales | Startup Profile, UX Research y estructura del informe. | 10h | Equipo Completo | Done |
+| HU01 | Navegación clara dentro de la landing | T01 | Maquetado de header y footer | Construcción del header con navegación y del footer con enlaces principales. | 1 | Piero Sulca | Done |
+| HU02 | Entender la propuesta de valor de WoodRoute | T02 | Hero section con propuesta de valor | Diseño y desarrollo del hero section con la propuesta de valor del SaaS. | 2 | Piero Sulca | Done |
+| HU03 | Conocer las funcionalidades del producto | T03 | Sección de funcionalidades | Implementación de la sección que resalta las funcionalidades principales del producto. | 1 | Piero Sulca | Done |
+| HU04 | Comprender cómo se usa el producto | T04 | Sección de flujo de uso | Sección visual que explica el flujo de uso de WoodRoute para visitantes. | 1 | Anderson Gonza | Done |
+| HU05 | Conocer los planes y precios disponibles | T05 | Sección de pricing | Construcción de la sección de planes y precios con tarjetas comparativas. | 2 | Dalila Torres | Done |
+| HU07 | Conocer al equipo detrás del producto | T06 | Sección del equipo | Sección con los integrantes del equipo y sus roles. | 1 | Alexander Justo | Done |
+| HU12 | Seguir a WoodRoute en redes sociales | T07 | Íconos de redes sociales en el footer | Inclusión de íconos enlazados a las redes sociales oficiales en el footer. | 1 | Anderson Gonza | Done |
+| HU11 | Conocer los términos y condiciones del servicio | T08 | Enlace a términos y condiciones | Inclusión del enlace a términos y condiciones en el footer de la landing. | 1 | Dalila Torres | Done |
+| HU06 | Empezar a usar la plataforma desde la landing | T09 | CTAs de registro y acceso | Implementación de los botones de llamada a la acción para iniciar registro como carpintero o cliente. | 1 | Juan David Saldaña | Done |
+| HU10 | Leer la landing en mi idioma preferido | T10 | Implementación de internacionalización (i18n) | Configuración de i18n con soporte de inglés por defecto y traducción al español de los textos de la landing. | 3 | Dalila Torres | Done |
+
+A continuación se muestra el tablero de Sprint Backlog 1 gestionado por el equipo en Trello, con las tareas distribuidas en sus respectivos estados (To do, In progress, To review y Done) al cierre del sprint.
+
+<div align="center">
+  <img src="assets/sprint-1.png" alt="Sprint Backlog 1 en Trello" width="100%">
+</div>
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
