@@ -116,6 +116,10 @@ Mayo 2026
         - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
     - [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
         - [4.6.1. Design Level Event Storming](#461-design-level-event-storming)
+    - [4.7. Software Object-Oriented Design](#47-software-object-oriented-design)
+        - [4.7.1. Class Diagrams](#471-class-diagrams)
+    - [4.8. Database Design](#48-database-design)
+        - [4.8.1. Database Diagrams](#481-database-diagrams)
 - [Capítulo V: Product Implementation, Validation & Deployment](#capítulo-v-product-implementation-validation--deployment)
     - [5.1. Software Configuration Management](#51-software-configuration-management)
     - [5.2. Landing Page, Services & Applications Implementation](#52-landing-page-services--applications-implementation)
@@ -2296,6 +2300,68 @@ Esta sección presenta los Component Diagrams por cada bounded context del API A
 
 <div align="center">
   <img src="assets/architecture/component-diagram-comunication.png" alt="Components of Seguimiento y Comunicación Context" width="100%">
+</div>
+
+<div style="page-break-after: always;"></div>
+
+## 4.7. Software Object-Oriented Design
+
+Esta sección presenta el Class Diagram UML del producto Web Application de WoodRoute por cada bounded context. Cada diagrama se organiza en cuatro capas siguiendo Domain-Driven Design: Domain, Infrastructure, Application y Presentation. La herramienta utilizada es PlantUML.
+
+### 4.7.1. Class Diagrams
+
+**Class Diagram of Onboarding Context**
+
+Modela el registro, inicio de sesión y gestión de perfil. La entidad raíz `User` se asocia uno a uno con `Profile` y emite `AuthSession` durante el login.
+
+<div align="center">
+  <img src="assets/architecture/class-diagram-onboarding.png" alt="Class Diagram of Onboarding Context" width="100%">
+</div>
+
+**Class Diagram of Inventario Context**
+
+Modela la gestión de materiales, control de stock y órdenes de compra al proveedor. `Material` mantiene una relación uno-a-muchos con `PurchaseOrder` y emite `StockAlert` cuando baja del mínimo.
+
+<div align="center">
+  <img src="assets/architecture/class-diagram-inventario.png" alt="Class Diagram of Inventario Context" width="100%">
+</div>
+
+**Class Diagram of Cotización y Venta Context**
+
+Modela el ciclo de pedidos, cotizaciones y pagos. `Order` agrupa `FurnitureDetails`, su `Quote` con desglose por `QuoteItem`, y los `Payment` de anticipo y saldo final.
+
+<div align="center">
+  <img src="assets/architecture/class-diagram-sales.png" alt="Class Diagram of Cotización y Venta Context" width="100%">
+</div>
+
+**Class Diagram of Producción Context**
+
+Modela la planificación de etapas, el registro de avance y el consumo de materiales. `ManufactureOrder` se compone de `Stage` con sus `StagePhoto` y registra `MaterialConsumption`.
+
+<div align="center">
+  <img src="assets/architecture/class-diagram-production.png" alt="Class Diagram of Producción Context" width="100%">
+</div>
+
+**Class Diagram of Seguimiento y Comunicación Context**
+
+Modela la mensajería, reseñas, encuestas post-entrega y el read-model público de seguimiento. `Conversation` agrupa los `Message` intercambiados y, opcionalmente, `Review` y `Survey`.
+
+<div align="center">
+  <img src="assets/architecture/class-diagram-comunication.png" alt="Class Diagram of Seguimiento y Comunicación Context" width="100%">
+</div>
+
+<div style="page-break-after: always;"></div>
+
+## 4.8. Database Design
+
+Esta sección presenta el Database Diagram de WoodRoute por cada bounded context, materializando la persistencia del Class Diagram sobre PostgreSQL. La herramienta utilizada es PlantUML con notación crow's foot.
+
+### 4.8.1. Database Diagrams
+
+Diagrama relacional consolidado de WoodRoute. Las tablas se agrupan visualmente por bounded context y se evidencian las relaciones intra-contexto junto con los Foreign Keys cruzados que materializan las dependencias entre agregados del modelo de dominio.
+
+<div align="center">
+  <img src="assets/architecture/database-diagram.png" alt="WoodRoute Database Diagram" width="100%">
 </div>
 
 <div style="page-break-after: always;"></div>
