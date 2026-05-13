@@ -303,7 +303,7 @@ El Lean UX Process es una metodología ágil centrada en la colaboración, la ex
 - **Domain:** Gestión operativa de talleres de carpintería dedicados a la fabricación de muebles personalizados bajo pedido.
 - **Customer Segments:** Carpinteros independientes y pequeños talleres con baja digitalización, ubicados principalmente en zonas urbanas de Lima Metropolitana.
 - **Pain Points:** Cálculo manual y propenso a errores de materiales, estimaciones imprecisas de tiempos de entrega, desorganización en la recepción de pedidos, control de inventario empírico y comunicación reactiva con los clientes a través de WhatsApp.
-- **Gap:** Las herramientas existentes son genéricas (ERPs grandes u hojas de cálculo) y no se adaptan al flujo de trabajo ni al lenguaje del rubro de la carpintería; las MYPE rechazan adoptarlas por su complejidad y costo.
+- **Gap:** Las herramientas existentes son genéricas (ERPs grandes u hojas de cálculo) y no se adaptan al flujo de trabajo ni al lenguaje del rubro de la carpintería. Las MYPE rechazan adoptarlas por su complejidad y costo.
 - **Vision / Strategy:** Ofrecer una plataforma web especializada que integre gestión de pedidos, asistente de viabilidad, estimación de tiempos y control simple de inventario, priorizando una experiencia minimalista alineada con el flujo real del taller.
 - **Initial Segment:** Talleres independientes urbanos en Lima Metropolitana, de 1 a 5 trabajadores, con uso activo de smartphone y disposición a probar herramientas digitales.
 
@@ -1738,7 +1738,7 @@ WoodRoute habla de carpintero a carpintero. No usa lenguaje corporativo ni tecni
 |---|---|---|
 | Divertido / Serio | 65% Serio | El producto resuelve problemas reales de negocio. El tono es directo y profesional, sin exceso de formalidad. |
 | Formal / Casual | 60% Casual | Habla al carpintero como a un igual, sin jerarquía corporativa. Directo y accesible. |
-| Respetuoso / Irreverente | 80% Respetuoso | Respeto profundo por el oficio. El carpintero es el experto; WoodRoute es su asistente. |
+| Respetuoso / Irreverente | 80% Respetuoso | Respeto profundo por el oficio. El carpintero es el experto. WoodRoute es su asistente. |
 | Entusiasta / Sereno | 55% Sereno | Confianza tranquila. Los resultados hablan por sí solos, sin signos de exclamación vacíos. |
 
 Las reglas de lenguaje derivadas de este posicionamiento son:
@@ -1902,7 +1902,7 @@ Los patrones responsive principales que aplican a la landing y la web app son:
 
 ## 4.2. Information Architecture
 
-Las decisiones de arquitectura de información de WoodRoute están orientadas a tres experiencias distintas con objetivos complementarios: la landing page, enfocada en convertir visitantes en usuarios; la aplicación web autenticada, donde carpinteros y clientes operan el flujo completo del pedido; y la vista pública de seguimiento, donde un cliente consulta el avance de su mueble sin necesidad de registro mediante un `publicTrackingId`. En las tres superficies el principio rector es el mismo: el usuario encuentra lo que necesita sin esfuerzo y sin necesidad de instrucción.
+Las decisiones de arquitectura de información de WoodRoute están orientadas a tres experiencias distintas con objetivos complementarios: la landing page, enfocada en convertir visitantes en usuarios. La aplicación web autenticada, donde carpinteros y clientes operan el flujo completo del pedido, y la vista pública de seguimiento, donde un cliente consulta el avance de su mueble sin necesidad de registro mediante un `publicTrackingId`. En las tres superficies el principio rector es el mismo: el usuario encuentra lo que necesita sin esfuerzo y sin necesidad de instrucción.
 
 ### 4.2.1. Organization Systems
 
@@ -1927,7 +1927,7 @@ La aplicación organiza el contenido **por tópicos funcionales** que mapean dir
 | Mensajería | Comunicación por pedido entre carpintero y cliente | EP07 | Carpintero y cliente |
 | Configuración | Datos del taller, perfil y preferencias | EP02 | Cada usuario sobre sí mismo |
 
-La organización **por audiencia** se aplica en el control de acceso y en la composición de cada vista. El carpintero tiene capacidades de escritura sobre Pedidos (aceptar/rechazar), Producción (definir y actualizar etapas), Inventario completo y validación de pagos. El cliente tiene capacidades de escritura sobre creación y modificación de su pedido, aceptación del presupuesto y registro de comprobantes de pago; y lectura sobre el progreso de producción y la mensajería del pedido. La selección de rol ocurre en el registro (HU16) y condiciona qué módulos y acciones se exponen al usuario.
+La organización **por audiencia** se aplica en el control de acceso y en la composición de cada vista. El carpintero tiene capacidades de escritura sobre Pedidos (aceptar/rechazar), Producción (definir y actualizar etapas), Inventario completo y validación de pagos. El cliente tiene capacidades de escritura sobre creación y modificación de su pedido, aceptación del presupuesto y registro de comprobantes de pago, y lectura sobre el progreso de producción y la mensajería del pedido. La selección de rol ocurre en el registro (HU16) y condiciona qué módulos y acciones se exponen al usuario.
 
 Dentro de los listados (pedidos, materiales, presupuestos), el contenido se organiza de forma **cronológica inversa** por defecto: los elementos más recientes aparecen primero, reflejando el flujo natural de trabajo donde primero se atienden los pedidos activos antes que los históricos.
 
@@ -2016,7 +2016,7 @@ Cada etapa tiene además un estado interno: `pendiente`, `en progreso` y `comple
 
 ### 4.2.3. SEO Tags and Meta Tags
 
-La landing page es bilingüe (HU10): el idioma por defecto es inglés y el visitante puede cambiar a español manteniendo la preferencia durante la navegación. Por eso los metatags principales se declaran en inglés y se sirven variantes en español mediante `hreflang`. Solo la landing está indexada; tanto la aplicación autenticada como la vista pública de seguimiento usan `noindex, nofollow` por tratarse de contenido privado o de acceso por enlace único.
+La landing page es bilingüe (HU10): el idioma por defecto es inglés y el visitante puede cambiar a español manteniendo la preferencia durante la navegación. Por eso los metatags principales se declaran en inglés y se sirven variantes en español mediante `hreflang`. Solo la landing está indexada, tanto la aplicación autenticada como la vista pública de seguimiento usan `noindex, nofollow` por tratarse de contenido privado o de acceso por enlace único.
 
 **Landing Page — versión por defecto (inglés)**
 
@@ -2138,9 +2138,9 @@ Los visitantes con intención directa (por ejemplo, llegando desde un anuncio) a
 
 **Aplicación web autenticada**
 
-La aplicación usa una **navegación lateral persistente** (sidebar) en desktop y una **barra inferior** en mobile, siguiendo convenciones establecidas de aplicaciones de gestión que el usuario ya conoce. El sidebar expone los seis módulos principales (Pedidos, Producción, Inventario, Presupuestos, Mensajes, Configuración) con íconos y etiquetas; el módulo activo se indica con el color primario. Las acciones de creación (nuevo pedido, nuevo material, nuevo presupuesto) están disponibles desde un botón prominente dentro de cada módulo, no desde la navegación global, para evitar contaminar el nivel principal con acciones específicas de cada sección.
+La aplicación usa una **navegación lateral persistente** (sidebar) en desktop y una **barra inferior** en mobile, siguiendo convenciones establecidas de aplicaciones de gestión que el usuario ya conoce. El sidebar expone los seis módulos principales (Pedidos, Producción, Inventario, Presupuestos, Mensajes, Configuración) con íconos y etiquetas, el módulo activo se indica con el color primario. Las acciones de creación (nuevo pedido, nuevo material, nuevo presupuesto) están disponibles desde un botón prominente dentro de cada módulo, no desde la navegación global, para evitar contaminar el nivel principal con acciones específicas de cada sección.
 
-La composición del sidebar varía por rol: el carpintero ve los seis módulos completos; el cliente ve únicamente Pedidos, Mensajes, Presupuestos y Configuración, ya que Inventario y Producción son superficies de escritura exclusivas del carpintero (sobre estos últimos el cliente accede solo en lectura desde el detalle de su pedido).
+La composición del sidebar varía por rol: el carpintero ve los seis módulos completos. El cliente ve únicamente Pedidos, Mensajes, Presupuestos y Configuración, ya que Inventario y Producción son superficies de escritura exclusivas del carpintero (sobre estos últimos el cliente accede solo en lectura desde el detalle de su pedido).
 
 La jerarquía de navegación es de dos niveles máximo:
 
@@ -2242,11 +2242,23 @@ La versión mobile mantiene la misma jerarquía de contenido que desktop. Las gr
 
 ### 4.6.2. Software Architecture Context Diagram
 
+El System Context Diagram (nivel 1 del modelo C4) presenta el sistema WoodRoute en relación con su entorno inmediato. Se modelan dos actores principales —el Cliente y el Carpintero o Taller (el Visitante identificado en el Big Picture EventStorming de la sección 2.4 corresponde a su estado pre-autenticado y, por convención C4, no se modela por separado)— y cuatro sistemas externos: Pasarela de pagos, Servicio de notificaciones, Proveedor de madera (HU44) y Cloud Storage. Los cuatro se etiquetan como Simulated y se mockean en la iteración académica actual.
+
+El diagrama resultante se presenta a continuación.
+
+**System Context Diagram — WoodRoute**
+
 <div align="center">
   <img src="assets/architecture/context-diagram.png" alt="Context Diagram" width="100%">
 </div>
 
 ### 4.6.3. Software Architecture Container Diagrams
+
+El Container Diagram (nivel 2 del modelo C4) amplía WoodRoute mostrando sus containers, tecnologías y protocolos de comunicación. La Web Application (Vue 3 + Vite) consume vía HTTPS/JSON la API REST de cinco bounded contexts agrupados bajo API Application, un monolito modular en .NET 10, todos persistiendo en una base de datos PostgreSQL compartida mediante Entity Framework Core. La integración entre bounded contexts se realiza exclusivamente a través de la base de datos (patrón Shared Database), sin invocaciones cruzadas en runtime. Las notificaciones se centralizan en el Seguimiento y Comunicación Context, que observa eventos en la DB y dispara los envíos contra el proveedor externo. Las decisiones de stack se formalizan en la sección 5.1 (Software Configuration Management).
+
+El diagrama resultante se presenta a continuación.
+
+**Container Diagram — WoodRoute**
 
 <div align="center">
   <img src="assets/architecture/container-diagram.png" alt="Container Diagram" width="100%">
@@ -2254,8 +2266,36 @@ La versión mobile mantiene la misma jerarquía de contenido que desktop. Las gr
 
 ### 4.6.4. Software Architecture Components Diagrams
 
+Esta sección presenta los Component Diagrams por cada bounded context del API Application. Cada diagrama muestra la descomposición interna del contexto en cuatro capas que reflejan el patrón Domain-Driven Design con arquitectura en capas: el Controller expone los endpoints REST, el Service implementa la lógica de negocio, el Repository abstrae el acceso a datos, y el Aggregate constituye la entidad raíz del dominio que se persiste. Las integraciones con sistemas externos se modelan como llamadas directas desde el Service correspondiente.
+
+**Components of Onboarding Context**
+
 <div align="center">
-  <img src="assets/architecture/component-diagram.png" alt="Component Diagram" width="100%">
+  <img src="assets/architecture/component-diagram-onboarding.png" alt="Components of Onboarding Context" width="100%">
+</div>
+
+**Components of Inventario Context**
+
+<div align="center">
+  <img src="assets/architecture/component-diagram-inventario.png" alt="Components of Inventario Context" width="100%">
+</div>
+
+**Components of Cotización y Venta Context**
+
+<div align="center">
+  <img src="assets/architecture/component-diagram-sales.png" alt="Components of Cotización y Venta Context" width="100%">
+</div>
+
+**Components of Producción Context**
+
+<div align="center">
+  <img src="assets/architecture/component-diagram-production.png" alt="Components of Producción Context" width="100%">
+</div>
+
+**Components of Seguimiento y Comunicación Context**
+
+<div align="center">
+  <img src="assets/architecture/component-diagram-comunication.png" alt="Components of Seguimiento y Comunicación Context" width="100%">
 </div>
 
 <div style="page-break-after: always;"></div>
@@ -2263,6 +2303,8 @@ La versión mobile mantiene la misma jerarquía de contenido que desktop. Las gr
 # Capítulo V: Product Implementation, Validation & Deployment
 
 ## 5.1. Software Configuration Management
+
+### 5.1.1. Software Development Environment Configuration
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
@@ -2291,11 +2333,11 @@ En este primer sprint se desarrolló la landing page y la documentación inicial
 
 | Team Member | GitHub Username | Landing Page | Diseño UI/UX | Documentación |
 | :--- | :--- | :--- | :--- | :--- |
-| Gonza Morales, Anderson | anderson-gonza | Colaborador | Colaborador | Colaborador |
-| Justo Yauricasa, Alexander Paolo | alexander-justo | Colaborador | Colaborador | Líder |
+| Gonza Morales, Anderson | Ander-U | Colaborador | Colaborador | Colaborador |
+| Justo Yauricasa, Alexander Paolo | AlexanderrJusto | Colaborador | Colaborador | Líder |
 | Saldaña De Souza, Juan David | jndesouza | Colaborador | Colaborador | Colaborador |
-| Sulca Sanchez, Piero Angel | piero-sulca | Líder | Líder | Colaborador |
-| Torres Sanchez, Dalila Victoria | dalila-torres | Colaborador | Colaborador | Colaborador |
+| Sulca Sanchez, Piero Angel | psulca | Líder | Líder | Colaborador |
+| Torres Sanchez, Dalila Victoria | DalilaTorres | Colaborador | Colaborador | Colaborador |
 
 #### 5.2.1.3. Sprint Backlog 1
 
