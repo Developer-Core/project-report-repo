@@ -1,0 +1,195 @@
+@startuml class-diagram-comunication
+!pragma layout smetana
+
+' Seguimiento y Comunicación Bounded Context — Class Diagram
+' Trazabilidad: HU34-36 Mensajería, HU43 Tracking público,
+' TS06 /tracking, TS07 /orders/{id}/messages + reseñas/encuestas + notificaciones
+
+title Seguimiento y Comunicacion Bounded Context — Class Diagram
+
+scale 0.7
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam dpi 90
+skinparam defaultFontSize 11
+skinparam classAttributeFontSize 10
+skinparam classFontSize 12
+skinparam packageFontSize 12
+skinparam nodesep 20
+skinparam ranksep 30
+hide empty members
+
+package "Seguimiento y Comunicacion Bounded Context" as seguimiento {
+
+    package "Domain" as seguimiento_domain {
+
+        enum NotificationChannel <<enumeration>> {
+            EMAIL
+            PUSH
+            WHATSAPP
+            IN_APP
+        }
+
+        enum MessageType <<enumeration>> {
+            TEXT
+            SYSTEM
+        }
+
+        class Conversation <<resource>> {
+            - id: Number|null
+            - orderId: Number|null
+            - participantIds: Number[]
+            - createdAt: Date|null
+            - lastMessageAt: Date|null
+            + constructor(id, orderId, participantIds, createdAt, lastMessageAt)
+        }
+
+        class Message <<resource>> {
+            - id: Number|null
+            - conversationId: Number|null
+            - senderId: Number|null
+            - content: string
+            - type: MessageType
+            - sentAt: Date|null
+            + constructor(id, conversationId, senderId, content, type, sentAt)
+        }
+
+        class Review <<resource>> {
+            - id: Number|null
+            - orderId: Number|null
+            - customerId: Number|null
+            - rating: Number
+            - comment: string|null
+            - submittedAt: Date|null
+            + constructor(id, orderId, customerId, rating, comment, submittedAt)
+        }
+
+        class Survey <<resource>> {
+            - id: Number|null
+            - orderId: Number|null
+            - sentAt: Date|null
+            - respondedAt: Date|null
+            + constructor(id, orderId, sentAt, respondedAt)
+            + isAnswered(): boolean
+        }
+
+        class SurveyAnswer <<value-object>> {
+            - question: string
+            - answer: string
+            + constructor(question, answer)
+        }
+
+        class Notification <<value-object>> {
+            - recipient: string
+            - channel: NotificationChannel
+            - subject: string
+            - body: string
+            - sentAt: Date
+            + constructor(recipient, channel, subject, body, sentAt)
+        }
+
+        class PublicTracking <<read-model>> {
+            - publicTrackingId: string
+            - orderStatus: string
+            - currentStage: string
+            - estimatedDeliveryDate: Date
+            - progressPercent: Number
+            + constructor(publicTrackingId, orderStatus, currentStage, estimatedDeliveryDate, progressPercent)
+        }
+
+        Conversation "1" *-- "0..*" Message : contains >
+        Conversation "1" *-- "0..1" Review : "rated by >"
+        Conversation "1" *-- "0..1" Survey : "surveyed by >"
+        Survey "1" *-- "0..*" SurveyAnswer : "answered with >"
+        Message --> MessageType : "of type"
+        Notification --> NotificationChannel : "sent via"
+    }
+
+    package "Infrastructure" as seguimiento_infrastructure {
+
+        interface ISeguimientoApi <<interface>> {
+            + getMessages(orderId, limit, before): Promise
+            + sendMessage(orderId, content): Promise
+            + submitReview(orderId, resource): Promise
+            + answerSurvey(surveyId, answers): Promise
+            + getPublicTracking(publicTrackingId): Promise
+        }
+
+        class SeguimientoApi {
+            + getMessages(orderId, limit, before): Promise
+            + sendMessage(orderId, content): Promise
+            + submitReview(orderId, resource): Promise
+            + answerSurvey(surveyId, answers): Promise
+            + getPublicTracking(publicTrackingId): Promise
+        }
+
+        class ConversationAssembler <<assembler>> {
+            + {static} toEntityFromResource(resource): Conversation
+        }
+
+        class MessageAssembler <<assembler>> {
+            + {static} toEntityFromResource(resource): Message
+            + {static} toEntitiesFromResponse(response): Message[]
+        }
+
+        class ReviewAssembler <<assembler>> {
+            + {static} toEntityFromResource(resource): Review
+        }
+
+        class PublicTrackingAssembler <<assembler>> {
+            + {static} toEntityFromResource(resource): PublicTracking
+        }
+
+        SeguimientoApi ..|> ISeguimientoApi
+    }
+
+    package "Application" as seguimiento_application {
+
+        class SeguimientoStore <<store>> {
+            - conversation: Conversation|null
+            - messages: Message[]
+            - review: Review|null
+            - survey: Survey|null
+            - publicTracking: PublicTracking|null
+            + messagesCount: computed
+            + fetchHistory(orderId: Number, limit: Number, before: Date): Promise
+            + sendMessage(orderId: Number, content: string): Promise
+            + submitReview(orderId: Number, rating: Number, comment: string): Promise
+            + answerSurvey(surveyId: Number, answers: SurveyAnswer[]): Promise
+            + fetchPublicTracking(publicTrackingId: string): Promise
+        }
+
+        SeguimientoStore "1" --> "1" ISeguimientoApi : consumes >
+        SeguimientoStore ..> ConversationAssembler : <<uses>>
+        SeguimientoStore ..> MessageAssembler : <<uses>>
+        SeguimientoStore ..> ReviewAssembler : <<uses>>
+        SeguimientoStore ..> PublicTrackingAssembler : <<uses>>
+    }
+
+    package "Presentation" as seguimiento_presentation {
+
+        class ChatView <<component>> {
+            - store: SeguimientoStore
+            + sendMessage(content: string): void
+            + loadOlder(): void
+        }
+
+        class ReviewForm <<component>> {
+            - store: SeguimientoStore
+            - form: object
+            + submit(): void
+        }
+
+        class PublicTrackingView <<component>> {
+            - store: SeguimientoStore
+            + load(): void
+        }
+
+        ChatView "1" --> "1" SeguimientoStore : binds >
+        ReviewForm "1" --> "1" SeguimientoStore : binds >
+        PublicTrackingView "1" --> "1" SeguimientoStore : binds >
+    }
+}
+
+@enduml

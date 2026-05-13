@@ -114,6 +114,12 @@ Mayo 2026
     - [4.3. Landing Page UI Design](#43-landing-page-ui-design)
         - [4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)
         - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
+    - [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
+        - [4.6.1. Design Level Event Storming](#461-design-level-event-storming)
+    - [4.7. Software Object-Oriented Design](#47-software-object-oriented-design)
+        - [4.7.1. Class Diagrams](#471-class-diagrams)
+    - [4.8. Database Design](#48-database-design)
+        - [4.8.1. Database Diagrams](#481-database-diagrams)
 - [Capítulo V: Product Implementation, Validation & Deployment](#capítulo-v-product-implementation-validation--deployment)
     - [5.1. Software Configuration Management](#51-software-configuration-management)
     - [5.2. Landing Page, Services & Applications Implementation](#52-landing-page-services--applications-implementation)
@@ -301,7 +307,7 @@ El Lean UX Process es una metodología ágil centrada en la colaboración, la ex
 - **Domain:** Gestión operativa de talleres de carpintería dedicados a la fabricación de muebles personalizados bajo pedido.
 - **Customer Segments:** Carpinteros independientes y pequeños talleres con baja digitalización, ubicados principalmente en zonas urbanas de Lima Metropolitana.
 - **Pain Points:** Cálculo manual y propenso a errores de materiales, estimaciones imprecisas de tiempos de entrega, desorganización en la recepción de pedidos, control de inventario empírico y comunicación reactiva con los clientes a través de WhatsApp.
-- **Gap:** Las herramientas existentes son genéricas (ERPs grandes u hojas de cálculo) y no se adaptan al flujo de trabajo ni al lenguaje del rubro de la carpintería; las MYPE rechazan adoptarlas por su complejidad y costo.
+- **Gap:** Las herramientas existentes son genéricas (ERPs grandes u hojas de cálculo) y no se adaptan al flujo de trabajo ni al lenguaje del rubro de la carpintería. Las MYPE rechazan adoptarlas por su complejidad y costo.
 - **Vision / Strategy:** Ofrecer una plataforma web especializada que integre gestión de pedidos, asistente de viabilidad, estimación de tiempos y control simple de inventario, priorizando una experiencia minimalista alineada con el flujo real del taller.
 - **Initial Segment:** Talleres independientes urbanos en Lima Metropolitana, de 1 a 5 trabajadores, con uso activo de smartphone y disposición a probar herramientas digitales.
 
@@ -1712,46 +1718,31 @@ El Product Backlog se elabora a continuación, listando cada User Story con su o
 
 #### Branding
 
-La identidad visual de WoodRoute refleja los valores del producto: calidez, precisión y confianza.
-Cada decisión de diseño está enraizada en el mundo del carpintero: la textura de la madera, la
-calidez del material natural y la claridad de un proceso bien organizado.
+La identidad visual de WoodRoute refleja los valores del producto: calidez, precisión y confianza. Cada decisión de diseño está enraizada en el mundo del carpintero: la textura de la madera, la calidez del material natural y la claridad de un proceso bien organizado.
 
-El branding abarca la identidad completa de la marca: el logo, el sistema de colores, la tipografía,
-el tono de comunicación y los principios que guían cómo el producto se ve, se siente y habla.
-No es solo el logo, es la suma de todas las decisiones que hacen que WoodRoute sea reconocible
-y coherente en cualquier punto de contacto con el usuario.
+El branding abarca la identidad completa de la marca: el logo, el sistema de colores, la tipografía, el tono de comunicación y los principios que guían cómo el producto se ve, se siente y habla. No es solo el logo, es la suma de todas las decisiones que hacen que WoodRoute sea reconocible y coherente en cualquier punto de contacto con el usuario.
 
-El logo combina un símbolo que evoca la veta de la madera con la idea de rutas o caminos,
-representando el flujo de trabajo del taller. El wordmark utiliza la fuente de display del sistema
-tipográfico en peso ExtraBold para transmitir solidez y presencia.
+El logo combina un símbolo que evoca la veta de la madera con la idea de rutas o caminos, representando el flujo de trabajo del taller. El wordmark utiliza la fuente de display del sistema tipográfico en peso ExtraBold para transmitir solidez y presencia.
 
-![Logo de WoodRoute](assets/logo-woodroute.png)
+![Logo de WoodRoute](assets/product-design/style/logos.png)
 
 Los tres principios que guían todas las decisiones de diseño son:
 
-**Calidez con contraste** — Los fondos y superficies usan tonos cálidos que evocan la madera
-natural (beige, crema, marrón claro). El color primario de acción (`#FD4319`, naranja-rojo) rompe
-intencionalmente esa calidez para señalizar con claridad qué debe hacer el usuario a continuación.
-La tensión entre el fondo cálido y el CTA energético crea jerarquía visual sin necesidad de texto
-adicional.
+**Calidez con contraste** — Los fondos y superficies usan tonos cálidos que evocan la madera natural (beige, crema, marrón claro). El color primario de acción (`#FD4319`, naranja-rojo) rompe intencionalmente esa calidez para señalizar con claridad qué debe hacer el usuario a continuación. La tensión entre el fondo cálido y el CTA energético crea jerarquía visual sin necesidad de texto adicional.
 
-**Claridad funcional** — Los artesanos trabajan con las manos, no con pantallas. La interfaz elimina
-el ruido visual y prioriza la información que importa: el estado del pedido, el inventario disponible,
-la viabilidad del mueble.
+**Claridad funcional** — Los artesanos trabajan con las manos, no con pantallas. La interfaz elimina el ruido visual y prioriza la información que importa: el estado del pedido, el inventario disponible, la viabilidad del mueble.
 
-**Confianza ganada** — WoodRoute no impone: acompaña. El diseño respeta el saber del carpintero.
-No reemplaza su criterio, lo amplifica con datos.
+**Confianza ganada** — WoodRoute no impone: acompaña. El diseño respeta el saber del carpintero. No reemplaza su criterio, lo amplifica con datos.
 
 #### Tono de comunicación
 
-WoodRoute habla de carpintero a carpintero. No usa lenguaje corporativo ni tecnicismos innecesarios.
-El tono está posicionado en cuatro dimensiones que definen la personalidad de la marca:
+WoodRoute habla de carpintero a carpintero. No usa lenguaje corporativo ni tecnicismos innecesarios. El tono está posicionado en cuatro dimensiones que definen la personalidad de la marca:
 
 | Dimensión | Posición | Descripción |
 |---|---|---|
 | Divertido / Serio | 65% Serio | El producto resuelve problemas reales de negocio. El tono es directo y profesional, sin exceso de formalidad. |
 | Formal / Casual | 60% Casual | Habla al carpintero como a un igual, sin jerarquía corporativa. Directo y accesible. |
-| Respetuoso / Irreverente | 80% Respetuoso | Respeto profundo por el oficio. El carpintero es el experto; WoodRoute es su asistente. |
+| Respetuoso / Irreverente | 80% Respetuoso | Respeto profundo por el oficio. El carpintero es el experto. WoodRoute es su asistente. |
 | Entusiasta / Sereno | 55% Sereno | Confianza tranquila. Los resultados hablan por sí solos, sin signos de exclamación vacíos. |
 
 Las reglas de lenguaje derivadas de este posicionamiento son:
@@ -1765,13 +1756,9 @@ Las reglas de lenguaje derivadas de este posicionamiento son:
 
 #### Sistema de colores
 
-La paleta de WoodRoute combina dos decisiones visuales complementarias: fondos cálidos que
-evocan la madera natural, y un color primario de acción fuerte y directo. Esta tensión entre
-la calidez del fondo y la energía del primario crea jerarquía visual inmediata: el usuario sabe
-exactamente dónde hacer clic.
+La paleta de WoodRoute combina dos decisiones visuales complementarias: fondos cálidos que evocan la madera natural, y un color primario de acción fuerte y directo. Esta tensión entre la calidez del fondo y la energía del primario crea jerarquía visual inmediata: el usuario sabe exactamente dónde hacer clic.
 
-Los tokens semánticos son el nivel de abstracción que conecta la paleta con los componentes.
-La interfaz nunca referencia valores de color crudos: siempre usa tokens.
+Los tokens semánticos son el nivel de abstracción que conecta la paleta con los componentes. La interfaz nunca referencia valores de color crudos: siempre usa tokens.
 
 ![Paleta de colores de WoodRoute](assets/product-design/style/color-palette.png)
 
@@ -1813,12 +1800,9 @@ La interfaz nunca referencia valores de color crudos: siempre usa tokens.
 
 El sistema tipográfico usa dos fuentes complementarias:
 
-**Plus Jakarta Sans** es la fuente de display para títulos y encabezados. Geométrica y moderna, con
-personalidad definida sin perder legibilidad. Transmite innovación y solidez. Se aplica en todos los
-elementos de heading (h1–h6) con `font-weight` semibold o superior.
+**Plus Jakarta Sans** es la fuente de display para títulos y encabezados. Geométrica y moderna, con personalidad definida sin perder legibilidad. Transmite innovación y solidez. Se aplica en todos los elementos de heading (h1–h6) con `font-weight` semibold o superior.
 
-**Inter** es la fuente de cuerpo para texto corrido, UI y datos. Optimizada para lectura en pantalla
-a cualquier tamaño. Neutral y funcional, no compite con los títulos.
+**Inter** es la fuente de cuerpo para texto corrido, UI y datos. Optimizada para lectura en pantalla a cualquier tamaño. Neutral y funcional, no compite con los títulos.
 
 ![Specimen tipográfico](assets/product-design/style/typography-specimen.png)
 
@@ -1858,8 +1842,7 @@ El interlineado varía según el contexto de lectura:
 
 #### Espaciado
 
-El espaciado base sigue la escala de Tailwind (múltiplos de 4px). Adicionalmente, se definen
-dos tokens de sección para controlar la separación vertical entre bloques de contenido en la interfaz:
+El espaciado base sigue la escala de Tailwind (múltiplos de 4px). Adicionalmente, se definen dos tokens de sección para controlar la separación vertical entre bloques de contenido en la interfaz:
 
 ![Escala de espaciado](assets/product-design/style/spacing-scale.png)
 
@@ -1874,9 +1857,7 @@ dos tokens de sección para controlar la separación vertical entre bloques de c
 
 ![Border radius tokens de WoodRoute](assets/product-design/style/border-radius.png)
 
-El sistema de radios define la personalidad de los componentes. WoodRoute usa radios moderados:
-ni completamente cuadrado (frío, técnico) ni completamente redondo (demasiado informal). La
-esquina redondeada evoca la madera trabajada y lijada.
+El sistema de radios define la personalidad de los componentes. WoodRoute usa radios moderados: ni completamente cuadrado (frío, técnico) ni completamente redondo (demasiado informal). La esquina redondeada evoca la madera trabajada y lijada.
 
 | Token | Valor | Uso |
 |---|---|---|
@@ -1888,8 +1869,7 @@ esquina redondeada evoca la madera trabajada y lijada.
 
 #### Sombras
 
-Las sombras usan el color del foreground con opacidad controlada, manteniendo la temperatura
-cálida del sistema. Definen la jerarquía de elevación de los elementos en el plano Z:
+Las sombras usan el color del foreground con opacidad controlada, manteniendo la temperatura cálida del sistema. Definen la jerarquía de elevación de los elementos en el plano Z:
 
 ![Escala de sombras](assets/product-design/style/shadow-scale.png)
 
@@ -1902,9 +1882,7 @@ cálida del sistema. Definen la jerarquía de elevación de los elementos en el 
 
 #### Diseño responsive
 
-La interfaz sigue la estrategia mobile-first: los estilos base se definen para mobile y se
-sobreescriben hacia arriba con media queries. Los breakpoints siguen la escala estándar de
-Tailwind CSS:
+La interfaz sigue la estrategia mobile-first: los estilos base se definen para mobile y se sobreescriben hacia arriba con media queries. Los breakpoints siguen la escala estándar de Tailwind CSS:
 
 ![Breakpoints responsive](assets/product-design/style/responsive-breakpoints.png)
 
@@ -1928,232 +1906,258 @@ Los patrones responsive principales que aplican a la landing y la web app son:
 
 ## 4.2. Information Architecture
 
-Las decisiones de arquitectura de información de WoodRoute están orientadas a dos
-experiencias distintas con objetivos complementarios: la landing page, enfocada en
-convertir visitantes en usuarios, y la aplicación web, enfocada en que carpinteros
-gestionen su taller con la menor fricción posible. En ambos casos, el principio rector
-es que el usuario encuentre lo que necesita sin esfuerzo y sin necesidad de instrucción.
+Las decisiones de arquitectura de información de WoodRoute están orientadas a tres experiencias distintas con objetivos complementarios: la landing page, enfocada en convertir visitantes en usuarios. La aplicación web autenticada, donde carpinteros y clientes operan el flujo completo del pedido, y la vista pública de seguimiento, donde un cliente consulta el avance de su mueble sin necesidad de registro mediante un `publicTrackingId`. En las tres superficies el principio rector es el mismo: el usuario encuentra lo que necesita sin esfuerzo y sin necesidad de instrucción.
 
 ### 4.2.1. Organization Systems
 
-El contenido de WoodRoute se organiza según el contexto de uso de cada superficie.
+El contenido de WoodRoute se organiza según el contexto de uso de cada superficie, y refleja directamente las épicas EP01–EP07 definidas en el product backlog.
 
 **Landing Page — organización secuencial y jerárquica**
 
-La landing page sigue una organización **secuencial** (step-by-step): el visitante
-recorre una narrativa de problema → solución → beneficios → prueba social → acción.
-Cada sección responde a una pregunta implícita del visitante antes de que la formule.
-El orden no es arbitrario: primero se valida el dolor (el caos del taller), luego se
-presenta la solución, luego se justifica la confianza. Esta progresión reduce la
-resistencia a la conversión.
+La landing page sigue una organización **secuencial** (step-by-step): el visitante recorre una narrativa de propuesta de valor → funcionalidades → cómo funciona → prueba social → planes → preguntas frecuentes → equipo → cierre. El orden no es arbitrario: primero se valida qué problema resuelve WoodRoute (HU02), luego se muestran las capacidades del producto (HU03), luego cómo se usa (HU04), luego los planes (HU05) y finalmente se refuerza la confianza presentando al equipo (HU07). Esta progresión reduce la resistencia a la conversión y responde a las preguntas implícitas del visitante antes de que las formule.
 
-Dentro de cada sección, la organización es **jerárquica**: el mensaje principal ocupa
-el nivel tipográfico más alto, los detalles de soporte están en niveles inferiores y las
-acciones secundarias nunca compiten visualmente con el CTA primario.
+Dentro de cada sección, la organización es **jerárquica**: el mensaje principal ocupa el nivel tipográfico más alto, los detalles de soporte están en niveles inferiores y las acciones secundarias nunca compiten visualmente con los CTA primarios ("Empieza como carpintero" / "Empieza como cliente", HU06). Los videos About-the-Product (HU08) y About-the-Team (HU09) se integran como apoyo visual dentro de las secciones de funcionalidades y equipo respectivamente, sin desviar el flujo narrativo principal.
 
-**Aplicación web — organización por tópicos y por audiencia**
+**Aplicación web autenticada — organización por tópicos y por audiencia**
 
-La aplicación organiza el contenido **por tópicos funcionales** que mapean directamente
-al flujo de trabajo del carpintero:
+La aplicación organiza el contenido **por tópicos funcionales** que mapean directamente a las épicas del backlog y al ciclo de vida del pedido:
 
-| Módulo | Tópico | Audiencia |
-|---|---|---|
-| Pedidos | Gestión del ciclo de vida de un pedido | Carpintero |
-| Inventario | Control de materiales y stock | Carpintero |
-| Planificación | Viabilidad, tiempos y capacidad | Carpintero |
-| Seguimiento | Estado de producción en tiempo real | Cliente final |
+| Módulo | Tópico | Épicas asociadas | Audiencia primaria |
+|---|---|---|---|
+| Pedidos | Ciclo de vida del pedido: creación, aceptación, modificación, cancelación | EP03 | Carpintero y cliente |
+| Producción | Etapas de fabricación, progreso y tiempos estimados | EP04 | Carpintero (escritura), cliente (lectura) |
+| Inventario | Registro de materiales, validación de viabilidad, alertas y órdenes a proveedor | EP05 | Carpintero |
+| Presupuestos y pagos | Estimación de costos, generación de presupuesto, anticipo y pago final | EP06 | Carpintero y cliente |
+| Mensajería | Comunicación por pedido entre carpintero y cliente | EP07 | Carpintero y cliente |
+| Configuración | Datos del taller, perfil y preferencias | EP02 | Cada usuario sobre sí mismo |
 
-La organización **por audiencia** se aplica en el acceso: el carpintero entra con
-credenciales propias y tiene acceso completo al sistema; el cliente accede mediante
-un enlace compartido y ve únicamente la vista de seguimiento de su pedido, sin
-necesidad de registro.
+La organización **por audiencia** se aplica en el control de acceso y en la composición de cada vista. El carpintero tiene capacidades de escritura sobre Pedidos (aceptar/rechazar), Producción (definir y actualizar etapas), Inventario completo y validación de pagos. El cliente tiene capacidades de escritura sobre creación y modificación de su pedido, aceptación del presupuesto y registro de comprobantes de pago, y lectura sobre el progreso de producción y la mensajería del pedido. La selección de rol ocurre en el registro (HU16) y condiciona qué módulos y acciones se exponen al usuario.
 
-Dentro de los listados (pedidos, materiales), el contenido se organiza de forma
-**cronológica inversa** por defecto: los elementos más recientes aparecen primero,
-reflejando el flujo natural de trabajo donde el carpintero atiende los pedidos activos
-antes que los históricos.
+Dentro de los listados (pedidos, materiales, presupuestos), el contenido se organiza de forma **cronológica inversa** por defecto: los elementos más recientes aparecen primero, reflejando el flujo natural de trabajo donde primero se atienden los pedidos activos antes que los históricos.
+
+**Vista pública de seguimiento — organización por estado actual**
+
+La vista pública (HU43) es una página única sin estructura jerárquica de navegación. Está organizada por **estado actual del pedido**: el avance vigente domina visualmente, debajo aparece el historial de etapas completadas en orden cronológico y al final los datos del mueble. No hay menú, no hay listados, no hay descubrimiento de otros contenidos. El acceso se realiza únicamente a través de un enlace que contiene el `publicTrackingId`, sin credenciales.
 
 ### 4.2.2. Labeling Systems
 
-Las etiquetas de WoodRoute siguen el principio de mínima carga cognitiva: una palabra
-cuando es suficiente, dos cuando es necesario para evitar ambigüedad. Se usa el
-vocabulario del carpintero, no el vocabulario técnico del software.
+Las etiquetas de WoodRoute siguen el principio de mínima carga cognitiva: una palabra cuando es suficiente, dos cuando es necesario para evitar ambigüedad. Se usa el vocabulario del carpintero, no el vocabulario técnico del software. Todas las etiquetas se mantienen en infinitivo o imperativo neutro siguiendo las convenciones de copy definidas en 4.1.1.
 
-**Navegación principal de la aplicación:**
+**Navegación principal de la aplicación autenticada:**
 
 | Etiqueta | Concepto que representa |
 |---|---|
-| Pedidos | Listado y gestión de órdenes de fabricación |
-| Inventario | Stock de materiales disponibles |
-| Planificación | Asistente de viabilidad y estimación de tiempos |
-| Clientes | Directorio de clientes y sus pedidos asociados |
-| Configuración | Datos del taller, usuarios y preferencias |
+| Pedidos | Listado y gestión del ciclo de vida del pedido |
+| Producción | Etapas de fabricación, progreso y tiempos |
+| Inventario | Stock de materiales, alertas y órdenes a proveedor |
+| Presupuestos | Costos, presupuestos, anticipos y pagos finales |
+| Mensajes | Comunicación por pedido con la otra parte |
+| Configuración | Perfil del usuario y datos del taller |
 
-**Estados de un pedido:**
+**Estados de un pedido (HU18, HU19, HU21, HU40, HU42):**
 
 | Etiqueta | Significado |
 |---|---|
-| Pendiente | Pedido recibido, aún no iniciado |
-| En producción | Fabricación en curso |
-| En revisión | Control de calidad antes de entrega |
-| Listo | Pedido terminado, pendiente de entrega o retiro |
+| Pendiente | Pedido creado por el cliente, aún no revisado por el carpintero |
+| Aceptado | Carpintero aceptó el pedido y procederá con el presupuesto |
+| Rechazado | Carpintero no tomará el pedido |
+| En producción | Fabricación en curso, etapas activas |
+| Listo para entrega | Mueble terminado, esperando pago final |
+| Pagado completamente | Pago final validado, habilitada la entrega |
 | Entregado | Proceso completado |
+| Cancelado | Cliente canceló el pedido antes de la aceptación |
 
-**Inventario:**
+**Etapas de producción (HU22):**
 
 | Etiqueta | Significado |
 |---|---|
-| Disponible | Material con stock suficiente |
-| Stock bajo | Material cerca del mínimo definido |
-| Sin stock | Material agotado, bloquea nuevos pedidos |
+| Diseño | Definición técnica del mueble previa al corte |
+| Corte | Dimensionado de piezas a partir de la madera |
+| Ensamblado | Unión de piezas en el cuerpo final del mueble |
+| Acabado | Lijado, sellado y aplicación de acabados finales |
+| Entrega | Coordinación y entrega del mueble al cliente |
 
-**Landing page (secciones visibles en navegación):**
+Cada etapa tiene además un estado interno: `pendiente`, `en progreso` y `completado` (TS03).
+
+**Inventario (HU26–HU29, HU44):**
+
+| Etiqueta | Significado |
+|---|---|
+| Disponible | Material con stock por encima del mínimo definido |
+| Stock bajo | Material por debajo del mínimo, dispara alerta (HU29) |
+| Sin stock | Material agotado, bloquea la aceptación de nuevos pedidos hasta reponer |
+| Orden enviada | Orden de compra al proveedor pendiente de recepción (HU44) |
+
+**Presupuestos y pagos (HU33, HU37–HU42):**
+
+| Etiqueta | Significado |
+|---|---|
+| Borrador | Presupuesto en cálculo por el carpintero |
+| Enviado | Presupuesto compartido con el cliente, esperando aceptación |
+| Aceptado | Cliente aceptó el presupuesto, queda pendiente el anticipo |
+| Pendiente de validación | Comprobante de pago registrado, esperando verificación del carpintero |
+| Confirmado | Pago verificado por el carpintero |
+| Rechazado | Comprobante inválido, el cliente debe enviar uno nuevo |
+
+**Landing page (secciones visibles en navegación, HU01):**
 
 | Etiqueta | Contenido |
 |---|---|
-| Inicio | Hero y propuesta de valor |
-| Funciones | Features del producto |
-| Cómo funciona | Flujo paso a paso |
-| Precios | Planes y comparativa |
+| Inicio | Hero y propuesta de valor (HU02) |
+| Funciones | Funcionalidades del producto (HU03) |
+| Cómo funciona | Flujo paso a paso (HU04) |
+| Precios | Planes y comparativa (HU05) |
 | Preguntas frecuentes | FAQ |
+| Equipo | Integrantes del proyecto (HU07) |
+
+**Acciones de conversión (HU06):**
+
+| Etiqueta | Destino |
+|---|---|
+| Empieza como carpintero | Registro con rol carpintero |
+| Empieza como cliente | Registro con rol cliente |
+| Iniciar sesión | Login para usuarios ya registrados |
 
 ### 4.2.3. SEO Tags and Meta Tags
 
-**Landing Page**
+La landing page es bilingüe (HU10): el idioma por defecto es inglés y el visitante puede cambiar a español manteniendo la preferencia durante la navegación. Por eso los metatags principales se declaran en inglés y se sirven variantes en español mediante `hreflang`. Solo la landing está indexada, tanto la aplicación autenticada como la vista pública de seguimiento usan `noindex, nofollow` por tratarse de contenido privado o de acceso por enlace único.
+
+**Landing Page — versión por defecto (inglés)**
+
+```html
+<title>WoodRoute — Order and workshop management for carpenters</title>
+<meta name="description"
+  content="WoodRoute helps independent carpenters and small workshops manage custom furniture orders, materials inventory and real-time client tracking. Start free." />
+<meta name="keywords"
+  content="workshop management, carpentry software, custom furniture orders, woodworking inventory, order tracking, carpentry SaaS" />
+<meta name="author" content="WoodRoute" />
+<link rel="alternate" hreflang="en" href="https://woodroute.app/" />
+<link rel="alternate" hreflang="es" href="https://woodroute.app/es" />
+<link rel="alternate" hreflang="x-default" href="https://woodroute.app/" />
+<meta property="og:title" content="WoodRoute — Order and workshop management for carpenters" />
+<meta property="og:description"
+  content="Organize your orders, control your inventory and keep your clients informed in real time." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta name="twitter:card" content="summary_large_image" />
+```
+
+**Landing Page — variante en español**
 
 ```html
 <title>WoodRoute — Gestión de pedidos y taller para carpinteros</title>
 <meta name="description"
-  content="WoodRoute organiza tu taller de carpintería: gestiona pedidos,
-  controla materiales y ofrece seguimiento en tiempo real a tus clientes.
-  Empieza gratis." />
+  content="WoodRoute organiza tu taller de carpintería: gestiona pedidos de muebles personalizados, controla materiales y ofrece seguimiento en tiempo real a tus clientes. Empieza gratis." />
 <meta name="keywords"
-  content="gestión de taller, software para carpinteros, control de pedidos
-  carpintería, inventario madera, seguimiento de pedidos, SaaS carpintería" />
-<meta name="author" content="WoodRoute" />
-<meta property="og:title" content="WoodRoute — Gestión de taller para carpinteros" />
-<meta property="og:description"
-  content="Organiza tus pedidos, controla tu inventario y mantén a tus clientes
-  informados en tiempo real. Sin complicaciones." />
-<meta property="og:type" content="website" />
+  content="gestión de taller, software para carpinteros, pedidos de muebles personalizados, inventario madera, seguimiento de pedidos, SaaS carpintería" />
+<meta property="og:locale" content="es_ES" />
 ```
 
-**Aplicación web (página de login / acceso)**
+**Aplicación web autenticada (página de acceso)**
 
 ```html
 <title>Ingresar — WoodRoute</title>
 <meta name="description"
-  content="Accede a tu cuenta de WoodRoute para gestionar tu taller de carpintería." />
+  content="Accede a tu cuenta de WoodRoute para gestionar tus pedidos, producción, inventario y pagos." />
 <meta name="robots" content="noindex, nofollow" />
 <meta name="author" content="WoodRoute" />
 ```
 
-**Vista de seguimiento pública (compartida con clientes)**
+**Vista pública de seguimiento de pedido (HU43)**
 
 ```html
 <title>Seguimiento de pedido — WoodRoute</title>
 <meta name="description"
-  content="Consulta el estado de fabricación de tu mueble en tiempo real." />
+  content="Consulta el estado y el avance de tu mueble personalizado en tiempo real." />
 <meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Seguimiento de pedido — WoodRoute" />
+<meta property="og:description"
+  content="Estado actual del pedido, etapa de producción y fecha estimada de entrega." />
 ```
 
-Las páginas internas de la aplicación (pedidos, inventario, planificación) usan
-`noindex, nofollow` ya que son contenido privado detrás de autenticación. Solo la
-landing page está indexada para motores de búsqueda.
+La vista pública no se indexa pese a no requerir autenticación, porque el contenido es específico de cada pedido y está pensado solo para el cliente al que se le compartió el enlace.
 
 ### 4.2.4. Searching Systems
 
-WoodRoute ofrece búsqueda y filtrado en los módulos donde el volumen de información
-puede desorientar al usuario. El sistema no expone un buscador global: cada módulo
-tiene su propio mecanismo de búsqueda contextual.
+WoodRoute ofrece búsqueda y filtrado únicamente en los módulos donde el volumen de información puede desorientar al usuario. El sistema no expone un buscador global: cada módulo tiene su propio mecanismo de búsqueda contextual, reactivo (sin necesidad de enviar un formulario) y con resultados que se actualizan a medida que el usuario escribe.
 
 **Módulo de Pedidos**
 
-El usuario puede buscar por nombre de cliente, número de pedido o descripción del
-mueble. Los resultados se muestran en tiempo real (búsqueda reactiva sin necesidad
-de enviar el formulario). Los filtros disponibles son:
+El usuario puede buscar por número de pedido, descripción del mueble o nombre de la otra parte (cliente para el carpintero, carpintero para el cliente). Los filtros disponibles son:
 
 | Filtro | Opciones |
 |---|---|
-| Estado | Pendiente / En producción / En revisión / Listo / Entregado |
+| Estado | Pendiente / Aceptado / Rechazado / En producción / Listo para entrega / Pagado / Entregado / Cancelado |
+| Etapa de producción | Diseño / Corte / Ensamblado / Acabado / Entrega |
 | Fecha de creación | Rango de fechas |
-| Cliente | Selección desde directorio |
+| Rol asociado | Pedidos donde el usuario es carpintero / cliente |
 
-Los resultados muestran: nombre del cliente, descripción del mueble, estado actual
-(con etiqueta de color) y fecha estimada de entrega.
+Los resultados muestran: número de pedido, descripción breve del mueble, nombre de la otra parte, estado actual con etiqueta de color y fecha estimada de entrega. Para el carpintero se prioriza visualmente la presencia de pedidos en estado "Pendiente" que aún requieren su revisión (HU19).
 
 **Módulo de Inventario**
 
-El usuario puede buscar materiales por nombre o tipo. Los filtros disponibles son:
+El carpintero puede buscar materiales por nombre, tipo o unidad de medida. Los filtros disponibles son:
 
 | Filtro | Opciones |
 |---|---|
-| Estado de stock | Disponible / Stock bajo / Sin stock |
+| Estado de stock | Disponible / Stock bajo / Sin stock / Orden enviada |
 | Tipo de material | Madera / Herrajes / Acabados / Otros |
 
-Los resultados muestran: nombre del material, unidad de medida, cantidad disponible
-y estado de stock (con etiqueta de color). Los materiales con stock bajo aparecen
-destacados al inicio del listado sin necesidad de filtrar, como alerta proactiva.
+Los resultados muestran: nombre del material, tipo, unidad de medida, cantidad disponible, mínimo configurado y estado de stock con etiqueta de color. Los materiales en "Stock bajo" o "Sin stock" aparecen destacados al inicio del listado sin necesidad de filtrar, funcionando como alerta proactiva alineada con HU29.
 
-**Módulo de Clientes**
+**Módulo de Presupuestos y pagos**
 
-Búsqueda por nombre o contacto. Sin filtros adicionales dado el volumen acotado
-esperado en talleres pequeños. Los resultados muestran nombre, contacto y cantidad
-de pedidos activos.
+El usuario puede buscar por número de pedido, monto o nombre de la otra parte. Los filtros disponibles son:
 
-**Vista de seguimiento pública**
+| Filtro | Opciones |
+|---|---|
+| Tipo de documento | Presupuesto / Anticipo / Pago final |
+| Estado | Borrador / Enviado / Aceptado / Pendiente de validación / Confirmado / Rechazado |
+| Fecha | Rango de fechas |
 
-No requiere búsqueda: el cliente accede mediante un enlace único que lleva directamente
-al estado de su pedido. No hay navegación ni descubrimiento de contenido en esta vista.
+Los resultados muestran: tipo de documento, número de pedido asociado, monto, fecha y estado actual. Para el carpintero se destacan los comprobantes en "Pendiente de validación" que requieren su revisión (HU39, HU42).
+
+**Módulo de Mensajería**
+
+La búsqueda se realiza sobre las conversaciones por pedido. El usuario puede filtrar por pedido específico o por mensajes no leídos. No existe búsqueda full-text dentro del contenido de los mensajes en esta primera versión, dado el volumen acotado esperado por conversación.
+
+**Vista pública de seguimiento**
+
+No expone ninguna búsqueda: el cliente accede mediante un enlace único con el `publicTrackingId` que lo lleva directamente al estado de su pedido (HU43, TS06). No hay navegación ni descubrimiento de otro contenido en esta vista.
 
 ### 4.2.5. Navigation Systems
 
 **Landing Page**
 
-La navegación de la landing sigue un modelo de **scroll lineal con anclas**: el menú
-superior fija las secciones principales y permite saltar directamente a cualquier punto.
-En mobile, el menú colapsa en un panel lateral (hamburguesa). El CTA principal
-("Empieza gratis") está fijo en el navbar para que esté siempre accesible sin importar
-la posición del scroll.
+La navegación de la landing sigue un modelo de **scroll lineal con anclas**: el navbar superior fija las secciones principales (Inicio, Funciones, Cómo funciona, Precios, FAQ, Equipo) y permite saltar directamente a cualquier punto preservando el contexto visual (HU01). En mobile, el menú colapsa en un panel lateral (hamburguesa). Los CTA principales ("Empieza como carpintero" / "Empieza como cliente") están presentes en el navbar y se repiten en el cierre de la página para que la acción de conversión esté siempre accesible (HU06). En el footer aparecen los accesos a términos y condiciones (HU11) y a las redes sociales, que abren en una pestaña separada para no perder el contexto de la landing (HU12). El selector de idioma EN/ES (HU10) está disponible permanentemente en el navbar.
 
 El flujo de navegación esperado es:
 
 ```
-Navbar → Hero → Funciones → Cómo funciona → Precios → FAQ → CTA final
+Navbar → Hero → Funciones → Cómo funciona → Prueba social → Precios → FAQ → Equipo → CTA final → Footer
 ```
 
-Los usuarios que llegan con intención directa (ej. desde un anuncio) aterrizan en el
-hero y pueden ir directo al CTA. Los usuarios exploratorios recorren las secciones de
-forma descendente. Ambos flujos convergen en el mismo punto de conversión.
+Los visitantes con intención directa (por ejemplo, llegando desde un anuncio) aterrizan en el hero y pueden ir directo al CTA. Los visitantes exploratorios recorren las secciones de forma descendente. Ambos flujos convergen en el mismo punto de conversión.
 
-**Aplicación web**
+**Aplicación web autenticada**
 
-La aplicación usa una **navegación lateral persistente** (sidebar) en desktop y una
-**barra inferior** en mobile, siguiendo convenciones establecidas de aplicaciones de
-gestión que el usuario ya conoce.
+La aplicación usa una **navegación lateral persistente** (sidebar) en desktop y una **barra inferior** en mobile, siguiendo convenciones establecidas de aplicaciones de gestión que el usuario ya conoce. El sidebar expone los seis módulos principales (Pedidos, Producción, Inventario, Presupuestos, Mensajes, Configuración) con íconos y etiquetas, el módulo activo se indica con el color primario. Las acciones de creación (nuevo pedido, nuevo material, nuevo presupuesto) están disponibles desde un botón prominente dentro de cada módulo, no desde la navegación global, para evitar contaminar el nivel principal con acciones específicas de cada sección.
 
-El sidebar muestra los cinco módulos principales con íconos y etiquetas. El módulo
-activo se indica con el color primario. Las acciones de creación (nuevo pedido, nuevo
-material) están disponibles desde un botón prominente dentro de cada módulo, no
-desde la navegación global.
+La composición del sidebar varía por rol: el carpintero ve los seis módulos completos. El cliente ve únicamente Pedidos, Mensajes, Presupuestos y Configuración, ya que Inventario y Producción son superficies de escritura exclusivas del carpintero (sobre estos últimos el cliente accede solo en lectura desde el detalle de su pedido).
 
 La jerarquía de navegación es de dos niveles máximo:
 
 ```
-Nivel 1 (sidebar): Pedidos / Inventario / Planificación / Clientes / Configuración
+Nivel 1 (sidebar): Pedidos / Producción / Inventario / Presupuestos / Mensajes / Configuración
 Nivel 2 (dentro del módulo): Listado → Detalle / Formulario de creación o edición
 ```
 
-No existe un nivel 3. Si una acción requeriría un tercer nivel, se implementa como
-modal o panel lateral (drawer) sobre el nivel 2 actual, manteniendo el contexto del
-usuario visible.
+No existe un nivel 3. Si una acción requeriría un tercer nivel (registrar un comprobante de pago dentro del detalle de un presupuesto, validar una etapa dentro del detalle de un pedido), se implementa como modal o panel lateral (drawer) sobre el nivel 2 actual, manteniendo el contexto del usuario visible.
 
-**Vista de seguimiento pública**
+**Vista pública de seguimiento**
 
-Es una experiencia de una sola página sin navegación. El cliente ve el estado actual
-del pedido, el historial de estados anteriores y los datos del mueble. No hay menú,
-no hay links a otras secciones, no hay posibilidad de confundirse. El único punto de
-salida opcional es un link al sitio de WoodRoute para que el cliente conozca el producto.
+Es una experiencia de una sola página sin navegación interna. El cliente ve el estado actual del pedido, la etapa de producción en curso, el porcentaje de avance, la fecha estimada de entrega y el historial de etapas completadas (HU43, TS06). No hay menú, no hay links a otras secciones, no hay posibilidad de extraviarse. El único punto de salida opcional es un enlace al sitio principal de WoodRoute para que el cliente conozca el producto en caso de que aún no sea usuario.
 
 
 
@@ -2161,11 +2165,19 @@ salida opcional es un link al sitio de WoodRoute para que el cliente conozca el 
 
 ### 4.3.1. Landing Page Wireframe
 
+Wireframes de la landing en sus dos breakpoints principales.
+
+**Vista desktop**
+
+![Wireframe landing page — desktop](assets/product-design/landing/wireframe-desktop.png)
+
+**Vista mobile**
+
+![Wireframe landing page — mobile](assets/product-design/landing/wireframe-mobile.png)
+
 ### 4.3.2. Landing Page Mock-up
 
-El mock-up de la landing page de WoodRoute aplica el design system definido en la
-sección anterior: tipografía Plus Jakarta Sans / Inter, paleta cálida con primario
-naranja-rojo `#FD4319` y espaciado de sección de 6rem en desktop y 4rem en mobile.
+El mock-up de la landing page de WoodRoute aplica el design system definido en la sección anterior: tipografía Plus Jakarta Sans / Inter, paleta cálida con primario naranja-rojo `#FD4319` y espaciado de sección de 6rem en desktop y 4rem en mobile.
 
 La página está estructurada en ocho secciones en el siguiente orden:
 
@@ -2186,12 +2198,59 @@ La página está estructurada en ocho secciones en el siguiente orden:
 
 ![Mock-up landing page — mobile](assets/product-design/landing/mockup-mobile.png)
 
-La versión mobile mantiene la misma jerarquía de contenido que desktop. Las grillas
-de features colapsan a una columna, el navbar se convierte en menú hamburguesa y
-el CTA de conversión permanece visible y accesible en todo momento. El espaciado
-entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm`.
+La versión mobile mantiene la misma jerarquía de contenido que desktop. Las grillas de features colapsan a una columna, el navbar se convierte en menú hamburguesa y el CTA de conversión permanece visible y accesible en todo momento. El espaciado entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm`.
+
+## 4.6. Domain-Driven Software Architecture
+
+### 4.6.1. Design Level Event Storming
+
+**Board completo en Miro:** [https://miro.com/app/board/uXjVHUVIGxY=/?share_link_id=166196211611](https://miro.com/app/board/uXjVHUVIGxY=/?share_link_id=166196211611)
+
+#### Step 1 — Unstructured Exploration
+
+![Step 1 — Unstructured Exploration](assets/design-level-event-storming/1-unstructured-exploration.jpg)
+
+#### Step 2 — Timelines
+
+![Step 2 — Timelines](assets/design-level-event-storming/2-timelines.jpg)
+
+#### Step 3 — Hot Spots
+
+![Step 3 — Hot Spots](assets/design-level-event-storming/3-hot-spots.jpg)
+
+#### Step 4 — Pivotal Points
+
+![Step 4 — Pivotal Points](assets/design-level-event-storming/4-pivotal-points.jpg)
+
+#### Step 5 — Commands
+
+![Step 5 — Commands](assets/design-level-event-storming/5-commands.jpg)
+
+#### Step 6 — Policies
+
+![Step 6 — Policies](assets/design-level-event-storming/6-policies.jpg)
+
+#### Step 7 — Read Models
+
+![Step 7 — Read Models](assets/design-level-event-storming/7-read-models.jpg)
+
+#### Step 8 — External Systems
+
+![Step 8 — External Systems](assets/design-level-event-storming/8-external-systems.jpg)
+
+#### Step 9+10 — Aggregates & Bounded Contexts
+
+![Step 9+10 — Aggregates & Bounded Contexts](assets/design-level-event-storming/9-10-aggregates-and-bounded-contexts.jpg)
+
+<div style="page-break-after: always;"></div>
 
 ### 4.6.2. Software Architecture Context Diagram
+
+El System Context Diagram (nivel 1 del modelo C4) presenta el sistema WoodRoute en relación con su entorno inmediato. Se modelan dos actores principales —el Cliente y el Carpintero o Taller (el Visitante identificado en el Big Picture EventStorming de la sección 2.4 corresponde a su estado pre-autenticado y, por convención C4, no se modela por separado)— y cuatro sistemas externos: Pasarela de pagos, Servicio de notificaciones, Proveedor de madera (HU44) y Cloud Storage. Los cuatro se etiquetan como Simulated y se mockean en la iteración académica actual.
+
+El diagrama resultante se presenta a continuación.
+
+**System Context Diagram — WoodRoute**
 
 <div align="center">
   <img src="assets/architecture/context-diagram.png" alt="Context Diagram" width="100%">
@@ -2199,14 +2258,110 @@ entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm
 
 ### 4.6.3. Software Architecture Container Diagrams
 
+El Container Diagram (nivel 2 del modelo C4) amplía WoodRoute mostrando sus containers, tecnologías y protocolos de comunicación. La Web Application (Vue 3 + Vite) consume vía HTTPS/JSON la API REST de cinco bounded contexts agrupados bajo API Application, un monolito modular en .NET 10, todos persistiendo en una base de datos PostgreSQL compartida mediante Entity Framework Core. La integración entre bounded contexts se realiza exclusivamente a través de la base de datos (patrón Shared Database), sin invocaciones cruzadas en runtime. Las notificaciones se centralizan en el Seguimiento y Comunicación Context, que observa eventos en la DB y dispara los envíos contra el proveedor externo. Las decisiones de stack se formalizan en la sección 5.1 (Software Configuration Management).
+
+El diagrama resultante se presenta a continuación.
+
+**Container Diagram — WoodRoute**
+
 <div align="center">
   <img src="assets/architecture/container-diagram.png" alt="Container Diagram" width="100%">
 </div>
 
 ### 4.6.4. Software Architecture Components Diagrams
 
+Esta sección presenta los Component Diagrams por cada bounded context del API Application. Cada diagrama muestra la descomposición interna del contexto en cuatro capas que reflejan el patrón Domain-Driven Design con arquitectura en capas: el Controller expone los endpoints REST, el Service implementa la lógica de negocio, el Repository abstrae el acceso a datos, y el Aggregate constituye la entidad raíz del dominio que se persiste. Las integraciones con sistemas externos se modelan como llamadas directas desde el Service correspondiente.
+
+**Components of Onboarding Context**
+
 <div align="center">
-  <img src="assets/architecture/component-diagram.png" alt="Component Diagram" width="100%">
+  <img src="assets/architecture/component-diagram-onboarding.png" alt="Components of Onboarding Context" width="100%">
+</div>
+
+**Components of Inventario Context**
+
+<div align="center">
+  <img src="assets/architecture/component-diagram-inventario.png" alt="Components of Inventario Context" width="100%">
+</div>
+
+**Components of Cotización y Venta Context**
+
+<div align="center">
+  <img src="assets/architecture/component-diagram-sales.png" alt="Components of Cotización y Venta Context" width="100%">
+</div>
+
+**Components of Producción Context**
+
+<div align="center">
+  <img src="assets/architecture/component-diagram-production.png" alt="Components of Producción Context" width="100%">
+</div>
+
+**Components of Seguimiento y Comunicación Context**
+
+<div align="center">
+  <img src="assets/architecture/component-diagram-comunication.png" alt="Components of Seguimiento y Comunicación Context" width="100%">
+</div>
+
+<div style="page-break-after: always;"></div>
+
+## 4.7. Software Object-Oriented Design
+
+Esta sección presenta el Class Diagram UML del producto Web Application de WoodRoute por cada bounded context. Cada diagrama se organiza en cuatro capas siguiendo Domain-Driven Design: Domain, Infrastructure, Application y Presentation. La herramienta utilizada es PlantUML.
+
+### 4.7.1. Class Diagrams
+
+**Class Diagram of Onboarding Context**
+
+Modela el registro, inicio de sesión y gestión de perfil. La entidad raíz `User` se asocia uno a uno con `Profile` y emite `AuthSession` durante el login.
+
+<div align="center">
+  <img src="assets/architecture/class-diagram-onboarding.png" alt="Class Diagram of Onboarding Context" width="100%">
+</div>
+
+**Class Diagram of Inventario Context**
+
+Modela la gestión de materiales, control de stock y órdenes de compra al proveedor. `Material` mantiene una relación uno-a-muchos con `PurchaseOrder` y emite `StockAlert` cuando baja del mínimo.
+
+<div align="center">
+  <img src="assets/architecture/class-diagram-inventario.png" alt="Class Diagram of Inventario Context" width="100%">
+</div>
+
+**Class Diagram of Cotización y Venta Context**
+
+Modela el ciclo de pedidos, cotizaciones y pagos. `Order` agrupa `FurnitureDetails`, su `Quote` con desglose por `QuoteItem`, y los `Payment` de anticipo y saldo final.
+
+<div align="center">
+  <img src="assets/architecture/class-diagram-sales.png" alt="Class Diagram of Cotización y Venta Context" width="100%">
+</div>
+
+**Class Diagram of Producción Context**
+
+Modela la planificación de etapas, el registro de avance y el consumo de materiales. `ManufactureOrder` se compone de `Stage` con sus `StagePhoto` y registra `MaterialConsumption`.
+
+<div align="center">
+  <img src="assets/architecture/class-diagram-production.png" alt="Class Diagram of Producción Context" width="100%">
+</div>
+
+**Class Diagram of Seguimiento y Comunicación Context**
+
+Modela la mensajería, reseñas, encuestas post-entrega y el read-model público de seguimiento. `Conversation` agrupa los `Message` intercambiados y, opcionalmente, `Review` y `Survey`.
+
+<div align="center">
+  <img src="assets/architecture/class-diagram-comunication.png" alt="Class Diagram of Seguimiento y Comunicación Context" width="100%">
+</div>
+
+<div style="page-break-after: always;"></div>
+
+## 4.8. Database Design
+
+Esta sección presenta el Database Diagram de WoodRoute por cada bounded context, materializando la persistencia del Class Diagram sobre PostgreSQL. La herramienta utilizada es PlantUML con notación crow's foot.
+
+### 4.8.1. Database Diagrams
+
+Diagrama relacional consolidado de WoodRoute. Las tablas se agrupan visualmente por bounded context y se evidencian las relaciones intra-contexto junto con los Foreign Keys cruzados que materializan las dependencias entre agregados del modelo de dominio.
+
+<div align="center">
+  <img src="assets/architecture/database-diagram.png" alt="WoodRoute Database Diagram" width="100%">
 </div>
 
 <div style="page-break-after: always;"></div>
@@ -2214,6 +2369,8 @@ entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm
 # Capítulo V: Product Implementation, Validation & Deployment
 
 ## 5.1. Software Configuration Management
+
+### 5.1.1. Software Development Environment Configuration
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
@@ -2242,11 +2399,11 @@ En este primer sprint se desarrolló la landing page y la documentación inicial
 
 | Team Member | GitHub Username | Landing Page | Diseño UI/UX | Documentación |
 | :--- | :--- | :--- | :--- | :--- |
-| Gonza Morales, Anderson | anderson-gonza | Colaborador | Colaborador | Colaborador |
-| Justo Yauricasa, Alexander Paolo | alexander-justo | Colaborador | Colaborador | Líder |
+| Gonza Morales, Anderson | Ander-U | Colaborador | Colaborador | Colaborador |
+| Justo Yauricasa, Alexander Paolo | AlexanderrJusto | Colaborador | Colaborador | Líder |
 | Saldaña De Souza, Juan David | jndesouza | Colaborador | Colaborador | Colaborador |
-| Sulca Sanchez, Piero Angel | piero-sulca | Líder | Líder | Colaborador |
-| Torres Sanchez, Dalila Victoria | dalila-torres | Colaborador | Colaborador | Colaborador |
+| Sulca Sanchez, Piero Angel | psulca | Líder | Líder | Colaborador |
+| Torres Sanchez, Dalila Victoria | DalilaTorres | Colaborador | Colaborador | Colaborador |
 
 #### 5.2.1.3. Sprint Backlog 1
 

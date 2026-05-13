@@ -1,0 +1,157 @@
+@startuml class-diagram-inventario
+!pragma layout smetana
+
+' Inventario Bounded Context — Class Diagram
+' Trazabilidad: HU26 Registro, HU27 Update, HU28 Viabilidad,
+' HU29 Alerta stock bajo, HU44 OC al proveedor, TS04 /inventory, TS05 feasibility
+
+title Inventario Bounded Context — Class Diagram
+
+scale 0.7
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam dpi 90
+skinparam defaultFontSize 11
+skinparam classAttributeFontSize 10
+skinparam classFontSize 12
+skinparam packageFontSize 12
+skinparam nodesep 20
+skinparam ranksep 30
+hide empty members
+
+package "Inventario Bounded Context" as inventario {
+
+    package "Domain" as inventario_domain {
+
+        enum MaterialUnit <<enumeration>> {
+            UNIDAD
+            METRO
+            METRO_CUADRADO
+            LITRO
+            KILOGRAMO
+        }
+
+        enum PurchaseOrderStatus <<enumeration>> {
+            ENVIADA
+            RECIBIDA
+            CERRADA
+        }
+
+        class Material <<resource>> {
+            - id: Number|null
+            - materialType: string
+            - quantity: Number
+            - unit: MaterialUnit
+            - minStock: Number
+            - imageUrl: string|null
+            + constructor(id, materialType, quantity, unit, minStock, imageUrl)
+            + isLowStock(): boolean
+            + hasEnough(required: Number): boolean
+        }
+
+        class PurchaseOrder <<resource>> {
+            - id: Number|null
+            - materialId: Number|null
+            - supplierId: Number|null
+            - quantity: Number
+            - estimatedDate: Date|null
+            - status: PurchaseOrderStatus
+            + constructor(id, materialId, supplierId, quantity, estimatedDate, status)
+        }
+
+        class StockAlert <<value-object>> {
+            - materialId: Number
+            - currentStock: Number
+            - minStock: Number
+            - detectedAt: Date
+            + constructor(materialId, currentStock, minStock, detectedAt)
+        }
+
+        Material "1" o-- "0..*" PurchaseOrder : "reposed by >"
+        Material "1" ..> "0..*" StockAlert : raises >
+        Material --> MaterialUnit : "measured in"
+        PurchaseOrder --> PurchaseOrderStatus : "in state"
+    }
+
+    package "Infrastructure" as inventario_infrastructure {
+
+        interface IInventarioApi <<interface>> {
+            + getMaterials(): Promise
+            + createMaterial(resource): Promise
+            + updateMaterial(id, resource): Promise
+            + adjustStock(id, delta): Promise
+            + checkFeasibility(orderId): Promise
+            + createPurchaseOrder(resource): Promise
+            + confirmReception(id): Promise
+        }
+
+        class InventarioApi {
+            + getMaterials(): Promise
+            + createMaterial(resource): Promise
+            + updateMaterial(id, resource): Promise
+            + adjustStock(id, delta): Promise
+            + checkFeasibility(orderId): Promise
+            + createPurchaseOrder(resource): Promise
+            + confirmReception(id): Promise
+        }
+
+        class MaterialAssembler <<assembler>> {
+            + {static} toEntityFromResource(resource): Material
+            + {static} toEntitiesFromResponse(response): Material[]
+        }
+
+        class PurchaseOrderAssembler <<assembler>> {
+            + {static} toEntityFromResource(resource): PurchaseOrder
+        }
+
+        InventarioApi ..|> IInventarioApi
+    }
+
+    package "Application" as inventario_application {
+
+        class InventarioStore <<store>> {
+            - materials: Material[]
+            - lowStockAlerts: StockAlert[]
+            - purchaseOrders: PurchaseOrder[]
+            + lowStockCount: computed
+            + fetchMaterials(): Promise
+            + addMaterial(material: Material): Promise
+            + adjustStock(id: Number, delta: Number): Promise
+            + checkFeasibility(orderId: Number): Promise
+            + generatePurchaseOrder(material: Material, qty: Number): Promise
+            + confirmReception(id: Number): Promise
+        }
+
+        InventarioStore "1" --> "1" IInventarioApi : consumes >
+        InventarioStore ..> MaterialAssembler : <<uses>>
+        InventarioStore ..> PurchaseOrderAssembler : <<uses>>
+    }
+
+    package "Presentation" as inventario_presentation {
+
+        class MaterialList <<component>> {
+            - store: InventarioStore
+            + navigateToNew(): void
+            + navigateToEdit(id: Number): void
+        }
+
+        class MaterialForm <<component>> {
+            - store: InventarioStore
+            - form: object
+            - isEdit: boolean
+            + saveMaterial(): void
+        }
+
+        class LowStockAlertsPanel <<component>> {
+            - store: InventarioStore
+            + openPurchaseOrderDialog(material: Material): void
+        }
+
+        MaterialList "1" --> "1" InventarioStore : binds >
+        MaterialForm "1" --> "1" InventarioStore : binds >
+        LowStockAlertsPanel "1" --> "1" InventarioStore : binds >
+    }
+}
+
+@enduml
