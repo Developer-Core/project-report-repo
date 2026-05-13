@@ -1396,7 +1396,7 @@ El Product Backlog se elabora a continuación, listando cada User Story con su o
       <td>HU06</td>
       <td>Empezar a usar la plataforma desde la landing</td>
       <td>Como visitante (carpintero o cliente), quiero empezar a usar la plataforma desde la landing según mi rol.</td>
-      <td>3</td>
+      <td>1</td>
     </tr>
     <tr>
       <td>10</td>
@@ -2370,7 +2370,218 @@ Diagrama relacional consolidado de WoodRoute. Las tablas se agrupan visualmente 
 
 ## 5.1. Software Configuration Management
 
+Esta sección documenta la gestión de configuración del software de WoodRoute, definiendo las herramientas, entornos y convenciones que sostienen el ciclo de desarrollo del equipo. Se describen el entorno de desarrollo, la estrategia de control de versiones y los lineamientos de despliegue que aseguran la trazabilidad y consistencia del producto.
+
 ### 5.1.1. Software Development Environment Configuration
+
+A continuación se listan los productos de software utilizados por el equipo a lo largo del ciclo de vida de WoodRoute, agrupados por tipo de actividad. Para cada producto se indica el propósito de uso en el proyecto y la ruta de referencia (SaaS) o de descarga (instalación local), respetando las restricciones de herramientas establecidas para el curso.
+
+#### Project Management
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia / descarga |
+| :--- | :--- | :--- |
+| Trello | Gestión del Product Backlog, planificación de sprints y seguimiento de tareas mediante tableros Kanban compartidos por el equipo. | <https://trello.com/> |
+| Discord | Canal principal de comunicación sincrónica del equipo: reuniones de daily, coordinación técnica y discusión de avances. | <https://discord.com/download> |
+| WhatsApp | Canal secundario de comunicación rápida y notificaciones del equipo. | <https://www.whatsapp.com/download> |
+
+#### Requirements Management
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia / descarga |
+| :--- | :--- | :--- |
+| Miro | Elaboración del Lean UX Canvas, Big Picture EventStorming, sesiones de needfinding y mapeo colaborativo de hipótesis y dominios. | <https://miro.com/> |
+
+#### Product UX/UI Design
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia / descarga |
+| :--- | :--- | :--- |
+| Figma | Diseño de wireframes, mockups y prototipos de alta fidelidad de la landing page y aplicaciones web. | <https://www.figma.com/> |
+| UXPressia | Construcción de User Personas, Empathy Maps, Journey Maps e Impact Mapping. | <https://uxpressia.com/> |
+| Lucidchart | Modelado de diagramas de flujo, sitemaps y artefactos de arquitectura de información. | <https://www.lucidchart.com/> |
+
+#### Software Development
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia / descarga |
+| :--- | :--- | :--- |
+| WebStorm | IDE principal del equipo para el desarrollo de la landing page y la SPA en Vue 3. | <https://www.jetbrains.com/webstorm/download/> |
+| Vue 3 | Framework JavaScript progresivo para la construcción de la landing page y de la Single Page Application. | <https://vuejs.org/> |
+| Vite | Build tool y dev server para el frontend en Vue 3, con HMR y bundling optimizado. | <https://vitejs.dev/> |
+| Node.js | Runtime de JavaScript necesario para ejecutar Vite, gestores de paquetes y herramientas de tooling del frontend. | <https://nodejs.org/en/download> |
+| .NET 10 SDK | Plataforma de desarrollo para los servicios backend de WoodRoute siguiendo la arquitectura DDD definida en el capítulo IV. | <https://dotnet.microsoft.com/en-us/download/dotnet/10.0> |
+| PostgreSQL | Motor de base de datos relacional ejecutado localmente para soportar la persistencia de los bounded contexts durante el desarrollo. | <https://www.postgresql.org/download/> |
+| Swagger / OpenAPI | Documentación y prueba interactiva de los endpoints REST expuestos por los servicios backend. | <https://swagger.io/> |
+| Git | Sistema de control de versiones distribuido utilizado para el versionado del código fuente y del informe. | <https://git-scm.com/downloads> |
+| Git Flow (extensión) | Extensión de Git que implementa el modelo de ramas definido en CLAUDE.md (main, develop, feature, release, hotfix). | <https://github.com/nvie/gitflow> |
+| GitHub | Hosting remoto de los repositorios del equipo, gestión de Pull Requests y revisión de código. | <https://github.com/> |
+
+#### Software Deployment
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia / descarga |
+| :--- | :--- | :--- |
+| Vercel | Plataforma de despliegue continuo de la landing page y de la aplicación frontend en Vue 3, con previews automáticos por rama. | <https://vercel.com/> |
+
+#### Software Documentation
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia / descarga |
+| :--- | :--- | :--- |
+| Visual Studio Code | Editor utilizado para la redacción del informe en Markdown y la edición de archivos de configuración. | <https://code.visualstudio.com/Download> |
+| Markdown PDF (extensión) | Extensión de VS Code utilizada para exportar el informe Markdown al formato PDF requerido por la entrega UPC. | <https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf> |
+| PlantUML | Generación de diagramas de clases y de base de datos como código, versionados junto al repositorio. | <https://plantuml.com/> |
+| Structurizr | Modelado de diagramas C4 (Contexto, Contenedores y Componentes) para documentar la arquitectura del producto. | <https://structurizr.com/> |
+| Google Drive | Almacenamiento y compartición de grabaciones de entrevistas, evidencias de needfinding y materiales de apoyo. | <https://drive.google.com/> |
+| Google Meet | Plataforma de videoconferencia para sprint planning, sprint review, retrospectivas y entrevistas a usuarios. | <https://meet.google.com/> |
+
+### 5.1.2. Source Code Management
+
+El proyecto WoodRoute utiliza GitHub como plataforma de control de versiones bajo el modelo GitFlow, lo que garantiza la trazabilidad del código, una colaboración organizada entre los miembros del equipo y la estabilidad en cada release del producto.
+
+**Organización en GitHub:** <https://github.com/Developer-Core>
+
+**Repositorio del informe:** <https://github.com/Developer-Core/project-report-repo>
+
+#### Ramas principales
+
+- **`main`:** Contiene la versión estable y desplegada en producción. Solo recibe merges desde ramas `release/*` y `hotfix/*`. Cada merge a `main` corresponde a una entrega oficial (AV1, AV2, TF) y queda etiquetado con su versión SemVer.
+- **`develop`:** Rama de integración de nuevas funcionalidades. Contiene la historia completa del proyecto y sirve como base para las ramas `feature/*` y `release/*`.
+
+#### Ramas secundarias
+
+- **`feature/*`:** Ramas temporales para el desarrollo de funcionalidades o secciones específicas del informe. Nacen de `develop` y se reintegran a `develop` mediante Pull Request. La convención de nombrado es `feature/NN-descriptive-name` cuando la tarea corresponde a una sección numerada del reporte; en caso contrario se usa `feature/descriptive-name`.
+- **`release/*`:** Ramas de preparación para entregas. Nacen de `develop` y solo aceptan correcciones de bugs y ajustes de documentación, nunca nuevas funcionalidades. Al finalizar se integran a `main` y a `develop`.
+- **`hotfix/*`:** Ramas para parches críticos posteriores a una entrega. Nacen de `main` y se reintegran tanto a `main` como a `develop`.
+
+#### Convenciones de commits
+
+El equipo aplica el estándar **Conventional Commits** con el formato `type(scope): description`. Los tipos utilizados en este repositorio incluyen `docs` para cambios de contenido del informe, `fix` para correcciones, `build` para configuración de exportación a PDF, `chore` para mantenimiento, `style` para cambios de formato y `refactor` para reestructuración sin cambio de salida.
+
+#### Versionado
+
+Se emplea **Semantic Versioning (SemVer 2.0.0)** con el formato `MAJOR.MINOR.PATCH`. Los commits de tipo `docs` incrementan la versión MINOR, los de tipo `fix` incrementan PATCH y los cambios marcados con `!` o `BREAKING CHANGE` incrementan MAJOR. Los tags se publican con el prefijo `v` (por ejemplo, `v0.1.0`). Las versiones se mapean a las entregas del curso de la siguiente manera:
+
+| Entregable | Versión | Rama de release |
+| :--- | :--- | :--- |
+| AV1 | `v0.1.0` | `release/0.1.0` |
+| AV2 | `v0.2.0` | `release/0.2.0` |
+| TF | `v1.0.0` | `release/1.0.0` |
+
+#### Política de integración
+
+Todas las integraciones hacia `develop` o `main` requieren la creación de un **Pull Request** revisado y aprobado por al menos un miembro del equipo. No se permiten commits directos a `develop` ni a `main`, y las ramas `feature/*` nunca interactúan directamente con `main`: siempre lo hacen a través de `develop`.
+
+### 5.1.3. Source Code Style Guide & Coding Conventions
+
+El equipo adopta convenciones estándares y reconocidas internacionalmente para los lenguajes utilizados en WoodRoute: **JavaScript** y **Vue 3** en el frontend, **C# / .NET 10** en el backend y **SQL** sobre PostgreSQL para la persistencia. Toda la nomenclatura del código —identificadores, archivos, tablas y columnas— se escribe en **inglés**, garantizando coherencia y legibilidad para cualquier desarrollador.
+
+Como herramienta de soporte se utiliza **Prettier** para el formateo automático del código fuente del frontend, asegurando un estilo consistente entre los miembros del equipo. Actualmente no se ha configurado un linter dedicado; su incorporación queda como mejora planificada para sprints posteriores.
+
+#### JavaScript y Vue 3
+
+Para el código del frontend (landing page y SPA) se adoptan las guías oficiales de **Vue.js** y **Google JavaScript Style Guide**, complementadas con las **MDN JavaScript Guidelines** como referencia normativa.
+
+| Elemento | Convención | Ejemplo |
+| :--- | :--- | :--- |
+| Variables y funciones | `camelCase` | `orderTotal`, `calculateMaterials()` |
+| Constantes globales | `UPPER_SNAKE_CASE` | `MAX_RETRY_COUNT` |
+| Componentes Vue (en código) | `PascalCase` | `OrderSummary`, `MaterialPicker` |
+| Archivos de componentes SFC | `kebab-case` | `order-summary.vue`, `material-picker.vue` |
+| Archivos de utilidades y composables | `kebab-case` | `use-order-state.js`, `format-currency.js` |
+| Props y eventos personalizados | `camelCase` en JS, `kebab-case` en template | `:order-id`, `@order-submitted` |
+| Indentación | 2 espacios | — |
+| Comillas | Comillas simples (`'`) en JS, dobles (`"`) en templates | — |
+| Punto y coma | Obligatorio al final de cada sentencia | — |
+
+**Reglas clave de la Vue Style Guide (Priority A):**
+
+- Nombres de componentes con varias palabras para evitar colisiones con elementos HTML nativos.
+- Definiciones de `data` como función (`data() { return { ... } }`) en componentes reutilizables.
+- Tipado explícito de `props` con validación (tipo, requerido, valor por defecto).
+- Uso de `key` en bucles `v-for`.
+- Evitar `v-if` y `v-for` sobre el mismo elemento.
+
+#### C# y .NET 10
+
+Para el código del backend se adoptan las **Microsoft C# Coding Conventions** y las **ASP.NET Core Coding Guidelines** oficiales.
+
+| Elemento | Convención | Ejemplo |
+| :--- | :--- | :--- |
+| Clases, structs, records, enums | `PascalCase` | `OrderService`, `MaterialEstimate` |
+| Métodos y propiedades públicas | `PascalCase` | `CalculateTotal()`, `OrderId` |
+| Parámetros y variables locales | `camelCase` | `orderId`, `customerName` |
+| Campos privados | `_camelCase` con guion bajo | `_orderRepository` |
+| Interfaces | Prefijo `I` + `PascalCase` | `IOrderRepository`, `IUnitOfWork` |
+| Constantes | `PascalCase` | `MaxRetryCount` |
+| Archivos | `PascalCase` coincidente con el tipo principal | `OrderService.cs` |
+| Indentación | 4 espacios | — |
+| Llaves | En línea nueva (estilo Allman) | — |
+
+**Reglas clave adoptadas:**
+
+- Uso de `var` solo cuando el tipo es evidente desde el contexto.
+- `async`/`await` para toda operación I/O, con sufijo `Async` en métodos asíncronos (`GetOrderAsync`).
+- Una clase pública por archivo, con el archivo nombrado igual que la clase.
+- Organización del proyecto según los bounded contexts y capas DDD definidas en el capítulo IV (Domain, Application, Infrastructure, Presentation).
+
+#### SQL (PostgreSQL)
+
+Para la base de datos relacional se adoptan las convenciones recomendadas por la comunidad **PostgreSQL**, alineadas con el Database Design del capítulo IV.
+
+| Elemento | Convención | Ejemplo |
+| :--- | :--- | :--- |
+| Tablas | `snake_case` plural | `orders`, `material_estimates` |
+| Columnas | `snake_case` | `customer_id`, `created_at` |
+| Claves primarias | `id` (entero o UUID) | `id` |
+| Claves foráneas | `<tabla_singular>_id` | `order_id`, `customer_id` |
+| Índices | `idx_<tabla>_<columnas>` | `idx_orders_customer_id` |
+| Restricciones | `<tipo>_<tabla>_<columna>` | `fk_orders_customer_id` |
+| Palabras reservadas SQL | `UPPERCASE` | `SELECT`, `FROM`, `WHERE` |
+
+**Reglas clave adoptadas:**
+
+- Toda tabla incluye columnas de auditoría `created_at` y `updated_at` con tipo `timestamptz`.
+- Las claves foráneas declaran explícitamente su política `ON DELETE` y `ON UPDATE`.
+- Identificadores en inglés y sin abreviaturas ambiguas.
+
+#### Referencias normativas
+
+Las guías oficiales adoptadas como base de estas convenciones están detalladas en la sección de Referencias del informe e incluyen:
+
+- Vue Style Guide (oficial).
+- Google JavaScript Style Guide.
+- MDN JavaScript Guidelines.
+- Microsoft C# Coding Conventions.
+- Microsoft ASP.NET Core Coding Guidelines.
+- PostgreSQL Naming Conventions.
+
+### 5.1.4. Software Deployment Configuration
+
+En esta sección se documentan las herramientas y procesos adoptados por el equipo para el despliegue de los componentes de WoodRoute: la landing page, la aplicación frontend y los servicios backend. El objetivo es contar con un flujo de publicación automatizado, reproducible y trazable a lo largo de los sprints.
+
+#### Landing Page y Frontend: Vercel
+
+Para el despliegue de la landing page y de la aplicación frontend en Vue 3 se utiliza **Vercel**, una plataforma especializada en el hosting de aplicaciones web modernas. Vercel se integra de forma nativa con GitHub, lo que habilita despliegues automáticos cada vez que se realiza un push a la rama configurada del repositorio, además de generar previews por cada Pull Request. A continuación se describe el flujo seguido por el equipo:
+
+**Paso 1: Conectar con Vercel.**
+
+El equipo accede a la plataforma de Vercel e inicia el flujo de creación de un nuevo proyecto, autorizando previamente la integración con la cuenta de GitHub de la organización.
+
+<div align="center">
+  <img src="assets/deployment/vercel-step-1-connect.png" alt="Acceso inicial a Vercel para crear un nuevo proyecto" width="100%">
+</div>
+
+**Paso 2: Importar el repositorio desde GitHub.**
+
+Desde la sección *Import Git Repository* se selecciona la organización **Developer-Core** y se importa el repositorio correspondiente a la landing page o a la aplicación frontend.
+
+<div align="center">
+  <img src="assets/deployment/vercel-step-2-import-repo.png" alt="Importación del repositorio desde la organización Developer-Core" width="100%">
+</div>
+
+**Paso 3: Desplegar la aplicación.**
+
+Se selecciona la rama a desplegar, el *Application Preset* (Vite para Vue 3), el *Root Directory*, los *Build and Output Settings* y las *Environment Variables* necesarias para producción. Al presionar el botón **Deploy**, Vercel ejecuta el build, publica el sitio y entrega la URL pública del entorno.
+
+<div align="center">
+  <img src="assets/deployment/vercel-step-3-deploy.png" alt="Despliegue del proyecto en Vercel" width="100%">
+</div>
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
@@ -2392,8 +2603,8 @@ En este primer sprint se desarrolló la landing page y la documentación inicial
 | **Sprint 1 Retrospective Summary** | Los miembros del equipo coincidieron en que la colaboración fue fluida gracias a la correcta asignación de roles. Se destacó la sinergia entre el diseño en Figma y la configuración inicial de los repositorios. Para el siguiente sprint, se identificó la oportunidad de mejorar la estimación de tiempos de desarrollo al iniciar la integración del backend. |
 | **Sprint Goal & User Stories** | |
 | **Sprint 1 Goal** | Nos enfocamos en entregar una primera versión de la landing page desplegada y la documentación de los primeros capítulos del informe. Creemos que esto entrega una propuesta de valor validada para atraer a nuestro segmento objetivo. Esto se confirmará cuando la web esté pública y el informe sea aprobado. |
-| **Sprint 1 Velocity** | 20 |
-| **Sum of Story Points** | 20 |
+| **Sprint 1 Velocity** | 14 |
+| **Sum of Story Points** | 14 |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
@@ -2407,25 +2618,135 @@ En este primer sprint se desarrolló la landing page y la documentación inicial
 
 #### 5.2.1.3. Sprint Backlog 1
 
-| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation | Assigned To | Status |
+| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation (SP) | Assigned To | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| US-LP01 | Landing Page – Estructura inicial | T01 | Maquetado HTML base | Construcción de la estructura inicial: header, hero section y footer. | 8h | Piero Sulca | Done |
-| US-LP02 | Landing Page – Diseño visual | T02 | Aplicación de estilos CSS | Implementación de estilos visuales según el manual de marca. | 10h | Piero Sulca | Done |
-| US-LP03 | Arquitectura y Entorno | T03 | Configuración del proyecto | Creación de repositorios y definición de la arquitectura base. | 4h | Juan David Saldaña | Done |
-| US-LP04 | Contenido estratégico UX | T04 | User Personas & Journey Maps | Creación de perfiles de usuarios y Lean UX Canvas. | 6h | Alexander Justo | Done |
-| US-LP05 | Diagramas de Arquitectura | T05 | Definición de C4 Model | Diseño de arquitectura Context y Container Diagrams. | 5h | Juan David Saldaña | Done |
-| US-LP06 | Despliegue de la web | T06 | Configuración de Hosting | Publicación del sitio estático en GitHub Pages. | 4h | Dalila Torres | Done |
-| US-INF01 | Documentación del informe | T07 | Redacción Capítulos Iniciales | Startup Profile, UX Research y estructura del informe. | 10h | Equipo Completo | Done |
+| HU01 | Navegación clara dentro de la landing | T01 | Maquetado de header y footer | Construcción del header con navegación y del footer con enlaces principales. | 1 | Piero Sulca | Done |
+| HU02 | Entender la propuesta de valor de WoodRoute | T02 | Hero section con propuesta de valor | Diseño y desarrollo del hero section con la propuesta de valor del SaaS. | 2 | Piero Sulca | Done |
+| HU03 | Conocer las funcionalidades del producto | T03 | Sección de funcionalidades | Implementación de la sección que resalta las funcionalidades principales del producto. | 1 | Piero Sulca | Done |
+| HU04 | Comprender cómo se usa el producto | T04 | Sección de flujo de uso | Sección visual que explica el flujo de uso de WoodRoute para visitantes. | 1 | Anderson Gonza | Done |
+| HU05 | Conocer los planes y precios disponibles | T05 | Sección de pricing | Construcción de la sección de planes y precios con tarjetas comparativas. | 2 | Dalila Torres | Done |
+| HU07 | Conocer al equipo detrás del producto | T06 | Sección del equipo | Sección con los integrantes del equipo y sus roles. | 1 | Alexander Justo | Done |
+| HU12 | Seguir a WoodRoute en redes sociales | T07 | Íconos de redes sociales en el footer | Inclusión de íconos enlazados a las redes sociales oficiales en el footer. | 1 | Anderson Gonza | Done |
+| HU11 | Conocer los términos y condiciones del servicio | T08 | Enlace a términos y condiciones | Inclusión del enlace a términos y condiciones en el footer de la landing. | 1 | Dalila Torres | Done |
+| HU06 | Empezar a usar la plataforma desde la landing | T09 | CTAs de registro y acceso | Implementación de los botones de llamada a la acción para iniciar registro como carpintero o cliente. | 1 | Juan David Saldaña | Done |
+| HU10 | Leer la landing en mi idioma preferido | T10 | Implementación de internacionalización (i18n) | Configuración de i18n con soporte de inglés por defecto y traducción al español de los textos de la landing. | 3 | Dalila Torres | Done |
+
+A continuación se muestra el tablero de Sprint Backlog 1 gestionado por el equipo en Trello, con las tareas distribuidas en sus respectivos estados (To do, In progress, To review y Done) al cierre del sprint.
+
+<div align="center">
+  <img src="assets/sprint-1.png" alt="Sprint Backlog 1 en Trello" width="100%">
+</div>
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-En este primer Sprint hemos realizado la implementación de nuestra Landing Page y la configuración inicial de los repositorios, donde todo el equipo ha aportado mediante la gestión de ramas. En la siguiente tabla se muestran los commits realizados.
+En este primer Sprint el equipo implementó la landing page de WoodRoute aplicando el modelo de ramas GitFlow. Todo el trabajo se desarrolló sobre ramas `feature/*` que se integraron a `develop` mediante Pull Requests revisados. El repositorio público es <https://github.com/Developer-Core/landing-page-woodroute>. A continuación se listan los commits más representativos del sprint.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Developer-Core/WoodRoute-Landing | main | 15ad028 | Initial commit | Initial commit | 10/04/2026 |
-| Developer-Core/WoodRoute-Landing | main | 33ad2a9 | Actualización de index.html | Agregado de estilos principales y la vista de la propuesta de valor. | 12/04/2026 |
-| Developer-Core/WoodRoute-Landing | main | 3694000 | Configuración de assets y diagramas | Se incluyeron los diagramas y el esquema inicial en los assets. | 14/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 73dd9cd | chore: initialize project with Vite vanilla and Tailwind v4 | Inicialización del proyecto con Vite y Tailwind CSS v4. | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 51574a7 | style: design system tokens and base styles | Definición de los tokens del design system y estilos base de la landing. | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 585d8cb | feat: base html structure and main entry point | Estructura HTML base y punto de entrada principal de la aplicación. | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | ba30a0b | feat: i18n system with spanish and english translations | Sistema de internacionalización con traducciones en inglés y español (HU10). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 58a97d7 | feat: nav-bar with mobile menu and language switcher | Barra de navegación con menú móvil y selector de idioma (HU01, HU10). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 4306453 | feat: hero section with tagline, ctas and dashboard placeholder | Hero section con la propuesta de valor, CTAs principales y placeholder del dashboard (HU02, HU06). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | a9dbb74 | feat: features grid with 6 product capabilities | Grid de funcionalidades con las seis capacidades principales del producto (HU03). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | fb3e87e | feat: client tracking section with benefits list | Sección dedicada al seguimiento del cliente con lista de beneficios (HU03). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 971b660 | feat: how it works section with numbered steps | Sección "cómo funciona" con pasos numerados que explica el flujo de uso (HU04). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 1a6ccd8 | feat: pricing section with monthly/annual billing toggle | Sección de pricing con tarjetas comparativas y toggle de facturación mensual/anual (HU05). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 84e0774 | feat: cta banner section with primary and secondary actions | Banner de llamada a la acción con acciones primaria y secundaria (HU06). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 9601e99 | feat: footer with nav columns, social icons and copyright | Footer con columnas de navegación, íconos de redes sociales y copyright (HU11, HU12). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 65bb4fc | feat: faq accordion section with 5 questions in es and en | Sección de preguntas frecuentes tipo acordeón con cinco preguntas en inglés y español. | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 0743916 | feat: add team section with member photos | Sección del equipo con fotos de los integrantes del proyecto (HU07). | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | 4c25f30 | feat: add vercel.json with build config | Configuración de build para el despliegue automático en Vercel. | 24/04/2026 |
+| Developer-Core/landing-page-woodroute | develop | ce0388e | feat: update logo woodroute | Actualización del logo oficial de WoodRoute en la landing page. | 13/05/2026 |
+
+#### 5.2.1.5. Execution Evidence for Sprint Review
+
+Durante el Sprint 1 el equipo completó la implementación de la landing page de WoodRoute. La landing presenta la propuesta de valor del SaaS, el flujo de uso del producto, los planes de suscripción, una sección de preguntas frecuentes y la presentación del equipo, todo con soporte de internacionalización en español e inglés. La aplicación se encuentra desplegada de forma pública en Vercel y accesible desde cualquier dispositivo.
+
+**URL pública de la landing page:** <https://landing-page-woodroute.vercel.app/>
+
+**Video demostrativo del Sprint 1:** <https://youtu.be/kCCwd5l2dD0>
+
+A continuación se presentan las capturas de las principales vistas implementadas en este sprint.
+
+**Vista 1 — Hero section con propuesta de valor**
+
+<div align="center">
+  <img src="assets/sprint-1-execution/landing-hero.png" alt="Hero section de la landing page de WoodRoute" width="100%">
+</div>
+
+**Vista 2 — Sección "Cómo funciona" con el flujo de uso**
+
+<div align="center">
+  <img src="assets/sprint-1-execution/landing-how-it-works.png" alt="Sección Cómo funciona de la landing page" width="100%">
+</div>
+
+**Vista 3 — Sección de preguntas frecuentes**
+
+<div align="center">
+  <img src="assets/sprint-1-execution/landing-faq.png" alt="Sección de Preguntas Frecuentes de la landing page" width="100%">
+</div>
+
+**Vista 4 — Sección del equipo detrás del producto**
+
+<div align="center">
+  <img src="assets/sprint-1-execution/landing-team.png" alt="Sección Nuestro Equipo con los integrantes de WoodRoute" width="100%">
+</div>
+
+#### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+No disponemos de documentación como evidencia, ya que en el primer sprint nuestro enfoque se centró en la elaboración de la landing page.
+
+#### 5.2.1.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 1 el equipo configuró y puso en marcha el despliegue continuo de la landing page de WoodRoute sobre la plataforma Vercel. Las actividades realizadas comprendieron la creación de la cuenta de equipo en Vercel, la autorización de la integración con la organización **Developer-Core** en GitHub, la importación del repositorio `landing-page-woodroute`, la configuración del proyecto (framework preset, rama de despliegue, build command y variables de entorno) y la activación del despliegue automático ante cada push a la rama `develop`. Como resultado, la landing quedó publicada en <https://landing-page-woodroute.vercel.app/>. A continuación se evidencian los pasos realizados.
+
+**Paso 1: Acceso a Vercel.**
+
+El equipo accede a la plataforma de Vercel para iniciar la creación del nuevo proyecto.
+
+<div align="center">
+  <img src="assets/deployment/vercel-step-1-connect.png" alt="Acceso inicial a Vercel" width="100%">
+</div>
+
+**Paso 2: Importación del repositorio desde GitHub.**
+
+Desde la sección *Import Git Repository* se selecciona la organización **Developer-Core** y se importa el repositorio de la landing page.
+
+<div align="center">
+  <img src="assets/deployment/vercel-step-2-import-repo.png" alt="Importación del repositorio desde Developer-Core" width="100%">
+</div>
+
+**Paso 3: Configuración y despliegue.**
+
+Se selecciona la rama de despliegue, el *Application Preset* (Vite), el *Root Directory*, los *Build and Output Settings* y las *Environment Variables* necesarias para producción. Al presionar el botón **Deploy**, Vercel ejecuta el build y publica el sitio.
+
+<div align="center">
+  <img src="assets/deployment/vercel-step-3-deploy.png" alt="Despliegue del proyecto en Vercel" width="100%">
+</div>
+
+#### 5.2.1.8. Team Collaboration Insights for Sprint Review
+
+Durante el Sprint 1 el equipo organizó la colaboración siguiendo el modelo de Aspect Leaders presentado en la sección 5.2.1.2: Piero Sulca lideró la implementación técnica de la landing page, mientras que el resto de los integrantes contribuyó como colaboradores en el diseño UI/UX, la elaboración de los artefactos de descubrimiento (User Personas, Journey Maps, Lean UX Canvas) y la redacción de los capítulos del informe. La integración del código se gestionó íntegramente bajo el modelo GitFlow, con ramas `feature/*` reintegradas a `develop` a través de Pull Requests revisados.
+
+A continuación se presentan las capturas de los analíticos de GitHub Insights correspondientes al repositorio de la landing page durante el Sprint 1.
+
+**Pulse del repositorio**
+
+La vista *Pulse* resume la actividad del repositorio durante el período del sprint, evidenciando los Pull Requests integrados y los commits realizados sobre la rama `develop`.
+
+<div align="center">
+  <img src="assets/sprint-1-insights/github-pulse.png" alt="Pulse de GitHub Insights del repositorio landing-page-woodroute" width="100%">
+</div>
+
+**Contribuciones por miembro del equipo**
+
+La vista *Contributors* muestra la distribución de commits a lo largo del sprint y la participación de cada integrante del equipo en la implementación de la landing page.
+
+<div align="center">
+  <img src="assets/sprint-1-insights/github-contributors.png" alt="Contributors de GitHub Insights del repositorio landing-page-woodroute" width="100%">
+</div>
 
 <div style="page-break-after: always;"></div>
 
