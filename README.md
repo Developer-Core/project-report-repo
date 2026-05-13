@@ -2662,7 +2662,7 @@ En este primer Sprint el equipo implementó la landing page de WoodRoute aplican
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
-Durante el Sprint 1 el equipo completó la implementación de la landing page de WoodRoute siguiendo el diseño definido en el capítulo IV. La landing presenta la propuesta de valor del SaaS, el flujo de uso del producto, los planes de suscripción, una sección de preguntas frecuentes y la presentación del equipo, todo con soporte de internacionalización en español e inglés. La aplicación se encuentra desplegada de forma pública en Vercel y accesible desde cualquier dispositivo.
+Durante el Sprint 1 el equipo completó la implementación de la landing page de WoodRoute. La landing presenta la propuesta de valor del SaaS, el flujo de uso del producto, los planes de suscripción, una sección de preguntas frecuentes y la presentación del equipo, todo con soporte de internacionalización en español e inglés. La aplicación se encuentra desplegada de forma pública en Vercel y accesible desde cualquier dispositivo.
 
 **URL pública de la landing page:** <https://landing-page-woodroute.vercel.app/>
 
@@ -2670,13 +2670,13 @@ Durante el Sprint 1 el equipo completó la implementación de la landing page de
 
 A continuación se presentan las capturas de las principales vistas implementadas en este sprint.
 
-**Vista 1 — Hero section con propuesta de valor (HU02)**
+**Vista 1 — Hero section con propuesta de valor**
 
 <div align="center">
   <img src="assets/sprint-1-execution/landing-hero.png" alt="Hero section de la landing page de WoodRoute" width="100%">
 </div>
 
-**Vista 2 — Sección "Cómo funciona" con el flujo de uso (HU04)**
+**Vista 2 — Sección "Cómo funciona" con el flujo de uso**
 
 <div align="center">
   <img src="assets/sprint-1-execution/landing-how-it-works.png" alt="Sección Cómo funciona de la landing page" width="100%">
@@ -2688,7 +2688,7 @@ A continuación se presentan las capturas de las principales vistas implementada
   <img src="assets/sprint-1-execution/landing-faq.png" alt="Sección de Preguntas Frecuentes de la landing page" width="100%">
 </div>
 
-**Vista 4 — Sección del equipo detrás del producto (HU07)**
+**Vista 4 — Sección del equipo detrás del producto**
 
 <div align="center">
   <img src="assets/sprint-1-execution/landing-team.png" alt="Sección Nuestro Equipo con los integrantes de WoodRoute" width="100%">
@@ -2696,7 +2696,7 @@ A continuación se presentan las capturas de las principales vistas implementada
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
-No disponemos de documentación de servicios como evidencia, ya que en el primer sprint nuestro enfoque se centró en la elaboración de la landing page. La documentación de los Web Services del backend será incorporada en los sprints posteriores, cuando inicie la implementación de los servicios bajo la arquitectura por bounded contexts definida en el capítulo IV.
+No disponemos de documentación como evidencia, ya que en el primer sprint nuestro enfoque se centró en la elaboración de la landing page.
 
 <div style="page-break-after: always;"></div>
 
