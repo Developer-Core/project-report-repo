@@ -118,6 +118,8 @@ Mayo 2026
     - [4.3. Landing Page UI Design](#43-landing-page-ui-design)
         - [4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)
         - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
+    - [4.4. Web Applications UX/UI Design](#44-web-applications-uxui-design)
+        - [4.4.1. Web Applications Mock-up](#441-web-applications-mock-up)
     - [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
         - [4.6.1. Design Level Event Storming](#461-design-level-event-storming)
     - [4.7. Software Object-Oriented Design](#47-software-object-oriented-design)
@@ -2222,6 +2224,30 @@ La página está estructurada en ocho secciones en el siguiente orden:
 
 La versión mobile mantiene la misma jerarquía de contenido que desktop. Las grillas de features colapsan a una columna, el navbar se convierte en menú hamburguesa y el CTA de conversión permanece visible y accesible en todo momento. El espaciado entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm`.
 
+## 4.4. Web Applications UX/UI Design
+
+### 4.4.1. Web Applications Mock-up
+
+Los mock-ups de la aplicación web de WoodRoute aplican el mismo design system de la landing page (tipografía Plus Jakarta Sans / Inter, paleta cálida con primario `#FD4319`) sobre un layout autenticado con sidebar lateral, breadcrumb superior y selector de idioma. La aplicación se organiza por módulos alineados a los bounded contexts del producto: Pedidos, Producción, Inventario, Cotizaciones y Mensajes.
+
+**Vista 1 — Gestión de Pedidos**
+
+Listado de pedidos del carpintero con identificador, proyecto, cliente, tipo de madera, acabado y estado actual. Para pedidos pendientes se exponen acciones rápidas de aceptación, rechazo y cancelación.
+
+![Mock-up Pedidos](assets/product-design/web-application/mockup-orders.png)
+
+**Vista 2 — Planificación de Producción**
+
+Configuración de las etapas de producción por pedido (Corte, Lijado, Ensamble, Acabado) con horas estimadas, horas reales, estado de cada etapa y acciones para avanzar el progreso.
+
+![Mock-up Producción](assets/product-design/web-application/mockup-production.png)
+
+**Vista 3 — Inventario de Materiales**
+
+Listado del inventario con tipo de material, unidad, costo unitario, stock actual y stock mínimo. Se exponen alertas visuales cuando un material está por debajo del nivel mínimo configurado.
+
+![Mock-up Inventario](assets/product-design/web-application/mockup-inventory.png)
+
 ## 4.6. Domain-Driven Software Architecture
 
 ### 4.6.1. Design Level Event Storming
@@ -2861,7 +2887,7 @@ A continuación se presentan las capturas de las principales vistas implementada
 Listado de pedidos del carpintero con filtros por estado y acciones de aceptación, rechazo y cancelación para los pedidos en estado pendiente.
 
 <div align="center">
-  <img src="assets/sprint-2-execution/app-orders.png" alt="Vista de Gestión de Pedidos" width="100%">
+  <img src="assets/product-design/web-application/mockup-orders.png" alt="Vista de Gestión de Pedidos" width="100%">
 </div>
 
 **Vista 2 — Planificación de Producción**
@@ -2869,7 +2895,7 @@ Listado de pedidos del carpintero con filtros por estado y acciones de aceptaci�
 Configuración por pedido de las etapas de producción (Corte, Lijado, Ensamble, Acabado), con horas estimadas y reales, estado actual de cada etapa y acciones para actualizar el progreso.
 
 <div align="center">
-  <img src="assets/sprint-2-execution/app-production.png" alt="Vista de Planificación de Producción" width="100%">
+  <img src="assets/product-design/web-application/mockup-production.png" alt="Vista de Planificación de Producción" width="100%">
 </div>
 
 **Vista 3 — Inventario de Materiales**
@@ -2877,7 +2903,7 @@ Configuración por pedido de las etapas de producción (Corte, Lijado, Ensamble,
 Listado del inventario con tipos de material, unidad, costo unitario, stock actual, stock mínimo y alertas visuales cuando el material está por debajo del nivel mínimo configurado.
 
 <div align="center">
-  <img src="assets/sprint-2-execution/app-inventory.png" alt="Vista de Inventario de Materiales" width="100%">
+  <img src="assets/product-design/web-application/mockup-inventory.png" alt="Vista de Inventario de Materiales" width="100%">
 </div>
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
