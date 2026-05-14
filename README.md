@@ -2760,6 +2760,207 @@ La vista *Contributors* muestra la distribución de commits a lo largo del sprin
   <img src="assets/sprint-1-insights/github-contributors.png" alt="Contributors de GitHub Insights del repositorio landing-page-woodroute" width="100%">
 </div>
 
+### 5.2.2. Sprint 2
+
+En este segundo sprint el equipo desarrolló la primera versión funcional del frontend de la aplicación web de WoodRoute, cubriendo los módulos de gestión de pedidos, producción, inventario, mensajería y consulta pública del estado del pedido. La aplicación se integró con un backend simulado mediante JSON Server para habilitar el flujo completo de extremo a extremo sin depender de la implementación del API REST.
+
+#### 5.2.2.1. Sprint Planning 2
+
+| Sprint # | Sprint 2 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| Date | 24/04/2026 |
+| Time | 3:30 PM |
+| Location | Google Meet |
+| Prepared By | Sulca Sanchez, Piero Angel |
+| Attendees (to planning meeting) | Gonza Morales, Anderson<br>Justo Yauricasa, Alexander Paolo<br>Saldaña De Souza, Juan David<br>Sulca Sanchez, Piero Angel<br>Torres Sanchez, Dalila Victoria |
+| **Sprint 1 Review Summary** | Durante el Sprint 1 se entregó la landing page de WoodRoute desplegada en Vercel cubriendo las primeras 10 User Stories del Product Backlog. El equipo cumplió con el Sprint Goal al desplegar el sitio público con la propuesta de valor, los planes de suscripción y la información del equipo. |
+| **Sprint 1 Retrospective Summary** | El equipo identificó que la asignación temprana de Aspect Leaders fue clave para coordinar el avance del sprint. Como oportunidad de mejora se planteó iniciar la implementación del frontend de la aplicación web desde el inicio del Sprint 2 trabajando con un mock backend (JSON Server) para no depender de la entrega del API REST, además de mejorar la trazabilidad entre Product Backlog y Sprint Backlog utilizando los identificadores HU directamente. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 2 Goal** | Nos enfocamos en entregar la primera versión funcional de la aplicación web de WoodRoute cubriendo los módulos de gestión de pedidos, producción, inventario, mensajería y consulta pública del estado del pedido. Creemos que esto entrega un MVP que valida los flujos principales del producto tanto para carpinteros como para clientes. Esto se confirmará cuando la aplicación esté desplegada en Vercel con datos de prueba mediante JSON Server y los flujos prioritarios sean navegables de extremo a extremo. |
+| **Sprint 2 Velocity** | 44 |
+| **Sum of Story Points** | 44 |
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+| Team Member | GitHub Username | Web Application Frontend | Diseño UI/UX | Documentación |
+| :--- | :--- | :--- | :--- | :--- |
+| Gonza Morales, Anderson | Ander-U | Colaborador | Colaborador | Colaborador |
+| Justo Yauricasa, Alexander Paolo | AlexanderrJusto | Colaborador | Colaborador | Líder |
+| Saldaña De Souza, Juan David | jndesouza | Colaborador | Colaborador | Colaborador |
+| Sulca Sanchez, Piero Angel | psulca | Líder | Líder | Colaborador |
+| Torres Sanchez, Dalila Victoria | DalilaTorres | Colaborador | Colaborador | Colaborador |
+
+#### 5.2.2.3. Sprint Backlog 2
+
+| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation (SP) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| HU17 | Creación de pedido personalizado | T01 | Quote wizard de tres pasos | Implementación del wizard de creación de pedido con tres pasos: datos del mueble, materiales y revisión. | 5 | Piero Sulca | Done |
+| HU19 | Aceptación o rechazo de pedidos | T02 | Acciones sobre pedidos pendientes | Implementación de las acciones de aceptación y rechazo desde la vista de detalle del pedido. | 3 | Piero Sulca | Done |
+| HU18 | Visualización de pedidos | T03 | Listado de pedidos con filtros | Construcción de la vista de listado de pedidos con filtros por estado. | 3 | Piero Sulca | Done |
+| HU24 | Visualización del progreso | T04 | Vista de avance por etapas | Implementación de la vista que muestra el progreso del pedido por etapas para el cliente. | 3 | Piero Sulca | Done |
+| HU22 | Definición de etapas de producción | T05 | Configuración de etapas del pedido | Implementación del flujo para definir las etapas de producción de un pedido específico. | 5 | Piero Sulca | Done |
+| HU23 | Actualización del estado de producción | T06 | Actualización inline del estado de etapa | Implementación de la actualización del estado de cada etapa desde la vista de producción. | 3 | Piero Sulca | Done |
+| HU43 | Consulta pública del estado del pedido | T07 | Vista pública del pedido | Implementación de la vista pública accesible mediante enlace único con el publicTrackingId. | 3 | Piero Sulca | Done |
+| HU34 | Envío de mensajes | T08 | Composer de mensajes | Implementación del composer de mensajes en la vista de conversación. | 3 | Piero Sulca | Done |
+| HU35 | Recepción de mensajes | T09 | Listado de conversaciones | Implementación del listado de conversaciones activas y de su pre-visualización. | 3 | Piero Sulca | Done |
+| HU36 | Historial de comunicación | T10 | Vista de historial de conversación | Implementación de la vista que muestra el historial completo de mensajes de un pedido. | 2 | Piero Sulca | Done |
+| HU25 | Estimación de tiempos por etapa | T11 | Asignación de tiempos a etapas | Implementación del flujo para asignar tiempos estimados a cada etapa de producción. | 5 | Piero Sulca | Done |
+| HU26 | Registro de materiales | T12 | Formulario de registro de materiales | Implementación del formulario de registro de nuevos materiales en el inventario. | 3 | Piero Sulca | Done |
+| HU27 | Actualización de inventario | T13 | Edición de stock de materiales | Implementación de la actualización inline del stock desde el listado de materiales. | 3 | Piero Sulca | Done |
+
+A continuación se muestra el tablero de Sprint Backlog 2 gestionado por el equipo en Trello, con las tareas distribuidas en sus respectivos estados al cierre del sprint.
+
+<div align="center">
+  <img src="assets/sprint-2.png" alt="Sprint Backlog 2 en Trello" width="100%">
+</div>
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+En este Sprint el equipo implementó la primera versión funcional de la aplicación web de WoodRoute sobre Vue 3 + Vite, organizada en módulos por bounded context (Pedidos, Producción, Inventario, Cotizaciones, Mensajería y Consulta Pública). El código se integró bajo el modelo GitFlow en el repositorio público <https://github.com/Developer-Core/frontend>. A continuación se listan los commits más representativos del sprint.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Developer-Core/frontend | develop | dc703f2 | chore: initial project setup | Inicialización del proyecto con Vite y Vue 3 como base de la aplicación web. | 13/05/2026 |
+| Developer-Core/frontend | develop | 04b84e5 | feat: setup i18n with en and es locales | Configuración de internacionalización con soporte de inglés y español. | 13/05/2026 |
+| Developer-Core/frontend | develop | 626618a | feat: setup primevue with aura preset and woodroute design tokens | Integración de PrimeVue con el preset Aura y los design tokens de WoodRoute. | 13/05/2026 |
+| Developer-Core/frontend | develop | d9d4f2e | refactor: align base-api and base-endpoint with reference style | Definición de la capa de acceso a APIs sobre Axios siguiendo el estilo CRUD compartido entre módulos. | 13/05/2026 |
+| Developer-Core/frontend | develop | dbfb068 | feat: wire orders routes into router | Integración del módulo de pedidos: listado, formulario y vista de seguimiento (HU17, HU18, HU19). | 13/05/2026 |
+| Developer-Core/frontend | develop | 6f9500d | chore: setup json-server with db and routes | Configuración del backend simulado con JSON Server, base de datos `db.json` y archivo de rutas. | 14/05/2026 |
+| Developer-Core/frontend | develop | ab489f8 | feat: wire production routes, i18n and stages db | Integración del módulo de producción con timeline de etapas y formulario de configuración (HU22, HU23, HU24, HU25). | 14/05/2026 |
+| Developer-Core/frontend | develop | 152181f | feat: wire inventory routes, i18n and materials db | Integración del módulo de inventario con listado de materiales, alerta de stock bajo y formulario de registro (HU26, HU27). | 14/05/2026 |
+| Developer-Core/frontend | develop | 07727bf | feat: wire quotes routes, i18n and quotes db | Integración del módulo de cotizaciones con quote wizard de tres pasos y cálculo de rentabilidad. | 14/05/2026 |
+| Developer-Core/frontend | develop | 68262b5 | feat: register public tracking route and i18n entries | Integración de la vista pública de seguimiento de pedido accesible mediante enlace único (HU43). | 14/05/2026 |
+| Developer-Core/frontend | develop | 469aa8e | feat: wire communication routes, i18n and seed conversations | Integración del módulo de mensajería con listado de conversaciones e hilo de mensajes (HU34, HU35, HU36). | 14/05/2026 |
+| Developer-Core/frontend | develop | 3693cb2 | feat: add app-layout shell | Construcción del shell de la aplicación autenticada con sidebar, breadcrumb y header. | 14/05/2026 |
+| Developer-Core/frontend | develop | 20a3f9b | feat: add language-switcher component | Componente selector de idioma incorporado al header del layout autenticado. | 14/05/2026 |
+| Developer-Core/frontend | develop | cf7176c | chore: add json-server entrypoint for hosted deploy | Configuración del entrypoint del JSON Server para su despliegue público en Render. | 14/05/2026 |
+| Developer-Core/frontend | develop | 4c25f30 | feat: add vercel.json with build config | Configuración del build de la aplicación para el despliegue automático en Vercel. | 14/05/2026 |
+| Developer-Core/frontend | develop | 63dc338 | fix: add vercel spa fallback rewrite | Configuración del fallback de Vercel para rutas SPA, asegurando que el router de Vue funcione correctamente en producción. | 14/05/2026 |
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+Durante el Sprint 2 el equipo desplegó la primera versión funcional de la aplicación web de WoodRoute. La aplicación implementa los flujos principales para los carpinteros: gestión de pedidos, planificación de producción por etapas, control de inventario de materiales, cotizaciones, mensajería con clientes y vista pública para consulta del estado del pedido. La internacionalización (inglés y español) está disponible desde el header del layout.
+
+**URL pública de la aplicación web:** <https://frontend-ashen-one-52.vercel.app/>
+
+**Video demostrativo del Sprint 2:** *(en proceso de edición; el enlace se incorporará una vez que se publique en YouTube)*
+
+A continuación se presentan las capturas de las principales vistas implementadas en este sprint.
+
+**Vista 1 — Gestión de Pedidos**
+
+Listado de pedidos del carpintero con filtros por estado y acciones de aceptación, rechazo y cancelación para los pedidos en estado pendiente.
+
+<div align="center">
+  <img src="assets/sprint-2-execution/app-orders.png" alt="Vista de Gestión de Pedidos" width="100%">
+</div>
+
+**Vista 2 — Planificación de Producción**
+
+Configuración por pedido de las etapas de producción (Corte, Lijado, Ensamble, Acabado), con horas estimadas y reales, estado actual de cada etapa y acciones para actualizar el progreso.
+
+<div align="center">
+  <img src="assets/sprint-2-execution/app-production.png" alt="Vista de Planificación de Producción" width="100%">
+</div>
+
+**Vista 3 — Inventario de Materiales**
+
+Listado del inventario con tipos de material, unidad, costo unitario, stock actual, stock mínimo y alertas visuales cuando el material está por debajo del nivel mínimo configurado.
+
+<div align="center">
+  <img src="assets/sprint-2-execution/app-inventory.png" alt="Vista de Inventario de Materiales" width="100%">
+</div>
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 2 el equipo configuró un backend simulado mediante **JSON Server** publicado en **Render**, con el objetivo de habilitar el flujo completo de extremo a extremo de la aplicación web sin depender de la implementación del API REST en .NET. El JSON Server expone un conjunto de endpoints REST sobre un archivo `db.json` que actúa como base de datos en memoria.
+
+**URL base del servicio:** <https://frontend-xkep.onrender.com/api/v1>
+
+**Repositorio asociado:** <https://github.com/Developer-Core/frontend> (carpeta `mock-server/` y archivo `db.json`)
+
+A continuación se listan los endpoints expuestos por el JSON Server. Todos ellos soportan las operaciones HTTP estándar `GET`, `POST`, `PUT`, `PATCH` y `DELETE` según las convenciones de JSON Server.
+
+| Recurso | URL | Métodos soportados | Descripción |
+| :--- | :--- | :--- | :--- |
+| Orders | `/api/v1/orders` | GET, POST, PUT, PATCH, DELETE | Gestión de pedidos del taller |
+| Materials | `/api/v1/materials` | GET, POST, PUT, PATCH, DELETE | Inventario de materiales |
+| Stages | `/api/v1/stages` | GET, POST, PUT, PATCH, DELETE | Etapas de producción asociadas a cada pedido |
+| Quotes | `/api/v1/quotes` | GET, POST, PUT, PATCH, DELETE | Cotizaciones generadas para cada pedido |
+| Conversations | `/api/v1/conversations` | GET, POST, PUT, PATCH, DELETE | Conversaciones asociadas a cada pedido |
+| Messages | `/api/v1/messages` | GET, POST, PUT, PATCH, DELETE | Mensajes intercambiados dentro de cada conversación |
+
+A continuación se evidencia el proceso de configuración y despliegue del JSON Server en Render.
+
+**Paso 1: Acceso a Render.**
+
+El equipo accede a la plataforma de Render e inicia el flujo de creación de un nuevo Web Service.
+
+<div align="center">
+  <img src="assets/sprint-2-services/render-step-1-home.png" alt="Acceso inicial a Render" width="100%">
+</div>
+
+**Paso 2: Importación del repositorio desde GitHub.**
+
+Desde la sección *New Web Service* se selecciona la organización **Developer-Core** y se importa el repositorio `frontend` que contiene la configuración del JSON Server.
+
+<div align="center">
+  <img src="assets/sprint-2-services/render-step-2-import-repo.png" alt="Importación del repositorio en Render" width="100%">
+</div>
+
+**Paso 3: Despliegue del servicio.**
+
+Render ejecuta el build del JSON Server y publica el servicio en una URL pública accesible desde la aplicación frontend.
+
+<div align="center">
+  <img src="assets/sprint-2-services/render-step-3-deploy-events.png" alt="Eventos de despliegue del Web Service en Render" width="100%">
+</div>
+
+**Paso 4: Servicio publicado.**
+
+Una vez completado el despliegue, el servicio queda visible en el dashboard de Render con estado *Deployed* y listo para recibir solicitudes desde la aplicación frontend.
+
+<div align="center">
+  <img src="assets/sprint-2-services/render-step-4-dashboard.png" alt="Dashboard de Render con el servicio desplegado" width="100%">
+</div>
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 2 el equipo configuró el despliegue continuo de la aplicación web de WoodRoute sobre la plataforma Vercel. Las actividades realizadas comprendieron la importación del repositorio `frontend` desde la organización **Developer-Core**, la configuración del proyecto con el preset de Vite, la definición del fallback para rutas SPA y la activación del despliegue automático ante cada push a la rama `develop`. Como resultado, la aplicación quedó publicada en <https://frontend-ashen-one-52.vercel.app/>. A continuación se evidencian los pasos realizados.
+
+**Paso 1: Importación del repositorio desde GitHub.**
+
+Desde la sección *Import Git Repository* de Vercel se selecciona la organización **Developer-Core** y se importa el repositorio `frontend`.
+
+<div align="center">
+  <img src="assets/sprint-2-deployment/vercel-step-1-import-repo.png" alt="Importación del repositorio frontend en Vercel" width="100%">
+</div>
+
+**Paso 2: Configuración del proyecto.**
+
+Se selecciona el *Application Preset* Vite, se define la rama de despliegue y el *Root Directory*, y se configuran las *Build and Output Settings* junto con las variables de entorno necesarias.
+
+<div align="center">
+  <img src="assets/sprint-2-deployment/vercel-step-2-configure.png" alt="Configuración del proyecto frontend en Vercel" width="100%">
+</div>
+
+**Paso 3: Despliegue completado.**
+
+Vercel ejecuta el build, publica la aplicación y entrega la URL pública del entorno, dejando la aplicación accesible para los siguientes pasos del proyecto.
+
+<div align="center">
+  <img src="assets/sprint-2-deployment/vercel-step-3-deploy.png" alt="Despliegue de la aplicación frontend completado en Vercel" width="100%">
+</div>
+
+#### 5.2.2.8. Team Collaboration Insights for Sprint Review
+
+Durante el Sprint 2 la implementación técnica de la aplicación web se concentró en el aspect leader del módulo, mientras que el resto del equipo participó en las ceremonias de Scrum y en la revisión de los entregables. La integración del código se gestionó bajo el modelo GitFlow, con ramas `feature/*` reintegradas a `develop` a través de Pull Requests revisados. A continuación se presenta la captura del analítico de GitHub Insights correspondiente al repositorio `frontend` durante el Sprint 2.
+
+<div align="center">
+  <img src="assets/sprint-2-insights/github-insights.png" alt="GitHub Insights del repositorio frontend durante el Sprint 2" width="100%">
+</div>
+
 <div style="page-break-after: always;"></div>
 
 # Conclusiones
