@@ -140,7 +140,18 @@ Mayo 2026
             - [5.2.1.6. Services Documentation Evidence for Sprint Review](#5216-services-documentation-evidence-for-sprint-review)
             - [5.2.1.7. Software Deployment Evidence for Sprint Review](#5217-software-deployment-evidence-for-sprint-review)
             - [5.2.1.8. Team Collaboration Insights for Sprint Review](#5218-team-collaboration-insights-for-sprint-review)
+        - [5.2.2. Sprint 2](#522-sprint-2)
+            - [5.2.2.1. Sprint Planning 2](#5221-sprint-planning-2)
+            - [5.2.2.2. Aspect Leaders and Collaborators](#5222-aspect-leaders-and-collaborators)
+            - [5.2.2.3. Sprint Backlog 2](#5223-sprint-backlog-2)
+            - [5.2.2.4. Development Evidence for Sprint Review](#5224-development-evidence-for-sprint-review)
+            - [5.2.2.5. Execution Evidence for Sprint Review](#5225-execution-evidence-for-sprint-review)
+            - [5.2.2.6. Services Documentation Evidence for Sprint Review](#5226-services-documentation-evidence-for-sprint-review)
+            - [5.2.2.7. Software Deployment Evidence for Sprint Review](#5227-software-deployment-evidence-for-sprint-review)
+            - [5.2.2.8. Team Collaboration Insights for Sprint Review](#5228-team-collaboration-insights-for-sprint-review)
+- [Conclusiones](#conclusiones)
 - [Bibliografía](#bibliografía)
+- [Anexos](#anexos)
 
 <div style="page-break-after: always;"></div>
 
@@ -2844,8 +2855,6 @@ Durante el Sprint 2 el equipo desplegó la primera versión funcional de la apli
 
 **URL pública de la aplicación web:** <https://frontend-ashen-one-52.vercel.app/>
 
-**Video demostrativo del Sprint 2:** *(en proceso de edición; el enlace se incorporará una vez que se publique en YouTube)*
-
 A continuación se presentan las capturas de las principales vistas implementadas en este sprint.
 
 **Vista 1 — Gestión de Pedidos**
@@ -2992,6 +3001,18 @@ El diseño anticipado de la arquitectura por bounded contexts —Onboarding, Sal
 <a id="ref-produce-empresas-2025"></a>Ministerio de la Producción [PRODUCE]. (2025). *PRODUCE: Perú cerró el 2024 con 2.34 millones de empresas formales*. https://www.gob.pe/institucion/produce/noticias/1168972-produce-peru-cerro-el-2024-con-2-34-millones-de-empresas-formales
 
 <a id="ref-osiptel-erestel-2024"></a>Organismo Supervisor de Inversión Privada en Telecomunicaciones [OSIPTEL]. (2024). *ERESTEL: el 92.8% de las familias peruanas contó con un smartphone en 2023*. https://www.osiptel.gob.pe/portal-del-usuario/noticias/erestel-el-92-8-de-las-familias-peruanas-conto-con-un-smartphone-en-2023/
+
+<div style="page-break-after: always;"></div>
+
+# Anexos
+
+## Anexo A. Videos de Exposiciones
+
+En este anexo se registran de forma progresiva los videos de exposición correspondientes a cada entrega del proyecto.
+
+| Entrega | Título | URL |
+| :--- | :--- | :--- |
+| AV1 | Video de Exposición AV1 | <https://youtu.be/kCCwd5l2dD0> |
 
 </article>
 
