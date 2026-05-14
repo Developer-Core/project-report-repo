@@ -1,0 +1,9 @@
+{
+  "markdown-pdf.highlightStyle": "github.css",
+  "markdown-pdf.styles": ["assets/styles/github-markdown.css"],
+  "markdown-pdf.format": "Tabloid",
+  "markdown-pdf.breaks": true,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  }
+}

@@ -1,0 +1,219 @@
+@startuml class-diagram-sales
+!pragma layout smetana
+
+' Cotización y Venta Bounded Context — Class Diagram
+' Trazabilidad: HU17-21 Pedidos, HU30-33 Costos/Tiempos, HU37-42 Pagos,
+' TS02 /orders, TS08 /estimate
+
+title Cotizacion y Venta Bounded Context — Class Diagram
+
+scale 0.7
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam dpi 90
+skinparam defaultFontSize 11
+skinparam classAttributeFontSize 10
+skinparam classFontSize 12
+skinparam packageFontSize 12
+skinparam nodesep 20
+skinparam ranksep 30
+hide empty members
+
+package "Cotizacion y Venta Bounded Context" as ventas {
+
+    package "Domain" as ventas_domain {
+
+        enum OrderStatus <<enumeration>> {
+            PENDIENTE
+            EN_PROCESO
+            LISTO_PARA_ENTREGA
+            PAGADO_COMPLETAMENTE
+            FINALIZADO
+            CANCELADO
+        }
+
+        enum QuoteStatus <<enumeration>> {
+            BORRADOR
+            ENVIADO
+            ACEPTADO
+            RECHAZADO
+        }
+
+        enum PaymentType <<enumeration>> {
+            ANTICIPO
+            SALDO_FINAL
+        }
+
+        enum PaymentStatus <<enumeration>> {
+            PENDIENTE_VALIDACION
+            CONFIRMADO
+            RECHAZADO
+        }
+
+        enum Currency <<enumeration>> {
+            PEN
+            USD
+        }
+
+        class Order <<resource>> {
+            - id: Number|null
+            - publicTrackingId: string|null
+            - customerId: Number|null
+            - carpenterId: Number|null
+            - status: OrderStatus
+            - createdAt: Date|null
+            + constructor(id, publicTrackingId, customerId, carpenterId, status, createdAt)
+            + isCancellable(): boolean
+        }
+
+        class FurnitureDetails <<value-object>> {
+            - description: string
+            - dimensions: string
+            - materialType: string
+            - design: string
+            + constructor(description, dimensions, materialType, design)
+        }
+
+        class Quote <<resource>> {
+            - id: Number|null
+            - orderId: Number|null
+            - totalCost: Number
+            - currency: Currency
+            - totalDuration: Number
+            - status: QuoteStatus
+            - issuedAt: Date|null
+            + constructor(id, orderId, totalCost, currency, totalDuration, status, issuedAt)
+        }
+
+        class QuoteItem <<value-object>> {
+            - stageName: string
+            - cost: Number
+            - durationHours: Number
+            + constructor(stageName, cost, durationHours)
+        }
+
+        class Payment <<resource>> {
+            - id: Number|null
+            - orderId: Number|null
+            - type: PaymentType
+            - amount: Number
+            - currency: Currency
+            - receiptUrl: string
+            - paidAt: Date|null
+            - status: PaymentStatus
+            + constructor(id, orderId, type, amount, currency, receiptUrl, paidAt, status)
+        }
+
+        Order "1" *-- "1" FurnitureDetails : describes >
+        Order "1" *-- "0..1" Quote : "quoted by >"
+        Order "1" *-- "0..*" Payment : "settled by >"
+        Quote "1" *-- "1..*" QuoteItem : "broken into >"
+        Order --> OrderStatus : "in state"
+        Quote --> QuoteStatus : "in state"
+        Payment --> PaymentType : "of type"
+        Payment --> PaymentStatus : "in state"
+        Quote --> Currency : "priced in"
+        Payment --> Currency : "paid in"
+    }
+
+    package "Infrastructure" as ventas_infrastructure {
+
+        interface IVentasApi <<interface>> {
+            + getOrders(role, page, size): Promise
+            + createOrder(resource): Promise
+            + updateOrder(id, resource): Promise
+            + cancelOrder(id): Promise
+            + estimate(orderId): Promise
+            + issueQuote(orderId, resource): Promise
+            + respondQuote(quoteId, accepted): Promise
+            + registerPayment(orderId, resource): Promise
+            + validatePayment(paymentId, decision): Promise
+        }
+
+        class VentasApi {
+            + getOrders(role, page, size): Promise
+            + createOrder(resource): Promise
+            + updateOrder(id, resource): Promise
+            + cancelOrder(id): Promise
+            + estimate(orderId): Promise
+            + issueQuote(orderId, resource): Promise
+            + respondQuote(quoteId, accepted): Promise
+            + registerPayment(orderId, resource): Promise
+            + validatePayment(paymentId, decision): Promise
+        }
+
+        class OrderAssembler <<assembler>> {
+            + {static} toEntityFromResource(resource): Order
+            + {static} toEntitiesFromResponse(response): Order[]
+        }
+
+        class QuoteAssembler <<assembler>> {
+            + {static} toEntityFromResource(resource): Quote
+        }
+
+        class PaymentAssembler <<assembler>> {
+            + {static} toEntityFromResource(resource): Payment
+        }
+
+        VentasApi ..|> IVentasApi
+    }
+
+    package "Application" as ventas_application {
+
+        class VentasStore <<store>> {
+            - orders: Order[]
+            - currentOrder: Order|null
+            - quote: Quote|null
+            - payments: Payment[]
+            + ordersCount: computed
+            + fetchOrders(page: Number, size: Number): Promise
+            + createOrder(resource: object): Promise
+            + cancelOrder(id: Number): Promise
+            + estimate(orderId: Number): Promise
+            + issueQuote(orderId: Number, items: QuoteItem[]): Promise
+            + acceptQuote(quoteId: Number): Promise
+            + registerPayment(orderId: Number, payment: Payment): Promise
+            + validatePayment(paymentId: Number, decision: PaymentStatus): Promise
+        }
+
+        VentasStore "1" --> "1" IVentasApi : consumes >
+        VentasStore ..> OrderAssembler : <<uses>>
+        VentasStore ..> QuoteAssembler : <<uses>>
+        VentasStore ..> PaymentAssembler : <<uses>>
+    }
+
+    package "Presentation" as ventas_presentation {
+
+        class OrderForm <<component>> {
+            - store: VentasStore
+            - form: object
+            + saveOrder(): void
+        }
+
+        class OrderList <<component>> {
+            - store: VentasStore
+            + filterByStatus(status: OrderStatus): void
+        }
+
+        class OrderDetail <<component>> {
+            - store: VentasStore
+            + acceptQuote(): void
+            + cancelOrder(): void
+        }
+
+        class PaymentForm <<component>> {
+            - store: VentasStore
+            - file: File|null
+            + uploadReceipt(): void
+            + submit(): void
+        }
+
+        OrderForm "1" --> "1" VentasStore : binds >
+        OrderList "1" --> "1" VentasStore : binds >
+        OrderDetail "1" --> "1" VentasStore : binds >
+        PaymentForm "1" --> "1" VentasStore : binds >
+    }
+}
+
+@enduml

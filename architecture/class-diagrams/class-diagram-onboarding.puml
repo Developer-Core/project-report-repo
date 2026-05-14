@@ -1,0 +1,140 @@
+@startuml class-diagram-onboarding
+!pragma layout smetana
+
+' Onboarding Bounded Context — Class Diagram
+' Trazabilidad: HU13 Registro, HU14 Login, HU15 Perfil, HU16 Rol, TS01 /auth/login
+
+title Onboarding Bounded Context — Class Diagram
+
+scale 0.7
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam dpi 90
+skinparam defaultFontSize 11
+skinparam classAttributeFontSize 10
+skinparam classFontSize 12
+skinparam packageFontSize 12
+skinparam nodesep 20
+skinparam ranksep 30
+hide empty members
+
+package "Onboarding Bounded Context" as onboarding {
+
+    package "Domain" as onboarding_domain {
+
+        enum UserRole <<enumeration>> {
+            CLIENTE
+            CARPINTERO
+        }
+
+        class User <<resource>> {
+            - id: Number|null
+            - email: string
+            - role: UserRole
+            - createdAt: Date|null
+            + constructor(id, email, role, createdAt)
+        }
+
+        class Profile <<resource>> {
+            - id: Number|null
+            - userId: Number|null
+            - fullName: string
+            - phone: string|null
+            - avatarUrl: string|null
+            + constructor(id, userId, fullName, phone, avatarUrl)
+        }
+
+        class AuthSession <<value-object>> {
+            - accessToken: string
+            - refreshToken: string
+            - expiresAt: Date
+            + constructor(accessToken, refreshToken, expiresAt)
+            + isExpired(): boolean
+        }
+
+        User "1" *-- "1" Profile : owns >
+        User "1" ..> "0..*" AuthSession : issues >
+        User --> UserRole : "typed by"
+    }
+
+    package "Infrastructure" as onboarding_infrastructure {
+
+        interface IAuthApi <<interface>> {
+            + register(resource): Promise
+            + login(credentials): Promise
+            + logout(): Promise
+            + getCurrentUser(): Promise
+            + updateProfile(id, resource): Promise
+        }
+
+        class AuthApi {
+            + register(resource): Promise
+            + login(credentials): Promise
+            + logout(): Promise
+            + getCurrentUser(): Promise
+            + updateProfile(id, resource): Promise
+        }
+
+        class UserAssembler <<assembler>> {
+            + {static} toEntityFromResource(resource): User
+            + {static} toEntitiesFromResponse(response): User[]
+        }
+
+        class ProfileAssembler <<assembler>> {
+            + {static} toEntityFromResource(resource): Profile
+        }
+
+        AuthApi ..|> IAuthApi
+    }
+
+    package "Application" as onboarding_application {
+
+        class AuthStore <<store>> {
+            - currentUser: User|null
+            - profile: Profile|null
+            - session: AuthSession|null
+            - isAuthenticated: boolean
+            + isCarpenter: computed
+            + isClient: computed
+            + register(resource): Promise
+            + login(credentials): Promise
+            + logout(): Promise
+            + updateProfile(resource): Promise
+        }
+
+        AuthStore "1" --> "1" IAuthApi : consumes >
+        AuthStore ..> UserAssembler : <<uses>>
+        AuthStore ..> ProfileAssembler : <<uses>>
+    }
+
+    package "Presentation" as onboarding_presentation {
+
+        class RegisterForm <<component>> {
+            - store: AuthStore
+            - form: object
+            + submit(): void
+            + selectRole(role: UserRole): void
+        }
+
+        class LoginForm <<component>> {
+            - store: AuthStore
+            - form: object
+            + submit(): void
+        }
+
+        class ProfileView <<component>> {
+            - store: AuthStore
+            - form: object
+            - isEdit: boolean
+            + saveProfile(): void
+            + toggleEdit(): void
+        }
+
+        RegisterForm "1" --> "1" AuthStore : binds >
+        LoginForm "1" --> "1" AuthStore : binds >
+        ProfileView "1" --> "1" AuthStore : binds >
+    }
+}
+
+@enduml
