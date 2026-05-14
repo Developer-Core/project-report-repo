@@ -3012,7 +3012,6 @@ En este anexo se registran de forma progresiva los videos de exposición corresp
 
 | Entrega | Título | URL |
 | :--- | :--- | :--- |
-| AV1 | Video de Exposición AV1 | *(pendiente)* |
 
 </article>
 
