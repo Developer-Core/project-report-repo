@@ -2762,6 +2762,18 @@ La vista *Contributors* muestra la distribución de commits a lo largo del sprin
 
 <div style="page-break-after: always;"></div>
 
+# Conclusiones
+
+## Conclusiones y recomendaciones
+
+Hasta el cierre del Sprint 2, el equipo completó la primera versión de la landing page de WoodRoute desplegada en Vercel y la primera versión del frontend de la aplicación web. A partir del trabajo realizado, se destacan las siguientes conclusiones.
+
+La separación entre la landing page y la aplicación web demostró ser una decisión acertada. La landing pudo desplegarse de forma pública en Vercel desde el Sprint 1, entregando valor visible para el segmento objetivo sin estar bloqueada por la implementación del backend. Esta separación de productos permitió que cada uno evolucione a su propio ritmo y que el equipo pueda recibir feedback temprano sobre la propuesta de valor antes de invertir esfuerzo en los servicios de la aplicación.
+
+El diseño anticipado de la arquitectura por bounded contexts —Onboarding, Sales, Production, Inventario y Comunicación— resultó ser una inversión valiosa antes de iniciar la implementación de los servicios. Tener el modelo de dominio, los Class Diagrams y el Database Design definidos en el capítulo 4 redujo la ambigüedad sobre qué pertenece a qué contexto y dejó al equipo una base clara para asignar responsabilidades por agregado en los sprints siguientes, minimizando el riesgo de re-trabajo cuando comience el desarrollo del API REST en .NET 10.
+
+<div style="page-break-after: always;"></div>
+
 # Bibliografía
 
 <a id="ref-apeim-nse-2024"></a>Asociación Peruana de Empresas de Inteligencia de Mercados [APEIM]. (2024). *Niveles socioeconómicos 2023-2024*. APEIM. https://apeim.com.pe/wp-content/uploads/2024/01/APEIM-Informe-de-Niveles-Socioeconomicos-2023-2024-Version-WEB.pdf
