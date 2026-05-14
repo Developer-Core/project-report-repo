@@ -50,7 +50,11 @@ Mayo 2026
 <tbody>
 <tr><td>0.1.0</td><td>2026-04-07</td><td>Sulca Sanchez, Piero Angel</td><td>Creación del repositorio e incorporación de la estructura base del informe</td></tr>
 <tr><td>0.2.0</td><td>2026-04-07</td><td>Sulca Sanchez, Piero Angel</td><td>Agregado de carátula, registro de versiones y configuración general del documento</td></tr>
-<tr><td>0.3.0</td><td>2026-04-24</td><td>Gonza Morales, Anderson</td><td>Agregado del capitulo 1, capitulo 2</td></tr>
+<tr><td>0.3.0</td><td>2026-04-24</td><td>Gonza Morales, Anderson</td><td>Agregado del capítulo 1 y secciones iniciales del capítulo 2</td></tr>
+<tr><td>0.4.0</td><td>2026-05-08</td><td>Justo Yauricasa, Alexander Paolo</td><td>Agregado de Big Picture EventStorming y Ubiquitous Language para completar el capítulo 2</td></tr>
+<tr><td>0.5.0</td><td>2026-05-12</td><td>Sulca Sanchez, Piero Angel</td><td>Agregado del capítulo 3 (User Stories, Impact Mapping, Product Backlog) y secciones iniciales del capítulo 4 (Style Guidelines, Information Architecture y Landing Page UI Design)</td></tr>
+<tr><td>0.6.0</td><td>2026-05-13</td><td>Sulca Sanchez, Piero Angel</td><td>Agregado de la arquitectura del capítulo 4 (Domain-Driven Software Architecture, Class Diagrams y Database Design)</td></tr>
+<tr><td>0.7.0</td><td>2026-05-13</td><td>Sulca Sanchez, Piero Angel</td><td>Agregado del capítulo 5: Software Configuration Management (5.1) y Sprint 1 completo (5.2.1). Entrega AV1</td></tr>
 </tbody>
 </table>
 
@@ -152,37 +156,37 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
   <tbody>
     <tr>
       <td rowspan="5"><strong>Trabaja en equipo para proporcionar liderazgo en forma conjunta</strong></td>
-      <td><strong>Gonza Morales, Anderson</strong><br><b>AV1:</b> <em>Por definir.</em></td>
-      <td rowspan="5"><b>AV1:</b> <em>Por definir.</em></td>
+      <td><strong>Gonza Morales, Anderson</strong><br><b>AV1:</b> Trabajó en los diagramas C4 de Contexto y Contenedor de la arquitectura del sistema. Participó en las entrevistas a usuarios durante el needfinding.<br><br><b>TB1:</b> Revisó los diagramas de arquitectura del capítulo 4 y participó en las reuniones del sprint.</td>
+      <td rowspan="5"><b>AV1:</b> El equipo aplicó un modelo de liderazgo distribuido con Aspect Leaders, asignando responsabilidades por área (Landing Page, UX/UI y Documentación). La coordinación se mantuvo con reuniones de Sprint Planning, Daily Scrum y Sprint Review.<br><br><b>TB1:</b> El equipo consolidó el liderazgo conjunto integrando todo el trabajo en un mismo repositorio bajo GitFlow, con Pull Requests revisados y trazabilidad entre Product Backlog y Sprint Backlog.</td>
     </tr>
     <tr>
-      <td><strong>Justo Yauricasa, Alexander Paolo</strong><br><b>AV1:</b> <em>Por definir.</em></td>
+      <td><strong>Justo Yauricasa, Alexander Paolo</strong><br><b>AV1:</b> Trabajó en el Big Picture EventStorming y en el Ubiquitous Language del capítulo 2. Como líder de Documentación, revisó el estilo del informe.<br><br><b>TB1:</b> Revisó la redacción del capítulo 5 para mantener la consistencia con los capítulos anteriores.</td>
     </tr>
     <tr>
-      <td><strong>Saldaña De Souza, Juan David</strong><br><b>AV1:</b> <em>Por definir.</em></td>
+      <td><strong>Saldaña De Souza, Juan David</strong><br><b>AV1:</b> Colaboró en el Impact Mapping y en el Ubiquitous Language, ayudando a definir objetivos y términos del dominio.<br><br><b>TB1:</b> Validó el Product Backlog actualizado y revisó los Story Points asignados al Sprint 2.</td>
     </tr>
     <tr>
-      <td><strong>Sulca Sanchez, Piero Angel</strong><br><b>AV1:</b> <em>Por definir.</em></td>
+      <td><strong>Sulca Sanchez, Piero Angel</strong><br><b>AV1:</b> Lideró la implementación de la landing page y el setup del repositorio. Coordinó al equipo bajo GitFlow y documentó los capítulos 3, 4 y 5 del informe.<br><br><b>TB1:</b> Documentó todo el capítulo 5 del informe: Software Configuration Management (5.1) y el Sprint 1 completo (5.2.1). Configuró el despliegue automático en Vercel y alineó los IDs del Sprint Backlog con el Product Backlog.</td>
     </tr>
     <tr>
-      <td><strong>Torres Sanchez, Dalila Victoria</strong><br><b>AV1:</b> <em>Por definir.</em></td>
+      <td><strong>Torres Sanchez, Dalila Victoria</strong><br><b>AV1:</b> Colaboró en la documentación del Sprint Planning del Sprint 1 y acompañó al equipo en las reuniones del sprint.</td>
     </tr>
     <tr>
       <td rowspan="5"><strong>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos</strong></td>
-      <td><strong>Gonza Morales, Anderson</strong><br><b>AV1:</b> <em>Por definir.</em></td>
-      <td rowspan="5"><b>AV1:</b> <em>Por definir.</em></td>
+      <td><strong>Gonza Morales, Anderson</strong><br><b>AV1:</b> Participó en la planificación del Sprint 1 y completó las tareas de arquitectura y de entrevistas dentro de los plazos del sprint.<br><br><b>TB1:</b> Participó en la planificación del Sprint 2 y cumplió con las tareas asignadas durante el sprint.</td>
+      <td rowspan="5"><b>AV1:</b> El equipo armó un entorno colaborativo con Trello, Miro, Figma y GitHub. El Sprint Goal se definió en formato SMART y cada miembro asumió tareas concretas del Sprint Backlog.<br><br><b>TB1:</b> El equipo formalizó el uso de Conventional Commits, Semantic Versioning y GitFlow en el informe. Las metas del sprint se concretaron en un Sprint Goal medible y los entregables quedaron versionados y publicados en una URL pública.</td>
     </tr>
     <tr>
-      <td><strong>Justo Yauricasa, Alexander Paolo</strong><br><b>AV1:</b> <em>Por definir.</em></td>
+      <td><strong>Justo Yauricasa, Alexander Paolo</strong><br><b>AV1:</b> Participó en las ceremonias de Scrum del Sprint 1 (Planning, Review y Retrospective) y entregó la documentación a su cargo.<br><br><b>TB1:</b> Revisó la documentación del capítulo 5 y aportó en el seguimiento de los criterios de aceptación de las User Stories.</td>
     </tr>
     <tr>
-      <td><strong>Saldaña De Souza, Juan David</strong><br><b>AV1:</b> <em>Por definir.</em></td>
+      <td><strong>Saldaña De Souza, Juan David</strong><br><b>AV1:</b> Apoyó en la priorización del Product Backlog y en la definición de las User Stories del Sprint 1. Completó las tareas asignadas en el Impact Mapping y el Ubiquitous Language.<br><br><b>TB1:</b> Colaboró en la actualización del Product Backlog para el Sprint 2 y cumplió con los compromisos del Sprint Planning.</td>
     </tr>
     <tr>
-      <td><strong>Sulca Sanchez, Piero Angel</strong><br><b>AV1:</b> <em>Por definir.</em></td>
+      <td><strong>Sulca Sanchez, Piero Angel</strong><br><b>AV1:</b> Definió el Sprint Goal del Sprint 1 en formato SMART y asignó las tareas del Sprint Backlog. Gestionó el repositorio con GitFlow, Conventional Commits y Semantic Versioning.<br><br><b>TB1:</b> Documentó las convenciones de Source Code Management, Coding Conventions y Deployment Configuration. Configuró el despliegue continuo en Vercel y dejó la trazabilidad completa entre Product Backlog y Sprint Backlog.</td>
     </tr>
     <tr>
-      <td><strong>Torres Sanchez, Dalila Victoria</strong><br><b>AV1:</b> <em>Por definir.</em></td>
+      <td><strong>Torres Sanchez, Dalila Victoria</strong><br><b>AV1:</b> Aportó en la documentación del Sprint Planning del Sprint 1 y acompañó al equipo en las reuniones del sprint.</td>
     </tr>
   </tbody>
 </table>
