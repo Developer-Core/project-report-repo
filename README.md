@@ -1331,6 +1331,48 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
       <td><strong>Escenario 1: Estimación exitosa</strong><br><em>Dado</em> que el pedido tiene etapas y materiales definidos<br><em>Cuando</em> se envía <code>POST /orders/{orderId}/estimate</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> devuelve <code>totalCost</code>, <code>totalDuration</code> y el desglose por etapa<br><br><strong>Escenario 2: Pedido sin etapas</strong><br><em>Dado</em> un pedido sin etapas definidas<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>422 Unprocessable Entity</code> con el detalle del error</td>
       <td>EP06</td>
     </tr>
+    <tr>
+      <td>TS09</td>
+      <td>Endpoint de registro de usuarios</td>
+      <td>Como Developer, quiero exponer un endpoint <code>POST /auth/register</code> que cree la cuenta con email, password y tipo de usuario (carpintero o cliente), validando que el email sea único.</td>
+      <td><strong>Escenario 1: Registro exitoso</strong><br><em>Dado</em> que el body contiene <code>email</code> no registrado, <code>password</code> y <code>userType</code> (<code>carpenter</code> o <code>client</code>) válidos<br><em>Cuando</em> el cliente envía <code>POST /auth/register</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> devuelve el usuario creado con su <code>userId</code><br><br><strong>Escenario 2: Email duplicado</strong><br><em>Dado</em> que el <code>email</code> ya está registrado en la plataforma<br><em>Cuando</em> el cliente envía la petición<br><em>Entonces</em> el servicio responde <code>409 Conflict</code><br><em>Y</em> el body incluye un mensaje indicando que el correo ya está en uso</td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>TS10</td>
+      <td>Endpoint de gestión de perfil</td>
+      <td>Como Developer, quiero exponer un endpoint <code>PATCH /profiles/{profileId}</code> que permita al usuario autenticado actualizar su información personal.</td>
+      <td><strong>Escenario 1: Actualización exitosa</strong><br><em>Dado</em> que el usuario autenticado es propietario del perfil<br><em>Y</em> el body contiene campos válidos para actualizar<br><em>Cuando</em> envía <code>PATCH /profiles/{profileId}</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> devuelve el perfil con la información actualizada<br><br><strong>Escenario 2: Perfil no encontrado</strong><br><em>Dado</em> un <code>profileId</code> inexistente<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>404 Not Found</code></td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>TS11</td>
+      <td>Endpoint de aceptación de presupuesto</td>
+      <td>Como Developer, quiero exponer un endpoint <code>PATCH /orders/{orderId}/quote</code> que permita al cliente aceptar o rechazar el presupuesto generado por el carpintero.</td>
+      <td><strong>Escenario 1: Aceptación exitosa</strong><br><em>Dado</em> que el pedido tiene un presupuesto pendiente de respuesta<br><em>Y</em> el body contiene <code>status: accepted</code><br><em>Cuando</em> el cliente envía <code>PATCH /orders/{orderId}/quote</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> el estado del presupuesto pasa a <code>accepted</code><br><em>Y</em> el pedido queda habilitado para registrar el anticipo<br><br><strong>Escenario 2: Presupuesto inexistente o ya aceptado</strong><br><em>Dado</em> que el pedido no tiene presupuesto generado o este ya fue aceptado<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>404 Not Found</code> o <code>409 Conflict</code> según corresponda</td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>TS12</td>
+      <td>Endpoints de registro y validación de pagos</td>
+      <td>Como Developer, quiero exponer endpoints <code>POST /orders/{orderId}/payments</code> y <code>PATCH /orders/{orderId}/payments/{paymentId}</code> para registrar comprobantes de anticipo o pago final y permitir que el carpintero los confirme o rechace.</td>
+      <td><strong>Escenario 1: Registro exitoso</strong><br><em>Dado</em> que el cliente es participante del pedido<br><em>Y</em> el body contiene <code>type</code> (<code>advance</code> o <code>final</code>), <code>amount</code> y <code>operationReference</code><br><em>Cuando</em> envía <code>POST /orders/{orderId}/payments</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> el pago queda en estado "Pendiente de validación"<br><br><strong>Escenario 2: Confirmación exitosa</strong><br><em>Dado</em> un pago en estado "Pendiente de validación"<br><em>Cuando</em> el carpintero envía <code>PATCH /orders/{orderId}/payments/{paymentId}</code> con <code>status: confirmed</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> el estado del pago pasa a "Confirmado"<br><br><strong>Escenario 3: Pago ya validado</strong><br><em>Dado</em> que el pago ya fue confirmado o rechazado previamente<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>409 Conflict</code></td>
+      <td>EP03</td>
+    </tr>
+    <tr>
+      <td>TS13</td>
+      <td>Endpoint de definición de etapas de producción</td>
+      <td>Como Developer, quiero exponer un endpoint <code>POST /orders/{orderId}/stages</code> para que el carpintero defina las etapas de fabricación (diseño, corte, ensamblado, acabado, entrega) de un pedido aceptado, con su tiempo estimado por etapa.</td>
+      <td><strong>Escenario 1: Definición exitosa</strong><br><em>Dado</em> que el carpintero es propietario de un pedido aceptado<br><em>Y</em> el body contiene la lista de etapas con <code>name</code> y <code>estimatedTime</code> por etapa<br><em>Cuando</em> envía <code>POST /orders/{orderId}/stages</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> devuelve las etapas creadas con sus <code>stageId</code><br><br><strong>Escenario 2: Pedido no aceptado aún</strong><br><em>Dado</em> que el pedido no ha sido aceptado por el carpintero<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>409 Conflict</code></td>
+      <td>EP04</td>
+    </tr>
+    <tr>
+      <td>TS14</td>
+      <td>Endpoints de orden de compra al proveedor</td>
+      <td>Como Developer, quiero exponer endpoints <code>POST /purchase-orders</code> y <code>PATCH /purchase-orders/{purchaseOrderId}</code> para generar órdenes de compra al proveedor y actualizar el inventario al recibir el material.</td>
+      <td><strong>Escenario 1: Creación exitosa</strong><br><em>Dado</em> que el carpintero está autenticado<br><em>Y</em> el body contiene <code>material</code>, <code>quantity</code> y <code>estimatedDate</code><br><em>Cuando</em> envía <code>POST /purchase-orders</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> devuelve el <code>purchaseOrderId</code> generado<br><br><strong>Escenario 2: Recepción actualiza stock</strong><br><em>Dado</em> que la orden fue marcada como enviada al proveedor<br><em>Cuando</em> el carpintero envía <code>PATCH /purchase-orders/{purchaseOrderId}</code> con <code>status: received</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> cierra la orden<br><em>Y</em> actualiza automáticamente el inventario con la cantidad recibida</td>
+      <td>EP05</td>
+    </tr>
   </tbody>
 </table>
 
@@ -1711,13 +1753,55 @@ El Product Backlog se elabora a continuación, listando cada User Story con su o
     </tr>
     <tr>
       <td>51</td>
+      <td>TS09</td>
+      <td>Endpoint de registro de usuarios</td>
+      <td>Como Developer, quiero exponer <code>POST /auth/register</code> que cree la cuenta con email, password y tipo de usuario, validando email único.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td>TS10</td>
+      <td>Endpoint de gestión de perfil</td>
+      <td>Como Developer, quiero exponer <code>PATCH /profiles/{profileId}</code> para que el usuario autenticado actualice su información personal.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td>TS11</td>
+      <td>Endpoint de aceptación de presupuesto</td>
+      <td>Como Developer, quiero exponer <code>PATCH /orders/{orderId}/quote</code> para que el cliente acepte o rechace el presupuesto generado.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td>TS12</td>
+      <td>Endpoints de registro y validación de pagos</td>
+      <td>Como Developer, quiero exponer endpoints <code>/orders/{orderId}/payments</code> para registrar comprobantes de anticipo o pago final y validarlos.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td>TS13</td>
+      <td>Endpoint de definición de etapas de producción</td>
+      <td>Como Developer, quiero exponer <code>POST /orders/{orderId}/stages</code> para definir las etapas de fabricación con su tiempo estimado.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td>TS14</td>
+      <td>Endpoints de orden de compra al proveedor</td>
+      <td>Como Developer, quiero exponer endpoints <code>/purchase-orders</code> para generar órdenes de compra y actualizar el inventario al recibirlas.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>57</td>
       <td>HU08</td>
       <td>Conocer el producto a través de un video</td>
       <td>Como visitante, quiero ver un video que presente el producto y sus características.</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>52</td>
+      <td>58</td>
       <td>HU09</td>
       <td>Conocer el proceso del equipo a través de un video</td>
       <td>Como visitante, quiero ver un video que muestre al equipo y su proceso de trabajo.</td>
