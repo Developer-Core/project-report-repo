@@ -3108,6 +3108,147 @@ Durante el Sprint 2 la implementación técnica de la aplicación web se concent
 
 <div style="page-break-after: always;"></div>
 
+### 5.2.3. Sprint 3
+
+
+
+#### 5.2.3.1. Sprint Planning 2
+
+
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+
+
+#### 5.2.3.3. Sprint Backlog 2
+
+...
+
+A continuación se muestra el tablero de Sprint Backlog 3 gestionado por el equipo en Trello, con las tareas distribuidas en sus respectivos estados al cierre del sprint.
+
+<div align="center">
+  <img src="assets/.png" alt="Sprint Backlog 3 en Trello" width="100%">
+</div>
+
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+
+
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+
+
+#### 5.2.3.8. Team Collaboration Insights for Sprint Review
+
+
+
+## 5.3. Validation Interviews. 
+
+### 5.3.1. Diseño de Entrevistas. 
+
+**Segmento 1: Carpintero/Taller**
+
+
+
+**Segmento 2: Cliente**
+
+
+
+### 5.3.2. Registro de Entrevistas. 
+
+#### Segmento 1: Carpintero/Taller
+
+**Entrevista 1**
+
+**Entrevistador:** ...........
+
+**Entrevistado:** .........
+
+**Link de la entrevista:** "enlace aqui"
+
+<div align="center">
+  <img src="assets/interviews/.png" alt="Interview segment 1 - 1" width="100%">
+</div>
+
+**Resumen de la entrevista:** ........
+
+
+
+**Entrevista 2**
+
+**Entrevistador:** ...........
+
+**Entrevistado:** .........
+
+**Link de la entrevista:** "enlace aqui"
+
+<div align="center">
+  <img src="assets/interviews/.png" alt="Second Interview segment 1 - 2" width="100%">
+</div>
+
+**Resumen de la entrevista:** ........
+
+
+#### Segmento 2: Cliente
+
+**Entrevista 1**
+
+**Entrevistador:** 
+
+**Entrevistado:** 
+
+**Edad:** 
+
+**Link de la entrevista:** 
+
+<div align="center">
+  <img src="assets/interviews/.png" alt="Second Interview segment 2 - 1" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+
+
+**Entrevista 2**
+
+**Entrevistador:** 
+
+**Entrevistado:** 
+
+**Edad:** 
+
+**Link de la entrevista:** 
+
+<div align="center">
+  <img src="assets/interviews/.png" alt="Second Interview segment 2 - 2" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+
+### 5.3.3. Evaluaciones según heurísticas. 
+
+## 5.4. Video About-the-Product. 
+
+En el vídeo se proporciona información sobre el producto WoodRoute. Se mencionan las diferentes funcionalidades de la aplicación.
+
+Screenshot del video:
+
+<div align="center">
+  <img src="assets/" alt="Screenshot del video" width="100%">
+</div>
+
+Enlace al vídeo de YouTube: 
+
+
+Duración del vídeo: 
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
