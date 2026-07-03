@@ -4,38 +4,65 @@
 
 <img src="assets/logo-upc.png" alt="UPC" width="200">
 
+<br>
+
 **Universidad Peruana de Ciencias Aplicadas**
 
-**Ingeniería de Software**
+**Carrera de Ingeniería de Software**
 
-**Ciclo 2026-10**
+<br>
 
-**1ASI0730 – Aplicaciones Web**
+**1ASI0730**
 
-**NRC: 10215**
+**Aplicaciones Web**
 
-**Docente: Velasquez Nuñez, Angel Augusto**
+<br>
 
-**Informe de Trabajo Final**
+**NRC**
 
+**10215**
+
+<br>
+
+**Informe del Trabajo Final**
+
+<br>
+
+**Docente**
+
+**Velásquez Núñez, Ángel Augusto**
+
+<br>
+
+**Proyecto**
 
 **WoodRoute**
 
+<br>
 
-<table>
+**Integrantes**
+
+<table style="border-collapse: collapse; border: none; width: auto; max-width: 400px; margin: 0 auto;">
 <thead>
-<tr><th>Integrante</th><th>Código</th></tr>
+<tr style="border: none;">
+<th style="border: none; padding: 8px 20px 8px 0px; text-align: left; width: 50px;">Código</th>
+<th style="border: none; padding: 8px 0px; text-align: left;">Apellidos y Nombres</th>
+</tr>
 </thead>
 <tbody>
-<tr><td>Gonza Morales, Anderson</td><td>U202120836</td></tr>
-<tr><td>Justo Yauricasa, Alexander Paolo</td><td>U20191C054</td></tr>
-<tr><td>Saldaña De Souza, Juan David</td><td>U20221F192</td></tr>
-<tr><td>Sulca Sanchez, Piero Angel</td><td>U202423711</td></tr>
-<tr><td>Torres Sanchez, Dalila Victoria</td><td>U20221F734</td></tr>
+<tr style="border: none;"><td style="border: none; padding: 6px 20px 6px 0px; text-align: left;">U202120836</td><td style="border: none; padding: 6px 0px; text-align: left;">Gonza Morales, Anderson</td></tr>
+<tr style="border: none;"><td style="border: none; padding: 6px 20px 6px 0px; text-align: left;">U20191C054</td><td style="border: none; padding: 6px 0px; text-align: left;">Justo Yauricasa, Alexander Paolo</td></tr>
+<tr style="border: none;"><td style="border: none; padding: 6px 20px 6px 0px; text-align: left;">U20221F192</td><td style="border: none; padding: 6px 0px; text-align: left;">Saldaña De Souza, Juan David</td></tr>
+<tr style="border: none;"><td style="border: none; padding: 6px 20px 6px 0px; text-align: left;">U202423711</td><td style="border: none; padding: 6px 0px; text-align: left;">Sulca Sanchez, Piero Angel</td></tr>
+<tr style="border: none;"><td style="border: none; padding: 6px 20px 6px 0px; text-align: left;">U20221F734</td><td style="border: none; padding: 6px 0px; text-align: left;">Torres Sanchez, Dalila Victoria</td></tr>
 </tbody>
 </table>
 
-Mayo 2026
+<br>
+
+**Período 202610**
+
+**Mayo 2026**
 
 </div>
 
