@@ -3156,6 +3156,23 @@ A continuación se muestra el tablero de Sprint Backlog 3 gestionado por el equi
 
 **Segmento 1: Carpintero/Taller**
 
+- Al ver cómo "Wood Route" registra los pedidos en el sistema, ¿sientes que este flujo reemplazaría bien a tu método actual (cuadernos, Excel, WhatsApp)?
+
+- ¿Qué te parece la forma en que la aplicación evalúa tu carga de trabajo actual para ayudarte a decidir si puedes o no aceptar un pedido nuevo?
+
+- Revisando el módulo de materiales en la app, ¿consideras que te ayudaría efectivamente a evitar detener un trabajo por falta de insumos a mitad del proceso?
+
+- Te mostré la función que le da al cliente un enlace para seguir el avance de su mueble en tiempo real. ¿Crees que esto reducirá las llamadas y mensajes preguntando por el estado de sus pedidos?
+
+- De todas las pantallas y funciones que viste en la gestión del taller, ¿cuál sientes que te ahorraría más horas de trabajo administrativo?
+
+- ¿Consideras que la transparencia que ofrece "Wood Route" con las fechas de entrega y el registro de cambios ayudará a evitar malos entendidos con tus clientes?
+
+- Qué te pareció la sección de control de inventario de la aplicación? ¿La encontraste lo suficientemente fácil de usar como para evitar sorpresas de stock en el día a día?
+
+- Si has intentado usar otras herramientas digitales antes, ¿qué ventaja principal o qué dificultad le ves a "Wood Route" en comparación con esas experiencias pasadas?
+
+- Ahora que viste en acción cómo la aplicación cruza automáticamente tu capacidad con el stock y mantiene informado al cliente, ¿te ves usándola todos los días en tu taller? ¿Por qué sí o por qué no?
 
 
 **Segmento 2: Cliente**
@@ -3168,33 +3185,19 @@ A continuación se muestra el tablero de Sprint Backlog 3 gestionado por el equi
 
 **Entrevista 1**
 
-**Entrevistador:** ...........
+**Entrevistador:** Anderson Gonza Morales
 
-**Entrevistado:** .........
+**Entrevistado:** Leonardo Fabian
 
-**Link de la entrevista:** "enlace aqui"
-
-<div align="center">
-  <img src="assets/interviews/.png" alt="Interview segment 1 - 1" width="100%">
-</div>
-
-**Resumen de la entrevista:** ........
-
-
-
-**Entrevista 2**
-
-**Entrevistador:** ...........
-
-**Entrevistado:** .........
-
-**Link de la entrevista:** "enlace aqui"
+**Link de la entrevista:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQDjSttI2SJXTIs2CkJY19bYAWduWxNx2xtM1qVi9kUmDIc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=c5TJER
 
 <div align="center">
-  <img src="assets/interviews/.png" alt="Second Interview segment 1 - 2" width="100%">
+  <img src="assets/interviews/interview-segment-1-4.png" alt="Interview segment 1 - 4" width="100%">
 </div>
 
-**Resumen de la entrevista:** ........
+**Resumen de la entrevista:** 
+
+Para esta entrevista de validación a Leonardo, se le mostró lo trabajado en la Landing Page y Web Application. Él nos comenta que le parece facil de usar y ubicar los elementos visuales e organización usada. Igualmente, le gustó la funcionalidad del inventario, menciona que es la que mas le llamo la atencion ya le ayudaria muchisimo a la hora de hacer un trabajo.
 
 
 #### Segmento 2: Cliente
@@ -3210,7 +3213,7 @@ A continuación se muestra el tablero de Sprint Backlog 3 gestionado por el equi
 **Link de la entrevista:** 
 
 <div align="center">
-  <img src="assets/interviews/.png" alt="Second Interview segment 2 - 1" width="100%">
+  <img src="assets/interviews/.png" alt="Second Interview segment 2 - 4" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
@@ -3227,7 +3230,7 @@ A continuación se muestra el tablero de Sprint Backlog 3 gestionado por el equi
 **Link de la entrevista:** 
 
 <div align="center">
-  <img src="assets/interviews/.png" alt="Second Interview segment 2 - 2" width="100%">
+  <img src="assets/interviews/.png" alt="Second Interview segment 2 - 5" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
