@@ -3508,17 +3508,29 @@ Para esta entrevista de validación a Oscar, se le mostró lo trabajado en la La
 
 ### 5.3.3. Evaluaciones según heurísticas. 
 
-## 5.4. Video About-the-Product. 
+## 5.4. About the Team
 
-En el vídeo se proporciona información sobre el producto WoodRoute. Se mencionan las diferentes funcionalidades de la aplicación.
+WoodRoute es desarrollado por un equipo de cinco estudiantes de la carrera de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, integrado por Gonza Morales, Anderson; Justo Yauricasa, Alexander Paolo; Saldaña De Souza, Juan David; Sulca Sanchez, Piero Angel; y Torres Sanchez, Dalila Victoria. El equipo se conformó en el marco del curso 1ASI0730 Aplicaciones Web (NRC 10215, período 202610) con la motivación común de resolver, mediante una aplicación web, una problemática real de un sector poco atendido por el software tradicional: los pequeños talleres de carpintería.
 
-Screenshot del video:
+El equipo adoptó desde el inicio un modelo de liderazgo distribuido basado en Aspect Leaders, en el que cada integrante asumió responsabilidades por área. Sulca Sanchez, Piero Angel lideró la implementación del frontend en React y TypeScript y, posteriormente, la del backend real en .NET 10 con arquitectura DDD/CQRS, además del despliegue continuo en Vercel y Render. Gonza Morales, Anderson actuó como líder de Documentación, consolidando la evidencia de los sprints y los diagramas C4 de arquitectura, y participó en las entrevistas de needfinding. Justo Yauricasa, Alexander Paolo se encargó del Big Picture EventStorming, el Ubiquitous Language y la revisión de estilo del informe. Saldaña De Souza, Juan David colaboró en el Impact Mapping, el Ubiquitous Language y la configuración del acceso a datos del backend durante la integración. Torres Sanchez, Dalila Victoria aportó en la documentación del Sprint Planning y en las tareas de backend, combinando su interés por la lógica de los datos con la colaboración en frontend.
 
-<div align="center">
-  <img src="assets/" alt="Screenshot del video" width="100%">
-</div>
+La motivación del equipo nace de constatar que los carpinteros independientes gestionan sus pedidos, materiales y tiempos de manera empírica, apoyándose en cuadernos y WhatsApp. Esta realidad, validada en las entrevistas, impulsó al grupo a construir una herramienta especializada que respete el flujo real del taller y reduzca la fricción para un segmento de baja digitalización. El equipo trabajó bajo GitFlow, Conventional Commits y Semantic Versioning, sosteniendo un liderazgo conjunto a lo largo de los cuatro sprints hasta dejar el producto completo publicado en la nube.
 
-Enlace al vídeo de YouTube: 
+![About the Team](assets/about-the-team.png)
+
+## 5.5. Video About-the-Product. 
+
+WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes y pequeños talleres que fabrican muebles personalizados bajo pedido. La aplicación permite gestionar los pedidos, realizar el seguimiento del proceso de fabricación y optimizar la planificación de la producción, integrando en una sola herramienta lo que hoy los carpinteros resuelven con cuadernos y WhatsApp.
+
+La propuesta de valor se centra en un asistente de viabilidad que evalúa, a partir del inventario disponible, la estimación de tiempos de trabajo y la capacidad del taller, si un mueble es factible de construir. Esta decisión, que actualmente depende únicamente de la experiencia del carpintero, es la principal fuente de errores por falta de materiales y retrasos en las entregas; WoodRoute la convierte en un cálculo rápido y respaldado por datos.
+
+El producto está pensado para un segmento de baja digitalización: el carpintero es el único rol con inicio de sesión y gestiona sus clientes como registros del taller, mientras que los clientes consultan el estado de su mueble mediante un enlace público de seguimiento, sin necesidad de registrarse. La comunicación se mantiene por WhatsApp, respetando el canal que el segmento ya utiliza. El sistema completo se desplegó en la nube: el backend en .NET 10 con arquitectura DDD/CQRS sobre Render con base de datos PostgreSQL, y la aplicación web en Vercel, ambos con despliegue continuo.
+
+El siguiente video presenta las funcionalidades principales del producto:
+
+![About the Product](assets/about-the-product.png)
+
+Enlace al vídeo de YouTube: [https://youtu.be/5zmEhiAhrEc](https://youtu.be/5zmEhiAhrEc) 
 
 
 Duración del vídeo: 
