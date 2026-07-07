@@ -240,9 +240,9 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       <td><strong>Sulca Sanchez, Piero Angel</strong><br><b>AV1:</b> Lideró la implementación de la landing page y el setup del repositorio. Coordinó al equipo bajo GitFlow y documentó los capítulos 3, 4 y 5 del informe.<br><br><b>TB1:</b> Documentó todo el capítulo 5 del informe: Software Configuration Management (5.1) y el Sprint 1 completo (5.2.1). Configuró el despliegue automático en Vercel y alineó los IDs del Sprint Backlog con el Product Backlog.<br><br><b>TF:</b> Lideró la implementación del backend real en .NET 10 con arquitectura DDD/CQRS, la integración de la aplicación web con el API y el despliegue del sistema completo en Render y Vercel.</td>
     </tr>
     <tr>
-      <td><strong>Torres Sanchez, Dalila Victoria</strong><br><b>AV1:</b> Colaboró en la documentación del Sprint Planning del Sprint 1 y acompañó al equipo en las reuniones del sprint.</td>
-      <br><b>TB1:</b> Revisó la documentación del capítulo 5 y participó en reuniones del sprint.</td>
-      <br><b>TF:</b> Aportó con la documentación y las entrevistas de validación.</td>
+      <td><strong>Torres Sanchez, Dalila Victoria</strong><br><b>AV1:</b> Colaboró en la documentación del Sprint Planning del Sprint 1 y acompañó al equipo en las reuniones del sprint.
+      <br><br><b>TB1:</b> Revisó la documentación del capítulo 5 y participó en reuniones del sprint.
+      <br><br><b>TF:</b> Aportó con la documentación y las entrevistas de validación.</td>
     </tr>
     <tr>
       <td rowspan="5"><strong>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos</strong></td>
@@ -259,9 +259,9 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       <td><strong>Sulca Sanchez, Piero Angel</strong><br><b>AV1:</b> Definió el Sprint Goal del Sprint 1 en formato SMART y asignó las tareas del Sprint Backlog. Gestionó el repositorio con GitFlow, Conventional Commits y Semantic Versioning.<br><br><b>TB1:</b> Documentó las convenciones de Source Code Management, Coding Conventions y Deployment Configuration. Configuró el despliegue continuo en Vercel y dejó la trazabilidad completa entre Product Backlog y Sprint Backlog.<br><br><b>TF:</b> Definió el Sprint Goal del Sprint 4 y cumplió los objetivos de backend, integración y despliegue en producción, dejando el producto publicado en URLs públicas.</td>
     </tr>
     <tr>
-      <td><strong>Torres Sanchez, Dalila Victoria</strong><br><b>AV1:</b> Aportó en la documentación del Sprint Planning del Sprint 1 y acompañó al equipo en las reuniones del sprint.</td>
-      <br><b>TB1:</b> Aportó en el desarrollo del frontend</td>
-      <br><b>TF:</b> Aportó con la documentación y las evaluaciones según heurísticas.</td>
+      <td><strong>Torres Sanchez, Dalila Victoria</strong><br><b>AV1:</b> Aportó en la documentación del Sprint Planning del Sprint 1 y acompañó al equipo en las reuniones del sprint.
+      <br><br><b>TB1:</b> Aportó en el desarrollo del frontend.
+      <br><br><b>TF:</b> Aportó con la documentación y las evaluaciones según heurísticas.</td>
     </tr>
   </tbody>
 </table>
