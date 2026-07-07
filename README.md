@@ -312,7 +312,7 @@ La solución se dirige a digitalizar y optimizar la gestión interna del taller,
 
 **¿Quién lo utilizará?**
 
-Los carpinteros utilizarán la plataforma para registrar pedidos, calcular materiales, estimar tiempos y gestionar su inventario. Por otro lado, los clientes accederán a la plataforma para consultar el estado de sus pedidos y recibir actualizaciones del proceso de fabricación.
+Los carpinteros, el único rol que inicia sesión en el taller, utilizarán la plataforma para registrar pedidos, calcular materiales, estimar tiempos y gestionar su inventario. Un pedido puede originarse de dos formas: el carpintero lo crea eligiendo a un cliente de su registro (el CRM del taller) o, de manera opcional, un cliente con cuenta lo crea por su cuenta y este queda en una bandeja común del taller para que cualquier carpintero lo acepte. Por otro lado, los clientes consultan el estado de sus pedidos y reciben actualizaciones del proceso de fabricación principalmente mediante un enlace de seguimiento público, sin necesidad de iniciar sesión.
 
 **Why? (¿Por qué?)**
 
@@ -370,7 +370,7 @@ El Lean UX Process es una metodología ágil centrada en la colaboración, la ex
 - **Customer Segments:** Personas adultas (25 a 55 años) de NSE B y C que solicitan muebles personalizados para el hogar, oficinas o negocios.
 - **Pain Points:** Ausencia de visibilidad sobre el avance del pedido, dependencia de mensajes informales por WhatsApp o llamadas, incertidumbre sobre fechas reales de entrega y poca confianza en el proceso.
 - **Gap:** No existe un canal estandarizado que permita al cliente consultar el estado de su mueble sin tener que interrumpir al carpintero, ni evidencia clara de las etapas de producción.
-- **Vision / Strategy:** Brindar al cliente acceso vía enlace —sin requerir registro— para consultar en tiempo real el estado de su pedido, fechas estimadas y notificaciones automáticas de cambios de etapa.
+- **Vision / Strategy:** Brindar al cliente acceso vía enlace, sin requerir registro, para consultar en tiempo real el estado de su pedido, fechas estimadas y notificaciones automáticas de cambios de etapa.
 - **Initial Segment:** Clientes urbanos de Lima Metropolitana que ya solicitan muebles a talleres independientes y utilizan WhatsApp como canal habitual de seguimiento.
 
 **¿Cómo podemos brindar a los clientes acceso claro y en tiempo real al estado de sus pedidos para mejorar la transparencia, reducir las consultas repetitivas al carpintero y aumentar la confianza en el servicio?**
@@ -833,7 +833,7 @@ Importancia: Escala de 1 a 5 (1 = Poco importante / Prescindible, 5 = Crítica /
 | **Registro de pedidos** es crítico para ambos (5/5 y 5/5) | La interfaz de creación de pedidos debe ser colaborativa o permitir visualización compartida |
 | **Especificaciones técnicas** son muy importantes para ambos (5/5 y 4/5) | Debe existir un registro estructurado de medidas, materiales, acabados y diseño, accesible para ambos |
 | **Fechas de entrega** son igualmente valoradas (5/5 y 4/5) | El sistema debe mostrar claramente la fecha prometida y enviar alertas de proximidad |
-| **Comunicación fluida** es necesaria para resolver dudas (5/5 y 4/4) | La plataforma debe integrar un canal de mensajería o comentarios asociado a cada pedido |
+| **Comunicación fluida** es necesaria para resolver dudas (5/5 y 4/4) | La plataforma debe facilitar el contacto directo por WhatsApp asociado a cada pedido, además de notificaciones automáticas de avance, en lugar de un chat interno |
 | **Estado/avance del pedido** es importante para ambos (4/5 y 5/5) | El seguimiento debe ser visual y en tiempo real, con hitos claros |
 
 
@@ -876,6 +876,8 @@ Los diagramas fueron elaborados en UXPressia y se adjuntan las capturas a contin
 ## 2.4. Big Picture EventStorming
 
 Como resultado de aplicar Big Picture EventStorming al dominio de WoodRoute identificamos cinco bounded contexts (**Onboarding**, **Inventario**, **Cotización y Venta**, **Producción** y **Seguimiento y Comunicación**), tres actores principales (Visitante, Cliente y Carpintero) y cuatro sistemas externos (Tienda de aplicaciones, Email/Sender, Pasarela de pagos y Proveedor de madera). Adicionalmente surgieron hot spots que documentamos como decisiones pendientes para futuras iteraciones.
+
+Conviene precisar el rol de cada actor, ya que WoodRoute es una herramienta interna del taller (un despliegue equivale a un taller) y no un marketplace de dos lados. El **Carpintero** (staff del taller) es el único actor que inicia sesión y opera todo el ciclo del pedido desde dentro. El **Cliente** es, principalmente, un registro que el taller administra: por eso el contexto **Onboarding** agrupa tanto las identidades y cuentas del sistema (**Iam**, que almacena el nombre del usuario) como el registro de clientes del taller (**Customers**, el CRM con nombre, teléfono/WhatsApp, email y cuenta opcional del cliente). Un cliente puede autoregistrarse de forma opcional y usar un portal reducido, o ser dado de alta por el carpintero mediante un formulario interno de clientes sin necesidad de login. Durante el modelado se evaluó un contexto independiente de "Profiles", pero se descartó: sus responsabilidades quedaron absorbidas por **Iam** (nombre del usuario en su cuenta) y **Customers** (datos del cliente). El seguimiento del cliente se realiza sobre todo a través del enlace público, y la comunicación directa con el taller ocurre por WhatsApp, no mediante un chat interno.
 
 Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming Journal, 2022](#ref-eventstorming-journal-2022)), cuyo desarrollo se presenta a continuación.
 
@@ -962,6 +964,11 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
 - **Real-Time Tracking (Seguimiento en Tiempo Real):** funcionalidad orientada al cliente final que le permite visualizar de manera transparente y automática el estado actual o la fase de fabricación en la que se encuentra su mueble.
 - **Inventory (Inventario):** registro y control de las materias primas (madera, tableros) y consumibles (tornillos, bisagras, rieles, pintura) físicamente disponibles en el taller.
 - **Down Payment (Anticipo de Pago):** depósito monetario inicial que realiza el cliente para formalizar el pedido, financiar la compra de los materiales necesarios y autorizar el inicio de la fabricación en el taller.
+- **Customer (Cliente / CRM del Taller):** registro que el taller administra sobre cada persona que solicita muebles, con su nombre, teléfono/WhatsApp, email y una cuenta opcional asociada. El cliente puede existir en el sistema sin cuenta, dado de alta por el carpintero mediante un formulario interno.
+- **Invitation Code (Código de Invitación):** clave que entrega el taller para que un carpintero (staff) pueda registrar su cuenta. El registro del carpintero es cerrado: no se selecciona un rol de forma abierta, sino que el código lo asocia al taller.
+- **Order Pool (Bandeja Común de Pedidos):** conjunto de pedidos creados por clientes con cuenta que aún no tienen un carpintero asignado. Cualquier carpintero del taller puede aceptar o reclamar un pedido del pool para gestionar su carga de trabajo.
+- **Public Tracking Link (Enlace de Seguimiento Público):** URL con un `publicTrackingId` que el taller comparte (habitualmente por WhatsApp) para que el cliente consulte el estado y avance de su pedido sin iniciar sesión. Es el canal principal del cliente.
+- **WhatsApp Contact (Contacto por WhatsApp):** canal de comunicación directa entre el carpintero y el cliente, disponible como botón de contacto asociado al pedido. WoodRoute no incorpora un chat interno.
 
 <div style="page-break-after: always;"></div>
 
@@ -1101,16 +1108,16 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
     </tr>
     <tr>
       <td>HU16</td>
-      <td>Selección de tipo de usuario</td>
-      <td>Como usuario, quiero definir si soy carpintero o cliente para acceder a funcionalidades específicas.</td>
-      <td><strong>Escenario 1: Selección de rol</strong><br><em>Dado</em> que el usuario se encuentra en el registro<br><em>Cuando</em> selecciona su tipo de usuario (carpintero o cliente)<br><em>Entonces</em> el sistema guarda esta información<br><em>Y</em> adapta la experiencia según el rol seleccionado</td>
+      <td>Registro del carpintero y alta de clientes</td>
+      <td>Como carpintero del taller, quiero registrarme con el código de invitación del taller y dar de alta a mis clientes desde un formulario interno, para acceder a la gestión sin una selección de rol abierta y mantener mi registro de clientes actualizado.</td>
+      <td><strong>Escenario 1: Registro del carpintero con código de invitación</strong><br><em>Dado</em> que el carpintero cuenta con un código de invitación válido del taller<br><em>Cuando</em> completa el registro con dicho código<br><em>Entonces</em> el sistema crea su cuenta de carpintero asociada al taller<br><em>Y</em> le habilita las funcionalidades de gestión<br><br><strong>Escenario 2: Alta de un cliente sin cuenta</strong><br><em>Dado</em> que el carpintero accede al formulario interno de clientes<br><em>Cuando</em> registra al cliente con su nombre y teléfono/WhatsApp<br><em>Entonces</em> el sistema crea el registro del cliente en el CRM del taller<br><em>Y</em> permite asociarle pedidos sin requerir que el cliente tenga cuenta</td>
       <td>EP02</td>
     </tr>
     <tr>
       <td>HU17</td>
       <td>Creación de pedido personalizado</td>
-      <td>Como cliente, quiero crear un pedido de mueble personalizado para solicitar un diseño específico.</td>
-      <td><strong>Escenario 1: Creación exitosa de pedido</strong><br><em>Dado</em> que el cliente se encuentra en la sección de pedidos<br><em>Cuando</em> completa los detalles del mueble (medidas, material, diseño) y envía la solicitud<br><em>Entonces</em> el sistema registra el pedido<br><em>Y</em> lo envía al carpintero para su revisión</td>
+      <td>Como cliente con cuenta o como carpintero a nombre de un cliente, quiero crear un pedido de mueble personalizado para iniciar su gestión con un diseño específico.</td>
+      <td><strong>Escenario 1: Pedido creado por un cliente con cuenta</strong><br><em>Dado</em> que un cliente con cuenta se encuentra en la sección de pedidos<br><em>Cuando</em> completa los detalles del mueble (medidas, material, diseño) y envía la solicitud sin elegir carpintero<br><em>Entonces</em> el sistema registra el pedido<br><em>Y</em> lo coloca en la bandeja común del taller para que cualquier carpintero lo acepte<br><br><strong>Escenario 2: Pedido creado por el carpintero</strong><br><em>Dado</em> que el carpintero está en la sección de pedidos<br><em>Cuando</em> crea el pedido eligiendo a un cliente de su registro (CRM) y completa los detalles del mueble<br><em>Entonces</em> el sistema registra el pedido<br><em>Y</em> lo deja asignado a ese carpintero</td>
       <td>EP03</td>
     </tr>
     <tr>
@@ -1124,7 +1131,7 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
       <td>HU19</td>
       <td>Aceptación o rechazo de pedidos</td>
       <td>Como carpintero, quiero aceptar o rechazar pedidos para gestionar mi carga de trabajo.</td>
-      <td><strong>Escenario 1: Aceptación de pedido</strong><br><em>Dado</em> que el carpintero recibe un pedido<br><em>Cuando</em> revisa los detalles y decide aceptarlo<br><em>Entonces</em> el sistema actualiza el estado del pedido<br><em>Y</em> lo marca como "en proceso"</td>
+      <td><strong>Escenario 1: Aceptación de un pedido de la bandeja común</strong><br><em>Dado</em> que existe un pedido en la bandeja común del taller (creado por un cliente con cuenta)<br><em>Cuando</em> el carpintero revisa los detalles y decide aceptarlo<br><em>Entonces</em> el sistema le asigna el pedido y actualiza su estado<br><em>Y</em> lo marca como "en proceso"</td>
       <td>EP03</td>
     </tr>
     <tr>
@@ -1227,23 +1234,23 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
     </tr>
     <tr>
       <td>HU34</td>
-      <td>Envío de mensajes</td>
-      <td>Como usuario, quiero enviar mensajes dentro de la plataforma para comunicarme sobre el pedido.</td>
-      <td><strong>Escenario 1: Envío de mensaje exitoso</strong><br><em>Dado</em> que el usuario accede al chat del pedido<br><em>Cuando</em> escribe un mensaje y lo envía<br><em>Entonces</em> el sistema entrega el mensaje<br><em>Y</em> lo muestra en la conversación</td>
+      <td>Contacto directo por WhatsApp</td>
+      <td>Como carpintero o cliente, quiero contactar a la otra parte por WhatsApp desde el pedido para resolver dudas por el canal que ya uso a diario, sin depender de un chat interno.</td>
+      <td><strong>Escenario 1: Apertura del contacto por WhatsApp</strong><br><em>Dado</em> que el usuario está en el detalle del pedido<br><em>Cuando</em> pulsa el botón de contacto por WhatsApp<br><em>Entonces</em> el sistema abre WhatsApp con el número de la otra parte<br><em>Y</em> incluye una referencia al pedido en el mensaje inicial</td>
       <td>EP07</td>
     </tr>
     <tr>
       <td>HU35</td>
-      <td>Recepción de mensajes</td>
-      <td>Como usuario, quiero recibir mensajes para mantenerme informado sobre el pedido.</td>
-      <td><strong>Escenario 1: Recepción de mensaje</strong><br><em>Dado</em> que otro usuario envía un mensaje<br><em>Cuando</em> el sistema procesa el envío<br><em>Entonces</em> el mensaje se recibe correctamente<br><em>Y</em> se muestra en la conversación</td>
+      <td>Notificaciones de avance del pedido</td>
+      <td>Como cliente, quiero recibir notificaciones automáticas cuando mi pedido cambie de etapa para enterarme del avance sin tener que preguntar.</td>
+      <td><strong>Escenario 1: Notificación de cambio de etapa</strong><br><em>Dado</em> que el carpintero actualiza el estado de una etapa del pedido<br><em>Cuando</em> el sistema procesa el cambio<br><em>Entonces</em> envía una notificación automática al cliente por el canal configurado<br><em>Y</em> incluye el nuevo estado y el enlace de seguimiento público</td>
       <td>EP07</td>
     </tr>
     <tr>
       <td>HU36</td>
-      <td>Historial de comunicación</td>
-      <td>Como usuario, quiero ver el historial de mensajes para revisar conversaciones anteriores.</td>
-      <td><strong>Escenario 1: Visualización de historial</strong><br><em>Dado</em> que el usuario accede al chat<br><em>Cuando</em> el sistema carga los mensajes<br><em>Entonces</em> muestra el historial completo<br><em>Y</em> ordenado cronológicamente</td>
+      <td>Historial de estados y notificaciones del pedido</td>
+      <td>Como usuario, quiero ver el historial de cambios de estado y notificaciones del pedido para tener trazabilidad de su avance.</td>
+      <td><strong>Escenario 1: Visualización del historial</strong><br><em>Dado</em> que el usuario accede al detalle del pedido<br><em>Cuando</em> el sistema carga el historial<br><em>Entonces</em> muestra los cambios de estado y las notificaciones enviadas<br><em>Y</em> ordenados cronológicamente</td>
       <td>EP07</td>
     </tr>
     <tr>
@@ -1346,9 +1353,9 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
     </tr>
     <tr>
       <td>TS07</td>
-      <td>Endpoints REST de mensajería por pedido</td>
-      <td>Como Developer, quiero exponer endpoints REST <code>/orders/{orderId}/messages</code> para que cliente y carpintero intercambien y consulten mensajes asociados a un pedido específico.</td>
-      <td><strong>Escenario 1: Envío de mensaje</strong><br><em>Dado</em> que el usuario es participante del pedido<br><em>Y</em> el body contiene <code>content</code> no vacío<br><em>Cuando</em> envía <code>POST /orders/{orderId}/messages</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> publica el evento <code>MessageSent</code><br><br><strong>Escenario 2: Consulta paginada de historial</strong><br><em>Dado</em> el <code>orderId</code><br><em>Cuando</em> se envía <code>GET /orders/{orderId}/messages?limit=20&before={cursor}</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> devuelve los mensajes en orden cronológico descendente</td>
+      <td>Endpoint de notificaciones de avance del pedido</td>
+      <td>Como Developer, quiero disparar notificaciones automáticas hacia el cliente vía el sender externo cuando cambia el estado del pedido y exponer <code>GET /orders/{orderId}/notifications</code> para consultarlas, en lugar de un chat interno (la comunicación directa se realiza por WhatsApp).</td>
+      <td><strong>Escenario 1: Notificación al cambiar de etapa</strong><br><em>Dado</em> que una etapa del pedido cambia de estado<br><em>Cuando</em> se procesa el evento <code>StageUpdated</code><br><em>Entonces</em> el servicio publica <code>NotificationSent</code><br><em>Y</em> envía la notificación al cliente a través del sender externo<br><br><strong>Escenario 2: Consulta paginada del historial</strong><br><em>Dado</em> el <code>orderId</code><br><em>Cuando</em> se envía <code>GET /orders/{orderId}/notifications?limit=20&before={cursor}</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> devuelve las notificaciones en orden cronológico descendente</td>
       <td>EP07</td>
     </tr>
     <tr>
@@ -1360,9 +1367,9 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
     </tr>
     <tr>
       <td>TS09</td>
-      <td>Endpoint de registro de usuarios</td>
-      <td>Como Developer, quiero exponer un endpoint <code>POST /auth/register</code> que cree la cuenta con email, password y tipo de usuario (carpintero o cliente), validando que el email sea único.</td>
-      <td><strong>Escenario 1: Registro exitoso</strong><br><em>Dado</em> que el body contiene <code>email</code> no registrado, <code>password</code> y <code>userType</code> (<code>carpenter</code> o <code>client</code>) válidos<br><em>Cuando</em> el cliente envía <code>POST /auth/register</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> devuelve el usuario creado con su <code>userId</code><br><br><strong>Escenario 2: Email duplicado</strong><br><em>Dado</em> que el <code>email</code> ya está registrado en la plataforma<br><em>Cuando</em> el cliente envía la petición<br><em>Entonces</em> el servicio responde <code>409 Conflict</code><br><em>Y</em> el body incluye un mensaje indicando que el correo ya está en uso</td>
+      <td>Endpoint de registro con código de invitación</td>
+      <td>Como Developer, quiero exponer <code>POST /auth/register</code> que cree la cuenta del carpintero validando el código de invitación del taller (registro cerrado) y, opcionalmente, la cuenta de un cliente que se autoregistre, validando que el email sea único.</td>
+      <td><strong>Escenario 1: Registro de carpintero con código válido</strong><br><em>Dado</em> que el body contiene <code>email</code> no registrado, <code>password</code> y un <code>invitationCode</code> válido del taller<br><em>Cuando</em> se envía <code>POST /auth/register</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> crea la cuenta de carpintero asociada al taller<br><br><strong>Escenario 2: Código de invitación inválido</strong><br><em>Dado</em> que el <code>invitationCode</code> no existe o no corresponde al taller<br><em>Cuando</em> se envía la petición como carpintero<br><em>Entonces</em> el servicio responde <code>403 Forbidden</code><br><br><strong>Escenario 3: Email duplicado</strong><br><em>Dado</em> que el <code>email</code> ya está registrado en la plataforma<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>409 Conflict</code><br><em>Y</em> el body incluye un mensaje indicando que el correo ya está en uso</td>
       <td>EP02</td>
     </tr>
     <tr>
@@ -1403,6 +1410,7 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
   </tbody>
 </table>
 
+**Nota sobre el modelo de actores y roles.** WoodRoute es una herramienta interna del taller (un despliegue equivale a un taller), no un marketplace de dos lados. El **carpintero** (staff del taller) es el único rol que inicia sesión y opera todo el ciclo del pedido; su registro es cerrado mediante el código de invitación del taller (HU16, TS09). El **cliente** es principalmente un registro del CRM que el taller administra (Customers): puede ser dado de alta por el carpintero desde el formulario interno, sin cuenta, o autoregistrarse de forma opcional para usar un portal reducido. Por ello, un pedido puede originarse de dos formas (HU17): lo crea un cliente con cuenta, y queda en la bandeja común del taller para que cualquier carpintero lo acepte (HU19), o lo crea el carpintero eligiendo a un cliente de su CRM. Del mismo modo, las historias en las que el cliente acepta el presupuesto o registra comprobantes de pago (HU37, HU38, HU41) las ejecuta el cliente cuando tiene cuenta o el carpintero a su nombre cuando no la tiene. El seguimiento del cliente se realiza principalmente por el enlace público (HU43) y la comunicación directa ocurre por WhatsApp (HU34), no mediante un chat interno.
 
 ## 3.2. Impact Mapping
 
@@ -1502,7 +1510,7 @@ El Product Backlog se elabora a continuación, listando cada User Story con su o
       <td>11</td>
       <td>HU17</td>
       <td>Creación de pedido personalizado</td>
-      <td>Como cliente, quiero crear un pedido de mueble personalizado para solicitar un diseño específico.</td>
+      <td>Como cliente con cuenta o como carpintero a nombre de un cliente, quiero crear un pedido de mueble personalizado para iniciar su gestión.</td>
       <td>5</td>
     </tr>
     <tr>
@@ -1550,22 +1558,22 @@ El Product Backlog se elabora a continuación, listando cada User Story con su o
     <tr>
       <td>18</td>
       <td>HU34</td>
-      <td>Envío de mensajes</td>
-      <td>Como usuario, quiero enviar mensajes dentro de la plataforma para comunicarme sobre el pedido.</td>
+      <td>Contacto directo por WhatsApp</td>
+      <td>Como carpintero o cliente, quiero contactar a la otra parte por WhatsApp desde el pedido, sin un chat interno.</td>
       <td>3</td>
     </tr>
     <tr>
       <td>19</td>
       <td>HU35</td>
-      <td>Recepción de mensajes</td>
-      <td>Como usuario, quiero recibir mensajes para mantenerme informado sobre el pedido.</td>
+      <td>Notificaciones de avance del pedido</td>
+      <td>Como cliente, quiero recibir notificaciones automáticas cuando mi pedido cambie de etapa para enterarme del avance sin preguntar.</td>
       <td>3</td>
     </tr>
     <tr>
       <td>20</td>
       <td>HU36</td>
-      <td>Historial de comunicación</td>
-      <td>Como usuario, quiero ver el historial de mensajes para revisar conversaciones anteriores.</td>
+      <td>Historial de estados y notificaciones del pedido</td>
+      <td>Como usuario, quiero ver el historial de cambios de estado y notificaciones del pedido para tener trazabilidad de su avance.</td>
       <td>2</td>
     </tr>
     <tr>
@@ -1648,8 +1656,8 @@ El Product Backlog se elabora a continuación, listando cada User Story con su o
     <tr>
       <td>32</td>
       <td>HU16</td>
-      <td>Selección de tipo de usuario</td>
-      <td>Como usuario, quiero definir si soy carpintero o cliente para acceder a funcionalidades específicas.</td>
+      <td>Registro del carpintero y alta de clientes</td>
+      <td>Como carpintero, quiero registrarme con el código de invitación del taller y dar de alta a mis clientes desde un formulario interno.</td>
       <td>2</td>
     </tr>
     <tr>
@@ -1767,8 +1775,8 @@ El Product Backlog se elabora a continuación, listando cada User Story con su o
     <tr>
       <td>49</td>
       <td>TS07</td>
-      <td>Endpoints REST de mensajería por pedido</td>
-      <td>Como Developer, quiero exponer endpoints REST <code>/orders/{orderId}/messages</code> para intercambio de mensajes.</td>
+      <td>Endpoint de notificaciones de avance del pedido</td>
+      <td>Como Developer, quiero disparar notificaciones automáticas al cliente vía el sender externo y exponer <code>GET /orders/{orderId}/notifications</code>, en lugar de un chat interno.</td>
       <td>3</td>
     </tr>
     <tr>
@@ -1781,8 +1789,8 @@ El Product Backlog se elabora a continuación, listando cada User Story con su o
     <tr>
       <td>51</td>
       <td>TS09</td>
-      <td>Endpoint de registro de usuarios</td>
-      <td>Como Developer, quiero exponer <code>POST /auth/register</code> que cree la cuenta con email, password y tipo de usuario, validando email único.</td>
+      <td>Endpoint de registro con código de invitación</td>
+      <td>Como Developer, quiero exponer <code>POST /auth/register</code> que cree la cuenta del carpintero validando el código de invitación del taller y, opcionalmente, la de un cliente que se autoregistre, validando email único.</td>
       <td>3</td>
     </tr>
     <tr>
@@ -2063,10 +2071,10 @@ La aplicación organiza el contenido **por tópicos funcionales** que mapean dir
 | Producción | Etapas de fabricación, progreso y tiempos estimados | EP04 | Carpintero (escritura), cliente (lectura) |
 | Inventario | Registro de materiales, validación de viabilidad, alertas y órdenes a proveedor | EP05 | Carpintero |
 | Presupuestos y pagos | Estimación de costos, generación de presupuesto, anticipo y pago final | EP06 | Carpintero y cliente |
-| Mensajería | Comunicación por pedido entre carpintero y cliente | EP07 | Carpintero y cliente |
+| Contacto y notificaciones | Contacto por WhatsApp con la otra parte y notificaciones automáticas de avance por pedido | EP07 | Carpintero y cliente |
 | Configuración | Datos del taller, perfil y preferencias | EP02 | Cada usuario sobre sí mismo |
 
-La organización **por audiencia** se aplica en el control de acceso y en la composición de cada vista. El carpintero tiene capacidades de escritura sobre Pedidos (aceptar/rechazar), Producción (definir y actualizar etapas), Inventario completo y validación de pagos. El cliente tiene capacidades de escritura sobre creación y modificación de su pedido, aceptación del presupuesto y registro de comprobantes de pago, y lectura sobre el progreso de producción y la mensajería del pedido. La selección de rol ocurre en el registro (HU16) y condiciona qué módulos y acciones se exponen al usuario.
+La organización **por audiencia** se aplica en el control de acceso y en la composición de cada vista. El carpintero, único rol que inicia sesión, tiene capacidades de escritura sobre Pedidos (crear a nombre de un cliente de su CRM, aceptar/rechazar), Producción (definir y actualizar etapas), Inventario completo y validación de pagos. El cliente con cuenta accede a un portal reducido con capacidades de escritura sobre la creación y modificación de su pedido, la aceptación del presupuesto y el registro de comprobantes de pago, y lectura sobre el progreso de producción; cuando el cliente no tiene cuenta, el carpintero ejecuta estas acciones a su nombre. El contacto directo con el cliente ocurre por WhatsApp y el seguimiento por el enlace público, sin un chat interno. El registro del carpintero es cerrado mediante el código de invitación del taller (HU16) y condiciona qué módulos y acciones se exponen.
 
 Dentro de los listados (pedidos, materiales, presupuestos), el contenido se organiza de forma **cronológica inversa** por defecto: los elementos más recientes aparecen primero, reflejando el flujo natural de trabajo donde primero se atienden los pedidos activos antes que los históricos.
 
@@ -2086,14 +2094,14 @@ Las etiquetas de WoodRoute siguen el principio de mínima carga cognitiva: una p
 | Producción | Etapas de fabricación, progreso y tiempos |
 | Inventario | Stock de materiales, alertas y órdenes a proveedor |
 | Presupuestos | Costos, presupuestos, anticipos y pagos finales |
-| Mensajes | Comunicación por pedido con la otra parte |
+| Contacto | Contacto por WhatsApp y notificaciones del pedido |
 | Configuración | Perfil del usuario y datos del taller |
 
 **Estados de un pedido (HU18, HU19, HU21, HU40, HU42):**
 
 | Etiqueta | Significado |
 |---|---|
-| Pendiente | Pedido creado por el cliente, aún no revisado por el carpintero |
+| Pendiente | Pedido creado (por un cliente con cuenta o por el carpintero a nombre de un cliente), aún no aceptado por un carpintero del taller |
 | Aceptado | Carpintero aceptó el pedido y procederá con el presupuesto |
 | Rechazado | Carpintero no tomará el pedido |
 | En producción | Fabricación en curso, etapas activas |
@@ -2253,9 +2261,9 @@ El usuario puede buscar por número de pedido, monto o nombre de la otra parte. 
 
 Los resultados muestran: tipo de documento, número de pedido asociado, monto, fecha y estado actual. Para el carpintero se destacan los comprobantes en "Pendiente de validación" que requieren su revisión (HU39, HU42).
 
-**Módulo de Mensajería**
+**Módulo de Contacto y notificaciones**
 
-La búsqueda se realiza sobre las conversaciones por pedido. El usuario puede filtrar por pedido específico o por mensajes no leídos. No existe búsqueda full-text dentro del contenido de los mensajes en esta primera versión, dado el volumen acotado esperado por conversación.
+No expone una búsqueda de mensajes, ya que la comunicación directa se realiza por WhatsApp y no existe un chat interno. El usuario puede filtrar el historial de notificaciones del pedido por pedido específico o por notificaciones no leídas, dado el volumen acotado esperado por pedido.
 
 **Vista pública de seguimiento**
 
@@ -2277,14 +2285,14 @@ Los visitantes con intención directa (por ejemplo, llegando desde un anuncio) a
 
 **Aplicación web autenticada**
 
-La aplicación usa una **navegación lateral persistente** (sidebar) en desktop y una **barra inferior** en mobile, siguiendo convenciones establecidas de aplicaciones de gestión que el usuario ya conoce. El sidebar expone los seis módulos principales (Pedidos, Producción, Inventario, Presupuestos, Mensajes, Configuración) con íconos y etiquetas, el módulo activo se indica con el color primario. Las acciones de creación (nuevo pedido, nuevo material, nuevo presupuesto) están disponibles desde un botón prominente dentro de cada módulo, no desde la navegación global, para evitar contaminar el nivel principal con acciones específicas de cada sección.
+La aplicación usa una **navegación lateral persistente** (sidebar) en desktop y una **barra inferior** en mobile, siguiendo convenciones establecidas de aplicaciones de gestión que el usuario ya conoce. El sidebar expone los seis módulos principales (Pedidos, Producción, Inventario, Presupuestos, Contacto, Configuración) con íconos y etiquetas, el módulo activo se indica con el color primario. Las acciones de creación (nuevo pedido, nuevo material, nuevo presupuesto) están disponibles desde un botón prominente dentro de cada módulo, no desde la navegación global, para evitar contaminar el nivel principal con acciones específicas de cada sección.
 
-La composición del sidebar varía por rol: el carpintero ve los seis módulos completos. El cliente ve únicamente Pedidos, Mensajes, Presupuestos y Configuración, ya que Inventario y Producción son superficies de escritura exclusivas del carpintero (sobre estos últimos el cliente accede solo en lectura desde el detalle de su pedido).
+La composición del sidebar varía por rol: el carpintero ve los seis módulos completos. El cliente con cuenta accede a un portal reducido con únicamente Pedidos, Contacto, Presupuestos y Configuración, ya que Inventario y Producción son superficies de escritura exclusivas del carpintero (sobre estos últimos el cliente accede solo en lectura desde el detalle de su pedido).
 
 La jerarquía de navegación es de dos niveles máximo:
 
 ```
-Nivel 1 (sidebar): Pedidos / Producción / Inventario / Presupuestos / Mensajes / Configuración
+Nivel 1 (sidebar): Pedidos / Producción / Inventario / Presupuestos / Contacto / Configuración
 Nivel 2 (dentro del módulo): Listado → Detalle / Formulario de creación o edición
 ```
 
@@ -2339,7 +2347,7 @@ La versión mobile mantiene la misma jerarquía de contenido que desktop. Las gr
 
 ### 4.4.1. Web Applications Mock-up
 
-Los mock-ups de la aplicación web de WoodRoute aplican el mismo design system de la landing page (tipografía Plus Jakarta Sans / Inter, paleta cálida con primario `#FD4319`) sobre un layout autenticado con sidebar lateral, breadcrumb superior y selector de idioma. La aplicación se organiza por módulos alineados a los bounded contexts del producto: Pedidos, Producción, Inventario, Cotizaciones y Mensajes.
+Los mock-ups de la aplicación web de WoodRoute aplican el mismo design system de la landing page (tipografía Plus Jakarta Sans / Inter, paleta cálida con primario `#FD4319`) sobre un layout autenticado con sidebar lateral, breadcrumb superior y selector de idioma. La aplicación se organiza por módulos alineados a los bounded contexts del producto: Pedidos, Producción, Inventario, Cotizaciones y Contacto.
 
 **Vista 1 — Gestión de Pedidos**
 
@@ -2471,7 +2479,7 @@ Esta sección presenta el Class Diagram UML del producto Web Application de Wood
 
 **Class Diagram of Onboarding Context**
 
-Modela el registro, inicio de sesión y gestión de perfil. La entidad raíz `User` se asocia uno a uno con `Profile` y emite `AuthSession` durante el login.
+Modela el registro con código de invitación, el inicio de sesión y el registro de clientes del taller. La identidad y la cuenta (**Iam**) tienen como entidad raíz `User`, que incluye el nombre del usuario, y emite `AuthSession` durante el login; el registro de clientes (**Customers**, el CRM del taller) se modela con `Customer`, que puede o no tener una cuenta asociada. Un contexto independiente de `Profile` se evaluó y descartó: sus datos quedaron absorbidos por `User` (Iam) y `Customer` (Customers).
 
 <div align="center">
   <img src="assets/architecture/class-diagram-onboarding.png" alt="Class Diagram of Onboarding Context" width="100%">
@@ -2503,7 +2511,7 @@ Modela la planificación de etapas, el registro de avance y el consumo de materi
 
 **Class Diagram of Seguimiento y Comunicación Context**
 
-Modela la mensajería, reseñas, encuestas post-entrega y el read-model público de seguimiento. `Conversation` agrupa los `Message` intercambiados y, opcionalmente, `Review` y `Survey`.
+Modela el read-model público de seguimiento, las notificaciones de avance, las reseñas y las encuestas post-entrega. `Notification` registra los avisos automáticos enviados al cliente y, opcionalmente, se asocian `Review` y `Survey`. El contacto directo se realiza por WhatsApp (enlace externo), por lo que no se persiste un chat interno.
 
 <div align="center">
   <img src="assets/architecture/class-diagram-comunication.png" alt="Class Diagram of Seguimiento y Comunicación Context" width="100%">
@@ -2628,7 +2636,7 @@ Todas las integraciones hacia `develop` o `main` requieren la creación de un **
 
 ### 5.1.3. Source Code Style Guide & Coding Conventions
 
-El equipo adopta convenciones estándares y reconocidas internacionalmente para los lenguajes utilizados en WoodRoute: **JavaScript** y **Vue 3** en el frontend, **C# / .NET 10** en el backend y **SQL** sobre PostgreSQL para la persistencia. Toda la nomenclatura del código —identificadores, archivos, tablas y columnas— se escribe en **inglés**, garantizando coherencia y legibilidad para cualquier desarrollador.
+El equipo adopta convenciones estándares y reconocidas internacionalmente para los lenguajes utilizados en WoodRoute: **JavaScript** y **Vue 3** en el frontend, **C# / .NET 10** en el backend y **SQL** sobre PostgreSQL para la persistencia. Toda la nomenclatura del código identificadores, archivos, tablas y columnas se escribe en **inglés**, garantizando coherencia y legibilidad para cualquier desarrollador.
 
 Como herramienta de soporte se utiliza **Prettier** para el formateo automático del código fuente del frontend, asegurando un estilo consistente entre los miembros del equipo. Actualmente no se ha configurado un linter dedicado; su incorporación queda como mejora planificada para sprints posteriores.
 
@@ -2909,7 +2917,7 @@ La vista *Contributors* muestra la distribución de commits a lo largo del sprin
 
 ### 5.2.2. Sprint 2
 
-En este segundo sprint el equipo desarrolló la primera versión funcional del frontend de la aplicación web de WoodRoute, cubriendo los módulos de gestión de pedidos, producción, inventario, mensajería y consulta pública del estado del pedido. La aplicación se integró con un backend simulado mediante JSON Server para habilitar el flujo completo de extremo a extremo sin depender de la implementación del API REST.
+En este segundo sprint el equipo desarrolló la primera versión funcional del frontend de la aplicación web de WoodRoute, cubriendo los módulos de gestión de pedidos, producción, inventario, contacto y notificaciones, y consulta pública del estado del pedido. La aplicación se integró con un backend simulado mediante JSON Server para habilitar el flujo completo de extremo a extremo sin depender de la implementación del API REST.
 
 #### 5.2.2.1. Sprint Planning 2
 
@@ -2924,7 +2932,7 @@ En este segundo sprint el equipo desarrolló la primera versión funcional del f
 | **Sprint 1 Review Summary** | Durante el Sprint 1 se entregó la landing page de WoodRoute desplegada en Vercel cubriendo las primeras 10 User Stories del Product Backlog. El equipo cumplió con el Sprint Goal al desplegar el sitio público con la propuesta de valor, los planes de suscripción y la información del equipo. |
 | **Sprint 1 Retrospective Summary** | El equipo identificó que la asignación temprana de Aspect Leaders fue clave para coordinar el avance del sprint. Como oportunidad de mejora se planteó iniciar la implementación del frontend de la aplicación web desde el inicio del Sprint 2 trabajando con un mock backend (JSON Server) para no depender de la entrega del API REST, además de mejorar la trazabilidad entre Product Backlog y Sprint Backlog utilizando los identificadores HU directamente. |
 | **Sprint Goal & User Stories** | |
-| **Sprint 2 Goal** | Nos enfocamos en entregar la primera versión funcional de la aplicación web de WoodRoute cubriendo los módulos de gestión de pedidos, producción, inventario, mensajería y consulta pública del estado del pedido. Creemos que esto entrega un MVP que valida los flujos principales del producto tanto para carpinteros como para clientes. Esto se confirmará cuando la aplicación esté desplegada en Vercel con datos de prueba mediante JSON Server y los flujos prioritarios sean navegables de extremo a extremo. |
+| **Sprint 2 Goal** | Nos enfocamos en entregar la primera versión funcional de la aplicación web de WoodRoute cubriendo los módulos de gestión de pedidos, producción, inventario, contacto y notificaciones, y consulta pública del estado del pedido. Creemos que esto entrega un MVP que valida los flujos principales del producto tanto para carpinteros como para clientes. Esto se confirmará cuando la aplicación esté desplegada en Vercel con datos de prueba mediante JSON Server y los flujos prioritarios sean navegables de extremo a extremo. |
 | **Sprint 2 Velocity** | 44 |
 | **Sum of Story Points** | 44 |
 
@@ -2949,9 +2957,9 @@ En este segundo sprint el equipo desarrolló la primera versión funcional del f
 | HU22 | Definición de etapas de producción | T05 | Configuración de etapas del pedido | Implementación del flujo para definir las etapas de producción de un pedido específico. | 5 | Piero Sulca | Done |
 | HU23 | Actualización del estado de producción | T06 | Actualización inline del estado de etapa | Implementación de la actualización del estado de cada etapa desde la vista de producción. | 3 | Piero Sulca | Done |
 | HU43 | Consulta pública del estado del pedido | T07 | Vista pública del pedido | Implementación de la vista pública accesible mediante enlace único con el publicTrackingId. | 3 | Piero Sulca | Done |
-| HU34 | Envío de mensajes | T08 | Composer de mensajes | Implementación del composer de mensajes en la vista de conversación. | 3 | Piero Sulca | Done |
-| HU35 | Recepción de mensajes | T09 | Listado de conversaciones | Implementación del listado de conversaciones activas y de su pre-visualización. | 3 | Piero Sulca | Done |
-| HU36 | Historial de comunicación | T10 | Vista de historial de conversación | Implementación de la vista que muestra el historial completo de mensajes de un pedido. | 2 | Piero Sulca | Done |
+| HU34 | Contacto directo por WhatsApp | T08 | Botón de contacto por WhatsApp | Implementación del botón de contacto que abre WhatsApp con la otra parte desde el detalle del pedido. | 3 | Piero Sulca | Done |
+| HU35 | Notificaciones de avance del pedido | T09 | Listado de notificaciones | Implementación del listado de notificaciones automáticas de avance por pedido. | 3 | Piero Sulca | Done |
+| HU36 | Historial de estados y notificaciones del pedido | T10 | Vista de historial de notificaciones | Implementación de la vista que muestra el historial de estados y notificaciones de un pedido. | 2 | Piero Sulca | Done |
 | HU25 | Estimación de tiempos por etapa | T11 | Asignación de tiempos a etapas | Implementación del flujo para asignar tiempos estimados a cada etapa de producción. | 5 | Piero Sulca | Done |
 | HU26 | Registro de materiales | T12 | Formulario de registro de materiales | Implementación del formulario de registro de nuevos materiales en el inventario. | 3 | Piero Sulca | Done |
 | HU27 | Actualización de inventario | T13 | Edición de stock de materiales | Implementación de la actualización inline del stock desde el listado de materiales. | 3 | Piero Sulca | Done |
@@ -2964,7 +2972,7 @@ A continuación se muestra el tablero de Sprint Backlog 2 gestionado por el equi
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
-En este Sprint el equipo implementó la primera versión funcional de la aplicación web de WoodRoute sobre Vue 3 + Vite, organizada en módulos por bounded context (Pedidos, Producción, Inventario, Cotizaciones, Mensajería y Consulta Pública). El código se integró bajo el modelo GitFlow en el repositorio público <https://github.com/Developer-Core/frontend>. A continuación se listan los commits más representativos del sprint.
+En este Sprint el equipo implementó la primera versión funcional de la aplicación web de WoodRoute sobre Vue 3 + Vite, organizada en módulos por bounded context (Pedidos, Producción, Inventario, Cotizaciones, Contacto y notificaciones, y Consulta Pública). El código se integró bajo el modelo GitFlow en el repositorio público <https://github.com/Developer-Core/frontend>. A continuación se listan los commits más representativos del sprint.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -2978,7 +2986,7 @@ En este Sprint el equipo implementó la primera versión funcional de la aplicac
 | Developer-Core/frontend | develop | 152181f | feat: wire inventory routes, i18n and materials db | Integración del módulo de inventario con listado de materiales, alerta de stock bajo y formulario de registro (HU26, HU27). | 14/05/2026 |
 | Developer-Core/frontend | develop | 07727bf | feat: wire quotes routes, i18n and quotes db | Integración del módulo de cotizaciones con quote wizard de tres pasos y cálculo de rentabilidad. | 14/05/2026 |
 | Developer-Core/frontend | develop | 68262b5 | feat: register public tracking route and i18n entries | Integración de la vista pública de seguimiento de pedido accesible mediante enlace único (HU43). | 14/05/2026 |
-| Developer-Core/frontend | develop | 469aa8e | feat: wire communication routes, i18n and seed conversations | Integración del módulo de mensajería con listado de conversaciones e hilo de mensajes (HU34, HU35, HU36). | 14/05/2026 |
+| Developer-Core/frontend | develop | 469aa8e | feat: wire communication routes, i18n and seed conversations | Integración del módulo de contacto y notificaciones del pedido: contacto por WhatsApp y notificaciones de avance (HU34, HU35, HU36). | 14/05/2026 |
 | Developer-Core/frontend | develop | 3693cb2 | feat: add app-layout shell | Construcción del shell de la aplicación autenticada con sidebar, breadcrumb y header. | 14/05/2026 |
 | Developer-Core/frontend | develop | 20a3f9b | feat: add language-switcher component | Componente selector de idioma incorporado al header del layout autenticado. | 14/05/2026 |
 | Developer-Core/frontend | develop | cf7176c | chore: add json-server entrypoint for hosted deploy | Configuración del entrypoint del JSON Server para su despliegue público en Render. | 14/05/2026 |
@@ -2987,7 +2995,7 @@ En este Sprint el equipo implementó la primera versión funcional de la aplicac
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-Durante el Sprint 2 el equipo desplegó la primera versión funcional de la aplicación web de WoodRoute. La aplicación implementa los flujos principales para los carpinteros: gestión de pedidos, planificación de producción por etapas, control de inventario de materiales, cotizaciones, mensajería con clientes y vista pública para consulta del estado del pedido. La internacionalización (inglés y español) está disponible desde el header del layout.
+Durante el Sprint 2 el equipo desplegó la primera versión funcional de la aplicación web de WoodRoute. La aplicación implementa los flujos principales para los carpinteros: gestión de pedidos, planificación de producción por etapas, control de inventario de materiales, cotizaciones, contacto por WhatsApp y notificaciones de avance, y vista pública para consulta del estado del pedido. La internacionalización (inglés y español) está disponible desde el header del layout.
 
 **URL pública de la aplicación web:** <https://frontend-ashen-one-52.vercel.app/>
 
@@ -3033,8 +3041,7 @@ A continuación se listan los endpoints expuestos por el JSON Server. Todos ello
 | Materials | `/api/v1/materials` | GET, POST, PUT, PATCH, DELETE | Inventario de materiales |
 | Stages | `/api/v1/stages` | GET, POST, PUT, PATCH, DELETE | Etapas de producción asociadas a cada pedido |
 | Quotes | `/api/v1/quotes` | GET, POST, PUT, PATCH, DELETE | Cotizaciones generadas para cada pedido |
-| Conversations | `/api/v1/conversations` | GET, POST, PUT, PATCH, DELETE | Conversaciones asociadas a cada pedido |
-| Messages | `/api/v1/messages` | GET, POST, PUT, PATCH, DELETE | Mensajes intercambiados dentro de cada conversación |
+| Notifications | `/api/v1/notifications` | GET, POST, PUT, PATCH, DELETE | Notificaciones automáticas de avance asociadas a cada pedido (la comunicación directa se realiza por WhatsApp) |
 
 A continuación se evidencia el proceso de configuración y despliegue del JSON Server en Render.
 
@@ -3521,7 +3528,7 @@ Hasta el cierre del Sprint 2, el equipo completó la primera versión de la land
 
 La separación entre la landing page y la aplicación web demostró ser una decisión acertada. La landing pudo desplegarse de forma pública en Vercel desde el Sprint 1, entregando valor visible para el segmento objetivo sin estar bloqueada por la implementación del backend. Esta separación de productos permitió que cada uno evolucione a su propio ritmo y que el equipo pueda recibir feedback temprano sobre la propuesta de valor antes de invertir esfuerzo en los servicios de la aplicación.
 
-El diseño anticipado de la arquitectura por bounded contexts —Onboarding, Sales, Production, Inventario y Comunicación— resultó ser una inversión valiosa antes de iniciar la implementación de los servicios. Tener el modelo de dominio, los Class Diagrams y el Database Design definidos en el capítulo 4 redujo la ambigüedad sobre qué pertenece a qué contexto y dejó al equipo una base clara para asignar responsabilidades por agregado en los sprints siguientes, minimizando el riesgo de re-trabajo cuando comience el desarrollo del API REST en .NET 10.
+El diseño anticipado de la arquitectura por bounded contexts, Onboarding, Sales, Production, Inventario y Comunicación, resultó ser una inversión valiosa antes de iniciar la implementación de los servicios. Tener el modelo de dominio, los Class Diagrams y el Database Design definidos en el capítulo 4 redujo la ambigüedad sobre qué pertenece a qué contexto y dejó al equipo una base clara para asignar responsabilidades por agregado en los sprints siguientes, minimizando el riesgo de re-trabajo cuando comience el desarrollo del API REST en .NET 10.
 
 <div style="page-break-after: always;"></div>
 
