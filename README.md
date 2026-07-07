@@ -3732,7 +3732,7 @@ Añadir una columna que indique la fecha de creación del pedido y/o un indicado
   <img src="assets/about-the-team.jpeg" alt="About the Team" width="100%">
 </div>
 
-Enlace al vídeo de YouTube: <https://www.youtube.com/watch?v=qILCsLa7Omc>
+Enlace al vídeo de YouTube: <https://youtu.be/Vkt8205e6Ek>
 
 ## 5.5. Video About-the-Product.
 
