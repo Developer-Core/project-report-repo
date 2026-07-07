@@ -3510,15 +3510,17 @@ Para esta entrevista de validación a Oscar, se le mostró lo trabajado en la La
 
 ## 5.4. About the Team
 
-WoodRoute es desarrollado por un equipo de cinco estudiantes de la carrera de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, integrado por Gonza Morales, Anderson; Justo Yauricasa, Alexander Paolo; Saldaña De Souza, Juan David; Sulca Sanchez, Piero Angel; y Torres Sanchez, Dalila Victoria. El equipo se conformó en el marco del curso 1ASI0730 Aplicaciones Web (NRC 10215, período 202610) con la motivación común de resolver, mediante una aplicación web, una problemática real de un sector poco atendido por el software tradicional: los pequeños talleres de carpintería.
+WoodRoute es desarrollado por un equipo de dos estudiantes de la carrera de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, integrado por Gonza Morales, Anderson y Sulca Sanchez, Piero Angel. El equipo se conformó en el marco del curso 1ASI0730 Aplicaciones Web (NRC 10215, período 202610) con la motivación común de resolver, mediante una aplicación web, una problemática real de un sector poco atendido por el software tradicional: los pequeños talleres de carpintería.
 
-El equipo adoptó desde el inicio un modelo de liderazgo distribuido basado en Aspect Leaders, en el que cada integrante asumió responsabilidades por área. Sulca Sanchez, Piero Angel lideró la implementación del frontend en React y TypeScript y, posteriormente, la del backend real en .NET 10 con arquitectura DDD/CQRS, además del despliegue continuo en Vercel y Render. Gonza Morales, Anderson actuó como líder de Documentación, consolidando la evidencia de los sprints y los diagramas C4 de arquitectura, y participó en las entrevistas de needfinding. Justo Yauricasa, Alexander Paolo se encargó del Big Picture EventStorming, el Ubiquitous Language y la revisión de estilo del informe. Saldaña De Souza, Juan David colaboró en el Impact Mapping, el Ubiquitous Language y la configuración del acceso a datos del backend durante la integración. Torres Sanchez, Dalila Victoria aportó en la documentación del Sprint Planning y en las tareas de backend, combinando su interés por la lógica de los datos con la colaboración en frontend.
+El equipo adoptó desde el inicio un modelo de liderazgo distribuido basado en Aspect Leaders. Sulca Sanchez, Piero Angel lideró la implementación del frontend en React y TypeScript y, posteriormente, la del backend real en .NET 10 con arquitectura DDD/CQRS, además del despliegue continuo en Vercel y Render. Gonza Morales, Anderson actuó como líder de Documentación, consolidando la evidencia de los sprints y los diagramas C4 de arquitectura, y participó en las entrevistas de needfinding.
 
 La motivación del equipo nace de constatar que los carpinteros independientes gestionan sus pedidos, materiales y tiempos de manera empírica, apoyándose en cuadernos y WhatsApp. Esta realidad, validada en las entrevistas, impulsó al grupo a construir una herramienta especializada que respete el flujo real del taller y reduzca la fricción para un segmento de baja digitalización. El equipo trabajó bajo GitFlow, Conventional Commits y Semantic Versioning, sosteniendo un liderazgo conjunto a lo largo de los cuatro sprints hasta dejar el producto completo publicado en la nube.
 
-![About the Team](assets/about-the-team.png)
+<div align="center">
+  <img src="assets/about-the-team.jpeg" alt="About the Team" width="100%">
+</div>
 
-## 5.5. Video About-the-Product. 
+## 5.5. Video About-the-Product.
 
 WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes y pequeños talleres que fabrican muebles personalizados bajo pedido. La aplicación permite gestionar los pedidos, realizar el seguimiento del proceso de fabricación y optimizar la planificación de la producción, integrando en una sola herramienta lo que hoy los carpinteros resuelven con cuadernos y WhatsApp.
 
@@ -3528,12 +3530,13 @@ El producto está pensado para un segmento de baja digitalización: el carpinter
 
 El siguiente video presenta las funcionalidades principales del producto:
 
-![About the Product](assets/about-the-product.png)
+<div align="center">
+  <img src="assets/about-the-product.jpeg" alt="Screenshot del video About-the-Product" width="100%">
+</div>
 
-Enlace al vídeo de YouTube: [https://youtu.be/5zmEhiAhrEc](https://youtu.be/5zmEhiAhrEc) 
+Enlace al vídeo de YouTube: <https://youtu.be/5zmEhiAhrEc>
 
-
-Duración del vídeo: 
+Duración del vídeo: 3:42
 
 # Conclusiones
 
