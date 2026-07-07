@@ -3240,6 +3240,7 @@ En este cuarto sprint el equipo completó la implementación del backend real de
 | Gonza Morales, Anderson | Ander-U | Colaborador | Colaborador | Colaborador | Líder |
 | Saldaña De Souza, Juan David | jndesouza | Colaborador | Colaborador | Colaborador | Colaborador |
 | Sulca Sanchez, Piero Angel | psulca | Líder | Líder | Líder | Colaborador |
+| Torres Sanchez, Dalila Victoria | DalilaTorres | Colaboradora | Colaboradora | Colaboradora | Colaboradora |
 
 #### 5.2.4.3. Sprint Backlog 4
 
