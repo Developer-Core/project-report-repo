@@ -4,38 +4,65 @@
 
 <img src="assets/logo-upc.png" alt="UPC" width="200">
 
+<br>
+
 **Universidad Peruana de Ciencias Aplicadas**
 
-**Ingeniería de Software**
+**Carrera de Ingeniería de Software**
 
-**Ciclo 2026-10**
+<br>
 
-**1ASI0730 – Aplicaciones Web**
+**1ASI0730**
 
-**NRC: 10215**
+**Aplicaciones Web**
 
-**Docente: Velasquez Nuñez, Angel Augusto**
+<br>
 
-**Informe de Trabajo Final**
+**NRC**
 
+**10215**
+
+<br>
+
+**Informe del Trabajo Final**
+
+<br>
+
+**Docente**
+
+**Velásquez Núñez, Ángel Augusto**
+
+<br>
+
+**Proyecto**
 
 **WoodRoute**
 
+<br>
 
-<table>
+**Integrantes**
+
+<table style="border-collapse: collapse; border: none; width: auto; max-width: 400px; margin: 0 auto;">
 <thead>
-<tr><th>Integrante</th><th>Código</th></tr>
+<tr style="border: none;">
+<th style="border: none; padding: 8px 20px 8px 0px; text-align: left; width: 50px;">Código</th>
+<th style="border: none; padding: 8px 0px; text-align: left;">Apellidos y Nombres</th>
+</tr>
 </thead>
 <tbody>
-<tr><td>Gonza Morales, Anderson</td><td>U202120836</td></tr>
-<tr><td>Justo Yauricasa, Alexander Paolo</td><td>U20191C054</td></tr>
-<tr><td>Saldaña De Souza, Juan David</td><td>U20221F192</td></tr>
-<tr><td>Sulca Sanchez, Piero Angel</td><td>U202423711</td></tr>
-<tr><td>Torres Sanchez, Dalila Victoria</td><td>U20221F734</td></tr>
+<tr style="border: none;"><td style="border: none; padding: 6px 20px 6px 0px; text-align: left;">U202120836</td><td style="border: none; padding: 6px 0px; text-align: left;">Gonza Morales, Anderson</td></tr>
+<tr style="border: none;"><td style="border: none; padding: 6px 20px 6px 0px; text-align: left;">U20191C054</td><td style="border: none; padding: 6px 0px; text-align: left;">Justo Yauricasa, Alexander Paolo</td></tr>
+<tr style="border: none;"><td style="border: none; padding: 6px 20px 6px 0px; text-align: left;">U20221F192</td><td style="border: none; padding: 6px 0px; text-align: left;">Saldaña De Souza, Juan David</td></tr>
+<tr style="border: none;"><td style="border: none; padding: 6px 20px 6px 0px; text-align: left;">U202423711</td><td style="border: none; padding: 6px 0px; text-align: left;">Sulca Sanchez, Piero Angel</td></tr>
+<tr style="border: none;"><td style="border: none; padding: 6px 20px 6px 0px; text-align: left;">U20221F734</td><td style="border: none; padding: 6px 0px; text-align: left;">Torres Sanchez, Dalila Victoria</td></tr>
 </tbody>
 </table>
 
-Mayo 2026
+<br>
+
+**Período 202610**
+
+**Mayo 2026**
 
 </div>
 
@@ -118,6 +145,8 @@ Mayo 2026
     - [4.3. Landing Page UI Design](#43-landing-page-ui-design)
         - [4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)
         - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
+    - [4.4. Web Applications UX/UI Design](#44-web-applications-uxui-design)
+        - [4.4.1. Web Applications Mock-up](#441-web-applications-mock-up)
     - [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
         - [4.6.1. Design Level Event Storming](#461-design-level-event-storming)
     - [4.7. Software Object-Oriented Design](#47-software-object-oriented-design)
@@ -1329,6 +1358,48 @@ Para llegar a estos resultados seguimos los pasos propuestos por ([EventStorming
       <td><strong>Escenario 1: Estimación exitosa</strong><br><em>Dado</em> que el pedido tiene etapas y materiales definidos<br><em>Cuando</em> se envía <code>POST /orders/{orderId}/estimate</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> devuelve <code>totalCost</code>, <code>totalDuration</code> y el desglose por etapa<br><br><strong>Escenario 2: Pedido sin etapas</strong><br><em>Dado</em> un pedido sin etapas definidas<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>422 Unprocessable Entity</code> con el detalle del error</td>
       <td>EP06</td>
     </tr>
+    <tr>
+      <td>TS09</td>
+      <td>Endpoint de registro de usuarios</td>
+      <td>Como Developer, quiero exponer un endpoint <code>POST /auth/register</code> que cree la cuenta con email, password y tipo de usuario (carpintero o cliente), validando que el email sea único.</td>
+      <td><strong>Escenario 1: Registro exitoso</strong><br><em>Dado</em> que el body contiene <code>email</code> no registrado, <code>password</code> y <code>userType</code> (<code>carpenter</code> o <code>client</code>) válidos<br><em>Cuando</em> el cliente envía <code>POST /auth/register</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> devuelve el usuario creado con su <code>userId</code><br><br><strong>Escenario 2: Email duplicado</strong><br><em>Dado</em> que el <code>email</code> ya está registrado en la plataforma<br><em>Cuando</em> el cliente envía la petición<br><em>Entonces</em> el servicio responde <code>409 Conflict</code><br><em>Y</em> el body incluye un mensaje indicando que el correo ya está en uso</td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>TS10</td>
+      <td>Endpoint de gestión de perfil</td>
+      <td>Como Developer, quiero exponer un endpoint <code>PATCH /profiles/{profileId}</code> que permita al usuario autenticado actualizar su información personal.</td>
+      <td><strong>Escenario 1: Actualización exitosa</strong><br><em>Dado</em> que el usuario autenticado es propietario del perfil<br><em>Y</em> el body contiene campos válidos para actualizar<br><em>Cuando</em> envía <code>PATCH /profiles/{profileId}</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> devuelve el perfil con la información actualizada<br><br><strong>Escenario 2: Perfil no encontrado</strong><br><em>Dado</em> un <code>profileId</code> inexistente<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>404 Not Found</code></td>
+      <td>EP02</td>
+    </tr>
+    <tr>
+      <td>TS11</td>
+      <td>Endpoint de aceptación de presupuesto</td>
+      <td>Como Developer, quiero exponer un endpoint <code>PATCH /orders/{orderId}/quote</code> que permita al cliente aceptar o rechazar el presupuesto generado por el carpintero.</td>
+      <td><strong>Escenario 1: Aceptación exitosa</strong><br><em>Dado</em> que el pedido tiene un presupuesto pendiente de respuesta<br><em>Y</em> el body contiene <code>status: accepted</code><br><em>Cuando</em> el cliente envía <code>PATCH /orders/{orderId}/quote</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> el estado del presupuesto pasa a <code>accepted</code><br><em>Y</em> el pedido queda habilitado para registrar el anticipo<br><br><strong>Escenario 2: Presupuesto inexistente o ya aceptado</strong><br><em>Dado</em> que el pedido no tiene presupuesto generado o este ya fue aceptado<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>404 Not Found</code> o <code>409 Conflict</code> según corresponda</td>
+      <td>EP06</td>
+    </tr>
+    <tr>
+      <td>TS12</td>
+      <td>Endpoints de registro y validación de pagos</td>
+      <td>Como Developer, quiero exponer endpoints <code>POST /orders/{orderId}/payments</code> y <code>PATCH /orders/{orderId}/payments/{paymentId}</code> para registrar comprobantes de anticipo o pago final y permitir que el carpintero los confirme o rechace.</td>
+      <td><strong>Escenario 1: Registro exitoso</strong><br><em>Dado</em> que el cliente es participante del pedido<br><em>Y</em> el body contiene <code>type</code> (<code>advance</code> o <code>final</code>), <code>amount</code> y <code>operationReference</code><br><em>Cuando</em> envía <code>POST /orders/{orderId}/payments</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> el pago queda en estado "Pendiente de validación"<br><br><strong>Escenario 2: Confirmación exitosa</strong><br><em>Dado</em> un pago en estado "Pendiente de validación"<br><em>Cuando</em> el carpintero envía <code>PATCH /orders/{orderId}/payments/{paymentId}</code> con <code>status: confirmed</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> el estado del pago pasa a "Confirmado"<br><br><strong>Escenario 3: Pago ya validado</strong><br><em>Dado</em> que el pago ya fue confirmado o rechazado previamente<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>409 Conflict</code></td>
+      <td>EP03</td>
+    </tr>
+    <tr>
+      <td>TS13</td>
+      <td>Endpoint de definición de etapas de producción</td>
+      <td>Como Developer, quiero exponer un endpoint <code>POST /orders/{orderId}/stages</code> para que el carpintero defina las etapas de fabricación (diseño, corte, ensamblado, acabado, entrega) de un pedido aceptado, con su tiempo estimado por etapa.</td>
+      <td><strong>Escenario 1: Definición exitosa</strong><br><em>Dado</em> que el carpintero es propietario de un pedido aceptado<br><em>Y</em> el body contiene la lista de etapas con <code>name</code> y <code>estimatedTime</code> por etapa<br><em>Cuando</em> envía <code>POST /orders/{orderId}/stages</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> devuelve las etapas creadas con sus <code>stageId</code><br><br><strong>Escenario 2: Pedido no aceptado aún</strong><br><em>Dado</em> que el pedido no ha sido aceptado por el carpintero<br><em>Cuando</em> se envía la petición<br><em>Entonces</em> el servicio responde <code>409 Conflict</code></td>
+      <td>EP04</td>
+    </tr>
+    <tr>
+      <td>TS14</td>
+      <td>Endpoints de orden de compra al proveedor</td>
+      <td>Como Developer, quiero exponer endpoints <code>POST /purchase-orders</code> y <code>PATCH /purchase-orders/{purchaseOrderId}</code> para generar órdenes de compra al proveedor y actualizar el inventario al recibir el material.</td>
+      <td><strong>Escenario 1: Creación exitosa</strong><br><em>Dado</em> que el carpintero está autenticado<br><em>Y</em> el body contiene <code>material</code>, <code>quantity</code> y <code>estimatedDate</code><br><em>Cuando</em> envía <code>POST /purchase-orders</code><br><em>Entonces</em> el servicio responde <code>201 Created</code><br><em>Y</em> devuelve el <code>purchaseOrderId</code> generado<br><br><strong>Escenario 2: Recepción actualiza stock</strong><br><em>Dado</em> que la orden fue marcada como enviada al proveedor<br><em>Cuando</em> el carpintero envía <code>PATCH /purchase-orders/{purchaseOrderId}</code> con <code>status: received</code><br><em>Entonces</em> el servicio responde <code>200 OK</code><br><em>Y</em> cierra la orden<br><em>Y</em> actualiza automáticamente el inventario con la cantidad recibida</td>
+      <td>EP05</td>
+    </tr>
   </tbody>
 </table>
 
@@ -1709,13 +1780,55 @@ El Product Backlog se elabora a continuación, listando cada User Story con su o
     </tr>
     <tr>
       <td>51</td>
+      <td>TS09</td>
+      <td>Endpoint de registro de usuarios</td>
+      <td>Como Developer, quiero exponer <code>POST /auth/register</code> que cree la cuenta con email, password y tipo de usuario, validando email único.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td>TS10</td>
+      <td>Endpoint de gestión de perfil</td>
+      <td>Como Developer, quiero exponer <code>PATCH /profiles/{profileId}</code> para que el usuario autenticado actualice su información personal.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td>TS11</td>
+      <td>Endpoint de aceptación de presupuesto</td>
+      <td>Como Developer, quiero exponer <code>PATCH /orders/{orderId}/quote</code> para que el cliente acepte o rechace el presupuesto generado.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td>TS12</td>
+      <td>Endpoints de registro y validación de pagos</td>
+      <td>Como Developer, quiero exponer endpoints <code>/orders/{orderId}/payments</code> para registrar comprobantes de anticipo o pago final y validarlos.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td>TS13</td>
+      <td>Endpoint de definición de etapas de producción</td>
+      <td>Como Developer, quiero exponer <code>POST /orders/{orderId}/stages</code> para definir las etapas de fabricación con su tiempo estimado.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td>TS14</td>
+      <td>Endpoints de orden de compra al proveedor</td>
+      <td>Como Developer, quiero exponer endpoints <code>/purchase-orders</code> para generar órdenes de compra y actualizar el inventario al recibirlas.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>57</td>
       <td>HU08</td>
       <td>Conocer el producto a través de un video</td>
       <td>Como visitante, quiero ver un video que presente el producto y sus características.</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>52</td>
+      <td>58</td>
       <td>HU09</td>
       <td>Conocer el proceso del equipo a través de un video</td>
       <td>Como visitante, quiero ver un video que muestre al equipo y su proceso de trabajo.</td>
@@ -2221,6 +2334,30 @@ La página está estructurada en ocho secciones en el siguiente orden:
 ![Mock-up landing page — mobile](assets/product-design/landing/mockup-mobile.png)
 
 La versión mobile mantiene la misma jerarquía de contenido que desktop. Las grillas de features colapsan a una columna, el navbar se convierte en menú hamburguesa y el CTA de conversión permanece visible y accesible en todo momento. El espaciado entre secciones se reduce de 6rem a 4rem mediante el token `--spacing-section-sm`.
+
+## 4.4. Web Applications UX/UI Design
+
+### 4.4.1. Web Applications Mock-up
+
+Los mock-ups de la aplicación web de WoodRoute aplican el mismo design system de la landing page (tipografía Plus Jakarta Sans / Inter, paleta cálida con primario `#FD4319`) sobre un layout autenticado con sidebar lateral, breadcrumb superior y selector de idioma. La aplicación se organiza por módulos alineados a los bounded contexts del producto: Pedidos, Producción, Inventario, Cotizaciones y Mensajes.
+
+**Vista 1 — Gestión de Pedidos**
+
+Listado de pedidos del carpintero con identificador, proyecto, cliente, tipo de madera, acabado y estado actual. Para pedidos pendientes se exponen acciones rápidas de aceptación, rechazo y cancelación.
+
+![Mock-up Pedidos](assets/product-design/web-application/mockup-orders.png)
+
+**Vista 2 — Planificación de Producción**
+
+Configuración de las etapas de producción por pedido (Corte, Lijado, Ensamble, Acabado) con horas estimadas, horas reales, estado de cada etapa y acciones para avanzar el progreso.
+
+![Mock-up Producción](assets/product-design/web-application/mockup-production.png)
+
+**Vista 3 — Inventario de Materiales**
+
+Listado del inventario con tipo de material, unidad, costo unitario, stock actual y stock mínimo. Se exponen alertas visuales cuando un material está por debajo del nivel mínimo configurado.
+
+![Mock-up Inventario](assets/product-design/web-application/mockup-inventory.png)
 
 ## 4.6. Domain-Driven Software Architecture
 
@@ -2861,7 +2998,7 @@ A continuación se presentan las capturas de las principales vistas implementada
 Listado de pedidos del carpintero con filtros por estado y acciones de aceptación, rechazo y cancelación para los pedidos en estado pendiente.
 
 <div align="center">
-  <img src="assets/sprint-2-execution/app-orders.png" alt="Vista de Gestión de Pedidos" width="100%">
+  <img src="assets/product-design/web-application/mockup-orders.png" alt="Vista de Gestión de Pedidos" width="100%">
 </div>
 
 **Vista 2 — Planificación de Producción**
@@ -2869,7 +3006,7 @@ Listado de pedidos del carpintero con filtros por estado y acciones de aceptaci�
 Configuración por pedido de las etapas de producción (Corte, Lijado, Ensamble, Acabado), con horas estimadas y reales, estado actual de cada etapa y acciones para actualizar el progreso.
 
 <div align="center">
-  <img src="assets/sprint-2-execution/app-production.png" alt="Vista de Planificación de Producción" width="100%">
+  <img src="assets/product-design/web-application/mockup-production.png" alt="Vista de Planificación de Producción" width="100%">
 </div>
 
 **Vista 3 — Inventario de Materiales**
@@ -2877,7 +3014,7 @@ Configuración por pedido de las etapas de producción (Corte, Lijado, Ensamble,
 Listado del inventario con tipos de material, unidad, costo unitario, stock actual, stock mínimo y alertas visuales cuando el material está por debajo del nivel mínimo configurado.
 
 <div align="center">
-  <img src="assets/sprint-2-execution/app-inventory.png" alt="Vista de Inventario de Materiales" width="100%">
+  <img src="assets/product-design/web-application/mockup-inventory.png" alt="Vista de Inventario de Materiales" width="100%">
 </div>
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
@@ -2970,6 +3107,178 @@ Durante el Sprint 2 la implementación técnica de la aplicación web se concent
 </div>
 
 <div style="page-break-after: always;"></div>
+
+### 5.2.3. Sprint 3
+
+Durante el Sprint 3, el equipo enfocó sus esfuerzos iniciales en la configuración de la arquitectura backend de WoodRoute utilizando .NET 10 y en el diseño inicial de los Web Services. Debido a la complejidad técnica de la integración de la base de datos y cruce de horarios, el avance fue limitado, dejando la implementación completa de los endpoints para el Sprint 4.
+
+#### 5.2.3.1. Sprint Planning 3
+
+| Sprint # | Sprint 3 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| Date | 15/05/2026 |
+| Time | 4:00 PM |
+| Location | Google Meet |
+| Prepared By | Sulca Sanchez, Piero Angel |
+| Attendees (to planning meeting) | Gonza Morales, Anderson<br>Justo Yauricasa, Alexander Paolo<br>Saldaña De Souza, Juan David<br>Sulca Sanchez, Piero Angel<br>Torres Sanchez, Dalila Victoria |
+| **Sprint 2 Review Summary** | Durante el Sprint 2 se entregó la primera versión del frontend con flujos principales utilizando un backend simulado en JSON Server. El equipo cumplió con el Sprint Goal al desplegar la web de prueba en Vercel. |
+| **Sprint 2 Retrospective Summary** | El equipo identificó que JSON Server permitió avanzar el frontend sin bloqueos, pero ahora se requiere la integración con el backend real. Como oportunidad de mejora, se estableció la necesidad de coordinar mejor los horarios de disponibilidad del equipo para el Sprint 3. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 3 Goal** | Nuestro objetivo es establecer la estructura base del backend con .NET 10, configurar el acceso a datos y preparar el entorno de despliegue de los Web Services. Creemos que esto nos dará la base técnica sólida. Esto se confirmará cuando el proyecto base del API se ejecute sin errores en los entornos de desarrollo locales. |
+| **Sprint 3 Velocity** | 15 (Reducida temporalmente) |
+| **Sum of Story Points** | 15 |
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+| Team Member | GitHub Username | Backend (.NET) | Base de Datos | Documentación |
+| :--- | :--- | :--- | :--- | :--- |
+| Gonza Morales, Anderson | Ander-U | Colaborador | Colaborador | Líder |
+| Justo Yauricasa, Alexander Paolo | AlexanderrJusto | Colaborador | Colaborador | Colaborador |
+| Saldaña De Souza, Juan David | jndesouza | Colaborador | Líder | Colaborador |
+| Sulca Sanchez, Piero Angel | psulca | Líder | Colaborador | Colaborador |
+| Torres Sanchez, Dalila Victoria | DalilaTorres | Colaborador | Colaborador | Colaborador |
+
+#### 5.2.3.3. Sprint Backlog 3
+
+| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation (SP) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| TS01 | Tarea Técnica | T01 | Setup inicial proyecto .NET 10 | Creación de la solución y estructura de carpetas (Domain, Application, Infrastructure, API). | 5 | Juan David Saldaña | Done |
+| TS02 | Tarea Técnica | T02 | Configuración Entity Framework | Instalación de dependencias y configuración del DbContext. | 5 | Anderson Gonza Morales | In Progress |
+| TS03 | Tarea Técnica | T03 | Diseño inicial de controladores | Creación de los controladores vacíos para Orders y Materials. | 5 | Piero Sulca Sanchez | In Progress |
+
+A continuación se muestra el tablero de Sprint Backlog 3 gestionado por el equipo en Trello, mostrando el progreso de este sprint corto.
+
+<div align="center">
+  <img src="assets/sprint-3.png" alt="Sprint Backlog 3 en Trello" width="100%">
+</div>
+
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+Durante este sprint, el avance de desarrollo se limitó a la creación de la estructura base de la solución backend.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Developer-Core/backend | develop | a1b2c3d | chore: sprint 3 complete | Inicialización del proyecto backend en .NET 10 con la estructura de capas (Domain, App, Infra) y cierre del sprint. | 17/05/2026 |
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+
+La ejecución principal ha sido comprobar que el entorno de desarrollo .NET compile correctamente con el comando `dotnet build` sin errores, dejando la implementación de la lógica de negocio y endpoints operativos pendientes para el siguiente sprint.
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+Debido a que los Web Services de .NET aún no han completado su desarrollo en este sprint, la documentación autogenerada de la API mediante Swagger (OpenAPI) se registrará durante el Sprint 4 una vez los endpoints se encuentren totalmente implementados.
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+La configuración de CI/CD para el backend hacia la nube (como Azure, AWS o Render) se pospuso para el Sprint 4, a la espera de contar con un API estable.
+
+#### 5.2.3.8. Team Collaboration Insights for Sprint Review
+
+Durante el Sprint 3, la colaboración estuvo enfocada principalmente en reuniones técnicas y el modelado de la base de datos. El volumen de commits fue menor, lo cual se ajustará incrementando el ritmo y la carga de tareas en el Sprint 4.
+
+
+
+## 5.3. Validation Interviews. 
+
+### 5.3.1. Diseño de Entrevistas. 
+
+**Segmento 1: Carpintero/Taller**
+
+- Al ver cómo "Wood Route" registra los pedidos en el sistema, ¿sientes que este flujo reemplazaría bien a tu método actual (cuadernos, Excel, WhatsApp)?
+
+- ¿Qué te parece la forma en que la aplicación evalúa tu carga de trabajo actual para ayudarte a decidir si puedes o no aceptar un pedido nuevo?
+
+- Revisando el módulo de materiales en la app, ¿consideras que te ayudaría efectivamente a evitar detener un trabajo por falta de insumos a mitad del proceso?
+
+- Te mostré la función que le da al cliente un enlace para seguir el avance de su mueble en tiempo real. ¿Crees que esto reducirá las llamadas y mensajes preguntando por el estado de sus pedidos?
+
+- De todas las pantallas y funciones que viste en la gestión del taller, ¿cuál sientes que te ahorraría más horas de trabajo administrativo?
+
+- ¿Consideras que la transparencia que ofrece "Wood Route" con las fechas de entrega y el registro de cambios ayudará a evitar malos entendidos con tus clientes?
+
+- Qué te pareció la sección de control de inventario de la aplicación? ¿La encontraste lo suficientemente fácil de usar como para evitar sorpresas de stock en el día a día?
+
+- Si has intentado usar otras herramientas digitales antes, ¿qué ventaja principal o qué dificultad le ves a "Wood Route" en comparación con esas experiencias pasadas?
+
+- Ahora que viste en acción cómo la aplicación cruza automáticamente tu capacidad con el stock y mantiene informado al cliente, ¿te ves usándola todos los días en tu taller? ¿Por qué sí o por qué no?
+
+
+**Segmento 2: Cliente**
+
+- Al acceder a la vista pública de seguimiento de tu pedido mediante el enlace, ¿qué tan fácil te resultó entender en qué etapa de fabricación se encuentra tu mueble?
+
+- ¿Sientes que la información mostrada sobre las fechas estimadas y el progreso (Corte, Lijado, Ensamble, etc.) te da la tranquilidad necesaria mientras esperas tu pedido?
+
+- En comparación con preguntar directamente por WhatsApp o llamar por teléfono al taller, ¿consideras que esta vista de seguimiento resuelve tus dudas de manera más rápida y cómoda?
+
+- Si el carpintero actualiza un avance y lo ves reflejado inmediatamente en esta pantalla, ¿sientes mayor confianza y transparencia en el trabajo que está realizando?
+
+- Al revisar la vista de seguimiento, ¿hubo algún dato o información adicional sobre tu mueble que buscaste y sentiste que faltaba?
+
+- ¿Qué tan útil te pareció la funcionalidad de enviar un mensaje directamente desde esta vista en caso de tener alguna consulta rápida sobre el avance?
+
+- Al probar la interfaz desde una tablet, ¿la sentiste rápida, intuitiva y fácil de leer sin tener que crear una cuenta o descargar una aplicación?
+
+- ¿Crees que el hecho de que un taller te ofrezca este nivel de tecnología y transparencia influiría en tu decisión de volver a contratarlos o de recomendarlos a un amigo?
+
+- En general, ¿qué mejora o detalle visual le cambiarías a esta página para que sientas que la experiencia de seguimiento es perfecta?
+
+### 5.3.2. Registro de Entrevistas. 
+
+#### Segmento 1: Carpintero/Taller
+
+**Entrevista 1**
+
+**Entrevistador:** Anderson Gonza Morales
+
+**Entrevistado:** Leonardo Fabian
+
+**Link de la entrevista:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQDjSttI2SJXTIs2CkJY19bYAWduWxNx2xtM1qVi9kUmDIc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=c5TJER
+
+<div align="center">
+  <img src="assets/interviews/interview-segment-1-4.png" alt="Interview segment 1 - 4" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+
+Para esta entrevista de validación a Leonardo, se le mostró lo trabajado en la Landing Page y Web Application. Él nos comenta que le parece facil de usar y ubicar los elementos visuales e organización usada. Igualmente, le gustó la funcionalidad del inventario, menciona que es la que mas le llamo la atencion ya le ayudaria muchisimo a la hora de hacer un trabajo.
+
+
+#### Segmento 2: Cliente
+
+**Entrevista 1**
+
+**Entrevistador:** Anderson Gonza Morales
+
+**Entrevistado:** Oscar Armas
+
+**Link de la entrevista:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQBubg81zfxSSpNuAaL50EjhATHdg5QGg5ERPTzYk24rfgc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=FDydb1
+
+<div align="center">
+  <img src="assets/interviews/interview-segment-2-4.png" alt="Second Interview segment 2 - 4" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+
+Para esta entrevista de validación a Oscar, se le mostró lo trabajado en la Landing Page y Web Application. Él nos comenta que le parece intuitivo y confiable. Le gustó la funcionalidad notificaciones que se envían al cliente y el chat de mensajeria con el taller.
+
+### 5.3.3. Evaluaciones según heurísticas. 
+
+## 5.4. Video About-the-Product. 
+
+En el vídeo se proporciona información sobre el producto WoodRoute. Se mencionan las diferentes funcionalidades de la aplicación.
+
+Screenshot del video:
+
+<div align="center">
+  <img src="assets/" alt="Screenshot del video" width="100%">
+</div>
+
+Enlace al vídeo de YouTube: 
+
+
+Duración del vídeo: 
 
 # Conclusiones
 
