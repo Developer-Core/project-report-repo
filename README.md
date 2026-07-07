@@ -3177,6 +3177,239 @@ La configuración de CI/CD para el backend hacia la nube (como Azure, AWS o Rend
 
 Durante el Sprint 3, la colaboración estuvo enfocada principalmente en reuniones técnicas y el modelado de la base de datos. El volumen de commits fue menor, lo cual se ajustará incrementando el ritmo y la carga de tareas en el Sprint 4.
 
+### 5.2.4. Sprint 4
+
+En este cuarto sprint el equipo completó la implementación del backend real de WoodRoute sobre .NET 10 con una arquitectura de monolito modular DDD/CQRS, integró la aplicación web con el API REST reemplazando el backend simulado (JSON Server) y desplegó el sistema completo en la nube: el backend sobre Render (contenedor Docker) y la aplicación web sobre Vercel. Durante la integración se refinó el modelo de dominio hacia una herramienta interna de taller, en la que el carpintero es el único rol con inicio de sesión, los clientes se administran como registros del taller (CRM) con cuenta opcional, y el seguimiento del cliente se realiza mediante un enlace público.
+
+#### 5.2.4.1. Sprint Planning 4
+
+| Sprint # | Sprint 4 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| Date | 30/06/2026 |
+| Time | 4:00 PM |
+| Location | Google Meet |
+| Prepared By | Sulca Sanchez, Piero Angel |
+| Attendees (to planning meeting) | Gonza Morales, Anderson<br>Saldaña De Souza, Juan David<br>Sulca Sanchez, Piero Angel |
+| **Sprint 3 Review Summary** | Durante el Sprint 3 se estableció la estructura base del backend en .NET 10 con la separación por capas y el diseño inicial de los controladores y el acceso a datos. El avance fue limitado por la complejidad de la integración y el cruce de horarios, dejando la implementación completa de los endpoints para el Sprint 4. |
+| **Sprint 3 Retrospective Summary** | El equipo identificó que el ritmo de desarrollo del backend debía incrementarse y concentrarse en un responsable técnico para desbloquear la integración con el frontend. Como oportunidad de mejora se estableció completar todos los bounded contexts, conectar la aplicación web con el API real y llevar ambos entregables a producción dentro del sprint. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 4 Goal** | Nos enfocamos en completar el backend real de WoodRoute con .NET 10 cubriendo todos los bounded contexts (Identidad, Clientes, Ventas, Producción, Inventario y Seguimiento), integrar la aplicación web con el API REST y desplegar el sistema completo en la nube. Creemos que esto entrega el producto funcional de extremo a extremo con datos reales y persistentes. Esto se confirmará cuando el backend esté desplegado en Render, la aplicación web en Vercel consuma el API real y los flujos prioritarios del taller sean operativos en producción. |
+| **Sprint 4 Velocity** | 50 |
+| **Sum of Story Points** | 50 |
+
+#### 5.2.4.2. Aspect Leaders and Collaborators
+
+| Team Member | GitHub Username | Backend (.NET) | Web Application Frontend | DevOps / Despliegue | Documentación |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Gonza Morales, Anderson | Ander-U | Colaborador | Colaborador | Colaborador | Líder |
+| Saldaña De Souza, Juan David | jndesouza | Colaborador | Colaborador | Colaborador | Colaborador |
+| Sulca Sanchez, Piero Angel | psulca | Líder | Líder | Líder | Colaborador |
+
+#### 5.2.4.3. Sprint Backlog 4
+
+| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation (SP) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| TS01 | Tarea Técnica | T01 | Autenticación e identidad (IAM) | Implementación del registro con código de invitación para carpinteros, login con JWT y autorización por roles. | 5 | Piero Sulca Sanchez | Done |
+| TS02 | Tarea Técnica | T02 | Bounded context de Clientes (CRM) | Implementación del agregado Customer con cuenta opcional y endpoints CRUD para la cartera de clientes del taller. | 3 | Piero Sulca Sanchez | Done |
+| TS03 | Tarea Técnica | T03 | Endpoints de Ventas (pedidos, cotización y pagos) | Implementación del ciclo de vida del pedido, la generación y aceptación de cotización, y el registro y validación de pagos. | 8 | Piero Sulca Sanchez | Done |
+| TS04 | Tarea Técnica | T04 | Endpoints de Producción por etapas | Implementación de la definición y edición de etapas, el avance de estado y el cálculo de progreso del pedido. | 5 | Piero Sulca Sanchez | Done |
+| TS05 | Tarea Técnica | T05 | Endpoints de Inventario | Implementación del registro y actualización de materiales con control de stock mínimo. | 3 | Anderson Gonza Morales | Done |
+| TS06 | Tarea Técnica | T06 | Seguimiento público con etapas reales | Implementación del endpoint público que expone las etapas reales de producción y la fecha estimada de entrega. | 3 | Piero Sulca Sanchez | Done |
+| TS07 | Tarea Técnica | T07 | Bandeja de pedidos y modelo por rol | Implementación de pedidos sin asignar reclamables por el carpintero y de la creación de pedidos dirigida por rol. | 5 | Piero Sulca Sanchez | Done |
+| TS08 | Tarea Técnica | T08 | Integración frontend ↔ backend real | Reemplazo del backend simulado (JSON Server) por el API REST en .NET en todos los módulos de la aplicación web. | 8 | Piero Sulca Sanchez | Done |
+| TS09 | Tarea Técnica | T09 | Despliegue del backend en Render | Configuración del contenedor Docker, la política de CORS y el despliegue continuo del API sobre Render. | 3 | Piero Sulca Sanchez | Done |
+| TS10 | Tarea Técnica | T10 | Despliegue de la aplicación web en Vercel | Publicación de la aplicación web integrada con el API real sobre Vercel con despliegue automático. | 2 | Piero Sulca Sanchez | Done |
+| TS11 | Tarea Técnica | T11 | Documentación de servicios con Swagger | Habilitación de la documentación OpenAPI con esquema de seguridad JWT sobre el API desplegado. | 2 | Piero Sulca Sanchez | Done |
+| TS12 | Tarea Técnica | T12 | Endurecimiento de reglas de negocio | Refuerzo de las reglas del dominio: derivación del actor desde el JWT y cierre del pedido solo tras el pago total. | 3 | Piero Sulca Sanchez | Done |
+
+A continuación se muestra el tablero de Sprint Backlog 4 gestionado por el equipo en Trello, con las tareas distribuidas en sus respectivos estados al cierre del sprint.
+
+<div align="center">
+  <img src="assets/sprint-4.png" alt="Sprint Backlog 4 en Trello" width="100%">
+</div>
+
+#### 5.2.4.4. Development Evidence for Sprint Review
+
+Durante este sprint el equipo implementó el backend real de WoodRoute sobre .NET 10 con una arquitectura de monolito modular DDD/CQRS organizada por bounded contexts (Identidad, Clientes, Ventas, Producción, Inventario y Seguimiento y Comunicación), e integró la aplicación web con el API REST. El código se gestionó bajo el modelo GitFlow en los repositorios públicos <https://github.com/Developer-Core/wood-route-platform> (backend) y <https://github.com/Developer-Core/frontend> (frontend). A continuación se listan los commits más representativos del sprint.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Developer-Core/wood-route-platform | develop | d16bb1b | feat: add user aggregate to iam domain | Definición del agregado User del contexto de Identidad con email único, hash de contraseña y rol. | 03/07/2026 |
+| Developer-Core/wood-route-platform | develop | e11b967 | feat: add jwt token service | Servicio de emisión de tokens JWT para la autenticación de los usuarios del taller. | 03/07/2026 |
+| Developer-Core/wood-route-platform | develop | 401587f | feat: add authentication controller | Controlador de autenticación con los endpoints de registro e inicio de sesión. | 03/07/2026 |
+| Developer-Core/wood-route-platform | develop | 304beaf | feat: protect endpoints and allow anonymous auth and tracking | Middleware de autorización que protege los endpoints y habilita el acceso anónimo a autenticación y seguimiento público. | 03/07/2026 |
+| Developer-Core/wood-route-platform | develop | b3b86a1 | feat: add CORS policy and Render deployment configuration | Configuración de la política de CORS y del contenedor Docker para el despliegue del API en Render. | 06/07/2026 |
+| Developer-Core/wood-route-platform | develop | af7452c | feat: expose real production stages and estimated delivery in public tracking | Seguimiento público que expone las etapas reales de producción y la fecha estimada de entrega. | 06/07/2026 |
+| Developer-Core/wood-route-platform | develop | 862d27a | feat(iam): add invitation-gated carpenter registration | Registro de carpinteros protegido por un código de invitación del taller. | 06/07/2026 |
+| Developer-Core/wood-route-platform | develop | c9e1c2b | feat(customers): add customers bounded-context for the workshop crm | Contexto de Clientes con el agregado Customer y cuenta opcional para la cartera del taller. | 06/07/2026 |
+| Developer-Core/wood-route-platform | develop | a85038a | feat(sales): make orders customer-based and role-driven | Pedidos basados en el cliente del taller y creación dirigida por el rol del usuario. | 06/07/2026 |
+| Developer-Core/wood-route-platform | develop | bdd5295 | feat(sales): support unassigned orders and a carpenter claim-pool | Bandeja de pedidos sin asignar que cualquier carpintero puede reclamar al aceptarlos. | 06/07/2026 |
+| Developer-Core/wood-route-platform | develop | 0bdba27 | feat(manufacturing): allow editing stages before start and expose order progress | Edición de etapas antes de iniciar la producción y exposición del progreso del pedido. | 06/07/2026 |
+| Developer-Core/wood-route-platform | develop | 6c75eb1 | fix(sales): require full payment before completing an order | El pedido solo se cierra una vez que el pago total ha sido confirmado. | 06/07/2026 |
+| Developer-Core/frontend | develop | d3420fb | feat(customers): add customers-crm module, landing and name-resolution | Módulo de Clientes (CRM), landing pública con búsqueda de seguimiento y resolución de nombres. | 06/07/2026 |
+| Developer-Core/frontend | develop | 66c6a53 | feat(orders): rework orders for the workshop-tool model | Rediseño de pedidos al modelo de taller: creación por rol, bandeja y contacto por WhatsApp. | 06/07/2026 |
+| Developer-Core/frontend | develop | c00ebee | feat(inventory): rewire inventory to the real backend contract | Reconexión del módulo de inventario al contrato del backend real. | 06/07/2026 |
+| Developer-Core/frontend | develop | ce31717 | feat(production): rewire production stages to the real backend contract | Reconexión del módulo de producción por etapas al backend real. | 06/07/2026 |
+| Developer-Core/frontend | develop | b0cf85d | feat(shell): role-based sidebar navigation and layout | Navegación y shell de la aplicación con opciones según el rol del usuario. | 06/07/2026 |
+| Developer-Core/frontend | develop | 0421f9b | feat(shared): add global toast feedback for user actions | Feedback global mediante toasts en las acciones del usuario. | 06/07/2026 |
+| Developer-Core/frontend | develop | 3e364e8 | feat(production): edit stages before start and show order progress | Edición de etapas y columna de progreso del pedido en la aplicación web. | 06/07/2026 |
+| Developer-Core/frontend | develop | f4be2b1 | feat(ui): implement global dark mode theme and fix component backgrounds | Tema oscuro global de la aplicación con conmutador desde el header. | 06/07/2026 |
+| Developer-Core/frontend | develop | 352f0e3 | feat(shared): add reusable brand-logo component | Componente reutilizable del logotipo de marca aplicado en las vistas. | 06/07/2026 |
+
+#### 5.2.4.5. Execution Evidence for Sprint Review
+
+Durante el Sprint 4 el equipo integró la aplicación web con el backend real y desplegó el sistema completo. La aplicación implementa el flujo de extremo a extremo del taller sobre datos reales y persistentes: registro del carpintero con código de invitación, administración de clientes (CRM), creación y reclamo de pedidos, generación y aceptación de cotización, registro y validación de pagos, planificación y avance de la producción por etapas, y consulta pública del estado del pedido mediante enlace. La aplicación soporta internacionalización (inglés y español) y tema claro/oscuro.
+
+**URL pública de la aplicación web:** <https://frontend-ashen-one-52.vercel.app/>
+
+A continuación se presentan las capturas de las principales vistas del producto integrado.
+
+**Vista 1 — Landing pública y consulta de seguimiento**
+
+Página pública de WoodRoute con el ingreso del código de seguimiento para el cliente y el acceso al portal del taller.
+
+<div align="center">
+  <img src="assets/sprint-4-execution/landing.png" alt="Landing pública de WoodRoute" width="100%">
+</div>
+
+**Vista 2 — Registro del taller con código de invitación**
+
+Registro del carpintero mediante el código de invitación del taller, que crea la cuenta autenticada con JWT contra el backend real.
+
+<div align="center">
+  <img src="assets/sprint-4-execution/carpenter-register.png" alt="Registro del carpintero con código de invitación" width="100%">
+</div>
+
+**Vista 3 — Gestión de pedidos**
+
+Listado de pedidos del carpintero con el cliente, el estado, la cotización y el progreso de producción (X/Y etapas) de cada pedido.
+
+<div align="center">
+  <img src="assets/sprint-4-execution/orders.png" alt="Gestión de pedidos" width="100%">
+</div>
+
+**Vista 4 — Creación de un pedido**
+
+Formulario de registro de un pedido para un cliente del taller, con la selección del cliente, las dimensiones del mueble y las notas de diseño.
+
+<div align="center">
+  <img src="assets/sprint-4-execution/new-order.png" alt="Creación de un pedido" width="100%">
+</div>
+
+**Vista 5 — Planificación de producción**
+
+Definición y edición de las etapas de producción de un pedido, el avance de su estado y las acciones de ciclo de vida (iniciar producción, marcar listo y completar).
+
+<div align="center">
+  <img src="assets/sprint-4-execution/production.png" alt="Planificación de producción" width="100%">
+</div>
+
+**Vista 6 — Inventario de materiales**
+
+Listado del inventario del taller con el tipo de material, la unidad, el stock actual y el mínimo, con acciones de ajuste de stock y registro de nuevos materiales.
+
+<div align="center">
+  <img src="assets/sprint-4-execution/inventory.png" alt="Inventario de materiales" width="100%">
+</div>
+
+**Vista 7 — Administración de clientes (CRM)**
+
+Cartera de clientes del taller, con el registro de clientes sin cuenta y el enlace opcional a una cuenta de la plataforma.
+
+<div align="center">
+  <img src="assets/sprint-4-execution/customers.png" alt="Administración de clientes" width="100%">
+</div>
+
+**Vista 8 — Seguimiento público del pedido**
+
+Vista pública accesible mediante el código de seguimiento, con las etapas reales de producción y la fecha estimada de entrega.
+
+<div align="center">
+  <img src="assets/sprint-4-execution/public-tracking.png" alt="Seguimiento público del pedido" width="100%">
+</div>
+
+#### 5.2.4.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 4 el equipo implementó el API REST real de WoodRoute sobre **.NET 10** con una arquitectura de monolito modular DDD/CQRS y persistencia sobre **PostgreSQL** mediante Entity Framework Core. El servicio expone su documentación autogenerada mediante **Swagger (OpenAPI)**, incluyendo el esquema de seguridad JWT Bearer para las operaciones autenticadas.
+
+**URL base del servicio:** <https://wood-route-platform.onrender.com/api/v1>
+
+**Documentación Swagger:** <https://wood-route-platform.onrender.com/swagger>
+
+**Repositorio asociado:** <https://github.com/Developer-Core/wood-route-platform>
+
+A continuación se listan los principales recursos expuestos por el API REST.
+
+| Recurso | URL | Métodos principales | Descripción |
+| :--- | :--- | :--- | :--- |
+| Autenticación | `/api/v1/auth` | POST | Registro de cliente, registro de carpintero con código de invitación e inicio de sesión con JWT |
+| Usuarios | `/api/v1/users` | GET | Directorio de usuarios del taller, filtrable por rol (autenticado) |
+| Clientes | `/api/v1/customers` | GET, POST, PUT | Cartera de clientes del taller (CRM) con cuenta opcional |
+| Pedidos | `/api/v1/orders` | GET, POST, PATCH | Ciclo de vida del pedido: creación, bandeja, aceptación, cotización y transiciones |
+| Pagos | `/api/v1/orders/{id}/payments` | POST, PATCH | Registro y validación de los comprobantes de pago del pedido |
+| Etapas de producción | `/api/v1/orders/{id}/stages` | GET, POST, PUT, PATCH | Definición, edición y avance de las etapas de producción |
+| Inventario | `/api/v1/inventory` | GET, POST, PATCH | Registro y actualización de materiales con control de stock |
+| Seguimiento público | `/api/v1/tracking/{publicTrackingId}` | GET | Consulta anónima del estado y las etapas del pedido |
+
+A continuación se evidencia la documentación Swagger del API desplegado, que agrupa los endpoints por recurso con sus operaciones y esquemas, e incorpora el botón *Authorize* con el esquema de seguridad JWT Bearer para autenticar las solicitudes a los endpoints protegidos.
+
+<div align="center">
+  <img src="assets/sprint-4-services/swagger.png" alt="Documentación Swagger del API de WoodRoute" width="100%">
+</div>
+
+#### 5.2.4.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 4 el equipo configuró el despliegue continuo de ambos entregables en la nube. El backend en .NET se empaqueta como un contenedor **Docker** y se publica sobre **Render**, mientras que la aplicación web se despliega sobre **Vercel**. Ambos despliegues se ejecutan automáticamente ante cada integración a la rama principal.
+
+**URL del backend:** <https://wood-route-platform.onrender.com>
+
+**URL de la aplicación web:** <https://frontend-ashen-one-52.vercel.app/>
+
+**Paso 1: Importación del repositorio en Render.**
+
+Desde Render se crea un *Blueprint* y se importa el repositorio `wood-route-platform` de la organización **Developer-Core**, sobre el que se define la infraestructura como código.
+
+<div align="center">
+  <img src="assets/sprint-4-deployment/render-import.png" alt="Importación del repositorio del backend en Render" width="100%">
+</div>
+
+**Paso 2: Configuración del Blueprint.**
+
+Se configura el *Blueprint* WoodRoute apuntando a la rama principal del repositorio, desde la que Render lee la definición de los servicios (`render.yaml`).
+
+<div align="center">
+  <img src="assets/sprint-4-deployment/render-config.png" alt="Configuración del Blueprint del backend en Render" width="100%">
+</div>
+
+**Paso 3: Servicios desplegados en Render.**
+
+Render sincroniza el *Blueprint* y crea los servicios: la base de datos PostgreSQL `wood-route-db` y el servicio web `wood-route-platform`, ejecutándose sobre un contenedor Docker con despliegue continuo ante cada integración a la rama principal.
+
+<div align="center">
+  <img src="assets/sprint-4-deployment/render-synced.png" alt="Servicios del backend desplegados en Render" width="100%">
+</div>
+
+**Paso 4: Aplicación web desplegada en Vercel.**
+
+La aplicación web integrada con el API real queda publicada sobre Vercel con despliegue automático y URL pública.
+
+<div align="center">
+  <img src="assets/sprint-4-deployment/vercel-frontend.png" alt="Aplicación web de WoodRoute desplegada en Vercel" width="100%">
+</div>
+
+#### 5.2.4.8. Team Collaboration Insights for Sprint Review
+
+Durante el Sprint 4 la colaboración se concentró en la implementación técnica del backend y su integración con la aplicación web, gestionada bajo el modelo GitFlow con ramas `feature/*` reintegradas a `develop` y promovidas a `main` mediante ramas `release/*` versionadas. A continuación se presentan las capturas del analítico de GitHub Insights correspondientes a los repositorios `wood-route-platform` y `frontend` durante el Sprint 4.
+
+<div align="center">
+  <img src="assets/sprint-4-insights/github-insights-backend.png" alt="GitHub Insights del repositorio wood-route-platform durante el Sprint 4" width="100%">
+</div>
+
+<div align="center">
+  <img src="assets/sprint-4-insights/github-insights-frontend.png" alt="GitHub Insights del repositorio frontend durante el Sprint 4" width="100%">
+</div>
+
 
 
 ## 5.3. Validation Interviews. 
