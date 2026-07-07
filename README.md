@@ -3513,25 +3513,11 @@ Para esta entrevista de validación a Oscar, se le mostró lo trabajado en la La
 
 ## 5.4. About the Team
 
-WoodRoute es desarrollado por un equipo de dos estudiantes de la carrera de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, integrado por Gonza Morales, Anderson y Sulca Sanchez, Piero Angel. El equipo se conformó en el marco del curso 1ASI0730 Aplicaciones Web (NRC 10215, período 202610) con la motivación común de resolver, mediante una aplicación web, una problemática real de un sector poco atendido por el software tradicional: los pequeños talleres de carpintería.
-
-El equipo adoptó desde el inicio un modelo de liderazgo distribuido basado en Aspect Leaders. Sulca Sanchez, Piero Angel lideró la implementación del frontend en React y TypeScript y, posteriormente, la del backend real en .NET 10 con arquitectura DDD/CQRS, además del despliegue continuo en Vercel y Render. Gonza Morales, Anderson actuó como líder de Documentación, consolidando la evidencia de los sprints y los diagramas C4 de arquitectura, y participó en las entrevistas de needfinding.
-
-La motivación del equipo nace de constatar que los carpinteros independientes gestionan sus pedidos, materiales y tiempos de manera empírica, apoyándose en cuadernos y WhatsApp. Esta realidad, validada en las entrevistas, impulsó al grupo a construir una herramienta especializada que respete el flujo real del taller y reduzca la fricción para un segmento de baja digitalización. El equipo trabajó bajo GitFlow, Conventional Commits y Semantic Versioning, sosteniendo un liderazgo conjunto a lo largo de los cuatro sprints hasta dejar el producto completo publicado en la nube.
-
 <div align="center">
   <img src="assets/about-the-team.jpeg" alt="About the Team" width="100%">
 </div>
 
 ## 5.5. Video About-the-Product.
-
-WoodRoute es una plataforma web tipo SaaS dirigida a carpinteros independientes y pequeños talleres que fabrican muebles personalizados bajo pedido. La aplicación permite gestionar los pedidos, realizar el seguimiento del proceso de fabricación y optimizar la planificación de la producción, integrando en una sola herramienta lo que hoy los carpinteros resuelven con cuadernos y WhatsApp.
-
-La propuesta de valor se centra en un asistente de viabilidad que evalúa, a partir del inventario disponible, la estimación de tiempos de trabajo y la capacidad del taller, si un mueble es factible de construir. Esta decisión, que actualmente depende únicamente de la experiencia del carpintero, es la principal fuente de errores por falta de materiales y retrasos en las entregas; WoodRoute la convierte en un cálculo rápido y respaldado por datos.
-
-El producto está pensado para un segmento de baja digitalización: el carpintero es el único rol con inicio de sesión y gestiona sus clientes como registros del taller, mientras que los clientes consultan el estado de su mueble mediante un enlace público de seguimiento, sin necesidad de registrarse. La comunicación se mantiene por WhatsApp, respetando el canal que el segmento ya utiliza. El sistema completo se desplegó en la nube: el backend en .NET 10 con arquitectura DDD/CQRS sobre Render con base de datos PostgreSQL, y la aplicación web en Vercel, ambos con despliegue continuo.
-
-El siguiente video presenta las funcionalidades principales del producto:
 
 <div align="center">
   <img src="assets/about-the-product.jpeg" alt="Screenshot del video About-the-Product" width="100%">
