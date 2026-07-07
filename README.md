@@ -3517,15 +3517,15 @@ Para esta entrevista de validación a Oscar, se le mostró lo trabajado en la La
   <img src="assets/about-the-team.jpeg" alt="About the Team" width="100%">
 </div>
 
+Enlace al vídeo de YouTube: <https://www.youtube.com/watch?v=qILCsLa7Omc>
+
 ## 5.5. Video About-the-Product.
 
 <div align="center">
   <img src="assets/about-the-product.jpeg" alt="Screenshot del video About-the-Product" width="100%">
 </div>
 
-Enlace al vídeo de YouTube: <https://youtu.be/5zmEhiAhrEc>
-
-Duración del vídeo: 3:42
+Enlace al vídeo de YouTube: <https://www.youtube.com/watch?v=FD2Fc3zTknY>
 
 # Conclusiones
 
