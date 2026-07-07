@@ -3225,7 +3225,7 @@ En este cuarto sprint el equipo completó la implementación del backend real de
 | Time | 4:00 PM |
 | Location | Google Meet |
 | Prepared By | Sulca Sanchez, Piero Angel |
-| Attendees (to planning meeting) | Gonza Morales, Anderson<br>Saldaña De Souza, Juan David<br>Sulca Sanchez, Piero Angel |
+| Attendees (to planning meeting) | Gonza Morales, Anderson<br>Saldaña De Souza, Juan David<br>Sulca Sanchez, Piero Angel<br>Torres Sanchez, Dalila Victoria |
 | **Sprint 3 Review Summary** | Durante el Sprint 3 se estableció la estructura base del backend en .NET 10 con la separación por capas y el diseño inicial de los controladores y el acceso a datos. El avance fue limitado por la complejidad de la integración y el cruce de horarios, dejando la implementación completa de los endpoints para el Sprint 4. |
 | **Sprint 3 Retrospective Summary** | El equipo identificó que el ritmo de desarrollo del backend debía incrementarse y concentrarse en un responsable técnico para desbloquear la integración con el frontend. Como oportunidad de mejora se estableció completar todos los bounded contexts, conectar la aplicación web con el API real y llevar ambos entregables a producción dentro del sprint. |
 | **Sprint Goal & User Stories** | |
