@@ -3555,7 +3555,176 @@ Durante la sesión de validación, se le presentó a Eddo la landing page y la a
 
 ### 5.3.3. Evaluaciones según heurísticas. 
 
+#### Evaluación de User Experience según Heurísticas<br>
 
+**UX Heuristics & Principles Evaluation**<br>
+**Usability – Inclusive Design – Information Architecture**<br>
+
+**CARRERA**: Ingeniería de Software<br>
+**CURSO**: Aplicaciones Web<br>
+**SECCIÓN**: 10215<br>
+**PROFESORES**: Velásquez Núñez, Ángel Augusto<br>
+**AUDITOR**: DeveloperCore<br>
+**CLIENTE(S)**: Carpinteros y Clientes de WoodRoute<br>
+
+---
+
+##### SITE o APP A EVALUAR
+WoodRoute - Aplicación Web (Frontend + Backend Integrado) - Sprint 4
+
+##### TAREAS A EVALUAR
+El alcance de esta evaluación se centra exclusivamente en las tareas implementadas y desplegadas durante el Sprint 4:
+1. Registro de carpintero con código de invitación (TS09).
+2. Autenticación con JWT (TS01).
+3. Creación de pedidos basados en el rol del usuario y el CRM de clientes (TS02, TS03, TS07).
+4. Reclamo de pedidos desde la bandeja común (TS07).
+5. Definición y edición de etapas de producción (TS04).
+6. Actualización del estado de producción (TS04).
+7. Consulta pública de seguimiento con etapas reales (TS06).
+8. Gestión de inventario con control de stock mínimo (TS05).
+9. Validación de pagos (anticipo y final) (TS03).
+10. Despliegue del sistema completo en la nube (TS09, TS10).
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+1. Funcionalidades implementadas en sprints anteriores que no fueron modificadas en el Sprint 4.
+2. Notificaciones automáticas avanzadas (TS07, pendiente de integración completa).
+3. Etc.
+
+---
+
+##### ESCALA DE SEVERIDAD
+
+| Nivel | Descripción |
+| :--- | :--- |
+| 1 | Problema superficial: puede ser fácilmente superado por el usuario o ocurre con muy poco frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| 3 | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| 4 | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+---
+
+##### TABLA RESUMEN
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+| :--- | :--- | :--- | :--- |
+| 1 | La integración con el backend real requiere un ajuste en el contrato de datos, lo que generó que la aplicación web se alinee al API en .NET 10, siendo esta la actividad de mayor esfuerzo del sprint. Esto indica que el contrato de datos no estaba completamente definido desde el diseño. | 3 | Information Architecture: Is it findable? / Usability: Consistencia y estándares |
+| 2 | El registro con código de invitación no especifica en la interfaz qué sucede si el código es inválido, mostrando un mensaje genérico. | 2 | Usability: Prevención de errores y manejo de errores |
+| 3 | Durante la integración, se refinó el modelo de dominio hacia una herramienta interna de taller (single-tenant), lo que implica que el cliente con cuenta tiene un portal reducido. La vista pública de seguimiento no muestra el historial completo de etapas, solo la actual. | 3 | Inclusive Design: Proporciona experiencias comparables |
+| 4 | El despliegue del backend en Render y el frontend en Vercel requirió configuración de CORS y variables de entorno. No se evidencia en la interfaz un indicador de conectividad con el backend. | 2 | Usability: Visibilidad del estado del sistema |
+| 5 | La documentación Swagger está disponible, pero no se indica en la interfaz de usuario cómo acceder a ella o qué significa cada error. | 2 | Usability: Ayuda y documentación |
+| 6 | El flujo de pagos (anticipo y pago final) no especifica en la interfaz qué tipos de archivo son aceptados para los comprobantes. | 2 | Usability: Consistencia y estándares |
+| 7 | La bandeja de pedidos comunes no muestra la antigüedad del pedido, lo que dificulta la priorización. | 2 | Information Architecture: Is it findable? |
+
+---
+
+##### DESCRIPCIÓN DE PROBLEMAS
+
+###### PROBLEMA #1: La integración con el backend real requirió un ajuste significativo en el contrato de datos.
+
+**Severidad**: 3
+
+**Heurística violada**: Information Architecture: Is it findable? / Usability - Consistencia y estándares
+
+**Problema**:
+Durante el Sprint 4, la actividad de mayor esfuerzo fue alinear la aplicación web al API en .NET 10 (TS08). Esto incluyó ajustar la autenticación con JWT, la autorización por roles y los recursos por bounded context. Este esfuerzo indica que el contrato de datos entre el frontend (desarrollado con JSON Server en el Sprint 2) y el backend real no estaba completamente definido desde el diseño, lo que generó retrabajo y posibles inconsistencias en la experiencia del usuario final.
+
+
+**Recomendación**:
+Definir y documentar el contrato de datos (OpenAPI/Swagger) desde el inicio del desarrollo, incluso si se usa un backend simulado. Esto aseguraría que el frontend y el backend compartan el mismo modelo de datos desde el principio, reduciendo el esfuerzo de integración y garantizando una experiencia de usuario más consistente.
+
+---
+
+###### PROBLEMA #2: El registro con código de invitación no tiene un mensaje de error claro.
+
+**Severidad**: 2
+
+**Heurística violada**: Usabilidad - Prevención de errores y manejo de errores
+
+**Problema**:
+En el flujo de registro del carpintero (TS09), se requiere un código de invitación del taller. Si el usuario ingresa un código inválido, la interfaz no especifica claramente el error. Según la documentación, el servicio responde con `403 Forbidden`, pero no se detalla si la interfaz traduce esto en un mensaje comprensible para el usuario.
+
+
+**Recomendación**:
+Implementar un mensaje de error específico y en lenguaje natural. Por ejemplo: "El código de invitación ingresado no es válido. Por favor, verifica que esté correctamente escrito y vuelve a intentarlo. Si el problema persiste, contacta con el administrador de tu taller."
+
+---
+
+###### PROBLEMA #3: La vista pública de seguimiento no muestra el historial completo de etapas.
+
+**Severidad**: 3
+
+**Heurística violada**: Inclusive Design - Proporciona experiencias comparables
+
+**Problema**:
+Durante el Sprint 4, se implementó el seguimiento público que expone las etapas reales de producción y la fecha estimada de entrega (TS06). Sin embargo, el cliente solo ve la etapa actual y el porcentaje de avance, no un historial de las etapas completadas. El carpintero, en cambio, tiene acceso a todas las etapas y su estado en el panel de producción. Esto ofrece una experiencia de usuario limitada y no comparable.
+
+
+**Recomendación**:
+Rediseñar la vista de seguimiento público para mostrar todas las etapas del pedido (ej. Diseño, Corte, Ensamblado, Acabado, Entrega), indicando claramente:
+- Las etapas completadas (con un check o color verde).
+- La etapa actual (con un estado de "En progreso").
+- Las etapas futuras (con un color gris o inactivo).
+Esto alinearía la experiencia del cliente con la del carpintero.
+
+---
+
+###### PROBLEMA #4: No hay un indicador de conectividad con el backend en la interfaz.
+
+**Severidad**: 2
+
+**Heurística violada**: Usabilidad - Visibilidad del estado del sistema
+
+**Problema**:
+El Sprint 4 incluyó el despliegue del backend en Render y la integración con el frontend en Vercel (TS09, TS10). Sin embargo, no se evidencia en la interfaz de usuario un indicador que muestre si la conexión con el backend está activa o si hay problemas de red. Si el backend falla, el usuario podría no saber si el problema es su conexión o el sistema.
+
+
+**Recomendación**:
+Agregar un indicador de estado de la API en el header o footer de la aplicación. Por ejemplo, un punto verde que indique "Conectado" y un punto rojo que indique "Sin conexión". Además, mostrar mensajes de error claros cuando las peticiones al backend fallen.
+
+---
+
+###### PROBLEMA #5: La documentación Swagger no es accesible desde la interfaz de usuario.
+
+**Severidad**: 2
+
+**Heurística violada**: Usability - Ayuda y documentación
+
+**Problema**:
+Durante el Sprint 4, se habilitó la documentación OpenAPI con Swagger para el API desplegado (TS11). Sin embargo, esta documentación solo es accesible mediante la URL `/swagger` y no hay un enlace desde la interfaz de usuario de la aplicación. Los usuarios (especialmente desarrolladores o administradores) no tienen una forma fácil de consultar la documentación de los endpoints.
+
+
+**Recomendación**:
+Agregar un enlace a la documentación Swagger en el footer o en el menú de configuración de la aplicación. Esto permitiría a los usuarios técnicos consultar fácilmente la API y comprender mejor el sistema.
+
+---
+
+###### PROBLEMA #6: El flujo de pagos no especifica qué tipos de archivo son aceptados.
+
+**Severidad**: 2
+
+**Heurística violada**: Usabilidad - Consistencia y estándares
+
+**Problema**:
+En el Sprint 4 se implementaron los endpoints de registro y validación de pagos (TS03, TS12). Sin embargo, en la interfaz, al momento de registrar un comprobante de pago (anticipo o pago final), no se especifica qué formatos de archivo son aceptados (ej. PNG, JPG, PDF) o el tamaño máximo permitido. Esto puede generar errores inesperados.
+
+
+**Recomendación**:
+Incluir un texto de ayuda en el campo de subida de archivos que indique los formatos aceptados y el tamaño máximo. Por ejemplo: "Formatos aceptados: JPG, PNG, PDF. Tamaño máximo: 5MB."
+
+---
+
+###### PROBLEMA #7: La bandeja de pedidos comunes no muestra la antigüedad del pedido.
+
+**Severidad**: 2
+
+**Heurística violada**: Information Architecture: Is it findable?
+
+**Problema**:
+En el Sprint 4 se implementó la bandeja de pedidos sin asignar que cualquier carpintero puede reclamar (TS07). Sin embargo, en el listado de esta bandeja, no se muestra cuánto tiempo lleva cada pedido pendiente. Esto impide que los carpinteros puedan priorizar los pedidos más antiguos, afectando la eficiencia del taller.
+
+
+**Recomendación**:
+Añadir una columna que indique la fecha de creación del pedido y/o un indicador de tiempo relativo (ej. "Hace 2 horas", "Ayer"). Esto ayudaría a los carpinteros a priorizar los pedidos que llevan más tiempo esperando.
 
 ## 5.4. About the Team
 
