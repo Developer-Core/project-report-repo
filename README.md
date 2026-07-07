@@ -3532,7 +3532,30 @@ Para esta entrevista de validación a Leonardo, se le mostró lo trabajado en la
 
 Para esta entrevista de validación a Oscar, se le mostró lo trabajado en la Landing Page y Web Application. Él nos comenta que le parece intuitivo y confiable. Le gustó la funcionalidad notificaciones que se envían al cliente y el chat de mensajeria con el taller.
 
+
+
+**Entrevista 2**
+
+**Entrevistadora:** Dalila Victoria Torres Sanchez
+
+**Entrevistado:** Eddo Su Caletti
+
+**Link de la entrevista:** <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221f734_upc_edu_pe/IQAv2adUcPU_TaneUIBqzMJZAWyG6DEkr_E1KaM1DLVlfho?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wb7YBO">https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221f734_upc_edu_pe/IQAv2adUcPU_TaneUIBqzMJZAWyG6DEkr_E1KaM1DLVlfho?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wb7YBO</a>
+
+<div align="center">
+  <img src="assets/interviews/interview-segment-2-5.png" alt="Second Interview segment 2 - 5" width="100%">
+</div>
+
+**Resumen de la entrevista:** 
+
+
+Durante la sesión de validación, se le presentó a Eddo la landing page y la aplicación web, permitiéndole conocer las funcionalidades implementadas a través de una demostración guiada, expresó una impresión favorable, señalando que la interfaz le resulta comprensible, valorando que las herramientas facilitan el seguimiento del proceso y brindan mayor tranquilidad al usuario final.
+
+
+
 ### 5.3.3. Evaluaciones según heurísticas. 
+
+
 
 ## 5.4. About the Team
 
