@@ -242,6 +242,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <tr>
       <td><strong>Torres Sanchez, Dalila Victoria</strong><br><b>AV1:</b> Colaboró en la documentación del Sprint Planning del Sprint 1 y acompañó al equipo en las reuniones del sprint.</td>
       <br><b>TB1:</b> Revisó la documentación del capítulo 5 y participó en reuniones del sprint.</td>
+      <br><b>TF:</b> Aportó con la documentación y las entrevistas de validación.</td>
     </tr>
     <tr>
       <td rowspan="5"><strong>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos</strong></td>
@@ -260,6 +261,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <tr>
       <td><strong>Torres Sanchez, Dalila Victoria</strong><br><b>AV1:</b> Aportó en la documentación del Sprint Planning del Sprint 1 y acompañó al equipo en las reuniones del sprint.</td>
       <br><b>TB1:</b> Aportó en el desarrollo del frontend</td>
+      <br><b>TF:</b> Aportó con la documentación y las evaluaciones según heurísticas.</td>
     </tr>
   </tbody>
 </table>
