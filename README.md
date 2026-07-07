@@ -3110,43 +3110,72 @@ Durante el Sprint 2 la implementación técnica de la aplicación web se concent
 
 ### 5.2.3. Sprint 3
 
+Durante el Sprint 3, el equipo enfocó sus esfuerzos iniciales en la configuración de la arquitectura backend de WoodRoute utilizando .NET 10 y en el diseño inicial de los Web Services. Debido a la complejidad técnica de la integración de la base de datos y cruce de horarios, el avance fue limitado, dejando la implementación completa de los endpoints para el Sprint 4.
 
+#### 5.2.3.1. Sprint Planning 3
 
-#### 5.2.3.1. Sprint Planning 2
-
-
+| Sprint # | Sprint 3 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| Date | 15/05/2026 |
+| Time | 4:00 PM |
+| Location | Google Meet |
+| Prepared By | Sulca Sanchez, Piero Angel |
+| Attendees (to planning meeting) | Gonza Morales, Anderson<br>Justo Yauricasa, Alexander Paolo<br>Saldaña De Souza, Juan David<br>Sulca Sanchez, Piero Angel<br>Torres Sanchez, Dalila Victoria |
+| **Sprint 2 Review Summary** | Durante el Sprint 2 se entregó la primera versión del frontend con flujos principales utilizando un backend simulado en JSON Server. El equipo cumplió con el Sprint Goal al desplegar la web de prueba en Vercel. |
+| **Sprint 2 Retrospective Summary** | El equipo identificó que JSON Server permitió avanzar el frontend sin bloqueos, pero ahora se requiere la integración con el backend real. Como oportunidad de mejora, se estableció la necesidad de coordinar mejor los horarios de disponibilidad del equipo para el Sprint 3. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 3 Goal** | Nuestro objetivo es establecer la estructura base del backend con .NET 10, configurar el acceso a datos y preparar el entorno de despliegue de los Web Services. Creemos que esto nos dará la base técnica sólida. Esto se confirmará cuando el proyecto base del API se ejecute sin errores en los entornos de desarrollo locales. |
+| **Sprint 3 Velocity** | 15 (Reducida temporalmente) |
+| **Sum of Story Points** | 15 |
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
+| Team Member | GitHub Username | Backend (.NET) | Base de Datos | Documentación |
+| :--- | :--- | :--- | :--- | :--- |
+| Gonza Morales, Anderson | Ander-U | Colaborador | Colaborador | Líder |
+| Justo Yauricasa, Alexander Paolo | AlexanderrJusto | Colaborador | Colaborador | Colaborador |
+| Saldaña De Souza, Juan David | jndesouza | Colaborador | Líder | Colaborador |
+| Sulca Sanchez, Piero Angel | psulca | Líder | Colaborador | Colaborador |
+| Torres Sanchez, Dalila Victoria | DalilaTorres | Colaborador | Colaborador | Colaborador |
 
+#### 5.2.3.3. Sprint Backlog 3
 
-#### 5.2.3.3. Sprint Backlog 2
+| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation (SP) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| TS01 | Tarea Técnica | T01 | Setup inicial proyecto .NET 10 | Creación de la solución y estructura de carpetas (Domain, Application, Infrastructure, API). | 5 | Juan David Saldaña | Done |
+| TS02 | Tarea Técnica | T02 | Configuración Entity Framework | Instalación de dependencias y configuración del DbContext. | 5 | Anderson Gonza Morales | In Progress |
+| TS03 | Tarea Técnica | T03 | Diseño inicial de controladores | Creación de los controladores vacíos para Orders y Materials. | 5 | Piero Sulca Sanchez | In Progress |
 
-...
-
-A continuación se muestra el tablero de Sprint Backlog 3 gestionado por el equipo en Trello, con las tareas distribuidas en sus respectivos estados al cierre del sprint.
+A continuación se muestra el tablero de Sprint Backlog 3 gestionado por el equipo en Trello, mostrando el progreso de este sprint corto.
 
 <div align="center">
-  <img src="assets/.png" alt="Sprint Backlog 3 en Trello" width="100%">
+  <img src="assets/sprint-3.png" alt="Sprint Backlog 3 en Trello" width="100%">
 </div>
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
+Durante este sprint, el avance de desarrollo se limitó a la creación de la estructura base de la solución backend.
 
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Developer-Core/backend | develop | a1b2c3d | chore: sprint 3 complete | Inicialización del proyecto backend en .NET 10 con la estructura de capas (Domain, App, Infra) y cierre del sprint. | 17/05/2026 |
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
-
+La ejecución principal ha sido comprobar que el entorno de desarrollo .NET compile correctamente con el comando `dotnet build` sin errores, dejando la implementación de la lógica de negocio y endpoints operativos pendientes para el siguiente sprint.
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-
+Debido a que los Web Services de .NET aún no han completado su desarrollo en este sprint, la documentación autogenerada de la API mediante Swagger (OpenAPI) se registrará durante el Sprint 4 una vez los endpoints se encuentren totalmente implementados.
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
-
+La configuración de CI/CD para el backend hacia la nube (como Azure, AWS o Render) se pospuso para el Sprint 4, a la espera de contar con un API estable.
 
 #### 5.2.3.8. Team Collaboration Insights for Sprint Review
+
+Durante el Sprint 3, la colaboración estuvo enfocada principalmente en reuniones técnicas y el modelado de la base de datos. El volumen de commits fue menor, lo cual se ajustará incrementando el ritmo y la carga de tareas en el Sprint 4.
 
 
 
@@ -3177,7 +3206,23 @@ A continuación se muestra el tablero de Sprint Backlog 3 gestionado por el equi
 
 **Segmento 2: Cliente**
 
+- Al acceder a la vista pública de seguimiento de tu pedido mediante el enlace, ¿qué tan fácil te resultó entender en qué etapa de fabricación se encuentra tu mueble?
 
+- ¿Sientes que la información mostrada sobre las fechas estimadas y el progreso (Corte, Lijado, Ensamble, etc.) te da la tranquilidad necesaria mientras esperas tu pedido?
+
+- En comparación con preguntar directamente por WhatsApp o llamar por teléfono al taller, ¿consideras que esta vista de seguimiento resuelve tus dudas de manera más rápida y cómoda?
+
+- Si el carpintero actualiza un avance y lo ves reflejado inmediatamente en esta pantalla, ¿sientes mayor confianza y transparencia en el trabajo que está realizando?
+
+- Al revisar la vista de seguimiento, ¿hubo algún dato o información adicional sobre tu mueble que buscaste y sentiste que faltaba?
+
+- ¿Qué tan útil te pareció la funcionalidad de enviar un mensaje directamente desde esta vista en caso de tener alguna consulta rápida sobre el avance?
+
+- Al probar la interfaz desde una tablet, ¿la sentiste rápida, intuitiva y fácil de leer sin tener que crear una cuenta o descargar una aplicación?
+
+- ¿Crees que el hecho de que un taller te ofrezca este nivel de tecnología y transparencia influiría en tu decisión de volver a contratarlos o de recomendarlos a un amigo?
+
+- En general, ¿qué mejora o detalle visual le cambiarías a esta página para que sientas que la experiencia de seguimiento es perfecta?
 
 ### 5.3.2. Registro de Entrevistas. 
 
@@ -3204,36 +3249,19 @@ Para esta entrevista de validación a Leonardo, se le mostró lo trabajado en la
 
 **Entrevista 1**
 
-**Entrevistador:** 
+**Entrevistador:** Anderson Gonza Morales
 
-**Entrevistado:** 
+**Entrevistado:** Oscar Armas
 
-**Edad:** 
-
-**Link de la entrevista:** 
+**Link de la entrevista:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202120836_upc_edu_pe/IQBubg81zfxSSpNuAaL50EjhATHdg5QGg5ERPTzYk24rfgc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=FDydb1
 
 <div align="center">
-  <img src="assets/interviews/.png" alt="Second Interview segment 2 - 4" width="100%">
+  <img src="assets/interviews/interview-segment-2-4.png" alt="Second Interview segment 2 - 4" width="100%">
 </div>
 
 **Resumen de la entrevista:** 
 
-
-**Entrevista 2**
-
-**Entrevistador:** 
-
-**Entrevistado:** 
-
-**Edad:** 
-
-**Link de la entrevista:** 
-
-<div align="center">
-  <img src="assets/interviews/.png" alt="Second Interview segment 2 - 5" width="100%">
-</div>
-
-**Resumen de la entrevista:** 
+Para esta entrevista de validación a Oscar, se le mostró lo trabajado en la Landing Page y Web Application. Él nos comenta que le parece intuitivo y confiable. Le gustó la funcionalidad notificaciones que se envían al cliente y el chat de mensajeria con el taller.
 
 ### 5.3.3. Evaluaciones según heurísticas. 
 
